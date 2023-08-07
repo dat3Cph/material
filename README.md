@@ -1,2 +1,2 @@
 # backend
-Course materials for programming and tech
+Course materials for Programming and Tech on 3rd semester
