@@ -64,5 +64,4 @@
   - Explore how Java Date and Time API integrates with JPA for managing date and time-related data.
   - Handle different types of date and time data using JPA annotations.
 
-
-
+***
