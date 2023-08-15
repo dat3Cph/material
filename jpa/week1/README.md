@@ -26,8 +26,11 @@
 
 ## Links
 
+- [JAVA Persistence](https://en.wikibooks.org/wiki/Java_Persistence)
+- [JPA Manual](https://www.objectdb.com/java/jpa/tool)
 - [Thorben Hansen](https://thorben-janssen.com/)
 - [JPA Tutorial](https://www.javacodegeeks.com/jpa-tutorial)
+- [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 
 **Video Links**
 - [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
