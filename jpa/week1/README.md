@@ -24,7 +24,12 @@
 
 ***
 
-## Links
+## Links internal resources
+
+- [JPA Introduction](#)
+- [JPA Entities](#)
+
+## Links external resources
 
 - [JAVA Persistence](https://en.wikibooks.org/wiki/Java_Persistence)
 - [JPA Manual](https://www.objectdb.com/java/jpa/tool)
@@ -36,6 +41,7 @@
 - [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
 - [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
 - [Pagination in JPQL](https://www.youtube.com/watch?v=Xny3OJquWuo)
+
 
 ## 1. How to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
 

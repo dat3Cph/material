@@ -22,7 +22,12 @@
 
 ***
 
-## Links
+## Links internal resources
+
+- [JPA Relations](#)
+- [JPQL](#)
+
+## Links external resources
 
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
 - [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
