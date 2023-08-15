@@ -16,9 +16,6 @@
     - Be able to explain the difference between unidirectional and bidirectional relationships.
     - Be able to explain the difference between eager and lazy loading.
     - Be able to explain and demonstrate cascading and orphan removal.
-- Date and Time
-    - Explore how Java Date and Time API integrates with JPA for managing date and time-related data.
-    - Handle different types of date and time data using JPA annotations.
 
 ***
 

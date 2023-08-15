@@ -21,13 +21,21 @@
 - Database transactions with help of JPA, Hibernate, JDBC, PostgresSQL and DAO.
     - Be able to explain and demonstrate how to use the EntityManager to perform CRUD operations like create, read, update and delete.
     - Explain the Data Access Object (DAO) architecture and its benefits in separating database access logic from business logic.
+- Date and Time
+    - Explore how Java Date and Time API integrates with JPA for managing date and time-related data.
+    - Handle different types of date and time data using JPA annotations.
 
 ***
 
-## Links internal resources
+## Videos internal resources
 
 - [JPA Introduction](#)
 - [JPA Entities](#)
+
+## Videos external resources
+- [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
+- [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
+- [Pagination in JPQL](https://www.youtube.com/watch?v=Xny3OJquWuo)
 
 ## Links external resources
 
@@ -36,11 +44,6 @@
 - [Thorben Hansen](https://thorben-janssen.com/)
 - [JPA Tutorial](https://www.javacodegeeks.com/jpa-tutorial)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
-
-**Video Links**
-- [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
-- [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
-- [Pagination in JPQL](https://www.youtube.com/watch?v=Xny3OJquWuo)
 
 
 ## 1. How to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
