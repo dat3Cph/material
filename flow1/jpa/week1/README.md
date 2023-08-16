@@ -35,13 +35,12 @@
     - Be able to explain the difference between TypedQuery vs Query in JPA.
     - Be able to write JPQL queries using aggregate functions MAX, AVG and DISTINCT.
 3. JPA entities and annotations
-    - Be able to explain and demonstrate JPA lifecycle annotations like @PrePersist, @PostPersist, @PreUpdate, @PostUpdate, @PreRemove, @PostRemove, @PostLoad
-    - Understand the purpose of Lombok and how it reduces boilerplate code in Java entities.
+    - Be able to explain and demonstrate JPA lifecycle annotations like @PrePersist, @PostPersist, @PreUpdate, @PostUpdate, @PreRemove, @PostRemove, @PostLoad.
 4. Data Access Object (DAO) Architecture
-    - Be able to explain the benefits of using a DAO architecture for separating database access logic from business logic. 
+    - Be able to explain and demonstrate the benefits of using a DAO architecture for separating database access logic from business logic. 
 5. Date and Time
-    - Explore how Java Date and Time API integrates with JPA for managing date and time-related data.
-    - Handle different types of date and time data using JPA annotations.
+    - Explain how Java Date and Time API integrates with JPA for managing date and time-related data.
+    - Demonstrate the different types of date and time data using JPA annotations.
 6. Lombok
     - Be able to explain the purpose of Lombok and how it reduces boilerplate code in Java entities.
     - Explain and demonstrate how to add a private constructor to a class with Lombok.
