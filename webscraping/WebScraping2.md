@@ -1,11 +1,13 @@
 # Web Scraping continued ...
+- Handling dynamic content
+- Consuming REST APIs with DTOs
 
 ## Handling dynamic content
 ```java
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version> <!-- Check for the latest version -->
+    <version>4.11.0</version>
 </dependency>
 ```
 Using selenium for dynamic content:
@@ -47,6 +49,7 @@ public class DynamicContentScraper {
 ```
 
 ## Error handling
+
 
 ## Data cleaning and transformation
 
