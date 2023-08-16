@@ -1,4 +1,4 @@
-# Thursday Exercise
+# DAO Exercise
 
 **Exercise 1: Data Access Object (DAO) Implementation**
 Objective: Implement DAO pattern for separating database access logic from business logic.
