@@ -6,7 +6,7 @@
 
 1. Be able to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and JPA.
     - Create a PostgresSQL server and a database with help of Docker.
-    - How to configure Hibernate to establish a database connections.
+    - How to configure Hibernate to establish a database connection.
     - Run the project in a main and a test method and verify that the connection is working in pgAdmin
 2. Hibernate and JPA
     - Be able to explain the difference between Hibernate and JPA.
