@@ -9,6 +9,4 @@ Objective: Implement DAO pattern for separating database access logic from busin
 
 - Question: Explain the benefits of using a DAO architecture for separating database access logic from business logic.
 
-
-
 Implement lifecycle methods using `@PrePersist` and `@PreUpdate` annotations to automatically update timestamp fields for created and updated dates.
