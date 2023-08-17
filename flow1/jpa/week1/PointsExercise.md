@@ -24,8 +24,9 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
     - Use the `identity` strategy for the `@GeneratedValue` annotation
 6. Use Lombok to generate getters, toString  and a NoArgsConstructor 
 7. Create a constructor that takes `x` and `y` as parameters
-8. Create a new class called Main and add a main method to it
-9. Add the following code to the main method:
+8. Remember to add the entity to the Hibernate config file
+9. Create a new class called Main and add a main method to it
+10. Add the following code to the main method:
 ```jav
     EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
     EntityManager em = emf.createEntityManager();
@@ -60,9 +61,9 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
 
 ```
 
-10. Run the code and verify that it works. Check either in PgAdmin or in IntelliJ's database tool that the data is actually stored in the database.
-11. Create a DAO class and transfer all methods that interact with the database to this class.
-12. Add tests for each method in the DAO class. Use the `@BeforeAll` and `@AfterAll` annotations to set up and tear down the database connection.
+11. Run the code and verify that it works. Check either in PgAdmin or in IntelliJ's database tool that the data is actually stored in the database.
+12. Create a DAO class and transfer all methods that interact with the database to this class.
+13. Add tests for each method in the DAO class. Use the `@BeforeAll` and `@AfterAll` annotations to set up and tear down the database connection.
 
 ## Conclusion
 
