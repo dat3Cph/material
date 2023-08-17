@@ -1,6 +1,4 @@
-# Day 1 - JPA Introduction
-
-## 1. How to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
+## How to create a basic Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
 
 1. Open IntelliJ and create a new project.
 2. Select Maven and Java 17.
@@ -39,7 +37,6 @@
 </br>
 <img src="./images/hibernateconfig_2.png">
 </br>
-
 
 1. Copy and paste the following gist into the file: [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2)
 
