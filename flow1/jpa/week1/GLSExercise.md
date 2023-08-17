@@ -15,7 +15,7 @@ Todo:
 Mandatory features:
 - use date/time attributes
 - pre/update life cycle methods
-- DAO for achitectural purposes
+- DAO for architectural purposes
 - CRUD (persist, jpql, merge, remove)
 - Test (jUnit)
 - Lombok (please use in entity)
