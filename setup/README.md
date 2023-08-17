@@ -2,7 +2,7 @@
 
 ## JPA
 
-- [JPA Starter Project]("./JPASetup.md")
+- [JPA Starter Project](./JPASetup.md)
 
 ## Java Deep Dive
 
