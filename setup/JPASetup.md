@@ -2,15 +2,10 @@
 
 ## 1. How to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
 
-- Open IntelliJ and create a new project.
-- Select Maven and Java 17.
-- In advanced settings, add groupId.
-- Click finish.
-- Open the pom.xml file and add the following dependencies: [Link](https://gist.github.com/tysker/33f364970e366ba1d2daf96d034abea6)
-  - JUnit 5
-  - Hibernate
-  - PostgresSQL
-  - Lombok
+1. Open IntelliJ and create a new project.
+2. Select Maven and Java 17.
+3. In advanced settings, add groupId.
+4. Click finish.
 
 ---
 
@@ -19,9 +14,16 @@
 
 </br>
 
+5. Open the pom.xml file and add the following dependencies: [Link](https://gist.github.com/tysker/33f364970e366ba1d2daf96d034abea6)
+
+- JUnit 5
+- Hibernate
+- PostgresSQL
+- Lombok
+
 ---
 
-- Add the following lines into the properties tag
+6. Add the following lines into the properties tag
 
 ```xml
 
@@ -30,16 +32,20 @@
 
 ```
 
-- Create a new java class file called HibernateConfig.
-- copy and paste the following gist into the file: [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2)
-- If you get an import error, try to run Maven lifecycle "install"
-
 ---
+
+7. Create a new java class file called HibernateConfig.
 
 </br>
 <img src="./images/hibernateconfig_2.png">
+</br>
+
+
+1. Copy and paste the following gist into the file: [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2)
 
 </br>
+
+**If you get an import error, try to run Maven lifecycle "install"**
 
 ---
 
