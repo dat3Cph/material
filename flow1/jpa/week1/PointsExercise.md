@@ -11,6 +11,8 @@ and you will learn how to create a simple application that stores and retrieves 
 You will do that with help from the JPA and Hibernate frameworks, which will handle the database interactions for you.
 Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin will be used as the database and database management tool, respectively.
 
+**In the test class you would normally use a test database, but for this exercise you can use the same database as the application.**
+
 ## Exercise
 
 1. Create a new JPA project. (Link above)
@@ -63,7 +65,9 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
 
 11. Run the code and verify that it works. Check either in PgAdmin or in IntelliJ's database tool that the data is actually stored in the database.
 12. Create a DAO class and transfer all methods that interact with the database to this class.
-13. Add tests for each method in the DAO class. Use the `@BeforeAll` and `@AfterAll` annotations to set up and tear down the database connection.
+13. Make each of the methods in the DAO class return a value instead of printing it to the console, or it's going to be difficult to test them. You do need to test the persistence of the data though.
+    - The method that retrieves all Points for example should return a list of all the points from the database.
+13. Add tests for each method in the DAO class. Use the `@BeforeAll` and `@AfterAll` annotations to set up and close the EntityManagerFactory and EntityManager objects.
 
 ## Conclusion
 
@@ -71,4 +75,3 @@ By completing this exercise, you've laid the foundation for building more comple
 You've learned how to organize code by separating database operations into a DAO (Data Access Object) class, enhancing code modularity 
 and testability. Remember that this exercise only scratches the surface of what JPA and Hibernate can offer, and you can build upon this 
 knowledge to create sophisticated and efficient data-driven applications.
-
