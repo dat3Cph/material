@@ -1,30 +1,67 @@
 # Student Exercise
 
-**Exercise 1: Hibernate and JPA Basics**
-
-- Question: Describe the key components of the JPA architecture and how they relate to each other. (Entity Classes, EntityManager, EntityManagerFactory, Entity Mapping Annotations, Persistence Provider (Hibernate), Query Language(JPQL))
-- Question: Explain the difference between Hibernate and JPA.
-
-**Exercise 2: JPQL**
-
-- Question: Explain the purpose of JPQL and how it differs from SQL.
-
-**Exercise 3: Mapping Entities and Annotations**
+**Exercise 1: Mapping Entities and Annotations**
 Objective: Apply JPA annotations to map Java classes to database tables and understand entity lifecycle.
 
 1. Create a new Java project using Maven.
-2. Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, and `age`.
-3. Use JPA annotations to map the entity class to a database table named "students".
-4. Include appropriate annotations such as `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` to define the primary key and attributes mapping. 
-5. Write a Java program that uses the EntityManager to create and persist instances of the "Student" entity to the database. 
-6. Retrieve and display the list of all students using a JPQL query. 
-7. Update the information of a student and make sure that your code works.
+2. Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, `email` and `age`. Remember to include a no-arg constructor.
+3. Use JPA annotations to map the entity class to a database table named `students`. The `email` property should be unique.
+4. Include appropriate annotations such as `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` to define the primary key and attributes mapping.
+5. Add a Main class with a main method and one static property: `EntityManagerFactory`.
+6. Create the following methods and add it to the Main class:
+   - `public static void createStudent(Student student)` - This method should create a new student and persist it to the database.
+   - `public static Student readStudent(int id)` - This method should read a student from the database using the student's id.
+   - `public static Student updateStudent(int id, Student updStd)` - This method should update an existing student in the database.
+   - `public static void deleteStudent(int id)` - This method should delete a student from the database using the student's id.
+   - `public static List<Student> readAllStudents()` - This method should retrieve all students from the database and return them as a list. Use a `TypedQuery` to retrieve all students. 
+   - In all the methods above, remember to open and close the `EntityManager` and `EntityManagerFactory` objects.
+   - You can use either the `try-with-resources` or the `finally` block to close the objects.
+7. In all the methods above, write small comments that explains when an object is transient, detached, removed or managed.
 
-- Question: Explain the purpose of the `@GeneratedValue` annotation and how it can be used to generate primary key values for entities. 
-- Question: Explain the difference between the `AUTO`, `IDENTITY`, and `SEQUENCE` strategies  in conjunction with the `@GeneratedValue` annotation.
+```JAVA
+    public static void main(String[] args) {
+    // entity is in transient state
+    Student student = new Student("Michelle", "Schmidt", "schmidt@mail.com", 30);
 
-**Exercise 4: EntityManager and Transaction Management**
-Objective: Understand EntityManager's role, entity states, and transaction management.
+    }
+    
+    public static void createStudent(Student student) {
+        try(EntityManager em = emf.createEntityManager()) {
+            em.getTransaction().begin();
+            // entity is in managed state (after persist)
+            em.persist(student);
+            // entity is in detached state after the transaction is committed
+            em.getTransaction().commit();
+        }
+    }
+```
 
-- Question: Explain the roles and responsibilities of EntityManager and EntityManagerFactory in JPA.
-- Question: Describe the lifecycle states of JPA entities (transient, managed, detached, removed). Provide an example scenario for each state.
+8. Create a method in the Student class that verifies that the email address is valid. The method should return a boolean value. 
+9. Add a `@PrePersist` method to the Student class that verifies that the email address is valid. If the email address is not valid, throw an exception. 
+10. Do the same as in step 9, but this time use a `@PreUpdate` method. 
+11. Create a test class with a test method for each of the methods in the Main class. 
+12. Run the test class and verify that all tests pass. 
+13. Create 10 students and persist them to the database. 
+    - 3 of the students should have the last name "Hansen" and 4 should have the last name "Jensen".
+    - 1 of the students should be the oldest with an age of 90.
+    - 1 of the students should be the youngest with an age of 10. 
+14. Get the `average` age of all students in the database. 
+15. Get the `average` age of all students in the database whose last name is "Hansen".
+16. `count` the number of students in the database whose last name is "Jensen". 
+17. Get the first name of the oldest student in the database. 
+18. Get the youngest student in the database. 
+19. Get the `sum` of all ages of all students in the database.
+
+**Exercise 2: Q & A**
+
+1. Why do we need a no-arg constructor in an entity class?
+2. Where in the HibernateConfig (line) file do we 
+   - specify the database dialect?
+   - specify the JDBC connection properties?
+   - add annotated classes?
+3. What is the purpose of the `@GeneratedValue` annotation and what are the different strategies that can be used to generate primary key values for entities?
+4. In Java, we have something called `try with resources`. What does it do and how can we use it in our code?
+5. What is the difference between `persist()` and `merge()` methods in JPA?
+6. What is the difference between the `TypedQuery` and `Query` interfaces in JPA?
+7. What does the `merge` method return?
+8. What are the different states of an entity in JPA?

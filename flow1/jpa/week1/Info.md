@@ -1,5 +1,3 @@
-## 2. Hibernate and JPA
-
 **What are the similarities and differences between JPA and hibernate?**
 
 
@@ -173,3 +171,10 @@ Here's how the DAO architecture works:
 A simplified example of a DAO might involve a `UserDAO` class that provides methods for CRUD operations on a `User` entity. The business logic in the application can then use these methods to interact with user data without needing to know the specific details of the database interactions.
 
 The DAO pattern is commonly used in combination with other design patterns and frameworks, such as Object-Relational Mapping (ORM) tools like Hibernate or JPA, to further simplify and streamline the data access process.
+
+***
+
+**Notes**
+
+- Use **persist** to save new entities. 
+- Use **merge** to update detached entities or reattach them to a new persistence context.
