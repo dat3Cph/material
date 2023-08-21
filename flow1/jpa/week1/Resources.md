@@ -2,8 +2,8 @@
 
 ## Videos internal resources
 
-- [JPA Introduction](#)
-- [JPA Entities](#)
+- [JPA Introduction](#): TBD
+- [JPA Entities](#): TBD
 
 ## Videos external resources
 - [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
