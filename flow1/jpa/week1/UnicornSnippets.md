@@ -1,4 +1,6 @@
-# Unicorn.class
+# Snippets for Unicorn JPA exercise
+
+## Unicorn.class
 
 ```java
 import jakarta.persistence.*;
@@ -26,6 +28,7 @@ public class Unicorn {
     // Getters and setters
 }
 ```
+
 ## Remember to add the entity in the HibernateConfig file
 
 ```java
@@ -33,7 +36,8 @@ private static void getAnnotationConfiguration(Configuration configuration) {
         configuration.addAnnotatedClass(Unicorn.class);
     }
 ```
-# UnicornDAO.class
+
+## UnicornDAO.class
 
 ```java
 import jakarta.persistence.*;
@@ -88,9 +92,10 @@ public class UnicornDAO
     {
         emf.close();
     }
-} ```
+} 
+```
 
-# Main.class
+## Main.class
 
 ```java
 public class Main
