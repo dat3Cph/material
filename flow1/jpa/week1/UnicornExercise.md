@@ -33,7 +33,7 @@ Create a Java application that uses Java Persistence API (JPA) with Hibernate to
       - `update(Unicorn unicorn)` using `EntityManager.merge()`
       - `delete(int id)` using `EntityManager.remove()`
       - `findById(int id)` using `EntityManager.find()`
-      - Peek at these [Snippets](flow1/jpa/week1/UnicornSnippets.md) for inspiration.
+      - Peek at these [snippets](UnicornSnippets.md) for inspiration.
 
 6. **Main Application**:
    - Create a `main` class.
