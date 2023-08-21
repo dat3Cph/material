@@ -1,10 +1,15 @@
-### Exercise: Java JPA with Hibernate - Standard CRUD Operations on Unicorn Entity
+# Exercise: Java JPA with Hibernate - Standard CRUD Operations on Unicorn Entity
 
-#### Objective
+## Check pantopto videos with solutions
+
+[Folder with videos](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=8bab5bee-ab23-48a4-b037-b0650179a4c0)
+
+
+## Objective
 
 Create a Java application that uses Java Persistence API (JPA) with Hibernate to perform standard CRUD (Create, Read, Update, Delete) operations on a `Unicorn` entity. Use standard JPA methods: `persist`, `merge`, `remove`, and `find`.
 
-#### Prerequisites
+## Prerequisites
 
 1. JDK installed.
 2. An IDE (IntelliJ IDEA)
@@ -13,7 +18,7 @@ Create a Java application that uses Java Persistence API (JPA) with Hibernate to
 
 ![Alt text](../images/unicorn.png)
 
-#### Steps
+## Steps
 
 1. **Set Up a New Project**:
    - Create a new Maven project in your IDE using this [tutorial](https://github.com/dat3Cph/backend/blob/main/setup/JPASetup.md)
@@ -48,11 +53,11 @@ Create a Java application that uses Java Persistence API (JPA) with Hibernate to
    - Run your application.
    - Validate that each CRUD operation is functioning by examining the console output and checking the database.
 
-#### Expected Outcome
+## Expected Outcome
 
 After running the application, you should be able to see the `Unicorn` entity being created, updated, fetched, and deleted in both your database and console output, utilizing standard JPA methods.
 
-#### Bonus Challenge
+## Bonus Challenge
 
 1. Implement a method `findAll()` in `UnicornDAO` that retrieves all `Unicorn` entities using the `EntityManager.createQuery()` method.
 2. Add validation constraints to the `Unicorn` entity, such as `name` should not be null or empty and `powerStrength` should be between 1 and 100.
