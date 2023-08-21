@@ -1,3 +1,5 @@
+# Unicorn.class
+
 ```java
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +18,14 @@ public class Unicorn {
     // Getters and setters
 }
 ```
+## Remember to add the entity in the HibernateConfig file
+
+```java
+private static void getAnnotationConfiguration(Configuration configuration) {
+        configuration.addAnnotatedClass(Unicorn.class);
+    }
+```
+# UnicornDAO.class
 
 ```java
 import javax.persistence.EntityManager;
@@ -60,6 +70,7 @@ public class UnicornDAO {
 }
 
 ```
+# Main.class
 
 ```java
 public class Main {
