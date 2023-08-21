@@ -1,19 +1,27 @@
 # Unicorn.class
 
 ```java
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Unicorn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "unicorn_id", nullable = false)
     private int id;
+
+    @Column(name = "name", length = 100)
     private String name;
+
+    @Column(name = "age")
     private int age;
+
+    @Column(name = "power_strength")
     private int powerStrength;
+
+    public Unicorn()
+    {
+    }
 
     // Getters and setters
 }
@@ -28,53 +36,67 @@ private static void getAnnotationConfiguration(Configuration configuration) {
 # UnicornDAO.class
 
 ```java
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.persistence.*;
 
-public class UnicornDAO {
+public class UnicornDAO
+{
 
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("UnicornApp");
-    private EntityManager entityManager = entityManagerFactory.createEntityManager();
+    private EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
 
-    public void save(Unicorn unicorn) {
-        entityManager.getTransaction().begin();
-        entityManager.persist(unicorn);
-        entityManager.getTransaction().commit();
+    public Unicorn save(Unicorn unicorn)
+    {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(unicorn);
+        em.getTransaction().commit();
+        em.close();
+        return unicorn;
     }
 
-    public Unicorn findById(int id) {
-        return entityManager.find(Unicorn.class, id);
+    public Unicorn findById(int id)
+    {
+        EntityManager em = emf.createEntityManager();
+        Unicorn foundUnicorn = em.find(Unicorn.class, id);
+        em.close();
+        return foundUnicorn;
     }
 
-    public Unicorn update(Unicorn unicorn) {
-        entityManager.getTransaction().begin();
-        Unicorn updatedUnicorn = entityManager.merge(unicorn);
-        entityManager.getTransaction().commit();
+    public Unicorn update(Unicorn unicorn)
+    {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        Unicorn updatedUnicorn = em.merge(unicorn);
+        em.getTransaction().commit();
+        em.close();
         return updatedUnicorn;
     }
 
-    public void delete(int id) {
-        entityManager.getTransaction().begin();
+    public void delete(int id)
+    {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
         Unicorn unicorn = findById(id);
-        if (unicorn != null) {
-            entityManager.remove(unicorn);
+        if (unicorn != null)
+        {
+            em.remove(unicorn);
         }
-        entityManager.getTransaction().commit();
+        em.getTransaction().commit();
+        em.close();
     }
 
-    public void close() {
-        entityManager.close();
-        entityManagerFactory.close();
+    public void close()
+    {
+        emf.close();
     }
-}
+} ```
 
-```
 # Main.class
 
 ```java
-public class Main {
-    public static void main(String[] args) {
+public class Main
+{
+    public static void main(String[] args)
+    {
         UnicornDAO unicornDAO = new UnicornDAO();
 
         // Create
@@ -82,10 +104,10 @@ public class Main {
         newUnicorn.setName("Sparkle");
         newUnicorn.setAge(5);
         newUnicorn.setPowerStrength(90);
-        unicornDAO.save(newUnicorn);
+        Unicorn createdUnicorn = unicornDAO.save(newUnicorn);
 
         // Read
-        Unicorn foundUnicorn = unicornDAO.findById(1);
+        Unicorn foundUnicorn = unicornDAO.findById(createdUnicorn.getId());
         System.out.println("Found Unicorn: " + foundUnicorn.getName());
 
         // Update
@@ -94,10 +116,9 @@ public class Main {
         System.out.println("Updated Unicorn Age: " + updatedUnicorn.getAge());
 
         // Delete
-        unicornDAO.delete(1);
+        //unicornDAO.delete(createdUnicorn.getId());
 
         unicornDAO.close();
     }
 }
-
 ```
