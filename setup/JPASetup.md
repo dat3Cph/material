@@ -1,18 +1,18 @@
-## How to create a basic Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
+# How to create a basic Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
 
-1. Open IntelliJ and create a new project.
-2. Select Maven and Java 17.
-3. In advanced settings, add groupId.
-4. Click finish.
+## 1. Open IntelliJ and create a new project.
+## 2. Select Maven and Java 17.
+## 3. In advanced settings, add groupId.
+## 4. Click finish.
 
 ---
 
 </br>
-<img src="./images/intellij_setup_1.png" width="600" height="500">
+<img src="./images/intellij_setup_1.png" width="400" height="400">
 
 </br>
 
-5. Open the pom.xml file and add the following dependencies:
+## 5. Open the pom.xml file and add the following dependencies:
 
 ```XML
  <dependencies>
@@ -64,7 +64,7 @@
 
 ---
 
-6. Add the following lines into the properties tag
+## 6. Add the following lines into the properties tag
 
 ```xml
 
@@ -75,13 +75,13 @@
 
 ---
 
-7. Create a new java class file called HibernateConfig.
+## 7. Create a new java class file called HibernateConfig.
 
 </br>
-<img src="./images/hibernateconfig_2.png">
+<img src="./images/hibernateconfig_2.png" width="300" height="400">
 </br>
 
-1. Copy and paste the following [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2) into the HibernateConfig.class.
+## 8. Copy and paste the following [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2) into the HibernateConfig.class.
 
 </br>
 
@@ -90,7 +90,7 @@
 ---
 
 </br>
-<img src="./images/maven_lifecycle_3.png">
+<img src="./images/maven_lifecycle_3.png" width="300" height="400" >
 
 </br>
 
