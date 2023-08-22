@@ -106,7 +106,8 @@ In this example, the `TaskList` class is parameterized with a type `T` that exte
 
 By using generics in your `Task` and `TaskList` classes, you can create more robust and flexible code that adheres to Java's type system and promotes cleaner, safer, and more reusable code.
 
-5. **Solution**
+5. **Solution** 
+//TODO: REMOVE THIS SECTION
 ```java
 import java.time.LocalDate;
 import java.util.List;

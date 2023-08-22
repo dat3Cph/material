@@ -209,24 +209,7 @@ In this example, the `evenoddpartitioningcollector` class implements the `collec
 
 This example demonstrates the process of creating a custom collector to handle a specific use case. custom collectors allow you to define complex accumulation strategies and are a powerful tool for customizing the behavior of your stream operations.
 
-## New date and time api
-- **Drawbacks of the old date and calendar apis.**
-  - mutable state:
-   both date and calendar were mutable classes, meaning that their internal state could be modified after creation. this made them prone to unexpected side effects and made it challenging to reason about the state of objects.
-  - zero-based months:
-   in the calendar api, months were represented using zero-based indexing. for example, january was represented as month 0, february as month 1, and so on. this was counterintuitive and led to confusion and mistakes in code.
-  - lack of immutability:
-   the date class was mutable, which made it challenging to ensure thread safety in multi-threaded environments.
-- **java.time package:** 
-  - localdate, 
-  - localtime, 
-  - localdatetime, 
-  - instant, 
-  - duration, 
-  - period.
-- **Working with:**
-  - **time zones** and 
-  - **formatting dates**.
+## [New date and time api](JavaTimeAPI.md)
 
 
 ## Generics:
