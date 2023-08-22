@@ -12,10 +12,18 @@
 
 ## Links external resources
 
-- [JAVA Persistence](https://en.wikibooks.org/wiki/Java_Persistence)
-- [JPA Manual](https://www.objectdb.com/java/jpa/tool)
-- [Thorben Hansen](https://thorben-janssen.com/)
-- [JPA Tutorial](https://www.javacodegeeks.com/jpa-tutorial)
+
+  **Jakarta Persistence**
+- [Jakarta Persistence PDF](https://jakarta.ee/zh/specifications/persistence/3.1/jakarta-persistence-spec-3.1.pdf)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
+- [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
+  
+  **JPQL**
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
+
+  **JPA relations**
 - [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
+- [OneToOne](https://en.wikibooks.org/wiki/Java_Persistence/OneToOne)
+- [ManyToOne](https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne)
+- [OneToMany](https://en.wikibooks.org/wiki/Java_Persistence/OneToMany)
+- [ManyToMany](https://en.wikibooks.org/wiki/Java_Persistence/ManyToMany)
