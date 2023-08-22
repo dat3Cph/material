@@ -1,9 +1,9 @@
 ## Day 2: Streams and Generics
 
 ## Streams
-- java streams provide several benefits that simplify and enhance the process of working with collections and processing data. here are some key advantages of using java streams:
+- Java streams provide several benefits that simplify and enhance the process of working with collections and processing data. Here are some key advantages of using java streams:
     - **readability and expressiveness:** streams enable you to express complex data transformations and processing in a more concise and readable manner. this leads to more maintainable and understandable code.
-    - **declarative programming:** with streams, you focus on describing the operations you want to perform on the data, rather than how to perform them. this promotes a declarative programming style, making your code more intuitive.
+    - **declarative programming:** with streams, you focus on describing the operations you want to perform on the data, rather than how to perform them (**imperative programming**). this promotes a declarative programming style, making your code more intuitive. Explainer: (imperative code focuses on writing an explicit sequence of commands to describe how you want the computer to do things, and declarative code focuses on specifying the result of what you want)
     - **functional programming:** streams introduce functional programming concepts to java, such as immutability, first-class functions, and higher-order functions. this results in cleaner code that is easier to reason about and test.
     - **lazy evaluation:** streams use lazy evaluation, meaning that elements are processed only when needed. this can improve performance by avoiding unnecessary computations.
     - **parallelism:** streams can be easily parallelized, enabling concurrent processing of data on multi-core processors. this can lead to significant performance improvements for data-intensive tasks.
@@ -15,7 +15,7 @@
     -  **focus on what, not how:** streams abstract away the looping and iteration details, allowing you to focus on the logic of what you want to achieve rather than the mechanics of how to achieve it.
     -  **easier debugging:** streams' fluent style of coding can make it easier to locate errors and debug issues, as each operation can be inspected individually.
 
-in summary, java streams offer a more functional and declarative way to process data, leading to cleaner, more expressive, and potentially more performant code. they bring the benefits of functional programming to java collections, making it easier to write efficient, concise, and maintainable code for data manipulation and transformation.
+In summary, java streams offer a more functional and declarative way to process data, leading to cleaner, more expressive, and potentially more performant code. they bring the benefits of functional programming to java collections, making it easier to write efficient, concise, and maintainable code for data manipulation and transformation.
 
 ### Creating streams: 
 There are several ways to create streams in java. streams are created from various sources, such as collections, arrays, i/o channels, or even by generating elements using specific methods. here are the different ways to create streams:
@@ -75,7 +75,7 @@ There are several ways to create streams in java. streams are created from vario
 These are the primary ways to create streams in java. depending on your data sources and requirements, you can choose the appropriate method to create a stream and perform various operations on the data using the stream api.
 
 ### Common stream methods:
-- **intermediate and terminal operations** in streams.
+- **Intermediate and terminal operations** in streams.
     - common **intermediate operations**: `map`, `filter`, `flatmap`-(flattens nested stream into one single stream), `distinct`, `sorted`.
     - common **terminal operations**: `foreach`, `collect`, `reduce`, `count`, `anymatch`, `allmatch`, `nonematch`.
       - `min`, `max`, `findfirst`, `findany`, `anymatch`, `allmatch`, `nonematch`.
@@ -88,31 +88,31 @@ These are the primary ways to create streams in java. depending on your data sou
   - built-in collectors: `tolist`, `toset`, `tomap`, `joining`, `groupingby`, `partitioningby`.
   code examples:
 
-- **collecting elements into a list:**
+- **Collecting elements into a list:**
    ```java
    list<string> names = stream.of("alice", "bob", "charlie")
        .collect(collectors.tolist());
    ```
 
-- **collecting elements into a set:**
+- **Collecting elements into a set:**
    ```java
    set<integer> numbers = stream.of(1, 2, 3, 2, 4, 5)
        .collect(collectors.toset());
    ```
 
-- **collecting elements into a map:**
+- **Collecting elements into a map:**
    ```java
    map<string, integer> namelengthmap = stream.of("alice", "bob", "charlie")
        .collect(collectors.tomap(name -> name, name -> name.length()));
    ```
 
-- **joining elements into a string:**
+- **Joining elements into a string:**
    ```java
    string joinednames = stream.of("alice", "bob", "charlie")
        .collect(collectors.joining(", "));
    ```
 
-- **calculating sum, average, max, min, etc.:**
+- **Calculating sum, average, max, min, etc.:**
    ```java
    int sum = stream.of(1, 2, 3, 4, 5)
        .collect(collectors.summingint(integer::intvalue));
@@ -124,13 +124,13 @@ These are the primary ways to create streams in java. depending on your data sou
        .collect(collectors.maxby(comparator.naturalorder()));
    ```
 
-- **grouping elements:**
+- **Grouping elements:**
    ```java
    map<character, list<string>> groupednames = stream.of("alice", "bob", "charlie")
        .collect(collectors.groupingby(name -> name.charat(0)));
    ```
 
-- **partitioning elements:**
+- **Partitioning elements:**
    ```java
    map<boolean, list<integer>> evenoddpartition = stream.of(1, 2, 3, 4, 5)
        .collect(collectors.partitioningby(num -> num % 2 == 0));
@@ -210,7 +210,7 @@ In this example, the `evenoddpartitioningcollector` class implements the `collec
 This example demonstrates the process of creating a custom collector to handle a specific use case. custom collectors allow you to define complex accumulation strategies and are a powerful tool for customizing the behavior of your stream operations.
 
 ## New date and time api
-- **drawbacks of the old date and calendar apis.**
+- **Drawbacks of the old date and calendar apis.**
   - mutable state:
    both date and calendar were mutable classes, meaning that their internal state could be modified after creation. this made them prone to unexpected side effects and made it challenging to reason about the state of objects.
   - zero-based months:
@@ -224,17 +224,17 @@ This example demonstrates the process of creating a custom collector to handle a
   - instant, 
   - duration, 
   - period.
-- **working with:**
+- **Working with:**
   - **time zones** and 
   - **formatting dates**.
 
 
 ## Generics:
-generics in java provide a way to create classes, interfaces, and methods that operate on types specified as parameters. they offer several benefits and are essential for writing more reusable, type-safe, and flexible code. here are some reasons why we need generics in java:
+Generics in java provide a way to create classes, interfaces, and methods that operate on types specified as parameters. they offer several benefits and are essential for writing more reusable, type-safe, and flexible code. here are some reasons why we need generics in java:
 
 ### Introduction to generics:
 
-**type safety**: generics help catch type-related errors at compile-time rather than runtime. this ensures that you're using the correct types in a consistent manner, reducing the chances of bugs and runtime exceptions.
+**Type safety**: generics help catch type-related errors at compile-time rather than runtime. this ensures that you're using the correct types in a consistent manner, reducing the chances of bugs and runtime exceptions.
 example (first without generics, then with generics):
 ```java
 list mylist = new arraylist();
@@ -248,20 +248,20 @@ mylist.add("hello");
 integer value = mylist.get(0); // compilation error
 ````
 
-**code reusability**: generics enable you to write classes, interfaces, and methods that can work with a variety of data types. this promotes code reuse, as a single implementation can cater to different types.
+**Code reusability**: generics enable you to write classes, interfaces, and methods that can work with a variety of data types. this promotes code reuse, as a single implementation can cater to different types.
 
-**eliminate type casting**: generics eliminate the need for explicit type casting when retrieving elements from collections or working with other data structures. this leads to cleaner and more readable code.
+**Eliminate type casting**: generics eliminate the need for explicit type casting when retrieving elements from collections or working with other data structures. this leads to cleaner and more readable code.
 
-**stronger abstractions**: generics allow you to define abstractions that work with a range of types. this enables you to create more generic and flexible apis that can be used with different data types.
+**Stronger abstractions**: generics allow you to define abstractions that work with a range of types. this enables you to create more generic and flexible apis that can be used with different data types.
 
-**collections framework**: the java collections framework (e.g., list, set, map, etc.) heavily utilizes generics. it allows you to create collections that hold specific types of elements, improving type safety and eliminating casting.
+**Collections framework**: the java collections framework (e.g., list, set, map, etc.) heavily utilizes generics. it allows you to create collections that hold specific types of elements, improving type safety and eliminating casting.
 
-### generic classes and interfaces:
+### Generic classes and interfaces:
 **defining and using generic classes in java**
 
-generic classes in java allow you to create classes that can work with different data types while maintaining type safety. they provide a powerful way to create reusable and flexible components that can operate seamlessly across various types. let´s explore how to define and use generic classes in java.
+Generic classes in java allow you to create classes that can work with different data types while maintaining type safety. they provide a powerful way to create reusable and flexible components that can operate seamlessly across various types. let´s explore how to define and use generic classes in java.
 
-**defining a generic class:**
+**Defining a generic class:**
 
 to define a generic class, you use angle brackets (`<>`) to specify a type parameter. this type parameter acts as a placeholder for an actual data type that will be provided when an instance of the class is created. here's the basic syntax:
 
@@ -271,9 +271,9 @@ public class mygenericclass<t> {
 }
 ```
 
-in this example, `t` is the type parameter. it can be any valid java identifier, but by convention, single uppercase letters like `t` are often used. you can use this type parameter within the class just like any other type.
+In this example, `t` is the type parameter. it can be any valid java identifier, but by convention, single uppercase letters like `t` are often used. you can use this type parameter within the class just like any other type.
 
-**using a generic class:**
+**Using a generic class:**
 
 when you create an instance of a generic class, you provide the actual type argument that the type parameter will take. this binding of the type parameter to an actual type is called "parameterizing" the class. here's how you use a generic class:
 
@@ -289,7 +289,7 @@ public class main {
 }
 ```
 
-**example: generic box class**
+**Example: generic box class**
 
 here's a simple example of a generic class that represents a box that can hold any type of object:
 
@@ -318,15 +318,15 @@ public class box<t> {
 }
 ```
 
-in this example, the `box` class is defined with a type parameter `t`. instances of `box` are created by specifying the actual type (e.g., `integer`, `string`) when declaring the variable.
+In this example, the `box` class is defined with a type parameter `t`. instances of `box` are created by specifying the actual type (e.g., `integer`, `string`) when declaring the variable.
 
-**implementing generic interfaces in java**
+**Implementing generic interfaces in java**
 
 generic interfaces allow you to create flexible and reusable contracts that can be implemented by various classes, accommodating different types while maintaining type safety. just like generic classes, generic interfaces enable you to design components that work with a wide range of data types. let's explore how to implement generic interfaces in java.
 
-**defining a generic interface:**
+**Defining a generic interface:**
 
-a generic interface is defined similarly to a regular interface, with the addition of type parameters enclosed in angle brackets (`<>`). these type parameters represent placeholders for actual types that will be provided when implementing the interface. here's the basic syntax:
+A generic interface is defined similarly to a regular interface, with the addition of type parameters enclosed in angle brackets (`<>`). these type parameters represent placeholders for actual types that will be provided when implementing the interface. here's the basic syntax:
 
 ```java
 public interface mygenericinterface<t> {
@@ -334,11 +334,11 @@ public interface mygenericinterface<t> {
 }
 ```
 
-in this example, `t` is the type parameter of the generic interface.
+In this example, `t` is the type parameter of the generic interface.
 
-**implementing a generic interface:**
+**Implementing a generic interface:**
 
-when you implement a generic interface, you need to provide the actual type argument that matches the type parameter of the interface. this allows you to customize the interface methods to work with specific data types. here's how you implement a generic interface:
+When you implement a generic interface, you need to provide the actual type argument that matches the type parameter of the interface. this allows you to customize the interface methods to work with specific data types. here's how you implement a generic interface:
 
 ```java
 public class myimplementation<t> implements mygenericinterface<t> {
@@ -346,7 +346,7 @@ public class myimplementation<t> implements mygenericinterface<t> {
 }
 ```
 
-**example: stack interface**
+**Example: stack interface**
 
 here's a practical example of a generic interface called `stack`, which represents a stack data structure. the interface defines methods to push, pop, and peek at elements in the stack:
 
@@ -358,7 +358,7 @@ public interface stack<t> {
 }
 ```
 
-now, let's implement the `stack` interface with a class that uses a list to maintain the stack:
+Now, let's implement the `stack` interface with a class that uses a list to maintain the stack:
 
 ```java
 import java.util.arraylist;
@@ -404,11 +404,11 @@ public class liststack<t> implements stack<t> {
 }
 ```
 
-in this example, the `liststack` class implements the `stack` interface with a generic type parameter `t`. the class uses an `arraylist` to manage the stack. by implementing the `stack` interface, the class ensures that it adheres to the stack contract for any type `t`.
+In this example, the `liststack` class implements the `stack` interface with a generic type parameter `t`. the class uses an `arraylist` to manage the stack. by implementing the `stack` interface, the class ensures that it adheres to the stack contract for any type `t`.
 
 ### Type parameters and wildcards:
 #### Type parameters in generic methods:
-you can use type parameters in generic methods to create methods that work with multiple types. The type parameter is declared before the return type of the method. Here's an example:
+You can use type parameters in generic methods to create methods that work with multiple types. The type parameter is declared before the return type of the method. Here's an example:
 ```java
 public class mygenericmethods {
     public <T> void printarray(T[] array) {
@@ -428,7 +428,7 @@ public class mygenericmethods {
 }
 ```
 
-in this example, the printarray method is a generic method that can work with arrays of any type. the type parameter T is used to represent the element type of the array.
+In this example, the printarray method is a generic method that can work with arrays of any type. the type parameter T is used to represent the element type of the array.
 
 #### Unbounded wildcards, upper-bounded wildcards, lower-bounded wildcards
 **Unbounded Wildcards, Upper-Bounded Wildcards, and Lower-Bounded Wildcards in Java Generics**
@@ -512,8 +512,8 @@ The limitations placed on wildcard types in Java generics are designed to preven
 
 
 ### Generics and method overloading:
-- handling method overloading with generic methods
-- resolving ambiguity in overloaded methods with type inference
+- Handling method overloading with generic methods
+- Resolving ambiguity in overloaded methods with type inference
 ```java
 public class AmbiguityExample {
 
