@@ -12,16 +12,15 @@
 
 ## Links external resources
 
-
-  **Jakarta Persistence**
+**Jakarta Persistence**
 - [Jakarta Persistence PDF](https://jakarta.ee/zh/specifications/persistence/3.1/jakarta-persistence-spec-3.1.pdf)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
   
-  **JPQL**
+**JPQL**
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
 
-  **JPA relations**
+**JPA relations**
 - [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
 - [OneToOne](https://en.wikibooks.org/wiki/Java_Persistence/OneToOne)
 - [ManyToOne](https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne)
