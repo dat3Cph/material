@@ -12,12 +12,55 @@
 
 </br>
 
-5. Open the pom.xml file and add the following dependencies: [Link](https://gist.github.com/tysker/33f364970e366ba1d2daf96d034abea6)
+5. Open the pom.xml file and add the following dependencies:
 
-- JUnit 5
-- Hibernate
-- PostgresSQL
-- Lombok
+```XML
+ <dependencies>
+        <!--  DB    -->
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+
+        <!--  LOMBOK    -->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--  TESTING      -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+</dependencies>
+
+```
 
 ---
 
@@ -38,7 +81,7 @@
 <img src="./images/hibernateconfig_2.png">
 </br>
 
-1. Copy and paste the following gist into the file: [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2)
+1. Copy and paste the following [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2) into the HibernateConfig.class.
 
 </br>
 
