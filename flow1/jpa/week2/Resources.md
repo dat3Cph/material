@@ -17,3 +17,5 @@
 - [Thorben Hansen](https://thorben-janssen.com/)
 - [JPA Tutorial](https://www.javacodegeeks.com/jpa-tutorial)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
+- [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
+- [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
