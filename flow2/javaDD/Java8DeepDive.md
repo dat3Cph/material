@@ -1,16 +1,16 @@
 # Java 8 Deep Dive
 ## Day 1
 
-## Introduction to Java 8 Feature
-1. Lambdas: Lambdas enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
-2. Streams: Streams provide a declarative way to process data in parallel or sequentially, promoting cleaner and more readable code.
-3. Default Methods: Interfaces can now have default method implementations, allowing for backward-compatible additions to interfaces without breaking existing implementations.
-4. Method References: Method references simplify code by allowing methods to be referred to using concise syntax, enhancing code readability.
-5. Functional Interfaces: Java 8 introduced functional interfaces, which are interfaces with a single abstract method, facilitating the use of lambda expressions.
-6. Type Inference: The diamond operator and improved type inference allow for more concise code when dealing with generic types.
-7. Optional: The Optional class helps handle null values more effectively, reducing the chances of null pointer exceptions.
-8. Date and Time API: The new Date and Time API (java.time) simplifies working with dates, times, and time zones, addressing many shortcomings of the old Date and Calendar classes.
-9. Functional Programming Paradigm: Java 8 encourages a more functional programming style, promoting immutability, pure functions, and higher-order functions, resulting in more reliable and maintainable code.
+## Introduction to Java 8 Features
+1. **Lambdas**: Lambdas enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
+2. **Streams**: Streams provide a declarative way to process data in parallel or sequentially, promoting cleaner and more readable code.
+3. **Default Methods**: Interfaces can now have default method implementations, allowing for backward-compatible additions to interfaces without breaking existing implementations.
+4. **Method References** : Method references simplify code by allowing methods to be referred to using concise syntax, enhancing code readability.
+5. **Functional Interfaces** : Java 8 introduced functional interfaces, which are interfaces with a single abstract method, facilitating the use of lambda expressions.
+6. **Type Inference**: The diamond operator and improved type inference allow for more concise code when dealing with generic types.
+7. **Optional**: The Optional class helps handle null values more effectively, reducing the chances of null pointer exceptions.
+8. **Date and Time API**: The new Date and Time API (java.time) simplifies working with dates, times, and time zones, addressing many shortcomings of the old Date and Calendar classes.
+9. **Functional Programming** Paradigm: Java 8 encourages a more functional programming style, promoting immutability, pure functions, and higher-order functions, resulting in more reliable and maintainable code.
 
 ## What is functional programming?
 - Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. While Java is primarily an object-oriented programming language, Java 8 introduced several features that enable functional programming concepts to be applied effectively. Here's how functional programming is characterized in Java:
@@ -28,7 +28,7 @@
    Pure functions are functions that have no side effects and always return the same output for the same input. While Java doesn't enforce pure functions, functional programming encourages writing code with minimal side effects and deterministic behavior.
 
 5. **Functional Interfaces:**
-   Java introduced functional interfaces in Java 8 to represent single-method interfaces. These interfaces are used to define the types of lambda expressions or method references. Examples include `Predicate`, `Consumer`, `Function`, and `Supplier`.
+   Java introduced functional interfaces in Java 8 to represent single-method interfaces. These interfaces are used to define the types of lambda expressions or method references. Java.util Examples include `Predicate`, `Consumer`, `Function`, and `Supplier`.
 
 6. **Readability and Expressiveness:**
     Functional programming often results in more concise and readable code, thanks to lambda expressions and functional interfaces. It encourages a declarative style of programming, where you specify what you want to achieve rather than how to achieve it.
