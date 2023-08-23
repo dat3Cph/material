@@ -1,5 +1,10 @@
 # These are CRUD examples prompted from ChatGpt and modified to our setup with Hibernate
 
+- [Create](#persist)
+- [Read](#selecting-book)
+- [Update](#update)
+- [Delete](#delete--remove)
+
 ## Update
 
 **Prompt: Show a java method that implements an update in jpa and use a Book entity?**
