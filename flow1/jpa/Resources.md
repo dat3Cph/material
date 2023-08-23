@@ -20,6 +20,9 @@
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
   
+**Life cycle**
+- [Entity Life Cycle Model in JPA & Hibernate]https://thorben-janssen.com/entity-lifecycle-model/
+
 **JPQL**
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
 
@@ -29,3 +32,6 @@
 - [ManyToOne](https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne)
 - [OneToMany](https://en.wikibooks.org/wiki/Java_Persistence/OneToMany)
 - [ManyToMany](https://en.wikibooks.org/wiki/Java_Persistence/ManyToMany)
+
+**Other**
+- [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
