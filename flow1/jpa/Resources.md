@@ -5,6 +5,9 @@
 - [JPA Introduction](#): TBD
 - [JPA Entities](#): TBD
 
+## Theory and examples (provided by teachers)
+- [CRUD examples with a single entity](theory/crudexamples.md)
+
 ## Videos external resources
 - [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
 - [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
