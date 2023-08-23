@@ -21,6 +21,7 @@
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
   
 **Life cycle**
+- [The role of the entity manager in JPA](../theory/entitymanager.md)
 - [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
 
 **JPQL**
@@ -32,6 +33,9 @@
 - [ManyToOne](https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne)
 - [OneToMany](https://en.wikibooks.org/wiki/Java_Persistence/OneToMany)
 - [ManyToMany](https://en.wikibooks.org/wiki/Java_Persistence/ManyToMany)
+
+**Lombok**
+- [Intro to project Lombok](https://www.baeldung.com/intro-to-project-lombok)
 
 **Other**
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
