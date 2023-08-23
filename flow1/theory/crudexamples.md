@@ -1,7 +1,7 @@
 # These are CRUD examples prompted from ChatGpt and modified to our setup with Hibernate
 
 - [Create (persist)](#persist)
-- [Read (select)](#selecting-book)
+- [Read (select)](#selecting-books)
 - [Update](#update)
 - [Delete (remove)](#delete--remove)
 
