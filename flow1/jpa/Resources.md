@@ -21,7 +21,7 @@
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
   
 **Life cycle**
-- [Entity Life Cycle Model in JPA & Hibernate]https://thorben-janssen.com/entity-lifecycle-model/
+- [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
 
 **JPQL**
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
