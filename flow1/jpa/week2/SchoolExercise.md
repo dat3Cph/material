@@ -81,7 +81,7 @@ PS. Add the getAllStudentInfo method to the StudentDAO interface and implement i
 
 1. Create a test class with a test method for each of the methods in the `StudentDAOImpl` class.
 
-#### 7. Run the test class and verify that all tests pass.
+2. Run the test class and verify that all tests pass.
 
 **Good luck!**
 
