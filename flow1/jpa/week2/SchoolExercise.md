@@ -6,10 +6,11 @@
 
 ### 2. Using JPQL find solutions to the following challenges:
 
-**Part 1:**
+#### Part 1:
+
 1. Create a ´Populate` class with a main method. In the main method create a method that can populate the database with data.
 
-**Part 2:**
+#### Part 2:
 
 Create a `dao` package and add a new interface called `StudentDAO` and add the following code to the interface:
 
@@ -38,9 +39,9 @@ public interface IStudentDAO {
 }
 ```
 
-### 3. At the same location add a new class called `StudentDAOImpl` and implement the interface to the class with all the methods.
+### 1. At the same location add a new class called `StudentDAOImpl` and implement the interface to the class with all the methods.
 
-### 4. In the root of the project add a new class called `Populate` and add the following code to the class:
+### 2. In the root of the project add a new class called `Populate` and add the following code to the class:
 
 ```JAVA
 public class Populate {
@@ -59,11 +60,11 @@ public class Populate {
 }
 ```
 
-### 5. Run the `main` method in the Populate class to populate the database with the students, teachers, and semesters.
+### 3. Run the `main` method in the Populate class to populate the database with the students, teachers, and semesters.
 
-### 6. All the methods in the `StudentDAOImpl` class should now be implemented using JPQL.
+### 4. All the methods in the `StudentDAOImpl` class should now be implemented using JPQL.
 
-**Part 3:**
+#### Part 3:
 
 1. Create a StudentInfo class with the following properties:
    - `fullName`
@@ -76,11 +77,11 @@ public class Populate {
 
 PS. Add the getAllStudentInfo method to the StudentDAO interface and implement it in the StudentDAOImpl class.
 
-**Part 4:**
+### Part 4:
 
 1. Create a test class with a test method for each of the methods in the `StudentDAOImpl` class.
 
-### 7. Run the test class and verify that all tests pass.
+#### 7. Run the test class and verify that all tests pass.
 
 **Good luck!**
 
