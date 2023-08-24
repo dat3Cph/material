@@ -63,5 +63,5 @@ Objective: Apply JPA annotations to map Java classes to database tables and unde
 4. In Java, we have something called `try with resources`. What does it do and how can we use it in our code?
 5. What is the difference between `persist()` and `merge()` methods in JPA?
 6. What is the difference between the `TypedQuery` and `Query` interfaces in JPA?
-7. What does the `merge` method return?
+7. What is the difference between the `getSingleResult()` and `getResultList()` methods in JPA?
 8. What are the different states of an entity in JPA?
