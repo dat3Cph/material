@@ -4,7 +4,7 @@
 
 <img src="../images/school_eer_model.png" alt="School ERD" width="500"/>
 
-### 2. Using JPQL find solutions to the following challenges:
+### 2. Using JPQL to find solutions to the following challenges:
 
 #### Part 1:
 
@@ -12,7 +12,7 @@
 
 #### Part 2:
 
-Create a `dao` package and add a new interface called `StudentDAO` and add the following code to the interface:
+2. Create a `dao` package and add a new interface called `StudentDAO` and add the following code to the interface:
 
 ```JAVA
 public interface IStudentDAO {
@@ -39,9 +39,9 @@ public interface IStudentDAO {
 }
 ```
 
-### 1. At the same location add a new class called `StudentDAOImpl` and implement the interface to the class with all the methods.
+3. At the same location add a new class called `StudentDAOImpl` and implement the interface to the class with all the methods.
 
-### 2. In the root of the project add a new class called `Populate` and add the following code to the class:
+4. In the root of the project add a new class called `Populate` and add the following code to the class:
 
 ```JAVA
 public class Populate {
@@ -60,9 +60,9 @@ public class Populate {
 }
 ```
 
-### 3. Run the `main` method in the Populate class to populate the database with the students, teachers, and semesters.
+5. Run the `main` method in the Populate class to populate the database with the students, teachers, and semesters.
 
-### 4. All the methods in the `StudentDAOImpl` class should now be implemented using JPQL.
+6. All the methods in the `StudentDAOImpl` class should now be implemented using JPQL.
 
 #### Part 3:
 
