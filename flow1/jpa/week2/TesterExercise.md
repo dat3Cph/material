@@ -54,9 +54,9 @@ public interface IEmployeeDAO {
 }
 ```
 
-## 5. At the same location add a new class called `EmployeeDAOImpl` and implement the interface to the class with all the methods.
+### 5. At the same location add a new class called `EmployeeDAOImpl` and implement the interface to the class with all the methods.
 
-## 6. In the root of the project add a new class called `Populate` and add the following code to the class:
+### 6. In the root of the project add a new class called `Populate` and add the following code to the class:
 
 ```JAVA
 public class Populate {
@@ -78,12 +78,12 @@ public class Populate {
 }
 ```
 
-## 7. Run the `main` method in the Populate class to populate the database with the employees.
+### 7. Run the `main` method in the Populate class to populate the database with the employees.
 
-## 8. All the methods in the `EmployeeDAOImpl` class should now be implemented using JPQL.
+### 8. All the methods in the `EmployeeDAOImpl` class should now be implemented using JPQL.
 
-## 9. Create a test class with a test method for each of the methods in the `EmployeeDAOImpl` class.
+### 9. Create a test class with a test method for each of the methods in the `EmployeeDAOImpl` class.
 
-## 10. Implement and run the test class and verify that all tests pass.
+### 10. Implement and run the test class and verify that all tests pass.
 
-Good luck!
+**Good luck!**
