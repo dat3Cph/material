@@ -11,12 +11,12 @@ Objective: Apply JPA annotations to map Java classes to database tables and unde
 6. Create the following methods and add it to the Main class:
    - `public static void createStudent(Student student)` - This method should create a new student and persist it to the database.
    - `public static Student readStudent(int id)` - This method should read a student from the database using the student's id.
-   - `public static Student updateStudent(int id, Student updStd)` - This method should update an existing student in the database.
+   - `public static Student updateStudent(Student updStd)` - This method should update an existing student in the database.
    - `public static void deleteStudent(int id)` - This method should delete a student from the database using the student's id.
    - `public static List<Student> readAllStudents()` - This method should retrieve all students from the database and return them as a list. Use a `TypedQuery` to retrieve all students. 
    - In all the methods above, remember to open and close the `EntityManager` and `EntityManagerFactory` objects.
    - You can use either the `try-with-resources` or the `finally` block to close the objects.
-7. In all the methods above, write small comments that explains when an object is transient, detached, removed or managed.
+7. In all the methods above, write small comments that explains when an object is transient, detached, removed or managed. (See example below)
 
 ```JAVA
     public static void main(String[] args) {
@@ -55,7 +55,7 @@ Objective: Apply JPA annotations to map Java classes to database tables and unde
 **Exercise 2: Q & A**
 
 1. Why do we need a no-arg constructor in an entity class?
-2. Where in the HibernateConfig (line) file do we 
+2. Investigate where we in our code can change the following: 
    - specify the database dialect?
    - specify the JDBC connection properties?
    - add annotated classes?
