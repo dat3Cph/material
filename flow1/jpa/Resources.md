@@ -26,6 +26,7 @@
 
 **JPQL**
 - [JAVA Persistence JPQL](https://en.wikibooks.org/wiki/Java_Persistence/JPQL)
+- [JPQL Supported Functions](https://en.wikibooks.org/wiki/Java_Persistence/JPQL#JPQL_supported_functions)
 
 **JPA relations**
 - [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
