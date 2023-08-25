@@ -29,11 +29,14 @@
 - [JPQL Supported Functions](https://en.wikibooks.org/wiki/Java_Persistence/JPQL#JPQL_supported_functions)
 
 **JPA relations**
-- [JPA - relationship](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
-- [OneToOne](https://en.wikibooks.org/wiki/Java_Persistence/OneToOne)
-- [ManyToOne](https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne)
-- [OneToMany](https://en.wikibooks.org/wiki/Java_Persistence/OneToMany)
-- [ManyToMany](https://en.wikibooks.org/wiki/Java_Persistence/ManyToMany)
+
+- [JPA Tutorial](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/jpa-kickstart.html)
+
+- [OneToOne](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
+- [OneToOne Bidirectional](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one-bidirectional.html)
+- [ManyToOne](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-one.html)
+- [OneToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-many.html)
+- [ManyToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
 
 **Lombok**
 - [Intro to project Lombok](https://www.baeldung.com/intro-to-project-lombok)
