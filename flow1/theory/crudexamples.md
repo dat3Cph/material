@@ -119,9 +119,7 @@ public class Book {
 ### Method for Persisting a Book
 
 ```java
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.persistence.*;
 
 public class BookRepository {
 
@@ -174,8 +172,7 @@ Certainly! Below is an additional method named `addBook` in the `BookRepository`
 ### Book Entity (for reference)
 
 ```java
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Book {
@@ -261,10 +258,7 @@ public class Book {
 ### Method for Finding All Books by "Haruki Murakami"
 
 ```java
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
+import jakarta.persistence.*;
 import java.util.List;
 
 public class BookRepository {
