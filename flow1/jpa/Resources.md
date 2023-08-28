@@ -38,7 +38,6 @@
 
 - [JPA Tutorial](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/jpa-kickstart.html)
 - [OneToOne](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one.html)
-- [OneToOne Bidirectional](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-one-bidirectional.html)
 - [ManyToOne](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-one.html)
 - [OneToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-many.html)
 - [ManyToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
