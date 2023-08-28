@@ -32,7 +32,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ### 5. The driver id and the employment date should be set in a @PrePersist annotated method. 
 
-### 6. Create a new package called `dao` and add two interfaces called `IDriverDAO` and `IWasteTruckDAO` add the following code to their interface:
+### 6. Create a new package called `dao` and add two interfaces called `IDriverDAO` and `IWasteTruckDAO` and add the following code to their interface:
 
 ```JAVA
         // Driver
@@ -59,7 +59,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
         List<WasteTruck> getAllAvailableTrucks();
 ```
 
-### 7. At the same location add a new class called `DriverDAOImpl` and `WasteTruckDAOImpl` and implement the interface to the classes with all the methods.
+### 7. At the same location add a new class called `DriverDAOImpl` and `WasteTruckDAOImpl` and implement the interface to the classes with all their methods.
 
 ### 8. Use the following sql script to populate data: 
 
@@ -91,3 +91,5 @@ VALUES
 ```
 
 ### 9. Create a main method in the root of the project and test all the methods in the DAO classes.
+
+### 10. Test the methods in the DAO classes using JUnit.
