@@ -22,6 +22,9 @@ problem domain (the subject area the software deals with). It defines the entiti
 
 The last step is to create a diagram that mirrors your future database, also known as an EER diagram.
 
+Your Domain Model and EER diagram will be the foundation for your database and the JPA entities you will create in the next step. Both
+diagram should be added to your README.md file with the business idea and user stories.
+
 Happy coding!
 
 
@@ -73,7 +76,7 @@ Happy coding!
 
 ### Optional Requirements
 
-- [O1] 
+- [O1] TODO
 
 
 ### Resources
