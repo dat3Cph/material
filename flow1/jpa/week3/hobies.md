@@ -5,7 +5,7 @@
 ```sql
 CREATE TABLE IF NOT EXISTS public.hobby
 (
-    id integer NOT NULL DEFAULT nextval('hobby_id_seq'::regclass),
+    id SERIAL,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
     wiki_link character varying(100) COLLATE pg_catalog."default" NOT NULL,
     category character varying(50) COLLATE pg_catalog."default" NOT NULL,
