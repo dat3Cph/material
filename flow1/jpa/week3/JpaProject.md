@@ -66,7 +66,7 @@ Happy coding!
 - [R-8] The phone number as to follow the Danish rules for phone numbers (e.g. +45 12345678)
 - [R-9] If you use a Date property in an entity, it must be a java.time.LocalDate or java.time.Date and not just a String
 - [R-10] DAO classes should follow the Singleton Pattern
-- [R-11] The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](#)
+- [R-11] The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503)
 
 ### Optional Requirements
 
