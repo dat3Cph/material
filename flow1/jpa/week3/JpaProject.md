@@ -43,7 +43,7 @@ Happy coding!
 - [US-7] As a user I want to get a list of all postcodes and city names in Denmark
 - [US-8] As a user I want to get all the information about a person (address, hobbies etc) given a phone number
 - [US-9] As a user I want to be able to do CRUD operations on all JPA entities unless it wouldn't make sense for a given entity.
-- [US-10] … Add more meaningful services of your own choice 
+- [US-10] … Add more meaningful services of your own choice.
 
 ### Project Requirements
 
@@ -57,7 +57,7 @@ Happy coding!
     - PostgresSQL
     - pgAdmin
     - Lombok
-- [R-2] The project must cont-ain a meaningful eer-diagram (use pgAdmin to create the diagram)
+- [R-2] The project must contain a meaningful EER-diagram (use pgAdmin to create the diagram)
 - [R-3] The project must be documented (short) in a README.md file 
 - [R-4] The project must contain meaningful unit tests. (70 - 80 % of the methods must be tested (DAO, Entity ...))
 - [R-5] JPA annotations must be used for mapping domain classes
@@ -66,13 +66,15 @@ Happy coding!
 - [R-8] The phone number as to follow the Danish rules for phone numbers (e.g. +45 12345678)
 - [R-9] If you use a Date property in an entity, it must be a java.time.LocalDate or java.time.Date and not just a String
 - [R-10] DAO classes should follow the Singleton Pattern
-- [R-11] The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503)
 
 ### Optional Requirements
 
 - [OPT-1] 100 % CRUD coverage for all entities
 - [OPT-2] 100 % test coverage of DAO classes.
 - [OPT-3]
+
+### Hand-in
+The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503). Latest Thursday before midnight.
 
 ### Resources
 
