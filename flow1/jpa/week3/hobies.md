@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS public.hobby
 (
     id SERIAL,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    wiki_link character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    wikilink character varying(100) COLLATE pg_catalog."default" NOT NULL,
     category character varying(50) COLLATE pg_catalog."default" NOT NULL,
     type character varying(50) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT hobby_pkey PRIMARY KEY (id)
