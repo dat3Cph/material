@@ -67,19 +67,25 @@ Happy coding!
     - Lombok
 - [R2] The project must contain a meaningful eer-diagram (use pgAdmin to create the diagram)
 - [R3] The project must be documented (short) in a README.md file 
-- [R4] The project must contain meaningful unit tests. (All methods must be tested (DAO, Entity ...))
+- [R4] The project must contain meaningful unit tests. (70 - 80 % of the methods must be tested (DAO, Entity ...))
 - [R5] JPA annotations must be used for mapping domain classes
 - [R6] JPQL must be used for all CRUD operations
 - [R7] JPA annotations must include minimum once an @Enumerated, @PrePersist, @PreUpdate and @Temporal tag.
 - [R8] The phone number as to follow the Danish rules for phone numbers (e.g. +45 12345678)
-- [R9] The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](#)
+- [R9] If you use a Date property in an entity, it must be a java.time.LocalDate or java.time.Date and not just a String
+- [R10] DAO classes should follow the Singleton Pattern
+- [R11] The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](#)
 
 ### Optional Requirements
 
-- [O1] TODO
+- [O1] 100 % CRUD coverage for all entities
+- [O2] 100 % test coverage
+- [03] 
 
 
 ### Resources
+
+The links below are just suggestions. You are free to use other resources.
 
 - [ZipCode - Hobby](https://github.com/dat3startcode/dataForCA-2 )
 
