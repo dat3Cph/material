@@ -74,7 +74,7 @@ Happy coding!
 - [OPT-3]
 
 ### Hand-in
-The project must be handed in Moodle as a link to a git-repo containing the full source code incl. unit tests. [Link](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503). Latest Thursday before midnight.
+The project must be handed in on [Moodle as a link to a git-repo](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503) containing the full source code incl. unit tests. Latest Thursday before midnight.
 
 ### Resources
 
