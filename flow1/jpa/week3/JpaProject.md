@@ -19,19 +19,6 @@ diagrams, including a description, your business idea and your complete user sto
 
 Happy coding!
 
-
-## Technologies
-
-- JPA
-- JPQL
-- Maven
-- JDK 17
-- JUnit 5
-- Docker
-- PostgresSQL
-- pgAdmin
-- Lombok
-
 ## User Stories
 
 - [US-1] As a user I want to get all the information about a person
