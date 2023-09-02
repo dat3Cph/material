@@ -15,7 +15,7 @@ problem domain (the subject area the software deals with). It defines the entiti
 The last step is to create a diagram that mirrors your future database, also known as an EER diagram.
 
 Your Domain Model and EER diagram will be the foundation for your data model and the JPA entities you will later create. Both
-diagrams should be added with explanations to your README.md file with your specific business idea and user stories.
+diagrams, including a description, your business idea and your complete user stories should be added to your README.md file.
 
 Happy coding!
 
@@ -51,14 +51,14 @@ Happy coding!
     - JPA
     - JPQL
     - Maven
-    - JDK 17
+    - JDK 17^
     - JUnit 5
     - Docker
     - PostgresSQL
     - pgAdmin
     - Lombok
 - [R-2] The project must contain a meaningful EER-diagram (use pgAdmin to create the diagram)
-- [R-3] The project must be documented (short) in a README.md file 
+- [R-3] The project must be documented in a README.md file(*)
 - [R-4] The project must contain meaningful unit tests. (70 - 80 % of the methods must be tested (DAO, Entity ...))
 - [R-5] JPA annotations must be used for mapping domain classes
 - [R-6] JPQL must be used for all CRUD operations
@@ -72,6 +72,16 @@ Happy coding!
 - [OPT-1] 100 % CRUD coverage for all entities
 - [OPT-2] 100 % test coverage of DAO classes.
 - [OPT-3]
+
+### README.md
+
+The Readme.md file must contain the following:
+
+- [R-3] A description of your business idea
+- [R-3] An Domain Model of your business idea
+- [R-3] An EE-diagram of your database
+- [R-3] A group description of your group work and how you have collaborated (GIT, Trello, Discord, who did what, etc.)
+- [R-3] All technical requirements listed above under Project Requirements
 
 ### Hand-in
 The project must be handed in on [Moodle as a link to a git-repo](https://cphbusiness.mrooms.net/mod/assign/view.php?id=621503) containing the full source code incl. unit tests. Latest Thursday before midnight.
