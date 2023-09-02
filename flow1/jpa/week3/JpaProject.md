@@ -34,7 +34,7 @@ Happy coding!
 
 ### Project Requirements
 
-- [R-1] The project must use the following technologies
+- [R-1] The project must include the following technologies
     - JPA
     - JPQL
     - Maven
