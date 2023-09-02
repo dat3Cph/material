@@ -57,8 +57,9 @@ Happy coding!
 ### Optional Requirements
 
 - [OPT-1] 100 % CRUD coverage for all entities
-- [OPT-2] 100 % test coverage of DAO classes.
-- [OPT-3]
+- [OPT-2] 100 % test coverage of all DAO classes.
+- [OPT-3] Create a method that you could use later in connection with pagination (e.g. a method that returns a list of persons given a page number and a page size)
+- [OPT-4] Provide a search functionality that allows users to filter and find others based on various criteria, such as location, age, or common hobbies.
 
 ### README.md
 
