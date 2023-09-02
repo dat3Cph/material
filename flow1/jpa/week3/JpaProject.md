@@ -60,6 +60,8 @@ Happy coding!
 - [OPT-2] 100 % test coverage of all DAO classes.
 - [OPT-3] Create a method that you could use later in connection with pagination (e.g. a method that returns a list of persons given a page number and a page size)
 - [OPT-4] Provide a search functionality that allows users to filter and find others based on various criteria, such as location, age, or common hobbies.
+- [OPT-5] Add a Logger to your project and log all CRUD operations to the Console and all exceptions to a file.
+- [OPT-6] … Add more meaningful services of your own choice.
 
 ### README.md
 
