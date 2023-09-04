@@ -27,7 +27,7 @@ public class TimeZoneExample {
 
         // Define a ZoneId for different time zones
         ZoneId newYorkZone = ZoneId.of("America/New_York");
-        ZoneId londonZone = ZoneId.of("Europe/Copenhagen"); // See all zones: https://mkyong.com/java8/java-display-all-zoneid-and-its-utc-offset/
+        ZoneId londonZone = ZoneId.of("Europe/Copenhagen"); // 
 
         // Convert LocalDateTime to ZonedDateTime for specific time zones
         ZonedDateTime newYorkTime = localDateTime.atZone(newYorkZone);

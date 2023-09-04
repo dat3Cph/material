@@ -1,6 +1,7 @@
 # Week 4: Java 8 Deep Dive
 ## Content
-Lambda, Functional Interfaces, Streams, Optionals, Collectors, Generics, Functional Programming and much more
+Lambda, Functional Interfaces, Streams, Collectors, Generics, Functional Programming and much more 
+
 Monday:
 - [Part 1](Java8DeepDive.md)
 - [Exercises](ClassExercises.md)

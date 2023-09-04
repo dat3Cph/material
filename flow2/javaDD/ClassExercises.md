@@ -14,15 +14,14 @@ Implement the following arithmetic operations using lambda expressions:
 - Modulus
 - Power
 
-Implement the following methods that take two integers and an `ArithmeticOperation` and return the result of the operation:
+Implement the following methods that take either 2 integers or integer arrays and an `ArithmeticOperation` and return the result of the operation:
 - `int operate(int a, int b, ArithmeticOperation op)`
 - `int[] operate(int[] a, int[] b, ArithmeticOperation op)`
 
 ## 2. Functional Programming
-Implement the following methods using lambda expressions:
-- `int[] map(int[] a, ArithmeticOperation op)`
-- `int[] filter(int[] a, ArithmeticOperation op)`
-- `int reduce(int[] a, ArithmeticOperation op)`
+Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`):
+- `int[] map(int[] a, MyTransformingType op)`
+- `int[] filter(int[] a, MyValidatingType op)`
 
 ## 3. Functional Interfaces
 Use the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`.

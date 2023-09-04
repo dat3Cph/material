@@ -209,7 +209,24 @@ In this example, the `evenoddpartitioningcollector` class implements the `collec
 
 This example demonstrates the process of creating a custom collector to handle a specific use case. custom collectors allow you to define complex accumulation strategies and are a powerful tool for customizing the behavior of your stream operations.
 
-## [New date and time api](JavaTimeAPI.md)
+## New date and time api
+- **Drawbacks of the old date and calendar apis.**
+  - mutable state:
+   both date and calendar were mutable classes, meaning that their internal state could be modified after creation. this made them prone to unexpected side effects and made it challenging to reason about the state of objects.
+  - zero-based months:
+   in the calendar api, months were represented using zero-based indexing. for example, january was represented as month 0, february as month 1, and so on. this was counterintuitive and led to confusion and mistakes in code.
+  - lack of immutability:
+   the date class was mutable, which made it challenging to ensure thread safety in multi-threaded environments.
+- **java.time package:** 
+  - localdate, 
+  - localtime, 
+  - localdatetime, 
+  - instant, 
+  - duration, 
+  - period.
+- **Working with:**
+  - **time zones** and 
+  - **formatting dates**.
 
 
 ## Generics:
@@ -249,12 +266,12 @@ Generic classes in java allow you to create classes that can work with different
 to define a generic class, you use angle brackets (`<>`) to specify a type parameter. this type parameter acts as a placeholder for an actual data type that will be provided when an instance of the class is created. here's the basic syntax:
 
 ```java
-public class mygenericclass<t> {
+public class mygenericclass<T> {
     // class members and methods
 }
 ```
 
-In this example, `t` is the type parameter. it can be any valid java identifier, but by convention, single uppercase letters like `t` are often used. you can use this type parameter within the class just like any other type.
+In this example, `T` is the type parameter. it can be any valid java identifier, but by convention, single uppercase letters like `T` are often used. you can use this type parameter within the class just like any other type.
 
 **Using a generic class:**
 
@@ -264,10 +281,10 @@ when you create an instance of a generic class, you provide the actual type argu
 public class main {
     public static void main(string[] args) {
         // parameterize mygenericclass with integer
-        mygenericclass<integer> intobj = new mygenericclass<>();
+        mygenericclass<Integer> intobj = new mygenericclass<>();
         
         // parameterize mygenericclass with string
-        mygenericclass<string> strobj = new mygenericclass<>();
+        mygenericclass<String> strobj = new mygenericclass<>();
     }
 }
 ```
@@ -277,31 +294,31 @@ public class main {
 here's a simple example of a generic class that represents a box that can hold any type of object:
 
 ```java
-public class box<t> {
-    private t content;
+public class Box<T> {
+    private T content;
     
-    public void setcontent(t content) {
+    public void setcontent(T content) {
         this.content = content;
     }
     
-    public t getcontent() {
+    public T getcontent() {
         return content;
     }
     
     public static void main(string[] args) {
-        box<integer> intbox = new box<>();
-        intbox.setcontent(42);
+        Box<Integer> intBox = new Box<>();
+        intBox.setcontent(42);
         
-        box<string> strbox = new box<>();
-        strbox.setcontent("hello, world!");
+        Box<String> strBox = new Box<>();
+        strBox.setcontent("hello, world!");
         
-        system.out.println(intbox.getcontent()); // output: 42
-        system.out.println(strbox.getcontent()); // output: hello, world!
+        system.out.println(intBox.getcontent()); // output: 42
+        system.out.println(strBox.getcontent()); // output: hello, world!
     }
 }
 ```
 
-In this example, the `box` class is defined with a type parameter `t`. instances of `box` are created by specifying the actual type (e.g., `integer`, `string`) when declaring the variable.
+In this example, the `Box` class is defined with a type parameter `T`. instances of `Box` are created by specifying the actual type (e.g., `Integer`, `String`) when declaring the variable.
 
 **Implementing generic interfaces in java**
 
@@ -312,19 +329,19 @@ generic interfaces allow you to create flexible and reusable contracts that can 
 A generic interface is defined similarly to a regular interface, with the addition of type parameters enclosed in angle brackets (`<>`). these type parameters represent placeholders for actual types that will be provided when implementing the interface. here's the basic syntax:
 
 ```java
-public interface mygenericinterface<t> {
+public interface Mygenericinterface<T> {
     // method signatures
 }
 ```
 
-In this example, `t` is the type parameter of the generic interface.
+In this example, `T` is the type parameter of the generic interface.
 
 **Implementing a generic interface:**
 
 When you implement a generic interface, you need to provide the actual type argument that matches the type parameter of the interface. this allows you to customize the interface methods to work with specific data types. here's how you implement a generic interface:
 
 ```java
-public class myimplementation<t> implements mygenericinterface<t> {
+public class Myimplementation<T> implements Mygenericinterface<T> {
     // implement interface methods
 }
 ```
@@ -334,66 +351,66 @@ public class myimplementation<t> implements mygenericinterface<t> {
 here's a practical example of a generic interface called `stack`, which represents a stack data structure. the interface defines methods to push, pop, and peek at elements in the stack:
 
 ```java
-public interface stack<t> {
-    void push(t element);
-    t pop();
-    t peek();
+public interface Stack<T> {
+    void push(T element);
+    T pop();
+    T peek();
 }
 ```
 
 Now, let's implement the `stack` interface with a class that uses a list to maintain the stack:
 
 ```java
-import java.util.arraylist;
-import java.util.list;
+import java.util.ArrayList;
+import java.util.List;
 
-public class liststack<t> implements stack<t> {
-    private list<t> stacklist = new arraylist<>();
+public class ListStack<T> implements Stack<T> {
+    private List<T> stackList = new ArrayList<>();
 
     @override
-    public void push(t element) {
-        stacklist.add(element);
+    public void push(T element) {
+        stackList.add(element);
     }
 
     @override
-    public t pop() {
+    public T pop() {
         if (isempty()) {
-            throw new illegalstateexception("stack is empty");
+            throw new IllegalStateException("stack is empty");
         }
-        return stacklist.remove(stacklist.size() - 1);
+        return stackList.remove(stackList.size() - 1);
     }
 
     @override
-    public t peek() {
+    public T peek() {
         if (isempty()) {
-            throw new illegalstateexception("stack is empty");
+            throw new IllegalStateException("stack is empty");
         }
-        return stacklist.get(stacklist.size() - 1);
+        return stackList.get(stackList.size() - 1);
     }
 
     public boolean isempty() {
-        return stacklist.isempty();
+        return stackList.isempty();
     }
 
     public static void main(string[] args) {
-        stack<integer> intstack = new liststack<>();
-        intstack.push(10);
-        intstack.push(20);
-        intstack.push(30);
+        stack<Integer> intStack = new ListStack<>();
+        intStack.push(10);
+        intStack.push(20);
+        intStack.push(30);
         
-        system.out.println(intstack.pop()); // output: 30
-        system.out.println(intstack.peek()); // output: 20
+        system.out.println(intStack.pop()); // output: 30
+        system.out.println(intStack.peek()); // output: 20
     }
 }
 ```
 
-In this example, the `liststack` class implements the `stack` interface with a generic type parameter `t`. the class uses an `arraylist` to manage the stack. by implementing the `stack` interface, the class ensures that it adheres to the stack contract for any type `t`.
+In this example, the `ListStack` class implements the `Stack` interface with a generic type parameter `T`. the class uses an `ArrayList` to manage the Stack. by implementing the `Stack` interface, the class ensures that it adheres to the stack contract for any type `T`.
 
 ### Type parameters and wildcards:
 #### Type parameters in generic methods:
 You can use type parameters in generic methods to create methods that work with multiple types. The type parameter is declared before the return type of the method. Here's an example:
 ```java
-public class mygenericmethods {
+public class Mygenericmethods {
     public <T> void printarray(T[] array) {
         for (T element : array) {
             system.out.println(element);
@@ -401,10 +418,10 @@ public class mygenericmethods {
     }
 
     public static void main(string[] args) {
-        integer[] intarray = { 1, 2, 3 };
-        string[] strarray = { "a", "b", "c" };
+        Integer[] intarray = { 1, 2, 3 };
+        String[] strarray = { "a", "b", "c" };
 
-        mygenericmethods genericmethods = new mygenericmethods();
+        Mygenericmethods genericmethods = new Mygenericmethods();
         genericmethods.printarray(intarray); // prints 1 2 3
         genericmethods.printarray(strarray); // prints a b c
     }
