@@ -8,9 +8,8 @@
 4. **Method References** : Method references simplify code by allowing methods to be referred to using concise syntax, enhancing code readability.
 5. **Functional Interfaces** : Java 8 introduced functional interfaces, which are interfaces with a single abstract method, facilitating the use of lambda expressions.
 6. **Type Inference**: The diamond operator and improved type inference allow for more concise code when dealing with generic types.
-7. **Optional**: The Optional class helps handle null values more effectively, reducing the chances of null pointer exceptions.
-8. **Date and Time API**: The new Date and Time API (java.time) simplifies working with dates, times, and time zones, addressing many shortcomings of the old Date and Calendar classes.
-9. **Functional Programming** Paradigm: Java 8 encourages a more functional programming style, promoting immutability, pure functions, and higher-order functions, resulting in more reliable and maintainable code.
+7. **Date and Time API**: The new Date and Time API (java.time) simplifies working with dates, times, and time zones, addressing many shortcomings of the old Date and Calendar classes.
+8. **Functional Programming** Paradigm: Java 8 encourages a more functional programming style, promoting immutability, pure functions, and higher-order functions, resulting in more reliable and maintainable code.
 
 ## What is functional programming?
 - Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. While Java is primarily an object-oriented programming language, Java 8 introduced several features that enable functional programming concepts to be applied effectively. Here's how functional programming is characterized in Java:
