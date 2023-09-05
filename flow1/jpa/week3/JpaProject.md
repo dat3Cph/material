@@ -28,7 +28,7 @@ Happy coding!
 - [US-5] As a user I want to get a list all hobbies + a count of how many are interested in each hobby
 - [US-6] As a user I want to get all persons living in a given city (i.e. 2800 Lyngby)
 - [US-7] As a user I want to get a list of all postcodes and city names in Denmark
-- [US-8] As a user I want to get all the information about a person (address, hobbies etc) given a phone number
+- [US-8] As a user I want to get all the information about a person (address, hobbies etc.) given a phone number
 - [US-9] As a user I want to be able to do CRUD operations on all JPA entities unless it wouldn't make sense for a given entity.
 - [US-10] … Add more meaningful services of your own choice.
 
@@ -49,9 +49,9 @@ Happy coding!
 - [R-4] The project must contain meaningful unit tests. (70 - 80 % of the methods must be tested (DAO, Entity ...))
 - [R-5] JPA annotations must be used for mapping domain classes
 - [R-6] JPQL must be used for all CRUD operations
-- [R-7] JPA annotations must include minimum once an @Enumerated, @PrePersist, @PreUpdate and @Temporal tag.
+- [R-7] JPA annotations must include minimum once an @Enumerated, @PrePersist and @PreUpdate.
 - [R-8] The phone number as to follow the Danish rules for phone numbers (e.g. +45 12345678)
-- [R-9] If you use a Date property in an entity, it must be a java.time.LocalDate or java.time.Date and not just a String
+- [R-9] If you use a Date property in an entity, it must be a java.time.LocalDate, java.time.Date or java.time.LocalDateTime and not just a String
 - [R-10] DAO classes should follow the Singleton Pattern
 
 ### Optional Requirements

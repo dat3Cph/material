@@ -28,7 +28,7 @@
 
 1. JPQL (Java Persistence Query Language) Part 1
     - Be able to explain the purpose of JPQL and how it differs from SQL.
-    - Be able to write JPQL queries using the SELECT, FROM, WHERE, GROUP BY, HAVING, and ORDER BY clauses.
+    - Be able to write JPQL queries using the SELECT, FROM, WHERE and ORDER BY clauses.
     - Be able to write JPQL queries using aggregate functions COUNT, SUM and MIN.
 2. JPQL (Java Persistence Query Language) Part 2
     - Be able to explain and demonstrate Named Queries.
@@ -38,10 +38,11 @@
     - Be able to explain and demonstrate JPA lifecycle annotations like @PrePersist, @PostPersist, @PreUpdate, @PostUpdate, @PreRemove, @PostRemove, @PostLoad.
 4. Data Access Object (DAO) Architecture
     - Be able to explain and demonstrate the benefits of using a DAO architecture for separating database access logic from business logic. 
-5. Date and Time
+5. Be able to explain and implement the Singleton design pattern.
+6. Date and Time
     - Explain how Java Date and Time API integrates with JPA for managing date and time-related data.
     - Demonstrate the different types of date and time data using JPA annotations.
-6. Lombok
+7. Lombok
     - Be able to explain the purpose of Lombok and how it reduces boilerplate code in Java entities.
     - Explain and demonstrate how to add a private constructor to a class with Lombok.
     - Explain and demonstrate Lombok @Data, @AllArgConstructor, @RequiredArgsConstructor and @Builder annotations.
