@@ -47,4 +47,4 @@
 
 2. DTO projections in JPQL
    - Explain what an DTO is
-   - Explain and demontrate the use of DTO projections in JPQL queries
+   - Explain and demonstrate the use of DTO projections in JPQL queries
