@@ -154,6 +154,70 @@ public class JsoupCSSSelectorsExample {
 }
 ```
 
-## Data extraction
+## Data extraction using Regular Expressions
+Source: https://www.w3schools.com/java/java_regex.asp
+" A regular expression is a sequence of characters that forms a search pattern. When you search for data in a text, you can use this search pattern to describe what you are searching for.
+A regular expression can be a single character, or a more complicated pattern."
 
-## Using Regular Expressions
+Regular expressions can be very powerful for parsing and extracting specific patterns from HTML pages. Here are some common regex examples along with explanations for working with HTML content:
+
+1. **Extract All Links (HREF Attributes):**
+   - Regex: `<a[^>]*href=["'](https?[^"']+)["']`
+   - Explanation: This regex is designed to capture all anchor (`<a>`) tags and extract the URLs (HREF attributes) within them.
+   - `<a[^>]*`: Matches the opening `<a>` tag, allowing for any attributes between `<a` and `>`.
+   - `href=["'](https?[^"']+)["']`: Captures the HREF attribute value (the URL) inside double or single quotes. It matches both HTTP and HTTPS URLs.
+
+2. **Extract All Email Addresses:**
+   - Regex: `[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}`
+   - Explanation: This regex is designed to match common email address patterns within HTML content.
+   - `[a-zA-Z0-9._%+-]+`: Matches the username part of the email address.
+   - `@`: Matches the "@" symbol.
+   - `[a-zA-Z0-9.-]+`: Matches the domain name part of the email address.
+   - `\.`: Matches the dot separating the domain name and top-level domain (TLD).
+   - `[a-zA-Z]{2,}`: Matches the TLD, requiring at least two letters.
+
+3. **Extract All Image URLs (SRC Attributes):**
+   - Regex: `<img[^>]*src=["'](https?[^"']+)["']`
+   - Explanation: Similar to the link example, this regex captures all image (`<img>`) tags and extracts the image URLs (SRC attributes).
+   - `<img[^>]*`: Matches the opening `<img>` tag, allowing for any attributes between `<img` and `>`.
+   - `src=["'](https?[^"']+)["']`: Captures the SRC attribute value (the image URL) inside double or single quotes. It matches both HTTP and HTTPS URLs.
+
+4. **Extract All HTML Comments:**
+   - Regex: `<!--(.*?)-->`
+   - Explanation: This regex captures HTML comments, including their content.
+   - `<!--`: Matches the start of an HTML comment.
+   - `(.*?)`: Captures the content of the comment (including newlines and other characters).
+   - `-->`: Matches the end of an HTML comment.
+
+5. **Extract Text Inside HTML Tags (e.g., Headings):**
+   - Regex: `<h[1-6][^>]*>(.*?)<\/h[1-6]>`
+   - Explanation: This regex captures text within heading tags (e.g., `<h1>`, `<h2>`) along with the tag itself.
+   - `<h[1-6][^>]*>`: Matches the opening tag of headings from `<h1>` to `<h6`, allowing for any attributes.
+   - `(.*?)`: Captures the content of the heading.
+   - `<\/h[1-6]>`: Matches the closing tag of headings.
+
+6. **Extract URLs within JavaScript or CSS Code:**
+   - Regex: `(?:href=|src=|url\()[ '"]?(https?[^'" )]+)`
+   - Explanation: This regex captures URLs within JavaScript or CSS code by looking for common patterns like `href=`, `src=`, or `url()`.
+   - `(?:...)`: Represents a non-capturing group.
+   - `href=|src=|url\(`: Matches common URL-related patterns.
+   - `[ '"]?`: Handles optional spaces or quotes.
+   - `(https?[^'" )]+)`: Captures the URL itself.
+
+7. **Extract All HTML Tags and Their Attributes:**
+   - Regex: `<([a-zA-Z0-9\-]+)([^>]*)>`
+   - Explanation: This regex captures all HTML tags and their attributes. You can further parse the attributes if needed.
+   - `<([a-zA-Z0-9\-]+)`: Matches the opening tag, allowing for alphanumeric characters and hyphens in the tag name.
+   - `([^>]*)`: Captures any attributes inside the tag.
+
+8. **Extract All Phone Numbers (US Format):**
+   - Regex: `\b\d{3}[-.]?\d{3}[-.]?\d{4}\b`
+   - Explanation: This regex matches US phone numbers in various common formats (e.g., 555-555-5555, 555.555.5555).
+   - `\b`: Word boundary to ensure whole number matches.
+   - `\d{3}[-.]?\d{3}[-.]?\d{4}`: Matches the phone number patterns, allowing for optional hyphens or periods as separators.
+
+9. **Extract Social Media Profile Links:**
+   - Regex: `<a[^>]*href=["'](https?:\/\/(www\.)?twitter\.com\/[^"']+)["']`
+   - Explanation:
+
+It is important to notice, that while regular expressions can be helpful for basic parsing of HTML content, they are not a recommended approach for parsing complex HTML documents. For parsing and traversing HTML documents, it's usually better to use dedicated HTML parsing libraries like Jsoup, which offer more robust and structured solutions. But for getting specific data from HTML elements that are not easily accessible using CSS selectors, regular expressions can be a useful tool.
