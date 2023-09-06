@@ -47,7 +47,7 @@ Add a birth date to the Employee class and implement the following tasks using t
 The methods defined in Step 2 "Functional Programming" can be implemented using method references. Implement them using method references.
 
 # Day 2
-## 1. Streams API
+## 6. Streams API
 In this exercise, you will work with a list of books and use the Stream API to perform various operations on the data.
 1. **Create the Book Class:**
   - Create a `Book` class with attributes like title, author, publication year, and rating.
@@ -100,7 +100,7 @@ public class StreamProcessing {
 }
 ```
 
-## 4. Collectors
+## 7. Collectors
 In Java, Collectors is a utility class provided by the java.util.stream package that offers various methods to perform reduction and aggregation operations on streams of data. Collectors are used in conjunction with the Stream API to collect elements from a stream into various data structures or perform aggregation operations like summing, grouping, counting, and more.
 
 Collectors provide a convenient way to gather the results of stream operations and convert them into different formats, such as lists, sets, maps, or even custom data structures. They encapsulate the logic required for accumulating, transforming, and processing elements in a streamlined and efficient manner.
@@ -184,7 +184,7 @@ public class CollectorsExercise {
     }
 }
 ```
-## 5. Generics
+## 8. Generics
 In this exercise, you will create a generic data storage system using interfaces and classes. Your goal is to design a flexible solution that can store and retrieve data of various types while maintaining type safety.
 
 1. **Create a Generic Storage Interface:**
@@ -228,7 +228,7 @@ public class DataStorageApp {
 
 This exercise will challenge you to design a generic solution that allows for the storage and retrieval of various types of data while maintaining type safety. It will also give you hands-on experience in working with generics in both interface declarations and class implementations.
 
-## 6. Concurrency
+## 9. Concurrency
 **Exercise: Concurrency with Java 8**
 
 In this exercise, you'll work on a scenario involving multiple tasks running concurrently using the Java 8 Concurrency API. You'll use features like `CompletableFuture`, `ExecutorService`, and lambda expressions to manage parallel execution.

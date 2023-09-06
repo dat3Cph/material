@@ -2,7 +2,8 @@
 ## Monday: Web Scraping
 This exercise focuses on web scraping static content using Jsoup and regular expressions. In this exercise, you'll scrape and extract data from a webpage containing static content, such as news articles, and use regular expressions to refine and clean the extracted data.
 
-**Exercise: Web Scraping and Data Extraction with Jsoup and Regular Expressions**
+## Exercise 1 
+Web Scraping and Data Extraction with Jsoup and Regular Expressions
 
 **Objective:** Build a Java program that scrapes data from here: `https://en.wikipedia.org/wiki/Women_in_computing`. We will be using Jsoup, and then `regular expressions` to clean and extract specific information from the scraped content.
 
@@ -40,7 +41,8 @@ This exercise focuses on web scraping static content using Jsoup and regular exp
 
 This exercise provides a hands-on experience in web scraping static content with Jsoup and using regular expressions to extract and clean data. It's a valuable skill for extracting structured information from websites that may not offer APIs or structured data formats.
 
-## Wednesday: Dynamic Content and Testing
+## Exercise 2
+Wednesday: Dynamic Content and Testing
 Exercise that combines Selenium and Jsoup for web scraping, focusing on data cleaning, error handling, and pagination.
 In this exercise, you'll scrape data from `amazon.com`: a paginated website, clean the data, and handle errors that may arise during the process.
 
