@@ -1,8 +1,10 @@
 # Java 8 Deep Dive
+
 ## Day 1
 
 ## Introduction to Java 8 Features
-1. **Lambdas* enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
+
+1. **Lambdas** enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
 2. **Streams** provide a declarative way to process data in parallel or sequentially, promoting cleaner and more readable code.
 3. **Default Methods**: Interfaces can now have default method implementations, allowing for backward-compatible additions to interfaces without breaking existing implementations.
 4. **Method References** : Method references simplify code by allowing methods to be referred to using concise syntax, enhancing code readability.
