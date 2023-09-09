@@ -2,8 +2,8 @@
 ## Day 1
 
 ## Introduction to Java 8 Features
-1. **Lambdas**: Lambdas enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
-2. **Streams**: Streams provide a declarative way to process data in parallel or sequentially, promoting cleaner and more readable code.
+1. **Lambdas* enable concise and functional-style coding, making it easier to express operations on collections and functional interfaces.
+2. **Streams** provide a declarative way to process data in parallel or sequentially, promoting cleaner and more readable code.
 3. **Default Methods**: Interfaces can now have default method implementations, allowing for backward-compatible additions to interfaces without breaking existing implementations.
 4. **Method References** : Method references simplify code by allowing methods to be referred to using concise syntax, enhancing code readability.
 5. **Functional Interfaces** : Java 8 introduced functional interfaces, which are interfaces with a single abstract method, facilitating the use of lambda expressions.
@@ -12,7 +12,8 @@
 8. **Functional Programming** Paradigm: Java 8 encourages a more functional programming style, promoting immutability, pure functions, and higher-order functions, resulting in more reliable and maintainable code.
 
 ## What is functional programming?
-- Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. While Java is primarily an object-oriented programming language, Java 8 introduced several features that enable functional programming concepts to be applied effectively. Here's how functional programming is characterized in Java:
+
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. While Java is primarily an object-oriented programming language, Java 8 introduced several features that enable functional programming concepts to be applied effectively. Here's how functional programming is characterized in Java:
 
 1. **First-Class Functions:**
    In functional programming, functions are first-class citizens, meaning they can be treated like any other value. Java introduced lambda expressions (anonymous functions) in Java 8, allowing you to pass functions as arguments to other functions and return them as values from functions.
@@ -35,7 +36,9 @@
 While Java is not a purely functional programming language like Haskell or Scala, it has incorporated many functional programming features that allow developers to write code using functional paradigms when appropriate. This can lead to more modular, maintainable, and efficient code in various scenarios.
 
 ## Lambda Expressions
+
 What are Lambda expressions?
+
 - Lambda expressions are a significant feature introduced in Java 8 that facilitates functional programming by allowing you to express instances of single-method interfaces (functional interfaces) using a concise syntax. Lambda expressions essentially enable you to treat functions as method arguments, creating a more readable and expressive code style.
 
 - In simpler terms, a lambda expression is a way to represent an anonymous function (a function without a name, that you can pass around as if it was a variable). Lambda expressions are primarily used to define inline implementations of functional interfaces.
@@ -84,12 +87,14 @@ Lambda expressions are particularly useful in scenarios like using the Stream AP
 Lambda expressions are closely related to functional interfaces. A functional interface is an interface that contains **exactly one abstract method**, and it's the kind of interface that you'll often work with when using lambda expressions.
 
 ## Functional Interfaces
+
 A functional interface is an interface that contains **exactly one abstract method**, and it's the kind of interface that you'll often work with when using lambda expressions.
 
 Creating custom functional interfaces.
 Example code here: https://raw.githubusercontent.com/HartmannDemoCode/callbackInJava/master/src/callbackinjava/CallbackInJava.java
 
 ## Some Functional interfaces in the `java.util.function` package: 
+
 - Predicate, 
 - Consumer, 
 - Function, 
@@ -166,14 +171,15 @@ public class SupplierExample {
 ```
 
 These functional interfaces, along with lambda expressions, provide a powerful way to work with functional programming concepts in Java.
-7. Benefits of using Lambdas: code conciseness and functional programming style.
-8. Lambda examples: 
-  - sorting, 
-  - filtering, and 
-  - mapping collections.
 
+### Lambda examples:
+
+- sorting, 
+- filtering, and 
+- mapping collections.
 
 ## Functional Programming Concepts:
+
 - **Immutability** and why it's important
 - **Pure functions**, side effects, and referential transparency (it consistently produces the same output for the same input, and its evaluation doesn't have side effects that affect the rest of the program)
   - **Equational Reasoning**: Referential transparency allows for equational reasoning, which means you can substitute function calls or expressions with their corresponding values and still reason about the correctness of your program.
@@ -184,14 +190,16 @@ These functional interfaces, along with lambda expressions, provide a powerful w
 - In functional programming, designing functions and expressions to be referentially transparent is a key principle that encourages modularity, predictability, and robustness in software systems. It also aligns well with the goal of creating code that is easier to reason about and maintain.
 
 ## Java Time API 
+
 [Working with dates and times](JavaTimeAPI.md)
 
 ## Default and Static Methods in Interfaces
-- In Java 8, default methods were introduced in interfaces. A default method is a method that is defined in an interface with a default implementation. This means that if a class implements that interface but doesn't provide its own implementation for the default method, the default implementation from the interface will be used.
 
-- However, conflicts can arise when a class implements multiple interfaces that have default methods with the same signature. This situation leads to an ambiguity: which default method implementation should the class use?
+In Java 8, default methods were introduced in interfaces. A default method is a method that is defined in an interface with a default implementation. This means that if a class implements that interface but doesn't provide its own implementation for the default method, the default implementation from the interface will be used.
 
-- Here's an example to illustrate the concept:
+However, conflicts can arise when a class implements multiple interfaces that have default methods with the same signature. This situation leads to an ambiguity: which default method implementation should the class use?
+
+Here's an example to illustrate the concept:
 
 ```java
 interface InterfaceA {
@@ -225,6 +233,7 @@ public class Main {
     }
 }
 ```
+
 - In this example, the `MyClass` class implements both `InterfaceA` and `InterfaceB`, both of which have a default method named `doSomething()`. This would lead to a compilation error due to a conflict.
 
 - To resolve this conflict, you need to provide your own implementation of the conflicting method in the implementing class (`MyClass` in this case). You can call one of the default implementations explicitly using the `InterfaceName.super.methodName()` syntax, or you can provide a completely new implementation. In the example above, if you uncomment the overridden `doSomething()` method in `MyClass`, you can decide which default implementation to use by calling the specific default method using `InterfaceA.super.doSomething()`.
@@ -232,7 +241,9 @@ public class Main {
 - Resolving conflicts with default methods ensures that the implementing class provides a clear and unambiguous choice of which default implementation to use when multiple interfaces have methods with the same signature.
 
 ## Method References
+
 Simplifying Lambda expressions using method references.
+
 - Types of method references: static, instance, and constructor references.
 
 Method references in Java provide a concise way to refer to methods or constructors and use them as arguments for higher-order functions like those provided by the Stream API, functional interfaces, and more. Here are examples of static, instance, and constructor method references:
@@ -325,7 +336,7 @@ public class ConstructorMethodReferenceExample {
         System.out.println("Person Name: " + person.getName());
     }
 
-    @FunctionalInterface
+@FunctionalInterface
 interface PersonCreator {
     Person createPerson(String name);
 }
