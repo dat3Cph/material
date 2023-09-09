@@ -24,15 +24,13 @@ Implement the following methods using lambda expressions (First create the appro
 - `int[] filter(int[] a, MyValidatingType op)`
 
 ## 3. Functional Interfaces
-Use the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`.
-Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
-Use `Supplier` to create a list of Employee objects based on a list of names like `Array.asList("John", "Jane", "Jack", "Joe", "Jill")`.
-Use `Consumer` to print the list of Employee objects.
-Use `Function` to convert a list of Employee objects to a list of names.
-
-Implement the following functional interfaces:
-- `interface Predicate<T>` with a method `boolean test(T t)` to check if a given employee is older than 18.
-- `interface Consumer<T>` with a method `void accept(T t)` to write a list of employees to a file.
+- Use the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`.
+- Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
+- Use `Supplier` to create a list of Employee objects based on a list of names like `Array.asList("John", "Jane", "Jack", "Joe", "Jill")`.
+- Use `Consumer` to print the list of Employee objects.
+- Use `Function` to convert a list of Employee objects to a list of names.
+- Use `Predicate`to check if a given employee is older than 18.
+- Use `Consumer` to write a list of employees to a file.
 
 ## 4. Time API
 Add a birth date to the Employee class and implement the following tasks using the Java Time API:
