@@ -1,12 +1,15 @@
 # Day 1
 ## 1. Lambda
 Based on the following functional interface:
+
 ```java
 interface ArithmeticOperation {
     int perform(int a, int b);
 }
 ```
+
 Implement the following arithmetic operations using lambda expressions:
+
 - Addition
 - Subtraction
 - Multiplication
@@ -15,38 +18,55 @@ Implement the following arithmetic operations using lambda expressions:
 - Power
 
 Implement the following methods that take either 2 integers or integer arrays and an `ArithmeticOperation` and return the result of the operation:
+
 - `int operate(int a, int b, ArithmeticOperation op)`
 - `int[] operate(int[] a, int[] b, ArithmeticOperation op)`
 
 ## 2. Functional Programming
+
 Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`):
+
 - `int[] map(int[] a, MyTransformingType op)`
 - `int[] filter(int[] a, MyValidatingType op)`
 
+Check hints for how the [map](./ExerciseHints.md#the-map-function) and [filter](./ExerciseHints.md#the-filter-function) methods work.
+
 ## 3. Functional Interfaces
-- Use the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`.
-- Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
-- Use `Supplier` to create a list of Employee objects based on a list of names like `Array.asList("John", "Jane", "Jack", "Joe", "Jill")`.
-- Use `Consumer` to print the list of Employee objects.
-- Use `Function` to convert a list of Employee objects to a list of names.
-- Use `Predicate`to check if a given employee is older than 18.
-- Use `Consumer` to write a list of employees to a file.
+
+Apply the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`:
+
+1. Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
+2. Use `Supplier` to create a list of Employee objects based on a list of names like `Array.asList("John", "Jane", "Jack", "Joe", "Jill")`.
+3. Use `Consumer` to print the list of Employee objects.
+4. Use `Function` to convert a list of Employee objects to a list of names.
+5. Use `Predicate`to check if a given employee is older than 18.
+6. Use `Consumer` to write a list of employees to a file.
+
+Check these hints for [explanations of the built-in functional interfaces](./Java8DeepDive.md#functional-interfaces).
 
 ## 4. Time API
+
 Add a birth date to the Employee class and implement the following tasks using the Java Time API:
-- calculate the average age of all employees
-- Calculate the age of each employee based on their birthdate.
-- Filter and display employees who have birthdays in a specific month.
-- Group employees by birth month and display the count of employees in each group.
-- Calculate the average age of employees.
-- List all employees who has a birthday in the current month.
+
+1. calculate the average age of all employees
+2. Calculate the age of each employee based on their birthdate.
+3. Filter and display employees who have birthdays in a specific month.
+4. Group employees by birth month and display the count of employees in each group.
+5. Calculate the average age of employees.
+6. List all employees who has a birthday in the current month.
+
+Check these hints for [explanations of the date and time API in Java 8](./JavaTimeAPI.md).
 
 ## 5. Method References
+
 The methods defined in Step 2 "Functional Programming" can be implemented using method references. Implement them using method references.
 
 # Day 2
+
 ## 6. Streams API
+
 In this exercise, you will work with a list of books and use the Stream API to perform various operations on the data.
+
 1. **Create the Book Class:**
   - Create a `Book` class with attributes like title, author, publication year, and rating.
 2. **Data Collection:**
