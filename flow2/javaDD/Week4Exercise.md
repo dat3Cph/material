@@ -106,58 +106,5 @@ In this example, the `TaskList` class is parameterized with a type `T` that exte
 
 By using generics in your `Task` and `TaskList` classes, you can create more robust and flexible code that adheres to Java's type system and promotes cleaner, safer, and more reusable code.
 
-5. **Solution** 
-//TODO: REMOVE THIS SECTION
-```java
-import java.time.LocalDate;
-import java.util.List;
 
-public class TaskListApp {
-    public static void main(String[] args) {
-        // Create tasks
-        Task task1 = new Task("Finish report", "Write the final report", LocalDate.of(2023, 8, 15));
-        Task task2 = new Task("Grocery shopping", "Buy groceries for the week", LocalDate.of(2023, 8, 12));
-        Task task3 = new Task("Exercise", "Go for a jog in the park", LocalDate.of(2023, 8, 13));
-
-        // Create a TaskList
-        TaskList<Task> taskList = new TaskList<>();
-
-        // Add tasks to the list
-        taskList.addTask(task1);
-        taskList.addTask(task2);
-        taskList.addTask(task3);
-
-        // Print all tasks
-        System.out.println("All Tasks:");
-        List<Task> allTasks = taskList.getTasks();
-        for (Task task : allTasks) {
-            System.out.println(task);
-        }
-
-        // Filter tasks by keyword
-        String keyword = "grocery";
-        List<Task> filteredTasks = taskList.filterTasksByKeyword(keyword);
-        System.out.println("\nTasks containing the keyword '" + keyword + "':");
-        for (Task task : filteredTasks) {
-            System.out.println(task);
-        }
-        filteredTasks.stream().forEach(System.out::println);
-
-        // Sort tasks by due date
-        List<Task> sortedTasks = taskList.sortTasksByDueDate();
-        System.out.println("\nTasks sorted by due date:");
-        sortedTasks.stream().forEach(System.out::println);
-
-        // Get tasks due today
-        LocalDate today = LocalDate.now();
-        List<Task> tasksDueToday = taskList.getTasksDueOn(today);
-        System.out.println("\nTasks due today:");
-        tasksDueToday.stream().forEach(System.out::println);
-
-        // Get tasks overdue
-        List<Task> overdueTasks = taskList.getOverdueTasks(today);
-        System.out.println("\nOverdue tasks:");
-        overdueTasks.stream().forEach(System.out::println);
-    }
-}
 ```
