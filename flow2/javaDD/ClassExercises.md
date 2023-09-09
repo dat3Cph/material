@@ -22,6 +22,8 @@ Implement the following methods that take either 2 integers or integer arrays an
 - `int operate(int a, int b, ArithmeticOperation op)`
 - `int[] operate(int[] a, int[] b, ArithmeticOperation op)`
 
+Hint: Check these explanations and examples on [lambda expressions](./Java8DeepDive.md#lambda-expressions).
+
 ## 2. Functional Programming
 
 Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`):
@@ -60,6 +62,8 @@ Check these hints for [explanations of the date and time API in Java 8](./JavaTi
 ## 5. Method References
 
 The methods defined in Step 2 "Functional Programming" can be implemented using method references. Implement them using method references.
+
+Check these hints for [method references](./Java8DeepDive.md#method-references).
 
 # Day 2
 
