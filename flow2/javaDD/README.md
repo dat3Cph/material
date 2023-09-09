@@ -21,7 +21,7 @@ Wednesday:
 
 Thursday:
 
-- [Exercises](Week4Exercises.md)
+- [Exercise](./Week4Exercise.md)
 
 ## Learning Objectives for Java 8 week
 
