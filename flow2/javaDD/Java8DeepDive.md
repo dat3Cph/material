@@ -184,10 +184,10 @@ These functional interfaces, along with lambda expressions, provide a powerful w
 
 - **Immutability** and why it's important
 - **Pure functions**, side effects, and referential transparency (it consistently produces the same output for the same input, and its evaluation doesn't have side effects that affect the rest of the program)
-  - **Equational Reasoning**: Referential transparency allows for equational reasoning, which means you can substitute function calls or expressions with their corresponding values and still reason about the correctness of your program.
-  - **Code Optimization**: Since referentially transparent expressions can be replaced with their values, compilers and runtime systems have more freedom to optimize the code without changing its behavior.
-  - **Parallelism and Concurrency**: In a referentially transparent program, you can safely parallelize or reorder function calls without introducing unexpected side effects.
-  - **Testing**: Referentially transparent functions are easier to test because you can predict their output based on their inputs, without worrying about hidden dependencies or changing states.
+- **Equational Reasoning**: Referential transparency allows for equational reasoning, which means you can substitute function calls or expressions with their corresponding values and still reason about the correctness of your program.
+- **Code Optimization**: Since referentially transparent expressions can be replaced with their values, compilers and runtime systems have more freedom to optimize the code without changing its behavior.
+- **Parallelism and Concurrency**: In a referentially transparent program, you can safely parallelize or reorder function calls without introducing unexpected side effects.
+- **Testing**: Referentially transparent functions are easier to test because you can predict their output based on their inputs, without worrying about hidden dependencies or changing states.
 - **Code Reusability**: Referential transparency promotes modular and reusable code since functions with this property are isolated from the context in which they are used.
 - In functional programming, designing functions and expressions to be referentially transparent is a key principle that encourages modularity, predictability, and robustness in software systems. It also aligns well with the goal of creating code that is easier to reason about and maintain.
 
