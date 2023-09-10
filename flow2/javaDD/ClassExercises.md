@@ -50,7 +50,7 @@ Check these hints for [explanations of the built-in functional interfaces](./Jav
 
 Add a birth date to the Employee class and implement the following tasks using the Java Time API:
 
-1. Calculate the age of each employee based on their birthdate.1. 
+1. Calculate the age of each employee based on their birthdate
 2. Calculate the average age of all employees
 3. Filter and display employees who have birthdays in a specific month.
 4. Group employees by birth month and display the count of employees in each group.
