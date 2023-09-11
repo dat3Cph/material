@@ -102,7 +102,7 @@ These are the primary ways to create streams in java. depending on your data sou
 
 - **Collecting elements into a map:**
    ```java
-   map<String, Integer> nameLengthMap = Stream.of("alice", "bob", "charlie")
+   Map<String, Integer> nameLengthMap = Stream.of("alice", "bob", "charlie")
        .collect(Collectors.toMap(name -> name, name -> name.length()));
    ```
 
@@ -120,7 +120,7 @@ These are the primary ways to create streams in java. depending on your data sou
    double average = Stream.of(1, 2, 3, 4, 5)
        .collect(collectors.averagingint(Integer::intvalue));
    
-   optional<Integer> max = Stream.of(1, 2, 3, 4, 5)
+   Optional<Integer> max = Stream.of(1, 2, 3, 4, 5)
        .collect(Collectors.maxby(Comparator.naturalorder()));
    ```
 
@@ -155,16 +155,16 @@ public class CustomCollectorExample {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         NumbersPartition partition = numbers.stream()
-            .collect(new evenoddpartitioningcollector());
+            .collect(new EvenOddPartitioningCollector());
 
-        system.out.println("even numbers: " + partition.evennumbers);
-        system.out.println("odd numbers: " + partition.oddnumbers);
+        System.out.println("even numbers: " + partition.evennumbers);
+        System.out.println("odd numbers: " + partition.oddnumbers);
     }
 }
 
 class NumbersPartition {
-    List<Integer> evennumbers = new ArrayList<>();
-    List<Integer> oddnumbers = new ArrayList<>();
+    List<Integer> evenNumbers = new ArrayList<>();
+    List<Integer> oddNumbers = new ArrayList<>();
 }
 
 class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartition, NumbersPartition> {
@@ -177,9 +177,9 @@ class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartitio
     public BiConsumer<NumbersPartition, Integer> accumulator() {
         return (partition, number) -> {
             if (number % 2 == 0) {
-                Partition.evennumbers.add(number);
+                Partition.evenNumbers.add(number);
             } else {
-                Partition.oddnumbers.add(number);
+                Partition.oddNumbers.add(number);
             }
         };
     }
@@ -187,8 +187,8 @@ class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartitio
     @override
     public BinaryOperator<NumbersPartition> combiner() {
         return (left, right) -> {
-            left.evennumbers.addall(right.evennumbers);
-            left.oddnumbers.addall(right.oddnumbers);
+            left.evenNumbers.addAll(right.evenNumbers);
+            left.oddNumbers.addAll(right.oddNumbers);
             return left;
         };
     }
@@ -200,7 +200,7 @@ class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartitio
 
     @override
     public Set<Characteristics> characteristics() {
-        return EnumSet.noneof(Characteristics.class);
+        return EnumSet.noneOf(Characteristics.class);
     }
 }
 ```
@@ -218,12 +218,12 @@ This example demonstrates the process of creating a custom collector to handle a
   - lack of immutability:
    the date class was mutable, which made it challenging to ensure thread safety in multi-threaded environments.
 - **java.time package:** 
-  - localdate, 
-  - localtime, 
-  - localdatetime, 
-  - instant, 
-  - duration, 
-  - period.
+  - LocalDate, 
+  - LocalTime, 
+  - LocalDateTime, 
+  - Instant, 
+  - Duration, 
+  - Period.
 - **Working with:**
   - **time zones** and 
   - **formatting dates**.
@@ -239,7 +239,7 @@ example (first without generics, then with generics):
 ```java
 List myList = new ArrayList();
 myList.add("hello");
-Integer value = (Integer) mylist.get(0); // runtime classcastexception
+Integer value = (Integer) myList.get(0); // runtime classcastexception
 ```
   - with generics:
 ```java
@@ -281,10 +281,10 @@ when you create an instance of a generic class, you provide the actual type argu
 public class Main {
     public static void main(string[] args) {
         // parameterize mygenericclass with integer
-        MyGenericclass<Integer> intObj = new MyGenericclass<>();
+        MyGenericClass<Integer> intObj = new MyGenericClass<>();
         
         // parameterize mygenericclass with string
-        MyGenericclass<String> strobj = new MyGenericclass<>();
+        MyGenericClass<String> strObj = new MyGenericClass<>();
     }
 }
 ```
@@ -312,8 +312,8 @@ public class Box<T> {
         Box<String> strBox = new Box<>();
         strBox.setContent("hello, world!");
         
-        system.out.println(intBox.getcontent()); // output: 42
-        system.out.println(strBox.getcontent()); // output: hello, world!
+        System.out.println(intBox.getContent()); // output: 42
+        System.out.println(strBox.getContent()); // output: hello, world!
     }
 }
 ```
@@ -374,7 +374,7 @@ public class ListStack<T> implements Stack<T> {
 
     @override
     public T pop() {
-        if (isempty()) {
+        if (isEmpty()) {
             throw new IllegalStateException("stack is empty");
         }
         return stackList.remove(stackList.size() - 1);
@@ -382,14 +382,14 @@ public class ListStack<T> implements Stack<T> {
 
     @override
     public T peek() {
-        if (isempty()) {
+        if (isEmpty()) {
             throw new IllegalStateException("stack is empty");
         }
         return stackList.get(stackList.size() - 1);
     }
 
-    public boolean isempty() {
-        return stackList.isempty();
+    public boolean isEmpty() {
+        return stackList.isEmpty();
     }
 
     public static void main(string[] args) {
@@ -398,8 +398,8 @@ public class ListStack<T> implements Stack<T> {
         intStack.push(20);
         intStack.push(30);
         
-        system.out.println(intStack.pop()); // output: 30
-        system.out.println(intStack.peek()); // output: 20
+        System.out.println(intStack.pop()); // output: 30
+        System.out.println(intStack.peek()); // output: 20
     }
 }
 ```
