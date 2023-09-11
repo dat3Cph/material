@@ -329,7 +329,6 @@ public class ConstructorMethodReferenceExample {
 interface PersonCreator {
     Person createPerson(String name);
 }
-
 }
 ```
 

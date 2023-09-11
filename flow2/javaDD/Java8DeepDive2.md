@@ -23,53 +23,53 @@ There are several ways to create streams in java. streams are created from vario
    you can create a stream from a collection using the `stream()` method.
 
    ```java
-   list<string> list = arrays.aslist("apple", "banana", "cherry");
-   stream<string> streamfromlist = list.stream();
+   list<string> list = Arrays.aslist("apple", "banana", "cherry");
+   Stream<String> streamFromList = list.stream();
    ```
 2. **from an array:**
-   you can create a stream from an array using the `arrays.stream()` method.
+   you can create a stream from an array using the `Arrays.stream()` method.
 
    ```java
-   string[] array = {"one", "two", "three"};
-   stream<string> streamfromarray = arrays.stream(array);
+   String[] array = {"one", "two", "three"};
+   Stream<String> streamFromArray = Arrays.stream(array);
    ```
 3. **from i/o channels:**
    you can create a stream from an i/o channel, like a file, using `files.lines()`.
 
    ```java
-   try (stream<string> lines = files.lines(paths.get("file.txt"))) {
+   try (stream<string> lines = Files.lines(Paths.get("file.txt"))) {
        // process each line
-   } catch (ioexception e) {
-       e.printstacktrace();
+   } catch (IoException e) {
+       e.printStacktrace();
    }
    ```
 4. **using stream.of():**
    you can create a stream from individual elements using the `stream.of()` method.
 
    ```java
-   stream<string> streamofelements = stream.of("one", "two", "three");
+   Stream<String> streamOfElements = Stream.of("one", "two", "three");
    ```
 5. **infinite streams:**
-   you can create infinite streams using methods like `stream.iterate()` and `stream.generate()`.
+   you can create infinite streams using methods like `Stream.iterate()` and `Stream.generate()`.
 
    ```java
-   stream<integer> infinitestream = stream.iterate(0, n -> n + 2); // generates even numbers
+   Stream<Integer> infiniteStream = Stream.iterate(0, n -> n + 2); // generates even numbers
    ```
 6. **using stream builder:**
-   you can use the `stream.builder()` to create a stream and add elements manually.
+   you can use the `Stream.builder()` to create a stream and add elements manually.
 
    ```java
-   stream.builder<string> streambuilder = stream.builder();
-   streambuilder.add("apple").add("banana").add("cherry");
-   stream<string> manualstream = streambuilder.build();
+   stream.builder<string> streamBuilder = Stream.builder();
+   streamBuilder.add("apple").add("banana").add("cherry");
+   Stream<String> manualStream = streamBuilder.build();
    ```
 7. **from intstream, longstream, and doublestream:**
    you can create specialized streams for primitive types.
 
    ```java
-   intstream intstream = intstream.range(1, 6); // generates 1 to 5
-   longstream longstream = longstream.rangeclosed(1, 5); // generates 1 to 5
-   doublestream doublestream = doublestream.of(1.0, 2.0, 3.0);
+   IntStream intStream = IntStream.range(1, 6); // generates 1 to 5
+   LongStream longStream = LongStream.rangeclosed(1, 5); // generates 1 to 5
+   DoubleStream doubleStream = DoubleStream.of(1.0, 2.0, 3.0);
    ```
 
 These are the primary ways to create streams in java. depending on your data sources and requirements, you can choose the appropriate method to create a stream and perform various operations on the data using the stream api.
@@ -90,50 +90,50 @@ These are the primary ways to create streams in java. depending on your data sou
 
 - **Collecting elements into a list:**
    ```java
-   list<string> names = stream.of("alice", "bob", "charlie")
-       .collect(collectors.tolist());
+   List<String> names = Stream.of("alice", "bob", "charlie")
+       .collect(Collectors.tolist());
    ```
 
 - **Collecting elements into a set:**
    ```java
-   set<integer> numbers = stream.of(1, 2, 3, 2, 4, 5)
-       .collect(collectors.toset());
+   Set<Integer> numbers = Stream.of(1, 2, 3, 2, 4, 5)
+       .collect(Collectors.toset());
    ```
 
 - **Collecting elements into a map:**
    ```java
-   map<string, integer> namelengthmap = stream.of("alice", "bob", "charlie")
-       .collect(collectors.tomap(name -> name, name -> name.length()));
+   map<String, Integer> nameLengthMap = Stream.of("alice", "bob", "charlie")
+       .collect(Collectors.toMap(name -> name, name -> name.length()));
    ```
 
 - **Joining elements into a string:**
    ```java
-   string joinednames = stream.of("alice", "bob", "charlie")
-       .collect(collectors.joining(", "));
+   String joinedNames = Stream.of("alice", "bob", "charlie")
+       .collect(Collectors.joining(", "));
    ```
 
 - **Calculating sum, average, max, min, etc.:**
    ```java
-   int sum = stream.of(1, 2, 3, 4, 5)
-       .collect(collectors.summingint(integer::intvalue));
+   int sum = Stream.of(1, 2, 3, 4, 5)
+       .collect(Collectors.summingInt(Integer::intvalue));
    
-   double average = stream.of(1, 2, 3, 4, 5)
-       .collect(collectors.averagingint(integer::intvalue));
+   double average = Stream.of(1, 2, 3, 4, 5)
+       .collect(collectors.averagingint(Integer::intvalue));
    
-   optional<integer> max = stream.of(1, 2, 3, 4, 5)
-       .collect(collectors.maxby(comparator.naturalorder()));
+   optional<Integer> max = Stream.of(1, 2, 3, 4, 5)
+       .collect(Collectors.maxby(Comparator.naturalorder()));
    ```
 
 - **Grouping elements:**
    ```java
-   map<character, list<string>> groupednames = stream.of("alice", "bob", "charlie")
-       .collect(collectors.groupingby(name -> name.charat(0)));
+   Map<Character, List<String>> groupedNames = Stream.of("alice", "bob", "charlie")
+       .collect(Collectors.groupingBy(name -> name.charAt(0)));
    ```
 
 - **Partitioning elements:**
    ```java
-   map<boolean, list<integer>> evenoddpartition = stream.of(1, 2, 3, 4, 5)
-       .collect(collectors.partitioningby(num -> num % 2 == 0));
+   Map<Boolean, List<Integer>> evenOddPartition = Stream.of(1, 2, 3, 4, 5)
+       .collect(Collectors.partitioningBy(num -> num % 2 == 0));
    ```
 
 These are just a few examples of how you can use `collectors` to perform various operations on the elements of a stream and aggregate them into meaningful results. `collectors` greatly simplify the process of collecting data from streams and allow you to express complex transformations and aggregations in a concise and readable manner.
@@ -143,18 +143,18 @@ Creating custom collectors. you can create your own custom collectors by impleme
 Suppose you want to collect even and odd numbers separately into two different lists. here's how you could create a custom collector to achieve this:
 
 ```java
-import java.util.arraylist;
-import java.util.enumset;
-import java.util.list;
-import java.util.set;
-import java.util.stream.collector;
-import java.util.stream.collectors;
+import java.util.Arraylist;
+import java.util.Enumset;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
-public class customcollectorexample {
+public class CustomCollectorExample {
     public static void main(string[] args) {
-        list<integer> numbers = list.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        numberspartition partition = numbers.stream()
+        NumbersPartition partition = numbers.stream()
             .collect(new evenoddpartitioningcollector());
 
         system.out.println("even numbers: " + partition.evennumbers);
@@ -162,30 +162,30 @@ public class customcollectorexample {
     }
 }
 
-class numberspartition {
-    list<integer> evennumbers = new arraylist<>();
-    list<integer> oddnumbers = new arraylist<>();
+class NumbersPartition {
+    List<Integer> evennumbers = new ArrayList<>();
+    List<Integer> oddnumbers = new ArrayList<>();
 }
 
-class evenoddpartitioningcollector implements collector<integer, numberspartition, numberspartition> {
+class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartition, NumbersPartition> {
     @override
-    public supplier<numberspartition> supplier() {
-        return numberspartition::new;
+    public Supplier<Numberspartition> supplier() {
+        return NumbersPartition::new;
     }
 
     @override
-    public biconsumer<numberspartition, integer> accumulator() {
+    public BiConsumer<NumbersPartition, Integer> accumulator() {
         return (partition, number) -> {
             if (number % 2 == 0) {
-                partition.evennumbers.add(number);
+                Partition.evennumbers.add(number);
             } else {
-                partition.oddnumbers.add(number);
+                Partition.oddnumbers.add(number);
             }
         };
     }
 
     @override
-    public binaryoperator<numberspartition> combiner() {
+    public BinaryOperator<NumbersPartition> combiner() {
         return (left, right) -> {
             left.evennumbers.addall(right.evennumbers);
             left.oddnumbers.addall(right.oddnumbers);
@@ -194,13 +194,13 @@ class evenoddpartitioningcollector implements collector<integer, numberspartitio
     }
 
     @override
-    public function<numberspartition, numberspartition> finisher() {
+    public Function<NumbersPartition, NumbersPartition> finisher() {
         return partition -> partition;
     }
 
     @override
-    public set<characteristics> characteristics() {
-        return enumset.noneof(characteristics.class);
+    public Set<Characteristics> characteristics() {
+        return EnumSet.noneof(Characteristics.class);
     }
 }
 ```
@@ -237,15 +237,15 @@ Generics in java provide a way to create classes, interfaces, and methods that o
 **Type safety**: generics help catch type-related errors at compile-time rather than runtime. this ensures that you're using the correct types in a consistent manner, reducing the chances of bugs and runtime exceptions.
 example (first without generics, then with generics):
 ```java
-list mylist = new arraylist();
-mylist.add("hello");
-integer value = (integer) mylist.get(0); // runtime classcastexception
+List myList = new ArrayList();
+myList.add("hello");
+Integer value = (Integer) mylist.get(0); // runtime classcastexception
 ```
   - with generics:
 ```java
-list<string> mylist = new arraylist<>();
-mylist.add("hello");
-integer value = mylist.get(0); // compilation error
+List<String> myList = new ArrayList<>();
+myList.add("hello");
+Integer value = myList.get(0); // compilation error
 ````
 
 **Code reusability**: generics enable you to write classes, interfaces, and methods that can work with a variety of data types. this promotes code reuse, as a single implementation can cater to different types.
@@ -266,7 +266,7 @@ Generic classes in java allow you to create classes that can work with different
 to define a generic class, you use angle brackets (`<>`) to specify a type parameter. this type parameter acts as a placeholder for an actual data type that will be provided when an instance of the class is created. here's the basic syntax:
 
 ```java
-public class mygenericclass<T> {
+public class MyGenericClass<T> {
     // class members and methods
 }
 ```
@@ -278,13 +278,13 @@ In this example, `T` is the type parameter. it can be any valid java identifier,
 when you create an instance of a generic class, you provide the actual type argument that the type parameter will take. this binding of the type parameter to an actual type is called "parameterizing" the class. here's how you use a generic class:
 
 ```java
-public class main {
+public class Main {
     public static void main(string[] args) {
         // parameterize mygenericclass with integer
-        mygenericclass<Integer> intobj = new mygenericclass<>();
+        MyGenericclass<Integer> intObj = new MyGenericclass<>();
         
         // parameterize mygenericclass with string
-        mygenericclass<String> strobj = new mygenericclass<>();
+        MyGenericclass<String> strobj = new MyGenericclass<>();
     }
 }
 ```
@@ -297,20 +297,20 @@ here's a simple example of a generic class that represents a box that can hold a
 public class Box<T> {
     private T content;
     
-    public void setcontent(T content) {
+    public void setContent(T content) {
         this.content = content;
     }
     
-    public T getcontent() {
+    public T getContent() {
         return content;
     }
     
-    public static void main(string[] args) {
+    public static void main(String[] args) {
         Box<Integer> intBox = new Box<>();
-        intBox.setcontent(42);
+        intBox.setContent(42);
         
         Box<String> strBox = new Box<>();
-        strBox.setcontent("hello, world!");
+        strBox.setContent("hello, world!");
         
         system.out.println(intBox.getcontent()); // output: 42
         system.out.println(strBox.getcontent()); // output: hello, world!
@@ -329,7 +329,7 @@ generic interfaces allow you to create flexible and reusable contracts that can 
 A generic interface is defined similarly to a regular interface, with the addition of type parameters enclosed in angle brackets (`<>`). these type parameters represent placeholders for actual types that will be provided when implementing the interface. here's the basic syntax:
 
 ```java
-public interface Mygenericinterface<T> {
+public interface MyGenericInterface<T> {
     // method signatures
 }
 ```
@@ -341,7 +341,7 @@ In this example, `T` is the type parameter of the generic interface.
 When you implement a generic interface, you need to provide the actual type argument that matches the type parameter of the interface. this allows you to customize the interface methods to work with specific data types. here's how you implement a generic interface:
 
 ```java
-public class Myimplementation<T> implements Mygenericinterface<T> {
+public class MyImplementation<T> implements MyGenericInterface<T> {
     // implement interface methods
 }
 ```
@@ -410,20 +410,20 @@ In this example, the `ListStack` class implements the `Stack` interface with a g
 #### Type parameters in generic methods:
 You can use type parameters in generic methods to create methods that work with multiple types. The type parameter is declared before the return type of the method. Here's an example:
 ```java
-public class Mygenericmethods {
-    public <T> void printarray(T[] array) {
+public class MyGenericMethods {
+    public <T> void printArray(T[] array) {
         for (T element : array) {
-            system.out.println(element);
+            System.out.println(element);
         }
     }
 
-    public static void main(string[] args) {
-        Integer[] intarray = { 1, 2, 3 };
-        String[] strarray = { "a", "b", "c" };
+    public static void main(String[] args) {
+        Integer[] intArray = { 1, 2, 3 };
+        String[] strArray = { "a", "b", "c" };
 
-        Mygenericmethods genericmethods = new Mygenericmethods();
-        genericmethods.printarray(intarray); // prints 1 2 3
-        genericmethods.printarray(strarray); // prints a b c
+        MyGenericMethods genericMethods = new MyGenericMethods();
+        genericMethods.printArray(intarray); // prints 1 2 3
+        genericMethods.printArray(strarray); // prints a b c
     }
 }
 ```
