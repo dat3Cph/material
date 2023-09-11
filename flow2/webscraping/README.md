@@ -1,10 +1,5 @@
-# Web scraping with java 
-## Content
-- [Monday: Part 1](WebScraping.md)
-- [Exercises](ClassExercises.md)
-- [Wednesday: Part 2](WebScraping2.md)
-- [Friday: Exercises](Week4Exercises.md)
-## Learning objectives
+# Learning objectives (Web scraping with java) 
+
 ### Monday
 
 1. **Understanding HTML and CSS:** Learn the basics of HTML structure and CSS selectors, as they are essential for identifying and extracting data from web pages.
@@ -21,7 +16,10 @@
 
 7. **Using Regular Expressions:** Use regular expressions to extract data from HTML elements that are not easily accessible using CSS selectors.
 
+***
+
 ### Wednesday
+
 1. **Handling Dynamic Content:** Understand how to deal with websites that load content dynamically using JavaScript. Consider using headless browsers or additional tools if necessary.
 
 2. **Error Handling:** Develop strategies to handle potential errors, such as network failures, invalid HTML, or unexpected changes to the website structure.
