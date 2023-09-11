@@ -174,12 +174,6 @@ public class SupplierExample {
 
 These functional interfaces, along with lambda expressions, provide a powerful way to work with functional programming concepts in Java.
 
-### Lambda examples:
-
-- sorting, 
-- filtering, and 
-- mapping collections.
-
 ## Functional Programming Concepts:
 
 - **Immutability** and why it's important

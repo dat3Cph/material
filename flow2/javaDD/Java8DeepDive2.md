@@ -23,7 +23,7 @@ There are several ways to create streams in java. streams are created from vario
    you can create a stream from a collection using the `stream()` method.
 
    ```java
-   list<string> list = Arrays.aslist("apple", "banana", "cherry");
+   List<String> list = Arrays.asList("apple", "banana", "cherry");
    Stream<String> streamFromList = list.stream();
    ```
 2. **from an array:**
@@ -37,7 +37,7 @@ There are several ways to create streams in java. streams are created from vario
    you can create a stream from an i/o channel, like a file, using `files.lines()`.
 
    ```java
-   try (stream<string> lines = Files.lines(Paths.get("file.txt"))) {
+   try (Stream<String> lines = Files.lines(Paths.get("file.txt"))) {
        // process each line
    } catch (IoException e) {
        e.printStacktrace();
@@ -59,7 +59,7 @@ There are several ways to create streams in java. streams are created from vario
    you can use the `Stream.builder()` to create a stream and add elements manually.
 
    ```java
-   stream.builder<string> streamBuilder = Stream.builder();
+   Stream.builder<String> streamBuilder = Stream.builder();
    streamBuilder.add("apple").add("banana").add("cherry");
    Stream<String> manualStream = streamBuilder.build();
    ```
@@ -85,7 +85,7 @@ These are the primary ways to create streams in java. depending on your data sou
 ## Collectors
 - **Overview of collectors** and their role in stream operations.
   - `collectors` is a utility class in the java stream api that provides various predefined reduction operations (collectors) to accumulate elements from a stream into a collection, perform aggregations, and convert data into different formats. collectors are a powerful tool for efficiently collecting and processing data from streams.
-  - built-in collectors: `tolist`, `toset`, `tomap`, `joining`, `groupingby`, `partitioningby`.
+  - built-in collectors: `toList`, `toSet`, `toMap`, `joining`, `groupingBy`, `partitioningBy`.
   code examples:
 
 - **Collecting elements into a list:**
@@ -423,7 +423,7 @@ public class MyGenericMethods {
 
         MyGenericMethods genericMethods = new MyGenericMethods();
         genericMethods.printArray(intarray); // prints 1 2 3
-        genericMethods.printArray(strarray); // prints a b c
+        genericMethods.printarray(strarray); // prints a b c
     }
 }
 ```
