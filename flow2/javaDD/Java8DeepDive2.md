@@ -34,7 +34,7 @@ There are several ways to create streams in java. streams are created from vario
    Stream<String> streamFromArray = Arrays.stream(array);
    ```
 3. **from i/o channels:**
-   you can create a stream from an i/o channel, like a file, using `files.lines()`.
+   you can create a stream from an i/o channel, like a file, using `Files.lines()`.
 
    ```java
    try (Stream<String> lines = Files.lines(Paths.get("file.txt"))) {
