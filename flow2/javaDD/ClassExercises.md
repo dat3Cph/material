@@ -43,11 +43,10 @@ Apply the functional interfaces from the `java.util.function` package: `Predicat
 
 1. Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
 2. Use `Supplier` to create a list of Employee objects based on a list of names like `Arrays.asList("John", "Jane", "Jack", "Joe", "Jill")`.
-Hint: Check these explanations and examples on [Predicate](./ExerciseHints.md#predicate).
+Hint: Check these explanations and examples on [Predicate](./ExerciseHints.md#supplier).
 3. Use `Consumer` to print the list of Employee objects.
 4. Use `Function` to convert a list of Employee objects to a list of names.
 5. Use `Predicate`to check if a given employee is older than 18.
-6. Use `Consumer` to write a list of employees to a file.
 
 Check these hints for [explanations of the built-in functional interfaces](./Java8DeepDive.md#functional-interfaces).
 
