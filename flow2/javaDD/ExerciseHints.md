@@ -35,3 +35,61 @@ Here's a general description of how the `filter` function works:
 
 3. Output:
    - The `filter` function returns a new collection containing only the elements that satisfy the condition specified by the predicate function.
+
+## Predicate
+Example of how to create Car objects where Car has a name and a price. The name is a String and the price is a double. The constructor takes these two values as parameters.
+
+```java
+public class Car {
+    private String name;
+    private double price;
+
+    public Car(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+```
+Creating 10 cars with random names and prices between 0 and 1000000:
+```java
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.function.Supplier;
+
+
+public class CarFactory {
+
+    public static void main(String[] args) {
+        List<String> carNames = Arrays.asList("Mercedes","BMW","Audi","Tesla","Ford","Fiat","Peugeot","Citroen","Renault","Toyota");
+        Supplier<Car> carSupplier = () -> {
+            Random random = new Random();
+            int randomIndex = new Random().nextInt(carNames.size());
+            String randomName = carNames.get(randomIndex);
+            double randomPrice = random.nextDouble() * 1000000;
+            return new Car(randomName, randomPrice);
+        };
+        List<Car> cars = createCars(10, carSupplier);
+        cars.forEach(System.out::println);
+    }
+
+    public static List<Car> createCars(int numCars, Supplier<Car> supplier) {
+        List<Car> cars = new ArrayList<>();
+        for (int i = 0; i < numCars; i++) {
+            cars.add(supplier.get());
+        }
+        return cars;
+    }
+}
+```
+
+
