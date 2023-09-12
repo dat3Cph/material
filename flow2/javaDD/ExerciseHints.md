@@ -37,6 +37,7 @@ Here's a general description of how the `filter` function works:
    - The `filter` function returns a new collection containing only the elements that satisfy the condition specified by the predicate function.
 
 ## Supplier
+
 Example of how to create Car objects where Car has a name and a price. The name is a String and the price is a double. The constructor takes these two values as parameters.
 
 ```java
@@ -91,5 +92,3 @@ public class CarFactory {
     }
 }
 ```
-
-
