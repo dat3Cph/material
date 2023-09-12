@@ -43,7 +43,7 @@ There are several ways to create streams in java. streams are created from vario
        e.printStacktrace();
    }
    ```
-4. **using stream.of():**
+4. **using Stream.of():**
    you can create a stream from individual elements using the `stream.of()` method.
 
    ```java
@@ -82,6 +82,29 @@ These are the primary ways to create streams in java. depending on your data sou
     - other operations on streams.
    - `peek`, `limit`, `skip`, `distinct`, `sorted`
 
+### Examples
+```java
+// Intermediate methods: filter, map, flatMap, distinct, sorted, peek, limit, skip
+List<String> words = Arrays.asList("apple", "banana", "apple", "cherry", "apricot", "banana");
+List<String> processedWords = words.stream()
+        .filter(word -> !word.startsWith("a")) // Filter out words starting with "a"
+        .map(String::toUpperCase) // Transform to uppercase
+        .distinct() // Remove duplicates
+        .sorted() // Sort alphabetically
+        .collect(Collectors.toList()); // Collect to list
+System.out.println(processedWords);
+
+// Terminal methods: forEach, collect, reduce, min, max, count, anyMatch, allMatch, noneMatch, findFirst, findAny
+words.stream().forEach(System.out::println); // Print each element
+int totalLengthOfWords = words.stream().map((word) -> word.length()).reduce(0, (subTotal, element) -> subTotal + element); // Calculate total length
+System.out.println("Total length of words: " + totalLengthOfWords);
+int countOfWords = (int) words.stream().count(); // Count number of words
+System.out.println("Number of words: " + countOfWords);
+Optional<String> firstWord = words.stream().findFirst(); // Find first word
+System.out.println("First word: " + firstWord.get());
+Optional<String> anyWord = words.stream().findAny(); // Find any word
+System.out.println("Any word: " + anyWord.get());
+```
 ## Collectors
 - **Overview of collectors** and their role in stream operations.
   - `collectors` is a utility class in the java stream api that provides various predefined reduction operations (collectors) to accumulate elements from a stream into a collection, perform aggregations, and convert data into different formats. collectors are a powerful tool for efficiently collecting and processing data from streams.
