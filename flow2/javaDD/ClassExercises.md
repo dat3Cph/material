@@ -26,10 +26,14 @@ Hint: Check these explanations and examples on [lambda expressions](./Java8DeepD
 
 ## 2. Functional Programming
 
-Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`):
+Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`). You should provide each inteface with a single method that is appropriate for the task.
+
+Create the following 2 methods that use the functional interfaces, to perform map and filter operations on an array of integers:
 
 - `int[] map(int[] a, MyTransformingType op)`
 - `int[] filter(int[] a, MyValidatingType op)`
+
+When running the above map and filter methods, you should provide them with an integer array and a lambda expression that performs the map or filter operation. For example, to double all the values in an array, you would call the map method like this:
 
 Check hints for how the [map](./ExerciseHints.md#the-map-function) and [filter](./ExerciseHints.md#the-filter-function) methods work.
 

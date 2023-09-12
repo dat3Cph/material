@@ -115,13 +115,13 @@ These are the primary ways to create streams in java. depending on your data sou
 - **Calculating sum, average, max, min, etc.:**
    ```java
    int sum = Stream.of(1, 2, 3, 4, 5)
-       .collect(Collectors.summingInt(Integer::intvalue));
-   
-   double average = Stream.of(1, 2, 3, 4, 5)
-       .collect(collectors.averagingint(Integer::intvalue));
-   
-   Optional<Integer> max = Stream.of(1, 2, 3, 4, 5)
-       .collect(Collectors.maxby(Comparator.naturalorder()));
+                .collect(Collectors.summingInt(Integer::intValue));
+
+        double average = Stream.of(1, 2, 3, 4, 5)
+                .collect(Collectors.averagingInt(Integer::intValue));
+
+        Optional<Integer> max = Stream.of(1, 2, 3, 4, 5)
+                .collect(Collectors.maxBy(Comparator.naturalOrder()));
    ```
 
 - **Grouping elements:**
