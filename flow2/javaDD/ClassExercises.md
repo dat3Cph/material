@@ -64,7 +64,7 @@ Check these hints for [explanations of the date and time API in Java 8](./JavaTi
 
 ## 5. Method References
 
-The methods defined in Step 2 "Functional Programming" can be implemented using method references. Implement them using method references.
+The methods defined in Step 2 "Functional Programming" can be implemented using method references. Implement them using method references. E.g. Create a named method that doubles a value and use this method as a method reference: `MyTransformingType doubleValue = (x) -> x * 2;` in your map function.
 
 Check these hints for [method references](./Java8DeepDive.md#method-references).
 
