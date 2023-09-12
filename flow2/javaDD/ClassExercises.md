@@ -75,11 +75,11 @@ Check these hints for [method references](./Java8DeepDive.md#method-references).
 In this exercise, you will work with a list of books and use the Stream API to perform various operations on the data.
 
 1. **Create the Book Class:**
-  - Create a `Book` class with attributes like title, author, publication year, and rating.
+  - Create a `Book` class with attributes like title, author, publication year, pages and rating.
 2. **Data Collection:**
   - Create a collection of `Book` objects to work with. You can either create a sample dataset or read data from a file or database.
 3. **Stream Processing:**
-  - Use the Stream API to perform the following operations on the list of books:
+  - Use the Stream API to perform the following operations on the collection of books:
     - Find the average rating of all books.
     - Filter and display books published after a specific year.
     - Sort books by rating in descending order.
