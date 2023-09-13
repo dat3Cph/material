@@ -118,7 +118,8 @@ public class JsoupCSSSelectorsExample {
                       "       <li>Item 1</li>" +
                       "       <li>Item 2</li>" +
                       "   </ul>" +
-                      "   <p class='info'>This is some information.</p>" +
+                      "  <a href='#'>Link</a>" +
+                      "  <p class='info'>This is some information.</p>" +
                       "</div></body></html>";
 
         Document document = Jsoup.parse(html);
