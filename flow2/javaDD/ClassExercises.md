@@ -362,7 +362,7 @@ Imagine you have a collection of **employees**, each with attributes like `name`
 
 5. Sorting:
 
-- Use the sorted method to sort employees based on different criteria, such as age, salary, or name.
+- Use the `sorted` method to sort employees based on different criteria, such as `age`, `salary`, or `name`.
 
 6. Custom Functional Interfaces:
 
@@ -373,6 +373,6 @@ Imagine you have a collection of **employees**, each with attributes like `name`
 Implement more complex operations, such as:
 - Combine multiple streams or operations.
 - Transform data, such as calculating bonuses based on employee performance.
-- Handle cases where some attributes might be missing (use Optional to handle null values).
+- Handle cases where some attributes might be missing (use `Optional` to handle null values).
 
 This exercise will challenge your ability to work with lambda expressions, functional interfaces, and the Stream API in more complex scenarios. It also provides an opportunity to practice real-world data analysis tasks that often involve processing and transforming collections of data.

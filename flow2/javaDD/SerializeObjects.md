@@ -29,7 +29,7 @@ public class WriterReader<T> {
         Type typeOf = obj.getClass();
         String fileName = typeOf.toString();
         String fileSuffix = (java.time.LocalDateTime.now()).format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
-        fileName = fileName + fileSuffix + ".txt";
+        fileName = fileName + fileSuffix;
         try {
             File file = new File(fileName);
             FileOutputStream fos = new FileOutputStream(file);
