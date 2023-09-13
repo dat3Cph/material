@@ -1,6 +1,18 @@
 # Resources
 
-## Web Scraping
+If you search the net about web-scraping you will find a lot of different tools and libraries. We have chosen to focus on the following:
+
+- [Jsoup](https://jsoup.org/) (A Java library for working with real-world HTML)
+- [Selenium](https://www.selenium.dev/) (A browser automation tool)
+- [Regular Expressions](https://www.w3schools.com/java/java_regex.asp) (A way to describe patterns in strings)
+- [Concurrency in Java](https://www.baeldung.com/java-concurrency) (A way to make your program run faster)
+
+The thing is that most of the examples you will find on the net, will use other tools and libraries. Most of the time it will be Python, and the libraries [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) and [Scrapy](https://scrapy.org/).
+But the concepts are the same, so if you find a good example, you can use it to learn the concepts, and then use the tools we have chosen to solve the exercises.
+
+### Web-Scraping Introduction
+
+- [What is Web Scraping and What is it Used For?](https://www.parsehub.com/blog/what-is-web-scraping/)
 
 ### Jsoup
 
