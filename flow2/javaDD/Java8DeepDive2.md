@@ -149,7 +149,7 @@ System.out.println("Any word: " + anyWord.get());
 
 - **Grouping elements:**
    ```java
-   Map<Character, List<String>> groupedNames = Stream.of("alice", "bob", "charlie")
+   Map<Character, List<String>> groupedNames = Stream.of("Alice", "Bob", "Charlie","Allan")
        .collect(Collectors.groupingBy(name -> name.charAt(0)));
    ```
 
@@ -161,6 +161,7 @@ System.out.println("Any word: " + anyWord.get());
 
 These are just a few examples of how you can use `collectors` to perform various operations on the elements of a stream and aggregate them into meaningful results. `collectors` greatly simplify the process of collecting data from streams and allow you to express complex transformations and aggregations in a concise and readable manner.
 
+### Custom Collectors (Optional extra)
 Creating custom collectors. you can create your own custom collectors by implementing the `collector` interface. custom collectors allow you to define specific accumulation logic tailored to your needs. here's an example of how you can create custom collectors:
 
 Suppose you want to collect even and odd numbers separately into two different lists. here's how you could create a custom collector to achieve this:
@@ -231,25 +232,6 @@ class EvenOddPartitioningCollector implements Collector<Integer, NumbersPartitio
 In this example, the `evenoddpartitioningcollector` class implements the `collector` interface. it defines how elements are accumulated, combined, and transformed. the `numberspartition` class is used to hold the accumulated even and odd numbers. the collector can be used in the `collect()` operation to partition the numbers into even and odd lists.
 
 This example demonstrates the process of creating a custom collector to handle a specific use case. custom collectors allow you to define complex accumulation strategies and are a powerful tool for customizing the behavior of your stream operations.
-
-## New date and time api
-- **Drawbacks of the old date and calendar apis.**
-  - mutable state:
-   both date and calendar were mutable classes, meaning that their internal state could be modified after creation. this made them prone to unexpected side effects and made it challenging to reason about the state of objects.
-  - zero-based months:
-   in the calendar api, months were represented using zero-based indexing. for example, january was represented as month 0, february as month 1, and so on. this was counterintuitive and led to confusion and mistakes in code.
-  - lack of immutability:
-   the date class was mutable, which made it challenging to ensure thread safety in multi-threaded environments.
-- **java.time package:** 
-  - LocalDate, 
-  - LocalTime, 
-  - LocalDateTime, 
-  - Instant, 
-  - Duration, 
-  - Period.
-- **Working with:**
-  - **time zones** and 
-  - **formatting dates**.
 
 
 ## Generics:

@@ -218,7 +218,7 @@ Create a generic interface called `DataStorage<T>` that defines methods for stor
 ```java
 interface DataStorage<T> {
     void store(T data);
-    T retrieve();
+    T retrieve(); // Just use String in implementation
 }
 ```
 
@@ -227,9 +227,11 @@ Implement three classes that implement the `DataStorage` interface:
 
 - `MemoryStorage<T>`: Stores data in memory.
 - `FileStorage<T>`: Stores data in a file.
-- `DatabaseStorage<T>`: Stores data in a database.
+- `DatabaseStorage<T>`: Stores data in a database. (Only do this if you have time)
 
-Implement these classes using appropriate data structures (e.g., lists, files, or database connections). Your implementation should ensure type safety by only allowing data of the specified type to be stored and retrieved.
+Implement the classes using appropriate data structures (e.g., instance variable, files, or database connections).
+
+In the first instance, you can just use a String to store the data and retrieve it. If you have time, then your implementation should ensure type safety by only allowing data of the specified type to be stored and retrieved. Hint: See [this file](SerializeObjects.md) for help on how to read and write objects to a file.
 
 3. **Main Application:**
 
