@@ -217,8 +217,8 @@ Create a generic interface called `DataStorage<T>` that defines methods for stor
 
 ```java
 interface DataStorage<T> {
-    void store(T data);
-    T retrieve(); // Just use String in implementation
+    String store(T data); // return a unique ID for the stored data or the filename
+    T retrieve(String source); // retrieve data from the specified source (like a file or database table or ID)
 }
 ```
 
@@ -242,11 +242,11 @@ public class DataStorageApp {
     public static void main(String[] args) {
         DataStorage<String> memoryStorage = new MemoryStorage<>();
         memoryStorage.store("Hello, world!");
-        String retrievedString = memoryStorage.retrieve();
+        String retrievedString = memoryStorage.retrieve(null);
 
-        DataStorage<Employee> fileStorage = new FileStorage<>("data.txt");
-        fileStorage.store(new Employee("John", 30));
-        Employee retrievedInt = fileStorage.retrieve();
+        DataStorage<Employee> fileStorage = new FileStorage<>();
+        String filename = fileStorage.store(new Employee("John", 30));
+        Employee retrievedInt = fileStorage.retrieve(filename);
 
         // Create and demonstrate DatabaseStorage
     }
