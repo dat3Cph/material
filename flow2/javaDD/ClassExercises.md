@@ -340,13 +340,18 @@ public class ConcurrencyExercise {
 
 This exercise will give you hands-on experience with the Java 8 Concurrency API, helping you understand how to manage parallel execution of tasks and handle exceptions in a concurrent environment.
 
-# Summary
+## 10. Bonus exercise
+
 Imagine you have a collection of **employees**, each with attributes like `name`, `age`, `department`, and `salary`. Your task is to perform various data analysis tasks using lambda expressions and streams.
+
 1. Create the Employee Class:
 2. Create an Employee class with attributes like name, age, department, and salary.
 3. Data Collection:
+
 - Create a collection of Employee objects to work with. You can either create a sample dataset or read data from a file or database.
+
 4. Data Analysis:
+
 - Implement the following tasks using lambda expressions and streams:
 - Calculate the average age of all employees.
 - Find the employee with the highest salary.
@@ -354,14 +359,20 @@ Imagine you have a collection of **employees**, each with attributes like `name`
 - Count the number of employees in each department.
 - Find the three oldest employees.
 - Filter and display employees whose salary is above a certain threshold.
+
 5. Sorting:
+
 - Use the sorted method to sort employees based on different criteria, such as age, salary, or name.
+
 6. Custom Functional Interfaces:
+
 - Define custom functional interfaces to represent various operations. For example, you could define an interface for filtering employees based on a certain condition.
+
 7. Advanced Operations:
-- Implement more complex operations, such as:
-  - Combine multiple streams or operations.
-  - Transform data, such as calculating bonuses based on employee performance.
-  - Handle cases where some attributes might be missing (use Optional to handle null values).
+
+Implement more complex operations, such as:
+- Combine multiple streams or operations.
+- Transform data, such as calculating bonuses based on employee performance.
+- Handle cases where some attributes might be missing (use Optional to handle null values).
 
 This exercise will challenge your ability to work with lambda expressions, functional interfaces, and the Stream API in more complex scenarios. It also provides an opportunity to practice real-world data analysis tasks that often involve processing and transforming collections of data.
