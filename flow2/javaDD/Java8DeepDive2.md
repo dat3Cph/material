@@ -58,11 +58,12 @@ There are several ways to create streams in java. streams are created from vario
 6. **using stream builder:**
    you can use the `Stream.builder()` to create a stream and add elements manually.
 
-   ```java
-   Stream.builder<String> streamBuilder = Stream.builder();
-   streamBuilder.add("apple").add("banana").add("cherry");
-   Stream<String> manualStream = streamBuilder.build();
-   ```
+```java
+Stream.Builder<String> streamBuilder = Stream.builder();
+streamBuilder.add("apple").add("banana").add("cherry");
+Stream<String> manualStream = streamBuilder.build();
+```
+
 7. **from intstream, longstream, and doublestream:**
    you can create specialized streams for primitive types.
 
