@@ -10,9 +10,9 @@ from the Trustpilot website. The project will utilize JDK 17, Maven, JSoup for w
 PostgreSql and lambda expressions for data processing, JUnit 5 for testing, and apply Object-Oriented Programming (OOP)
 and functional programming concepts.
 
-In this project, you will learn how to scrape data from a website, store the data in a database, and analyze the data
-using Java streams and lambda expressions. You will also learn how to use JUnit 5 to test your code and Mockito(optional) to mock
-classes and methods.
+In this project, you will learn how to scrape data from a website, store the data in a database, use Java ExecutorService to
+improve the performance of the web scraping and data storage, and analyze the data using Java streams and lambda expressions. 
+You will also learn how to use JUnit 5 to test your code and Mockito(optional) to mock classes and methods.
 
 - **Try tu use Streams, Functional Programming and Lambda expressions as much as possible.**
 - **All analysis and calculations should be done by calling the data from the database.**
@@ -21,7 +21,7 @@ classes and methods.
 **Project Structure:**
 
 1. **Data Scraping:**
-    - Use JSoup to scrape data from the Trustpilot page (https://dk.trustpilot.com/review/www.apple.dk).
+    - Use JSoup to scrape data from the Trustpilot page (https://dk.trustpilot.com/review/www.apple.com).
     - Extract the following information from each review:
         - Name of registrant
         - Number of reviews posted by the registrant
@@ -59,10 +59,14 @@ on top of the page. Use it more as a lookup to see if you're on the right path r
 
 <img src="../images/apple_analysis.png" height="150" width="300">
 
-4. **Testing:**
+4. **Multithreading:**
+    - Use Java ExecutorService to improve the performance of the web scraping and data storage.
+    - Use the ExecutorService to store the scraped data in the database.
+
+5. **Testing:**
     - Write JUnit 5 [unit and integration test](https://www.guru99.com/unit-test-vs-integration-test.html), ensuring that all methods and functions are working as expected.
 
-5. **Mockito: (Optional)**
+6. **Mockito: (Optional)**
 - (Optional) Use Mockito to mock the DAO classes.
 
 [Mockito](https://site.mockito.org/) is a framework that allows you to mock classes and methods. This is useful when you want to test a class that depends on another class. 
@@ -89,7 +93,7 @@ void testGetAllReviews() {
     - Use Excel or any other tool to create charts and graphs to visualize the data. (Optional but recommended)
 
 **Conclusion:**
-This project will provide you with hands-on experience in web scraping, data analysis using Java streams and 
+This project will provide you with hands-on experience in web scraping, multithreading, data analysis using Java streams and 
 lambda expressions, testing with JUnit 5, and applying OOP and functional programming principles.
 
 
