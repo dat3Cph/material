@@ -1,6 +1,4 @@
-## Pagination and Web Scraping 
-
-## Web Scraping and Analysis of Apple Reviews
+# Web Scraping and Analysis of Apple Reviews
 
 **Read the whole document before you start with the exercises.**
 
