@@ -1,6 +1,4 @@
-# JAVA Web Scraping
-
-## Learning Objectives
+# JAVA Web Scraping and Data Extraction (Learning Objectives)
 
 ### Monday
 
