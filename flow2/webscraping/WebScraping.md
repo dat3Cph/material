@@ -25,13 +25,14 @@ When web scraping, you traverse the Document Object Model (DOM) of a web page to
 
 3. **Selecting Elements:**
    - To extract specific data, you need to navigate this tree. You start by selecting the elements that contain the data you're interested in.
-   - This is often done using CSS selectors, XPath expressions, or other methods provided by the parsing library.
+   - This is often done using CSS selectors, XPath expressions, or other methods provided by the parsing library. [See difference here](https://www.testim.io/blog/xpath-vs-css-selector-difference-choose/)
    - For example, you might select all the `<a>` tags (links) on the page, or find elements with specific class attributes.
 
 4. **Traversing the DOM Tree:**
    - Once you've selected an element, you can traverse the DOM tree in various ways to access its children, siblings, or parent elements.
    - Common traversal methods include finding child elements, moving up to parent elements, and iterating through siblings.
    - For example, you might find all the `<li>` elements within an ordered list `<ol>` or navigate to the parent `<div>` of a specific paragraph `<p>`.
+   - In most browsers you can right-click on an element and choose: inspect element. This will open the developer tools and highlight the element in the DOM tree. Now you can copy either the CSS selector or the XPath expression.
 
 5. **Accessing Element Attributes and Text:**
    - After locating the desired elements, you can access their attributes (e.g., `href`, `src`, `class`) and extract text content.
@@ -221,4 +222,4 @@ Regular expressions can be very powerful for parsing and extracting specific pat
    - Regex: `<a[^>]*href=["'](https?:\/\/(www\.)?twitter\.com\/[^"']+)["']`
    - Explanation:
 
-It is important to notice, that while regular expressions can be helpful for basic parsing of HTML content, they are not a recommended approach for parsing complex HTML documents. For parsing and traversing HTML documents, it's usually better to use dedicated HTML parsing libraries like Jsoup, which offer more robust and structured solutions. But for getting specific data from HTML elements that are not easily accessible using CSS selectors, regular expressions can be a useful tool.
+It is important to notice, that while regular expressions can be helpful for basic parsing of HTML content, they are not a recommended approach for parsing complex HTML documents. For parsing and traversing HTML documents, it's usually better to use dedicated HTML parsing libraries like Jsoup, which offer more robust and structured solutions. But for getting specific data from HTML (large) elements that are not easily accessible using CSS selectors, regular expressions can be a useful tool.
