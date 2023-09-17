@@ -20,8 +20,8 @@ In this project, you will practise your programming skills by
 - creating charts and graphs to visualize the data (optional)
 - creating an EER diagram to show the relations between the classes
 
-- **Try tu use Streams, Functional Programming and Lambda expressions as much as possible.**
-- **All analysis and calculations should be done by calling the data from the database.**
+**Try tu use Streams, Functional Programming and Lambda expressions as much as possible.**
+**All analysis and calculations should be done by calling the data from the database.**
 
 **Project Structure:**
 
