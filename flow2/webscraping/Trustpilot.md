@@ -14,7 +14,6 @@ In this project, you will practise your programming skills by
 - using Java ExecutorService to improve the performance of the web scraping and data storage
 - analyzing the data using Java streams and lambda expressions
 - testing your code using JUnit 5
-- mocking classes and methods using Mockito (optional)
 - applying OOP and functional programming principles
 - creating a report to showcase the analysis results
 - creating charts and graphs to visualize the data (optional)
@@ -71,26 +70,6 @@ on top of the page. Use it more as a lookup to see if you're on the right path r
 5. **Testing:**
     - Write JUnit 5 [unit and integration test](https://www.guru99.com/unit-test-vs-integration-test.html), ensuring that all methods and functions are working as expected.
 
-6. **Mockito: (Optional)**
-- (Optional) Use Mockito to mock the DAO classes.
-
-[Mockito](https://site.mockito.org/) is a framework that allows you to mock classes and methods. This is useful when you want to test a class that depends on another class. 
-You can mock the other class and then test the class you want to test.
-
-```java
-// Example of a mockito test
-@Test
-void testGetAllReviews() {
-    // Arrange
-    ReviewDAO reviewDAO = Mockito.mock(ReviewDAO.class);
-    Mockito.when(reviewDAO.getAllReviews()).thenReturn(new ArrayList<>());
-    // Act
-    List<Review> reviews = reviewDAO.getAllReviews();
-    // Assert
-    assertEquals(0, reviews.size());
-}
-```
-
 6. **Reporting (README.md):**
     - Generate reports or summaries showcasing the analysis results.
     - Display the overall percentage, average rating, and other relevant statistics.
@@ -100,5 +79,3 @@ void testGetAllReviews() {
 **Conclusion:**
 This project will provide you with hands-on experience in web scraping, multithreading, data analysis using Java streams and 
 lambda expressions, testing with JUnit 5, and applying OOP and functional programming principles.
-
-
