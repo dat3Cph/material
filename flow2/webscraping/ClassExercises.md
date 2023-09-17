@@ -10,40 +10,29 @@ Web Scraping and Data Extraction with Jsoup and Regular Expressions
 **Requirements:**
 
 1. **Initial Setup:**
-   - Set up a Java project with the Jsoup dependency.
+   - Create a new Java project in IntelliJ IDEA.
+   - Set up the Java project with the Jsoup dependency.
 
 2. **Web Scraping:**
-   - Choose a webpage containing static content (e.g., a news article).
    - Use Jsoup to fetch and parse the HTML content of the webpage.
 
 3. **Data Extraction:**
-   - Identify specific pieces of information you want to extract from the webpage. This can include the article title, author, publication date, and article content. 
+   - Answer the following questions by extracting data from the html source code:
+     - How many references are there in the article?
+     - How many references are there in the article that contain the word "computer"?
+     - How many h3 headers are there on the page?
+     - Can you select the the text comming after the h3? Create a map with key: h3 text, value: text after h3.
 
 4. **Regular Expressions:**
-   - Write regular expressions to match and extract the desired information from the HTML content.
-   - Use groups in your regular expressions to capture different parts of the data (e.g., title, author, date). Hint: see example [Here](RegularExpressions.md#example)
+   - Within the section: "1800s", how many names are there (regex to find names like Firstname Lastname, starting with a capital letter)?
+   - Use groups in your regular expressions to capture only the last name of each name.
 
 5. **Data Cleaning:**
    - Implement data cleaning functions to process the extracted data (e.g., remove HTML tags, trim whitespace).
    - Ensure that the extracted data is in a clean and usable format.
 
-6. **Display or Store Data:**
-   - Choose whether to display the extracted data in the console or store it in a file or data structure for further use.
-
-7. **Testing:**
-   - Test your regular expressions and data cleaning functions with various articles to ensure they work correctly.
-
-8. **Documentation:**
-   - Document your code, including explanations of each component and how to run the program.
-   - Include comments to describe the purpose of each regular expression and data cleaning step.
-
-**Time Allocation:**
-
-This exercise provides a hands-on experience in web scraping static content with Jsoup and using regular expressions to extract and clean data. It's a valuable skill for extracting structured information from websites that may not offer APIs or structured data formats.
-
 ## Exercise 2
-Wednesday: Dynamic Content and Testing
-Exercise that combines Selenium and Jsoup for web scraping, focusing on data cleaning, error handling, and pagination.
+Wednesday: Concurrency and Json data
 In this exercise, you'll scrape data from `amazon.com`: a paginated website, clean the data, and handle errors that may arise during the process.
 
 **Exercise: Scraping, Cleaning, Error Handling, and Pagination**
@@ -53,13 +42,12 @@ In this exercise, you'll scrape data from `amazon.com`: a paginated website, cle
 **Requirements:**
 
 1. **Initial Setup:**
-   - Set up a Java project with Selenium and Jsoup dependencies.
-   - Configure Selenium to use a WebDriver (e.g., ChromeDriver).
-   - Load the initial page of the e-commerce website.
+   - Set up a Java project with Jsoup dependency.
+   - Load the initial page of the amazon website.
 
 2. **Scraping and Pagination:**
    - Write code to scrape product information (e.g., name, price, description) from the current page using Jsoup.
-   - Implement logic to navigate to the next page using Selenium (pagination) until there are no more pages to scrape.
+   - Implement logic to navigate to the next page using pagination informantion in the url, until there are no more pages to scrape.
 
 3. **Data Cleaning:**
    - Implement data cleaning functions to remove unwanted characters, format prices, and sanitize descriptions.
@@ -70,14 +58,8 @@ In this exercise, you'll scrape data from `amazon.com`: a paginated website, cle
    - Log errors and continue scraping from where the error occurred, if possible.
 
 5. **Data Storage:**
-   - Choose a data storage option (e.g., in-memory list, CSV file, database) to store the cleaned product data.
+   - Store the scraped data in the database using the proper data model.
 
 6. **Testing:**
    - Write unit tests to verify the functionality of your data cleaning and error handling functions.
    - Test the program with various scenarios, including scenarios where errors are intentionally introduced.
-
-7. **Documentation:**
-   - Document your code, including explanations of each component and how to run the program.
-   - Include comments to describe the purpose of each function and block of code.
-
-This exercise provides a comprehensive hands-on experience with web scraping, data cleaning, error handling, pagination, and testing using Selenium and Jsoup. It's a practical way to improve your skills in handling real-world web scraping scenarios.
