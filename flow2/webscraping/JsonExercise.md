@@ -2,16 +2,6 @@
 
 ## Part 1
 
-1. Go to https://www.w3schools.com/js/js_json_intro.asp
-2. Read the following 5 sections. Ignore the parts about JavaScript.
-    - JSON INTRO
-    - JSON SYNTAX
-    - JSON VS XML
-    - JSON DATA TYPES
-    - JSON ARRAY
-
-## Part 2
-
 Answer the following questions: (use the link above to help you)
 
 * What does JSON stand for?
