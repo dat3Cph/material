@@ -8,13 +8,20 @@ from the Trustpilot website. The project will utilize JDK 17, Maven, JSoup for w
 PostgreSql and lambda expressions for data processing, JUnit 5 for testing, and apply Object-Oriented Programming (OOP)
 and functional programming concepts.
 
-In this project, you will learn how to scrape data from a website, store the data in a database, use Java ExecutorService to
-improve the performance of the web scraping and data storage, and analyze the data using Java streams and lambda expressions. 
-You will also learn how to use JUnit 5 to test your code and Mockito(optional) to mock classes and methods.
+In this project, you will practise your programming skills by 
+- scraping data from a website 
+- storing data in a database
+- using Java ExecutorService to improve the performance of the web scraping and data storage
+- analyzing the data using Java streams and lambda expressions
+- testing your code using JUnit 5
+- mocking classes and methods using Mockito (optional)
+- applying OOP and functional programming principles
+- creating a report to showcase the analysis results
+- creating charts and graphs to visualize the data (optional)
+- creating an EER diagram to show the relations between the classes
 
 - **Try tu use Streams, Functional Programming and Lambda expressions as much as possible.**
 - **All analysis and calculations should be done by calling the data from the database.**
-
 
 **Project Structure:**
 
