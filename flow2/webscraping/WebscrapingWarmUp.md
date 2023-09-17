@@ -1,4 +1,4 @@
-# Webscraping First Practise
+# Webscraping Warm-up
 
 ## 1. Introduction
 
@@ -24,7 +24,7 @@ have chosen to focus on, and you will get a chance to try them out.
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web Scraping Practice</title>
+    <title>Web Scraping Warm-up</title>
 </head>
 <body>
     <header>
