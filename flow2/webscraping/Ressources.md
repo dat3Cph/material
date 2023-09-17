@@ -19,16 +19,23 @@ But the concepts are the same, so if you find a good example, you can use it to 
 - [Jsoup Documentation](https://jsoup.org/cookbook/extracting-data/selector-syntax)
 - [Web-Scraping with JAVA (20 min Video tutorial)](https://www.youtube.com/watch?v=tI1qGwhn_bs&t=1s)
 
-### Selenium
-
-- [Selenium Documentation](https://www.selenium.dev/documentation/en/)
-- [10 min Video explaining Selenium](https://www.youtube.com/watch?v=mOAXEQevCAE)
+### Test
+- [JUnit5](https://junit.org/junit5/docs/current/user-guide/)
+- [Unit Test vs Integration Test](https://www.guru99.com/unit-test-vs-integration-test.html)
+- [Mockito (Mocking framework for unit tests)](https://site.mockito.org/)
 
 ### Regular Expressions
 
 - [Java Regular Expressions (short overview in w3schools.com)](https://www.w3schools.com/java/java_regex.asp)
 - [Regular Expressions in Java (Summary of regular-expression constructs in JAVA)](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)
 
+### JSON (JavaScript Object Notation)
+- [JSON in Java](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+- [JSON Standard](https://www.json.org/json-en.html)
+
+
+### REST API
+- [What is a REST API? (Video)](https://www.youtube.com/watch?v=lsMQRaeKNDk)
 
 ### Concurrency in Java
 
