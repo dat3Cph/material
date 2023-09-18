@@ -51,6 +51,8 @@ In this project, you will practise your programming skills by
     - Create an EER diagram to show the relations between the classes.
     - Use DAO classes to store and retrieve the data in the database. Like we did in the previous week. You do not need to implement update and delete methods.
     - Use PostgreSql as the database.
+    - Make sure if a country or a registrant already exists in the database, that you do not create a new one, but use the existing one.
+    - Make sure you do not store duplicate reviews in the database.
 
 3. **Data Analysis:**
     - Calculate the overall percentage of positive, neutral, and negative reviews based on star ratings.
