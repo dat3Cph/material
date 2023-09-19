@@ -2,7 +2,7 @@
 
 ## Part 1
 
-Answer the following questions: [link](https://www.w3schools.com/whatis/whatis_json.asp)
+Answer the following questions: [link](https://www.w3schools.com/js/js_json_intro.asp)
 
 * What does JSON stand for?
 * What is the difference between JSON and XML?
@@ -22,7 +22,7 @@ Answer the following questions: [link](https://www.w3schools.com/whatis/whatis_j
  `address` (object)
         - `street` (string)
         - `city` (string)
-        - `zipCode` (string)
+        - `zipCode` (integer)
  `account` (object)
         - `id` (string)
         - `balance` (string)
