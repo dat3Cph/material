@@ -22,7 +22,7 @@ Answer the following questions: [link](https://www.w3schools.com/js/js_json_intr
  `address` (object)
         - `street` (string)
         - `city` (string)
-        - `zipCode` (string)
+        - `zipCode` (integer)
  `account` (object)
         - `id` (string)
         - `balance` (string)
