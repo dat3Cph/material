@@ -8,6 +8,20 @@ from the Trustpilot website. The project will utilize JDK 17, Maven, JSoup for w
 PostgreSql and lambda expressions for data processing, JUnit 5 for testing, and apply Object-Oriented Programming (OOP)
 and functional programming concepts.
 
+The Trustpilot website disallows web scraping, so you will need to limit your requests to avoid getting blocked. When testing your code use as **few requests** as possible. See the robots.txt here: https://www.trustpilot.com/robots.txt. Another thing that can help is to set a user agent in the request header. See the example below.
+
+```java
+Document doc = Jsoup.connect(url)
+        .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+                "(KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36")
+        .get();
+```
+And you can also set a delay between requests to avoid getting blocked. See the example below.
+
+```java
+Thread.sleep(1000); // 1 second
+```
+
 In this project, you will practise your programming skills by 
 - scraping data from a website 
 - storing data in a database
