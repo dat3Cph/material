@@ -37,6 +37,7 @@ Now setup a new database and the necessary classes to persist the data including
   - `delete`, 
   - `persist` and
   - `getByRating` that can take an MPAA rating or similar as a parameter and return all movies with that rating or lower or if you prefer, use the quality rating and find all movies with a specific rating e.g 8.5 and higher.
+  - `getSortedByReleaseDate` that returns all movies sorted by release date descending.
 - Make the interface generic so it can be used for Books, Games, etc. as well.
 - Implement the DAO interface using JPA and Hibernate with MovieEntity as the entity class.
 - Write unit tests for the JPA DAO where you search for the following titles and persist them:
