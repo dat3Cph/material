@@ -61,6 +61,6 @@ If you are unsure about finding a website to scrape, you can use the following e
 
 **Documentation**
 
-- Write documentation like a EER Diagram including links and names of the used api's and pages that are used for web scraping.
+- Write documentation including EER Diagram, links and names of the used api's and pages that are used for web scraping
 - Consider edge cases, error handling, and potential improvements.
 - Prepare a presentation to demonstrate your work for the review on friday
