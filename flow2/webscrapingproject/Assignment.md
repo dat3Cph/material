@@ -1,4 +1,4 @@
-# Flow 2 Week Assignment: Weather Data Enrichment and Storage
+# Flow 2 SP-2 Assignment: Weather Data Enrichment and Storage
 
 Data can potentially be worth a lot of money.
 A common use case is to collect, store, and enrich related data from various sources 
