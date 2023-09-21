@@ -7,8 +7,6 @@ expose the data in useful places. Sometimes new and interesting products can eme
 
 In this exercise we will train our data collecting skills using JPA, DTOs, web scraping, and REST API's.
 
-![Rainrabbit](./images/rabbitweather.png)
-
 ## Requirements
 
 This project is meant to be a group exercise and the scope is 4 working days. The requirements are as follows:
@@ -26,6 +24,8 @@ This project is meant to be a group exercise and the scope is 4 working days. Th
 If you are unsure about finding a website to scrape, you can use the following example:
 
 ## Weather Data project
+
+![Rainrabbit](./images/rabbitweather.png)
 
 ### Day 1: Web Scraping and DTOs
 
