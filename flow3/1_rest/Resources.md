@@ -5,8 +5,8 @@
 **REST**
 - [What is an API?](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
 
-**JSON**
-- [What is JSON?](https://www.youtube.com/watch?v=7mj-p1Os6QA&t=1s)
+**Javalin**
+- [Javalin](https://javalin.io/)
 
 **Testing**
 -[Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
