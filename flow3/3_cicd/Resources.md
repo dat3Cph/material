@@ -8,7 +8,7 @@
 
 **Testing**
 
-- [Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
+-  [Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
 
 
 ## Recommended reading material
