@@ -6,6 +6,10 @@
 
 - [What is an API?](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
 
+**REST API documentation**
+
+- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)
+
 **Testing**
 
 -  [Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
@@ -34,9 +38,9 @@
 - [REST Assured API testing examples](https://medium.com/chaya-thilakumara/rest-assured-api-testing-part-1-e96a2f284a6e)
 
 
-## REST API documentation
+**REST API documentation**
 
-- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)
+- [API documentation](https://www.postman.com/api-platform/api-documentation/)
 
 ## Slides
 
