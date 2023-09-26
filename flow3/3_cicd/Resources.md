@@ -36,7 +36,7 @@
 
 ## REST API documentation
 
-- [Link](http://#)
+- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)
 
 ## Slides
 
