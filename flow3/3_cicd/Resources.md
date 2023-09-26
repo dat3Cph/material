@@ -4,6 +4,7 @@
 
 **REST**
 - [What is an API?](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
+- [REST API Tutorial](https://restfulapi.net/)
 
 **Javalin**
 - [Javalin](https://javalin.io/)
@@ -29,7 +30,7 @@
 - [REST Assured API testing examples](https://medium.com/chaya-thilakumara/rest-assured-api-testing-part-1-e96a2f284a6e)
 
 ## REST API documentation
-- [Swagger](https://swagger.io/docs/specification/about/)
+
 
 ## Slides
 - [REST-Intro](https://docs.google.com/presentation/d/1bRWN7FVqkzx1MOu_TzRxXJiY2YSSFgKu7trzgdIdJfQ/edit#slide=id.p2)
