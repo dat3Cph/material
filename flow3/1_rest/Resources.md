@@ -26,6 +26,7 @@
 - [REST Assured Documentation](https://rest-assured.io/)
 - [REST Assured Guide](https://www.baeldung.com/rest-assured-tutorial)
 - [Testing with Hamcrest](https://www.baeldung.com/java-junit-hamcrest-guide)
+- [REST Assured API testing examples](https://medium.com/chaya-thilakumara/rest-assured-api-testing-part-1-e96a2f284a6e)
 
 ## REST API documentation
 - [Swagger](https://swagger.io/docs/specification/about/)
