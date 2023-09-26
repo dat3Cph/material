@@ -4,19 +4,18 @@
 
 **REST**
 - [What is an API?](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
-- [REST API Tutorial](https://restfulapi.net/)
-
-**Javalin**
-- [Javalin](https://javalin.io/)
 
 **Testing**
--[Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
+- [Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
 
 
 ## Recommended reading material
 
+**Javalin**
+- [Javalin](https://javalin.io/)
+
 **REST**
-- [A RESTful Tutorial](https://www.restapitutorial.com/)
+- [REST API Tutorial](https://restfulapi.net/)
 - [What are the components of an API?](https://blog.postman.com/what-are-the-components-of-an-api/)
 
 **JSON**
@@ -28,6 +27,7 @@
 - [REST Assured Guide](https://www.baeldung.com/rest-assured-tutorial)
 - [Testing with Hamcrest](https://www.baeldung.com/java-junit-hamcrest-guide)
 - [REST Assured API testing examples](https://medium.com/chaya-thilakumara/rest-assured-api-testing-part-1-e96a2f284a6e)
+
 
 ## REST API documentation
 
