@@ -97,10 +97,10 @@ Example code here: https://raw.githubusercontent.com/HartmannDemoCode/callbackIn
 
 ## Some Functional interfaces in the `java.util.function` package: 
 
-- Predicate, 
-- Consumer, 
-- Function, 
-- Supplier.
+- Predicate: **One argument -> returns boolean**, 
+- Consumer: **One argument -> returns void**, 
+- Function<T,V>: **One argument (T) -> returns result (V)** (for more advanced use cases, you can use BiFunction<T,U,V> for two arguments) 
+- Supplier<T>: **Zero arguments -> returns (T)**.
 
 **1. Predicate:**
 A Predicate is a functional interface that **represents a boolean-valued function of a single argument**. It's often used for filtering elements in collections or making boolean decisions based on a condition.
