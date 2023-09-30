@@ -32,12 +32,6 @@ Skim the following articles
 - [API documentation](https://www.postman.com/api-platform/api-documentation/)
 - [The DAO Pattern](https://www.baeldung.com/java-dao-pattern)
 
-## Recommended reading material
-
-**Javalin**
-
-
-
 ## Slides
 
 - [REST-Intro](https://docs.google.com/presentation/d/1bRWN7FVqkzx1MOu_TzRxXJiY2YSSFgKu7trzgdIdJfQ/edit#slide=id.p2)
