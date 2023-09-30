@@ -30,6 +30,7 @@ Skim the following articles
 - [Why you should use DTOs in your REST API](https://cassiomolin.com/2016/03/23/why-you-should-use-dtos-in-your-rest-api/)
 - [How To Use GSON](https://www.techiedelight.com/serialization-java-objects-google-gson-library/)
 - [API documentation](https://www.postman.com/api-platform/api-documentation/)
+- [The DAO Pattern](https://www.baeldung.com/java-dao-pattern)
 
 ## Recommended reading material
 
