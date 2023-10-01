@@ -1,6 +1,7 @@
 # Resources
 
 ## Monday
+
 ### Read the documentation
 Read carefully the following paragraphs:
 - Getting Started
@@ -19,6 +20,7 @@ Read carefully the following paragraphs:
 - [Javalin docs](https://javalin.io/documentation)
 
 ## Wednesday
+
 ### Videos
 - [What is an API (Video: 8:52)](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
 - [API Documentation and Why it Matters (Video: 11:15)](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)

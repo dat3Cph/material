@@ -1,46 +1,38 @@
 # Resources
 
-## Recommended video resources
+## Monday
 
-**REST**
+### Read the documentation
+Read carefully the following paragraphs:
+- Getting Started
+- HTTP Handlers
+    - Before
+    - Endpoint
+    - After
+    - Context (ctx)
+- Handler groups
+    - CrudHandler
+- Validation
+- Access manager
+- Default responses
+- Exception Mapping
+- Error Mapping
+- [Javalin docs](https://javalin.io/documentation)
 
-- [What is an API?](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
+## Wednesday
 
-**REST API documentation**
+### Videos
+- [What is an API (Video: 8:52)](https://www.youtube.com/watch?v=7YcW25PHnAA&t=1s)
+- [API Documentation and Why it Matters (Video: 11:15)](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)
 
-- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ&t=175s)
-
-**Testing**
-
--  [Rest Assured Video Tutorial](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
-
-
-## Recommended reading material
-
-**Javalin**
-
-- [Javalin](https://javalin.io/)
-
-**REST**
+### Reading material
+Skim the following articles
 - [REST API Tutorial](https://restfulapi.net/)
 - [What are the components of an API?](https://blog.postman.com/what-are-the-components-of-an-api/)
-
-**JSON**
-
 - [Why you should use DTOs in your REST API](https://cassiomolin.com/2016/03/23/why-you-should-use-dtos-in-your-rest-api/)
 - [How To Use GSON](https://www.techiedelight.com/serialization-java-objects-google-gson-library/)
-
-**Testing**
-
-- [REST Assured Documentation](https://rest-assured.io/)
-- [REST Assured Guide](https://www.baeldung.com/rest-assured-tutorial)
-- [Testing with Hamcrest](https://www.baeldung.com/java-junit-hamcrest-guide)
-- [REST Assured API testing examples](https://medium.com/chaya-thilakumara/rest-assured-api-testing-part-1-e96a2f284a6e)
-
-
-**REST API documentation**
-
 - [API documentation](https://www.postman.com/api-platform/api-documentation/)
+- [The DAO Pattern](https://www.baeldung.com/java-dao-pattern)
 
 ## Slides
 
