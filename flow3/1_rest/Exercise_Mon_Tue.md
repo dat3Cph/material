@@ -1,7 +1,10 @@
-# Day 1 and 2 - Javalin
-## Exercise with Javalin and CRUD
+### Day 1 and 2 - Exercise with Javalin and CRUD
 
-**Project Name:** The Veterinarian
+
+# **Project Name:** The Veterinarian
+
+
+<img src="./images/animals.png" width="600" >
 
 **Project Description:**
 As a computer science student, you've been engaged by a local veterinarian clinic, "Paws & Whiskers," to develop a 
