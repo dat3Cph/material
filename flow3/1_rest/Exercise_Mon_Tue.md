@@ -46,12 +46,13 @@ for GET methods to retrieve essential data.
 8. **DTOs (Data Transfer Objects):**
     - Create DTOs to facilitate data transfer between the client and server. A DTO that includes some of the patient's and appointment's information is sufficient.
 
-9. **Logging:**
-    - Implement Javalin's `before()` and `after()` methods for logging purposes.
-
-10. **Error Handling:**
+9. **Error Handling:**
     - Make sure to return 404 when a patient or appointment is not found.
-11. Set up the server so that all endpoints are under the path `/api/`.
+
+10. **Extras but not optional:**
+    - Implement Javalin's `before()` and `after()`. It could be used to log the requests and responses.
+    - Implement attribute() method in your project to add a custom attribute to the context. That attribute could be used somewhere else in the project. https://javalin.io/documentation#context
+
 
 **Business Goals:**
 - Enable clinic staff to quickly access essential information about appointments and patients.
