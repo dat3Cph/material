@@ -31,7 +31,6 @@ for GET methods to retrieve essential data.
 
 4. **Handlers:**
     - Implement separate handlers (AppointmentHandler, PatientHandler) for each GET endpoint to manage the retrieval logic.
-      (Thomas called them controllers and I called them handlers. Both are correct.)
 
 5. **Data Structures:**
     - Utilize Java Collections to manage appointment and patient data. No need to persist data to a database.
