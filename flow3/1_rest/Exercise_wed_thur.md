@@ -81,6 +81,9 @@ In above api, if no request json is specified, then the request body should be e
   - IllegalStateException: When posting or updating a hotel or room with incorrect json representation.
 
 ## Part 4: (Optional) logging
+
+See small tutorial here: https://mkyong.com/logging/slf4j-logback-tutorial/ and see how I have implemented it in the javalindemo project on [github](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P06LoggingDemo.java). 
+
 - Implement logging for all requests and responses
 - Include the following information in the log:
   - Timestamp

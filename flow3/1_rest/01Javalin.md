@@ -28,12 +28,13 @@ public class App {
 }
 ```
 
+[Example Code](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P01SimpleDemo.java)
+
+6. Run the `App.java` class.
+
 ### Class Exercise 1: Create a simple Javalin application with 2 endpoints:
 - GET /todaysDate // Returns the current date
 - GET /joke // Returns a random joke
-
-[Example Code](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P01SimpleDemo.java)
-6. Run the `App.java` class.
 
 ## Javalin and Routes
 
