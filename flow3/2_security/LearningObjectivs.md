@@ -2,26 +2,25 @@
 
 ## Rest Assured
 
- - Familiarize yourself with Rest Assured, a Java library for testing RESTful APIs.
- - Set up a testing environment for Javalin REST services using Rest Assured.
- - Write basic API tests to verify endpoints' functionality and response status codes.
- - Learn how to use Hamcrest matchers to write expressive assertions in Rest Assured tests.
- - Explore techniques for handling authentication and authorization in Rest Assured tests.
-
+- Be able to explain and demonstrate how one can test RESTful API's with Rest Assured.
+- Write basic API tests to verify endpoints' CRUD functionality and response status codes.
+- Demonstrate how to use a variety of Hamcrest matchers to write expressive assertions in Rest Assured tests.
+- Explore and demonstrate techniques for handling authentication and authorization in Rest Assured tests.
 
 ## JWT (JSON Web Tokens)
 
-- Understand the concept of JWT (JSON Web Tokens) and its role in securing RESTful web services.
-- Learn how to generate JWTs for user authentication and authorization.
-- Explore the components of a JWT, including the header, payload, and signature.
-- Implement JWT-based authentication and authorization in a Javalin application.
-- Secure REST endpoints using JWTs to control access to resources.
-- Optional: Handle token expiration and token refresh mechanisms for long-lived sessions.
+- Explain the concept of JWT (JSON Web Tokens) and its role in securing RESTful web services.
+- Show how to generate JWTs for user authentication and authorization.
+- Explore and explain the components of a JWT, including the header, payload, and signature.
+- Show how to implement JWT-based authentication and authorization in a Javalin application.
+- Demonstrate how to secure REST endpoints using JWTs to control access to resources.
+- Optional: Show how to handle token expiration and token refresh mechanisms for long-lived sessions.
 
 ## Password Hashing
 
-- Understand the importance of password hashing in securing user credentials.
+- Explain why password hashing is important in securing user credentialsd, and how it works.
 - Implement password hashing and salt generation in a Javalin application using bcrypt.
 - Develop user registration and authentication mechanisms with secure password handling.
-- Handle password change and reset procedures securely.
-- Identify and mitigate common password-related vulnerabilities, such as brute force attacks and rainbow table attacks.
+- Demonstrate how to handle password change and reset procedures securely.
+- Identify and mitigate common password-related vulnerabilities, such as brute force attacks 
+and rainbow table attacks.
