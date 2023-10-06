@@ -14,4 +14,7 @@ Watch this video:
 
 ## Wednesday (Security)
 
-
+- [Password hashing with bcrypt](https://www.youtube.com/watch?t=1&v=O6cmuiTBZVs) (7 min)
+- [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (Skim 10-15 min)
+- [How does JWT work?](https://www.youtube.com/watch?t=test&v=K6pwjJ5h0Gg) (1:06 min)
+- [JSON Web Tokens](https://www.youtube.com/watch?t=1&v=oXxbB5kv9OA) (first 24 min ONLY)
