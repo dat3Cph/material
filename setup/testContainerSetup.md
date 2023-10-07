@@ -1,5 +1,7 @@
 # Testcontainer setup
 
+As a reference look to this repository with examples of setting up test-containers for tests: [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api). Explanations will follow below:
+
 ## Prepare HibernateConfig.java
 
 Use and modify this version of the HibernateConfig.java file. This will add a boolean `isTest` attribute, which
