@@ -8,3 +8,4 @@ udvikling kan sikres (til en hvis grad).
 og få det til at køre på dit lokale dev-setup.
 2. Brug Rest Assured, JUnit 5 og Hamcrest matchers til at teste alle de færdige endpoints.
 
+![Bates hotel](./images/bates_hotel.jpg)
