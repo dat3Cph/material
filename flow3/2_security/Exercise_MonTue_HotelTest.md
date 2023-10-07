@@ -23,5 +23,3 @@ Our German developer team has developed the first version of an API for a hotel 
    2. Or, we run an entirely new Postgres database server in a separate Docker Container for our tests (on a new port). This way, we completely avoid mixing the test and development environments.
 
 For the current semester, we choose to go with test-containers. We have [documented how you set up testcontainers](../../setup/testContainerSetup.md) in this description.
-
-![Bates](https://media.giphy.com/media/3o6gaZ6ZbC6g13OCg8/giphy.gif)
