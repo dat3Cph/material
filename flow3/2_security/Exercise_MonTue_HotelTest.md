@@ -24,3 +24,4 @@ Our German developer team has developed the first version of an API for a hotel 
 
 For the current semester, we choose to go with test-containers. We have [documented how you set up testcontainers](../../setup/testContainerSetup.md) in this description.
 
+![Bates](https://giphy.com/gifs/bates-motel-301-s3e01-3o6gaZ6ZbC6g13OCg8)
