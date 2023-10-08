@@ -12,6 +12,9 @@ possible to read properties from the pom.xml file. This is handy to feed in valu
 3. Modify / overwrite the HibernateConfig file. The new version will provide a boolean ´isTest´ attribute, that can signal whether
 the connectionpool should be hooked onto the real database (normal situation) - or be using the test-containers and a test database.
 4. Setup your test class for the test EntityManagerFactory
+5. Stuff some test data in the database (populate)
+6. Use Rest Assured to perform you first REST test
+7. Complete the remaining tests
 
 Code-snippets are provided below:
 
@@ -402,25 +405,24 @@ Now we have a skeleton for the test class, and it's time to setup the test-conta
 The tricks happens by setting the `isTest` boolean in the HibernateConfig class: `HibernateConfig.setTest(true);`. This
 is done in the `@BeforeAll` method. Then the instantiation of the DAOs will point to the testcontainer.
 
+Make sure your test class begins like this:
+
 ```Java
+
+private static Javalin app;
+    private static final String BASE_URL = "http://localhost:7777/api/v1";
+    private static HotelController hotelController;
+    private static EntityManagerFactory emfTest;
+
+    private static Hotel h1, h2;
+
 @BeforeAll
 void beforeAll()
 {
     HibernateConfig.setTest(true);
     emfTest = HibernateConfig.getEntityManagerFactory();
-    hotelController = new HotelController(emfTest);
+    hotelController = new HotelController();
 }
-```
-
-When our German dev-team left the code, they did not make it 100% test-friendly. If you take a close look at the 
-HotelController class, the default constructor is hard-coding the EntityManagerFactory. But we need to be able to point
-the connections to our container version. Therefore we overload the constructor with:
-
-```Java
-    public HotelController(EntityManagerFactory emf)
-    {
-        this.dao = HotelDao.getInstance(emf);
-    }
 ```
 
 Now it's time to see if the test-container and test setup works. So run the HotelControllerTest på right-clicking it and click: `Run HotelControllerTest`.
@@ -446,6 +448,101 @@ Now we are ready to perform integration test. Which could be to test the DAO. Bu
 
 ## 5. Stuff some test data in the database (populate)
 
+```Java
+    @BeforeEach
+    void setUp()
+    {
+        Set<Room> calRooms = getCalRooms();
+        Set<Room> hilRooms = getBatesRooms();
 
+        try (var em = emfTest.createEntityManager())
+        {
+            em.getTransaction().begin();
+            // Delete all rows
+            em.createQuery("DELETE FROM Room r").executeUpdate();
+            em.createQuery("DELETE FROM Hotel h").executeUpdate();
+            // Reset sequence
+            em.createNativeQuery("ALTER SEQUENCE room_room_id_seq RESTART WITH 1").executeUpdate();
+            em.createNativeQuery("ALTER SEQUENCE hotel_hotel_id_seq RESTART WITH 1").executeUpdate();
+            // Insert test data
+            h1 = new Hotel("Hotel California", "California", Hotel.HotelType.LUXURY);
+            h2 = new Hotel("Bates Motel", "Lyngby", Hotel.HotelType.STANDARD);
+            h1.setRooms(calRooms);
+            h2.setRooms(hilRooms);
+            em.persist(h1);
+            em.persist(h2);
+            em.getTransaction().commit();
+
+            app = Javalin.create();
+            ApplicationConfig.startServer(app, 7777);
+        }
+    }
+
+    @AfterEach
+    void tearDown()
+    {
+        HibernateConfig.setTest(false);
+        ApplicationConfig.stopServer(app);
+    }
+```
 
 ## 6. Use Rest Assured to perform you first REST test
+
+Meditate on this and try it out:
+
+```Java
+@Test
+    void readAll()
+    {
+        // Given -> When -> Then
+        List<HotelDto> hotelDtoList =
+                given()
+                        .contentType("application/json")
+                        .when()
+                        .get(BASE_URL + "/hotels")
+                        .then()
+                        .assertThat()
+                        .statusCode(HttpStatus.OK_200)  // could also just be 200
+                        .extract().body().jsonPath().getList("", HotelDto.class);
+
+        HotelDto h1DTO = new HotelDto(h1);
+        HotelDto h2DTO = new HotelDto(h2);
+
+        assertEquals(hotelDtoList.size(), 2);
+        assertThat(hotelDtoList, containsInAnyOrder(h1DTO, h2DTO));
+    }
+```
+
+## 7. Complete the remaining tests
+
+This one we will give away for free - since it's a little complex:
+
+```Java
+@Test
+    void create()
+    {
+        Hotel h3 = new Hotel("Cab-inn", "Østergade 2", Hotel.HotelType.BUDGET);
+        Room r1 = new Room(117, new BigDecimal(4500), Room.RoomType.SINGLE);
+        Room r2 = new Room(118, new BigDecimal(2300), Room.RoomType.DOUBLE);
+        h3.addRoom(r1);
+        h3.addRoom(r2);
+        HotelDto newHotel = new HotelDto(h3);
+
+        List<RoomDto> roomDtos =
+        given()
+                .contentType(ContentType.JSON)
+                .body(newHotel)
+                .when()
+                .post(BASE_URL + "/hotels")
+                .then()
+                .statusCode(201)
+                .body("id", equalTo(3))
+                .body("hotelName", equalTo("Cab-inn"))
+                .body("hotelAddress", equalTo("Østergade 2"))
+                .body("hotelType", equalTo("BUDGET"))
+                .body("rooms", hasSize(2))
+                .extract().body().jsonPath().getList("rooms", RoomDto.class);
+
+        assertThat(roomDtos, containsInAnyOrder(new RoomDto(r1), new RoomDto(r2)));
+    }
+```
