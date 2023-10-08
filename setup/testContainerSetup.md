@@ -244,7 +244,7 @@ that you actually have on your Postgres database server:
 
 This one is easy peasy:
 
-Add this method to bottom of the ApplicationConfig.class:
+Add these methods to the bottom of the ApplicationConfig.class:
 
 ```Java
 public static String getProperty(String propName) throws IOException
@@ -258,6 +258,18 @@ public static String getProperty(String propName) throws IOException
             ex.printStackTrace();
             throw new IOException("Could not read property from pom file. Build Maven!");
         }
+    }
+
+public static void startServer(Javalin app, int port) {
+        Routes routes = new Routes();
+        app.updateConfig(ApplicationConfig::configuration);
+        app.routes(routes.getRoutes(app));
+        //HibernateConfig.setTest(false);
+        app.start(port);
+    }
+
+    public static void stopServer(Javalin app) {
+        app.stop();
     }
 ```
 
