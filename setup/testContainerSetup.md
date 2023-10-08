@@ -163,8 +163,8 @@ that you actually have on your Postgres database server:
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>1.3</version>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -513,7 +513,7 @@ Meditate on this and try it out:
     }
 ```
 
-## 7. Complete the remaining tests
+## 7. Complete the remaining tests for the HotelController
 
 This one we will give away for free - since it's a little complex:
 
@@ -546,3 +546,7 @@ This one we will give away for free - since it's a little complex:
         assertThat(roomDtos, containsInAnyOrder(new RoomDto(r1), new RoomDto(r2)));
     }
 ```
+
+## 8. Make similar tests for the RoomController endpoints
+
+## 9. Do the integrationstest for the DAOs
