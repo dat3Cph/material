@@ -10,4 +10,4 @@ to a database - but also because we need to spin up a webserver to deploy and ha
 Test type 2 + 3 involves a database. To speed things up and simplify the testdesigns we use a Docker testcontainer with Postgres
 for the test database. So when running these tests, the Hibernate configuration is modified to connect to a temporary database in a temporary Docker container.
 
-![The test setup](./images/javalin_rest_test_map.png)
+![The test setup](./images/javalin_test_map.png)
