@@ -1,24 +1,118 @@
 # Testcontainer setup
 
-As a reference look to this repository with examples of setting up test-containers for tests: [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api). Explanations will follow below:
+Get an [overview of test scenarios](../flow3/2_security/understanding_the_test_setup.md) here.
 
-## Prepare HibernateConfig.java
+This repository holds an example code base of setting up test-containers for tests: [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api). Explanations and 'how-to' will follow below:
+
+You will need to go through these three steps to prepare for using test-containers:
+
+1. Prepare your `pom.xml` with properties and extra test-container dependencies.
+2. Add a util method called getProperty(String propName) in the ApplicationConfig class. This method will make it
+possible to read properties from the pom.xml file. This is handy to feed in values to the Hibernate setup. Like `db.name`, `db.username`, and `db.password`.
+3. Modify / overwrite the HibernateConfig file. The new version will provide a boolean ´isTest´ attribute, that can signal whether
+the connectionpool should be hooked onto the real database (normal situation) - or be using the test-containers and a test database.
+
+Code-snippets are provided below:
+
+## 1. Prepare your `pom.xml`
+
+First, add these dependencies:
+
+```Java
+<!--  TESTING      -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>1.18.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>1.18.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>jdbc</artifactId>
+            <version>1.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>1.18.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>5.3.2</version>
+            <scope>test</scope>
+        </dependency>
+```
+
+## 2. Add a util method called getProperty(String propName)
+
+Add this method to the ApplicationConfig class:
+
+```Java
+public static String getProperty(String propName) throws IOException {
+        try (InputStream is = HibernateConfig.class.getClassLoader().getResourceAsStream("properties-from-pom.properties")) {
+            Properties prop = new Properties();
+            prop.load(is);
+            return prop.getProperty(propName);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            throw new IOException("Could not read property from pom file");
+        }
+    }
+```
+
+## 3. Prepare HibernateConfig.java
 
 Use and modify this version of the HibernateConfig.java file. This will add a boolean `isTest` attribute, which
 can be used for indication that `getEntityManagerFactory()` should return a factory that holds connections to
 a test container with a Postgres Database.
 
 ```Java
-package dk.lyngby.config;
 
-import dk.lyngby.model.*;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-
 import java.util.Properties;
 
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
