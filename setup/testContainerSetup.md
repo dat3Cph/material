@@ -437,7 +437,7 @@ had a `Config` too many - so we ditched it.
 4. In case you are the lucky owner of a Mac M1/M2 laptop, you also need to inform Docker to use a specific ARM64 version of
 postgres. In the terminal execute these 2 commands:
 
-```bash
+```console
   docker tag arm64v8/postgres:latest postgresql:15.3-alpine3.18
   sudo ln -s $HOME/.docker/run/docker.sock /var/run/docker.sock
 ```
