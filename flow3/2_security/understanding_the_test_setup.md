@@ -11,3 +11,27 @@ Test type 2 + 3 involves a database. To speed things up and simplify the testdes
 for the test database. So when running these tests, the Hibernate configuration is modified to connect to a temporary database in a temporary Docker container.
 
 ![The test setup](./images/javalin_test_map.png)
+
+### Dependencies
+```java
+<!--        https://www.baeldung.com/hamcrest-core-matchers-->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>java-hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--        https://www.baeldung.com/rest-assured-tutorial-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${restassured.version}</version>
+            <scope>test</scope>
+        </dependency>
+```
