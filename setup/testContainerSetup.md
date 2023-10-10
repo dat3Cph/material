@@ -2,7 +2,7 @@
 
 Get an [overview of test scenarios](../flow3/2_security/understanding_the_test_setup.md) here.
 
-This repository holds an example code base of setting up test-containers for tests: [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api). Explanations and 'how-to' will follow below:
+This repository holds an example code base of setting up test-containers for tests: [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api), and carrying out Rest Assured tests. Explanations and 'how-to' will follow below:
 
 You will need to go through these three steps to prepare for using test-containers:
 
@@ -23,7 +23,7 @@ Code-snippets are provided below:
 First, overwrite pom.xml with the version below. Make sure to set the ` <db.name>startcode</db.name>` to a database name
 that you actually have on your Postgres database server:
 
-```Java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
