@@ -13,7 +13,12 @@ for the test database. So when running these tests, the Hibernate configuration 
 ![The test setup](./images/javalin_test_map.png)
 
 ### Dependencies
-```java
+```xml
+        <hamcrest.version>2.0.0.0</hamcrest.version>
+        <restassured.version>5.3.0</restassured.version>
+```
+
+```xml
 <!--        https://www.baeldung.com/hamcrest-core-matchers-->
         <dependency>
             <groupId>org.hamcrest</groupId>

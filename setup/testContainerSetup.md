@@ -437,6 +437,8 @@ static void beforeAll()
     HibernateConfig.setTest(true);
     emfTest = HibernateConfig.getEntityManagerFactory();
     hotelController = new HotelController();
+    app = Javalin.create();
+    ApplicationConfig.startServer(app, 7777);
 }
 ```
 
@@ -487,14 +489,11 @@ Now we are ready to perform integration test. Which could be to test the DAO. Bu
             em.persist(h1);
             em.persist(h2);
             em.getTransaction().commit();
-
-            app = Javalin.create();
-            ApplicationConfig.startServer(app, 7777);
         }
     }
 
-    @AfterEach
-    void tearDown()
+    @AfterAll
+    static void tearDown()
     {
         HibernateConfig.setTest(false);
         ApplicationConfig.stopServer(app);
