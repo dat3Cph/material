@@ -1,6 +1,4 @@
-# Testing the Hotel API
-
-## Part I: Integration Testing of RESTful APIs
+# Part I: Testing the Hotel API (team A)
 
 Our German developer team has developed the first version of an API for a hotel chain. It's not quite finished yet. Germans think in terms of quality. Hence, we've been tasked with adding integration tests to the project, so we can meet the usual standards. "Quadratisch praktisch gut," as they say:
 

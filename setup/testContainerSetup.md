@@ -594,5 +594,3 @@ This one we will give away for free - since it's a little complex:
 ```
 
 ## 8. Make similar tests for the RoomController endpoints
-
-## 9. Do the integrationstest for the DAOs
