@@ -2,20 +2,22 @@
 
 This page describes how to add a security layer for the Rest APIs. The security consists of these aspects:
 
-1. Login authentication through the api
+1. Login authentication through the API
 2. Hashing user passwords with jBCrypt, so all passwords stored in entities and in the database are no longer clear text.
 3. Implementation of JWT (Json Web Tokens) in the backend
 4. Implemention of user roles, so each endpoint can be protected and made accessable only for users with a particular role.
+5. Updating Rest Assured to handle authentication
 
 ## How to add security to an existing API built in Javalin
 
-We will use this repo as an example to begin with, and add the necessary dependencies, classes and methods to provide a decent level of security:
+We will use this repo as an example to begin with, and add the necessary classes and methods to provide a decent level of security. And it's a long one:
 
-- [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api) (take the restassured branch to start with - or use your own version with Rest Assured and test containers implemented).
+- [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api) (take the restassured branch to start with - or use your own version with Rest Assured and test containers implemented). That version has the most
+basic architecture, but lacks security.
 
 ## 1. Checking the pom.xml file
 
-These dependencies are probably already present. But check anyway. 
+These dependencies are probably already present. But check anyway.
 
 ```xml
 <!--   Security     -->
@@ -409,6 +411,19 @@ public class User implements Serializable {
 
 }
 ```
+
+Remember to add the new entities to the `HibernateConfig`:
+
+```Java
+private static void getAnnotationConfiguration(Configuration configuration) 
+{
+    configuration.addAnnotatedClass(Hotel.class);
+    configuration.addAnnotatedClass(Room.class);
+    configuration.addAnnotatedClass(User.class);
+    configuration.addAnnotatedClass(Role.class);
+}
+```
+
 
 Then add a UserDTO:
 
@@ -862,45 +877,56 @@ import io.javalin.security.RouteRole;
 
 import java.util.Set;
 
-public class AccessManagerController {
+public class AccessManagerController
+{
 
     private final TokenFactory TOKEN_FACTORY = TokenFactory.getInstance();
 
-    public void accessManagerHandler(Handler handler, Context ctx, Set<? extends RouteRole> permittedRoles) throws Exception {
+    public void accessManagerHandler(Handler handler, Context ctx, Set<? extends RouteRole> permittedRoles) throws Exception
+    {
         String path = ctx.path();
         boolean isAuthorized = false;
 
-        if (path.equals("/api/v1/auth/login") || path.equals("/api/v1/auth/register") || path.equals("/api/v1/routes") || permittedRoles.contains(RouteRoles.ANYONE)) {
+        if (path.equals("/api/v1/auth/login") || path.equals("/api/v1/auth/register") || path.equals("/api/v1/routes") || permittedRoles.contains(RouteRoles.ANYONE))
+        {
             handler.handle(ctx);
             return;
-        } else {
+        } else
+        {
             RouteRole[] userRole = getUserRole(ctx);
-            for (RouteRole role : userRole) {
-                if (permittedRoles.contains(role)) {
+            for (RouteRole role : userRole)
+            {
+                if (permittedRoles.contains(role))
+                {
                     isAuthorized = true;
                     break;
                 }
             }
         }
 
-        if (isAuthorized) {
+        if (isAuthorized)
+        {
             handler.handle(ctx);
-        } else {
+        } else
+        {
             throw new AuthorizationException(401, "You are not authorized to perform this action");
         }
     }
 
-    private RouteRole[] getUserRole(Context ctx) throws AuthorizationException, ApiException {
-        String token = ctx.header("Authorization").split(" ")[1];
-        UserDTO userDTO = TOKEN_FACTORY.verifyToken(token);
-
-        if (userDTO == null) {
+    private RouteRole[] getUserRole(Context ctx) throws AuthorizationException, ApiException
+    {
+        try
+        {
+            String token = ctx.header("Authorization").split(" ")[1];
+            UserDTO userDTO = TOKEN_FACTORY.verifyToken(token);
+            return userDTO.getRoles().stream().map(r -> RouteRoles.valueOf(r.toUpperCase())).toArray(RouteRole[]::new);
+        }
+        catch (NullPointerException e)
+        {
             throw new ApiException(401, "Invalid token");
         }
 
-        return userDTO.getRoles().stream().map(r -> RouteRoles.valueOf(r.toUpperCase())).toArray(RouteRole[]::new);
     }
-
 }
 ```
 
@@ -970,6 +996,7 @@ package dk.lyngby.config;
 
 import dk.lyngby.controller.impl.AccessManagerController;
 import dk.lyngby.routes.Routes;
+import dk.lyngby.security.RouteRoles;
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
 import io.javalin.plugin.bundled.RouteOverviewPlugin;
@@ -990,7 +1017,7 @@ public class ApplicationConfig {
     private static void configuration(JavalinConfig config) {
         config.routing.contextPath = "/api/v1"; // base path for all routes
         config.http.defaultContentType = "application/json"; // default content type for requests
-        config.plugins.register(new RouteOverviewPlugin("/")); // enables route overview at /
+        config.plugins.register(new RouteOverviewPlugin("/", RouteRoles.ANYONE)); // enables route overview at /
         config.accessManager(ACCESS_MANAGER_HANDLER::accessManagerHandler);
     }
 
@@ -1020,6 +1047,28 @@ public class ApplicationConfig {
     }
 }
 ```
+
+The `Main.class` can now be updated and simplyfied:
+
+```Java
+package dk.lyngby;
+
+import dk.lyngby.config.ApplicationConfig;
+import io.javalin.Javalin;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        ApplicationConfig
+            .startServer(
+                Javalin.create(),
+                Integer.parseInt(ApplicationConfig.getProperty("javalin.port")));
+    }
+}
+```
+
+Notice, the javalin port is now picked from the pom.xml. Nice eey?
 
 ## 5. Try it out - add some .http files
 
@@ -1106,7 +1155,7 @@ Authorization: Bearer {{token}}
 
 ###
 
-GET {{url}}/hotels/6
+GET {{url}}/hotels/2
 Authorization: Bearer {{token}}
 
 ###
@@ -1152,7 +1201,7 @@ Authorization: Bearer {{token}}
 
 ###
 
-POST {{url}}/rooms/hotel/9
+POST {{url}}/rooms/hotel/2
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -1163,5 +1212,287 @@ Authorization: Bearer {{token}}
 }
 ```
 
-Finally, the time has come to give it a spin
+Finally, the time has come to give it a spin:
 
+1. Run the Main.main method to get the API going
+2. Check that http://localhost:7070/api/v1/ and http://localhost:7070/api/v1/hotels are working in the browser
+3. Use the auth.http methods to log in and check the JWTs on [https://jwt.io/](https://jwt.io/)
+4. Try the various endpoints though the dev.http
+
+## 6. Update your Rest Assured tests
+
+Now it's time to add JWT authentication to the relevant tests.
+
+Update your `HotelControllerTest.class` to this - and contemplate what is going on:
+
+```Java
+package dk.lyngby.controller.impl;
+
+import dk.lyngby.config.ApplicationConfig;
+import dk.lyngby.config.HibernateConfig;
+import dk.lyngby.dto.HotelDto;
+import dk.lyngby.dto.RoomDto;
+import dk.lyngby.model.Hotel;
+import dk.lyngby.model.Role;
+import dk.lyngby.model.Room;
+import dk.lyngby.model.User;
+import io.javalin.Javalin;
+import io.restassured.http.ContentType;
+import jakarta.persistence.EntityManagerFactory;
+import org.eclipse.jetty.http.HttpStatus;
+import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.*;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Set;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class HotelControllerTest
+{
+    private static Javalin app;
+    private static final String BASE_URL = "http://localhost:7777/api/v1";
+    private static HotelController hotelController;
+    private static EntityManagerFactory emfTest;
+    private static Object adminToken;
+    private static Object userToken;
+
+    private static Hotel h1, h2;
+    private static User user, admin;
+    private static Role userRole, adminRole;
+
+    @BeforeAll
+    static void beforeAll()
+    {
+        HibernateConfig.setTest(true);
+        emfTest = HibernateConfig.getEntityManagerFactory();
+        hotelController = new HotelController();
+        app = Javalin.create();
+        ApplicationConfig.startServer(app, 7777);
+
+        // Create users and roles
+        user = new User("usertest", "user123");
+        admin = new User("admintest", "admin123");
+        userRole = new Role("user");
+        adminRole = new Role("admin");
+        user.addRole(userRole);
+        admin.addRole(adminRole);
+        try (var em = emfTest.createEntityManager())
+        {
+            em.getTransaction().begin();
+            em.persist(userRole);
+            em.persist(adminRole);
+            em.persist(user);
+            em.persist(admin);
+            em.getTransaction().commit();
+        }
+
+        // Get tokens
+        UserController userController = new UserController();
+        adminToken = getToken(admin.getUsername(), "admin123");
+        userToken = getToken(user.getUsername(), "user123");
+    }
+
+    @BeforeEach
+    void setUp()
+    {
+        Set<Room> calRooms = getCalRooms();
+        Set<Room> hilRooms = getBatesRooms();
+
+        try (var em = emfTest.createEntityManager())
+        {
+            em.getTransaction().begin();
+
+            // Delete all rows
+            em.createQuery("DELETE FROM Room r").executeUpdate();
+            em.createQuery("DELETE FROM Hotel h").executeUpdate();
+
+            // Reset sequence
+            em.createNativeQuery("ALTER SEQUENCE room_room_id_seq RESTART WITH 1").executeUpdate();
+            em.createNativeQuery("ALTER SEQUENCE hotel_hotel_id_seq RESTART WITH 1").executeUpdate();
+
+            // Insert test data for hotels and rooms
+            h1 = new Hotel("Hotel California", "California", Hotel.HotelType.LUXURY);
+            h2 = new Hotel("Bates Motel", "Lyngby", Hotel.HotelType.STANDARD);
+            h1.setRooms(calRooms);
+            h2.setRooms(hilRooms);
+            em.persist(h1);
+            em.persist(h2);
+
+            em.getTransaction().commit();
+        }
+    }
+
+    @AfterAll
+    static void tearDown()
+    {
+        HibernateConfig.setTest(false);
+        ApplicationConfig.stopServer(app);
+    }
+
+    @Test
+    void read()
+    {
+        given()
+                .header("Authorization", adminToken)
+                .contentType("application/json")
+                .when()
+                .get(BASE_URL + "/hotels/" + h1.getId())
+                .then()
+                .assertThat()
+                .statusCode(HttpStatus.OK_200)
+                .body("id", equalTo(h1.getId()));
+    }
+
+    @Test
+    void readAll()
+    {
+        // Given -> When -> Then
+        List<HotelDto> hotelDtoList =
+                given()
+                        .contentType("application/json")
+                        .when()
+                        .get(BASE_URL + "/hotels")
+                        .then()
+                        .assertThat()
+                        .statusCode(HttpStatus.OK_200)  // could also just be 200
+                        .extract().body().jsonPath().getList("", HotelDto.class);
+
+        HotelDto h1DTO = new HotelDto(h1);
+        HotelDto h2DTO = new HotelDto(h2);
+
+        assertEquals(hotelDtoList.size(), 2);
+        assertThat(hotelDtoList, containsInAnyOrder(h1DTO, h2DTO));
+    }
+
+    @Test
+    void create()
+    {
+        Hotel h3 = new Hotel("Cab-inn", "Østergade 2", Hotel.HotelType.BUDGET);
+        Room r1 = new Room(117, new BigDecimal(4500), Room.RoomType.SINGLE);
+        Room r2 = new Room(118, new BigDecimal(2300), Room.RoomType.DOUBLE);
+        h3.addRoom(r1);
+        h3.addRoom(r2);
+        HotelDto newHotel = new HotelDto(h3);
+
+        List<RoomDto> roomDtos =
+                given()
+                        .header("Authorization", adminToken)
+                        .contentType(ContentType.JSON)
+                        .body(newHotel)
+                        .when()
+                        .post(BASE_URL + "/hotels")
+                        .then()
+                        .statusCode(201)
+                        .body("id", equalTo(3))
+                        .body("hotelName", equalTo("Cab-inn"))
+                        .body("hotelAddress", equalTo("Østergade 2"))
+                        .body("hotelType", equalTo("BUDGET"))
+                        .body("rooms", hasSize(2))
+                        .extract().body().jsonPath().getList("rooms", RoomDto.class);
+
+        assertThat(roomDtos, containsInAnyOrder(new RoomDto(r1), new RoomDto(r2)));
+    }
+
+    @Test
+    void update()
+    {
+        // Update the Bates Motel to luxury
+
+        HotelDto updateHotel = new HotelDto("Bates Motel", "Lyngby", Hotel.HotelType.LUXURY);
+        given()
+                .header("Authorization", adminToken)
+                .contentType(ContentType.JSON)
+                .body(updateHotel)
+                .log().all()
+                .when()
+                .put(BASE_URL + "/hotels/" + h2.getId())
+                .then()
+                .statusCode(200)
+                .body("id", equalTo(h2.getId()))
+                .body("hotelName", equalTo("Bates Motel"))
+                .body("hotelAddress", equalTo("Lyngby"))
+                .body("hotelType", equalTo("LUXURY"))
+                .body("rooms", hasSize(6));
+    }
+
+    @Test
+    void delete()
+    {
+        // Remove hotel California
+        given()
+                .header("Authorization", adminToken)
+                .contentType(ContentType.JSON)
+                .when()
+                .delete(BASE_URL + "/hotels/" + h1.getId())
+                .then()
+                .statusCode(204);
+
+        // Check that it is gone
+        given()
+                .header("Authorization", adminToken)
+                .contentType(ContentType.JSON)
+                .when()
+                .get(BASE_URL + "/hotels/" + h1.getId())
+                .then()
+                .statusCode(404);
+    }
+
+    @NotNull
+    private static Set<Room> getCalRooms()
+    {
+        Room r100 = new Room(100, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r101 = new Room(101, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r102 = new Room(102, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r103 = new Room(103, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r104 = new Room(104, new BigDecimal(3200), Room.RoomType.DOUBLE);
+        Room r105 = new Room(105, new BigDecimal(4500), Room.RoomType.SUITE);
+
+        Room[] roomArray = {r100, r101, r102, r103, r104, r105};
+        return Set.of(roomArray);
+    }
+
+    @NotNull
+    private static Set<Room> getBatesRooms()
+    {
+        Room r111 = new Room(111, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r112 = new Room(112, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r113 = new Room(113, new BigDecimal(2520), Room.RoomType.SINGLE);
+        Room r114 = new Room(114, new BigDecimal(2520), Room.RoomType.DOUBLE);
+        Room r115 = new Room(115, new BigDecimal(3200), Room.RoomType.DOUBLE);
+        Room r116 = new Room(116, new BigDecimal(4500), Room.RoomType.SUITE);
+
+        Room[] roomArray = {r111, r112, r113, r114, r115, r116};
+        return Set.of(roomArray);
+    }
+
+    public static Object getToken(String username, String password)
+    {
+        return login(username, password);
+    }
+
+    private static Object login(String username, String password)
+    {
+        String json = String.format("{\"username\": \"%s\", \"password\": \"%s\"}", username, password);
+
+        var token = given()
+                .contentType("application/json")
+                .body(json)
+                .when()
+                .post("http://localhost:7777/api/v1/auth/login")
+                .then()
+                .extract()
+                .response()
+                .body()
+                .path("token");
+
+        return "Bearer " + token;
+    }
+
+
+}
+```
