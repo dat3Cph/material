@@ -12,7 +12,7 @@ This page describes how to add a security layer for the Rest APIs. The security 
 
 We will use this repo as an example to begin with, and add the necessary classes and methods to provide a decent level of security. And it's a long one:
 
-- [https://github.com/dat3Cph/3sem-javalin-rest-api](https://github.com/dat3Cph/3sem-javalin-rest-api) (take the restassured branch to start with - or use your own version with Rest Assured and test containers implemented). That version has the most
+- [https://github.com/dat3Cph/hotel_exercise_rest](https://github.com/dat3Cph/hotel_exercise_rest) (take the restassured branch to start with - or use your own version with Rest Assured and test containers implemented). That version has the most
 basic architecture, but lacks security.
 
 ## 1. Checking the pom.xml file
