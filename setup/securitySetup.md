@@ -37,11 +37,24 @@ These dependencies are probably already present. But check anyway.
 In the properties section, these should also be there:
 
 ```xml
+<!-- Project properties  -->
 <!--  token    -->
 <secret.key>841D8A6C80CBA4FCAD32D5367C18C53B</secret.key>
 <issuer>cphbusiness.dk</issuer>
 <token.expiration.time>3600000</token.expiration.time>
+<!--  DB    -->
+<db.name>hotel</db.name>
+<db.username>postgres</db.username>
+<db.password>postgres</db.password>
+<db.connection.string>jdbc:postgresql://localhost:5432/</db.connection.string>
 ```
+
+A little peculiar feature by using propties at runtime (reading them from Java) - is that the pom.xml has to be deployed to
+the /target folder. To do that we just need to run the Maven goal: install:
+
+![Maven install goal](./images/maven_install.png)
+
+You need to do this every time the pom.xml properties are modified.
 
 ## 2. Add needed security classes
 
@@ -1496,3 +1509,8 @@ class HotelControllerTest
 
 }
 ```
+
+## Congrats
+
+You made it to the end, and are now able to build a Rest API with a decent security layer and automated tests for database operations and
+endpoints.
