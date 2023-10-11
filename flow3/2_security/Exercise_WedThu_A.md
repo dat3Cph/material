@@ -1,6 +1,4 @@
-# Securing the Hotel API / team A
-
-## Part I: Securing the RESTful API
+# Securing the Hotel API (team A)
 
 Our German developer team has yet to implement security on the Hotel API. So that our job.
 
