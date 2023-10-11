@@ -1,6 +1,6 @@
 # Part III:  Expanding the Hotel API (team A)
 
-It Thursday. First consider this: depending on how far you have gone during the previous and this week, you might need to catch up.
+It's Thursday. First consider this: depending on how far you have gone during the previous week and this one, you might need to catch up.
 
 This exercise is building on top of these three exercises:
 
@@ -20,16 +20,16 @@ Luckily we have collected a "suggested" solution for all three exercises, so you
 
 ## Thursday exercise
 
-And now to this days exercise. The purpose is for you to get better acquainted with the architecture and code base.
+And now to this days' exercise. The purpose is for you to get better acquainted with the architecture and code base.
 
-Our German developer team has sent us some further requirements. So we need to develop the functionality of the Hotel API further:
+Our German developer team has sent us some further requirements. So we need to develop new functionality for the Hotel API:
 
 Use the `security_jon` branch as a starting point - or better - use your own version of it. Then implement these requirements:
 
 Requirements:
 
 1. We would like add a room size in squaremeters for each room. Make sure that you implement this extension all the way through. From Entity, DTO, DAO, test etc.
-2. We would like a new endpoint, so you can request all rooms within a given price range. For instance between 700 and 900.
+2. We would like a new endpoint, so you can request all rooms within a given price range. For instance between 700 and 900. The end point could have this syntax: `/api/v1/rooms?pricefrom=700&priceto=900}`. You can also find [inspiration for URI's here](https://restfulapi.net/resource-naming/).
 3. The Rest Assured Tests for `HotelControllerTest` does not test for the `RouteRoles.MANAGER`. Please add a new user to the
 the test who has that role, and test that you can
 create a new hotel entity with that user.
