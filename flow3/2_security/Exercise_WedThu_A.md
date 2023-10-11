@@ -1,6 +1,6 @@
 # Securing the Hotel API (team A)
 
-Our German developer team has yet to implement security on the Hotel API. So that our job.
+Our German developer team has yet to implement security on the Hotel API. So that's our job.
 
 This time the whole cook book description is placed in a seperate document. So jump in, and code along:
 
