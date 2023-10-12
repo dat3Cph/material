@@ -18,7 +18,7 @@ Use an existing Rest project from last week or create a new one. Now add securit
   - The endpoint should return an error if the username and password are invalid.
   - Update the UserDAO with methods:
   - `login(String username, String password)` that returns a JWT token if the username and password are valid.
-  - `authorizeUser(String username, List<String> acceptedRoles)`
+  - `boolean authorize(String username, Set<? extends RouteRole> permittedRoles);`
 
 ## Part 3 Protect Endpoints
 - Create an endpoint that can only be accessed by authenticated users with a role of ADMIN.
