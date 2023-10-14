@@ -6,9 +6,8 @@
 2. Practise how to set up a development environment for Java, including @BeforeEach and @BeforeAll.
 3. Gain proficiency in writing JUnit tests to verify the code.
 4. Use RestAssured and Hamcrest matchers to test RESTful endpoints with TDD
-5. Learn how to create testable, modular, and maintainable Java code by following TDD [best practices](TDD.md).
-6. Explore common TDD design patterns and their application in Java development with Javalin.
-7. Apply TDD techniques to solve real-world programming challenges, promoting better code quality and faster development.
+5. Learn how to create testable, modular, and maintainable Java code by following TDD [best practices](TDD.md#best-practices).
+6. Explore common TDD [design patterns](TDD.md#tdd-and-desgin-patterns) and their application in Java development with Javalin.
 
 **Wednesday: GitHub Actions and Docker Image Deployment**
 
