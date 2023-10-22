@@ -1,6 +1,6 @@
 # Learning Objectives for CI/CD week
 
-**Monday: TDD with Java, Javalin, and RestAssured**
+## Monday: TDD with Java, Javalin, and RestAssured
 
 1. Understand the fundamental principles of Test-Driven Development (TDD) and its importance in software development.
 2. Practise how to set up a development environment for Java, including @BeforeEach and @BeforeAll.
@@ -9,7 +9,7 @@
 5. Learn how to create testable, modular, and maintainable Java code by following TDD [best practices](TDD.md#best-practices).
 6. Explore common TDD [design patterns](TDD.md#tdd-and-desgin-patterns) and their application in Java development with Javalin.
 
-**Wednesday: GitHub Actions and Docker Image Deployment**
+## Wednesday: GitHub Actions and Docker Image Deployment
 
 1. Understand the role of continuous integration and continuous deployment (CI/CD) in modern software development.
 2. Practise how to set up a GitHub repository and configure version control for your project.
