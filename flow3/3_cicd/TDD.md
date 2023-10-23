@@ -1,4 +1,5 @@
 # TDD
+A good and simple ressource for learning TDD is [this](https://tddmanifesto.com/getting-started/)
 
 ## Best practices
 
