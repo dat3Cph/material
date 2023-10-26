@@ -12,3 +12,6 @@
 ## JPA
 
 - [JPA Starter Project](./JPASetup.md)
+
+## CICD Part 1
+- [Github actions, Docker hub and Digital Oceand deployment](https://github.com/HartmannDemoCode/github_actions_demo/blob/main/CICD.README.md#setup-project-for-cicd)
