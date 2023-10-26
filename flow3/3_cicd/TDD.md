@@ -35,7 +35,7 @@ Test-Driven Development (TDD) is a software development practice that emphasizes
 
 TDD is a skillset that improves with practice. While following these best practices, adapt them to the specific needs and context of your project, and continue learning and refining your TDD skills over time. In the beginning it may seem like a lot of extra work, but in the long run it might save you time and effort.
 
-## TDD and Desgin patterns
+## TDD and Design patterns
 
 Test-Driven Development (TDD) is not only about writing tests but also about shaping the design of your software through the test-writing process. While there aren't explicit "TDD design patterns" in the same way there are design patterns in software development, certain design principles and practices emerge as you apply TDD. These principles help you write more maintainable, modular, and testable code. Here are some design-related practices often associated with TDD:
 
