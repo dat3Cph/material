@@ -1098,8 +1098,6 @@ Content-Type: application/json
   "role": "admin"
 }
 
-> {% client.global.set("token", response.body.json.token); %}
-
 ### Register user/user
 POST {{url}}/auth/register
 Content-Type: application/json
@@ -1120,8 +1118,6 @@ Content-Type: application/json
   "role": "manager"
 }
 
-> {% client.global.set("token", response.body.token); %}
-
 ### Login as admin
 POST {{url}}/auth/login
 Content-Type: application/json
@@ -1131,7 +1127,6 @@ Content-Type: application/json
   "password": "admin"
 }
 
-> {% client.global.set("token", response.body.token); %}
 
 ### Login as user
 POST {{url}}/auth/login
@@ -1141,8 +1136,6 @@ Content-Type: application/json
   "username": "user",
   "password": "user"
 }
-> {% client.global.set("token", response.body.token); %}
-
 
 ### Login as manager
 POST {{url}}/auth/login
@@ -1153,14 +1146,12 @@ Content-Type: application/json
   "password": "manager"
 }
 
-> {% client.global.set("token", response.body.token); %}
-
 ###
 ```
 
 Next update the `dev.http` file:
 
-```Console
+```BASH
 // Hotel API
 
 GET {{url}}/hotels
