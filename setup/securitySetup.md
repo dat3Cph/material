@@ -1087,7 +1087,7 @@ Notice, the javalin port is now picked from the pom.xml. Nice eey?
 
 First add a `auth.http` file in the `ressource/http` folder:
 
-```console
+```BASH
 ### Register user/admin
 POST {{url}}/auth/register
 Content-Type: application/json
