@@ -6,6 +6,13 @@ on:
 jobs:
   # Single deploy job no building
   deploy:
+    permissions:
+      deployments: write
+      contents: write
+      statuses: write
+      actions: write
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
