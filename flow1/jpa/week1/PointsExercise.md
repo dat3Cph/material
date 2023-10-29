@@ -2,7 +2,7 @@
 
 ## Links
 
-- [JPA Project Setup](https://github.com/dat3Cph/backend/blob/main/setup/JPASetup.md)
+- [JPA Project Setup](../../../setup/JPASetup.md)
 
 ## Introduction
 
