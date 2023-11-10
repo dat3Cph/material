@@ -32,12 +32,12 @@
     - Be able to identify and resolve common JavaScript errors.
 
 ### Wednesday - React:
-#### Component-Based Architecture:
+1. **Component-Based Architecture:**
     - Understand the concept of components in React.
     - Create and use functional components and understand class components.
-#### JSX Syntax:
+2. **JSX Syntax:**
     - Compose UI elements using JSX syntax.
     - Grasp the relationship between JSX and JavaScript.
-#### State and Props:
+3. **State and Props:**
     - Differentiate between state and props.
     - Implement stateful components and pass data through props.
