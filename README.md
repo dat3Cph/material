@@ -1,8 +1,8 @@
-## 3rd semester Programming and Tech course materials
+# 3rd semester Programming and Tech course materials
 
-### JPA
+## Backend Flow 1: JPA
 
-#### Week 1
+### Week 1
 
 - [Learning Objectives](flow1/jpa/week1/README.md)
 - [Resources](flow1/jpa/week1/Resources.md)
@@ -12,10 +12,3 @@
 - [Student Exercise](flow1/jpa/week1/StudentExercise.md)
 - [Unicorn Exercise](flow1/jpa/week1/UnicornExercise.md)
 - [Points Exercise](flow1/jpa/week1/PointsExercise.md)
-
-
-
-
-
-
-
