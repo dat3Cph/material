@@ -5,8 +5,6 @@ Use the forEach method to iterate and print (console.log) both the original and 
 
 0.2 Use the names-array created above, and, using its map method, create a new array with all names uppercased.
 
-We will continue with this exercise tomorrow when we start manipulating the browser's DOM
-
 0.3 Use map, join + just a little bit more to create a function, which given the array of names, for example: ["Lars", "Peter", "Jan", "Ian"] returns a string with the HTML for the names in an `<ul>` as sketched below:
 
 ```html
@@ -24,7 +22,7 @@ The output above was shown with newlines for readability, but this is actually w
 <ul><li>Lars</li><li>Peter</li><li>Jan</li><li>Ian</li><ul>
 ```
 
-Tomorrow we will use DOM manipulation and place this into a “running” web-page.
+In exercise 1, we will use DOM manipulation and place this into a “running” web-page.
 
 0.4  Given this JavaScript array:
 
@@ -38,7 +36,7 @@ let cars = [
 ];
 ```
 
-0.4.1 Use the filter filter function to get arrays with only:
+0.4.1 Use the filter function to get arrays with only:
 
 - Cars newer than 1999
 - All  Volvo’s
