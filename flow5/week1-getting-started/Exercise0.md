@@ -1,4 +1,4 @@
-# Exercise 0.0: Getting comfortable with arrays, filter, map, and forEach
+# Exercise 0: Getting comfortable with arrays, filter, map, and forEach
 
 0.1 Declare a JavaScript array and initialize it with some names (Lars, Jan, Peter, Bo, Frederik etc.). Use the filter method to create a new array with only names of length `<=3`.
 Use the forEach method to iterate and print (console.log) both the original and the new array.
