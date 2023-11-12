@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling Example</title>
+  <style>
+    .parent {
+      padding: 20px;
+      background-color: lightblue;
+    }
+
+    .child {
+      padding: 10px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+
+<div class="parent" id="parentDiv">
+  <p>This is the parent div</p>
+  <div class="child" id="childDiv">
+    <p>This is the child div</p>
+  </div>
+  <button id="stopBtn">Stop bubbling</button>
+</div>
+
+<script>
+  // Event handler for the parent div
+  function parentDivClickHandler() {
+    console.log('Parent div clicked!');
+  }
+
+  // Event handler for the child div
+  function childDivClickHandler() {
+    console.log('Child div clicked!');
+    event.stopPropagation();
+  }
+
+  // Attach click event listeners to the parent and child divs
+  const parentDiv = document.getElementById('parentDiv');
+  const childDiv = document.getElementById('childDiv');
+
+  parentDiv.addEventListener('click', parentDivClickHandler);
+  childDiv.addEventListener('click', childDivClickHandler);
+  
+</script>
+
+</body>
+</html>

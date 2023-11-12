@@ -130,18 +130,72 @@ Logical or(||) :Returns true if one or both expressions are true, otherwise it r
 - Ternary operator:
   - `let age = 16; let voteable = (age < 18) ? "Too young":"Old enough"; // output-> Too young`
 
-- Nullish coalescing operator (??)
+### JS features
+- **Truthy and falsy** values:
+  - According to MDN: “In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).”
+    - `const truthy = 1; if (truthy) { console.log('truthy'); }`
+  - According to MDN: “In JavaScript, a falsy value is a value that is considered false when encountered in a Boolean context. JavaScript uses type conversion to coerce any value to a Boolean in contexts that require it, such as conditionals and loops.”
+    - `const falsy = 0; if (!falsy) { console.log('falsy'); }`
+- Falsy values:
+  - `false`
+    - `0`
+    - `-0`
+    - `0n`
+    - `""`
+    - `null`
+    - `undefined`
+    - `NaN`
+- Truthy values:
+  - `true`
+  - `1`
+  - `"0"`
+  - `"false"`
+  - `[]`
+  - `{}`
+  - `function(){}`
+- Examples: 
+  - ` var a = 0; if (a) { console.log('true'); } else { console.log('false'); } // output-> false`
+  - ` var a = 1; if (a) { console.log('true'); } else { console.log('false'); } // output-> true`
+
+- **Nullish coalescing** operator (??)
   - According to MDN: “The nullish coalescing operator ( ?? ) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand”.
     - `const foo = null ?? 'default string'; console.log(foo); // expected output: "default string"`
-- Optional chaining (?.)
+- **Optional chaining** (?.)
   - According to MDN: “The optional chaining operator ( ?. ) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. The ?. operator functions similarly to the . chaining operator, except that instead of causing an error if a reference is nullish ( null or undefined ), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.”
     - `const adventurer = { name: 'Alice', cat: { name: 'Dinah' } }; const dogName = adventurer.dog?.name; console.log(dogName); // expected output: undefined`
-### JS peculiarities:
-
-
-
-
 
 ## Javascript in the browser
 - In a Single Page Application (SPA) the browser is responsible for rendering the HTML, CSS and JavaScript. The browser is also responsible for executing the JavaScript code. From the first request made by the user, the whole application is send from the server to the client. The browser then renders the HTML, CSS and JavaScript. The JavaScript code is executed in the browser. The JavaScript code can then make requests to the server to get data. The data is then used to update the HTML and CSS in the browser. This is called the client-side of the application.
+- Common DOM methods:
+    - `document.getElementById(id)` returns an Element object representing the element whose id property matches the specified string
+        - `const element = document.getElementById('element-id');`
+    - `document.getElementsByTagName(name)` returns a live HTMLCollection of elements with the given tag name
+        - `const elements = document.getElementsByTagName('p');`
+    - `document.getElementsByClassName(name)` returns an array-like object of all child elements which have all of the given class names
+        - `const elements = document.getElementsByClassName('class-name');`
+    - `document.querySelector(selectors)` returns the first Element within the document that matches the specified selector, or group of selectors
+        - `const element = document.querySelector('p.class-name');`
+    - Element.innerHTML property sets or gets the HTML syntax describing the element's descendants
+        - `const element = document.getElementById('element-id'); element.innerHTML = '<p>new html</p>';`
+- Forms: 
+  - `<form>`
+  - Input elements
+    - `<input type="text" name="name" id="name" />`
+    - `<input type="password" name="password" id="password" />`
+    - `<input type="email" name="email" id="email" />`
+    - `<select name="cars" id="cars"> <option value="volvo">Volvo</option> <option value="saab">Saab</option> <option value="fiat">Fiat</option> <option value="audi">Audi</option> </select>`
+    - Radio buttons: `<input type="radio/>`
+    - Checkboxes: `<input type="checkbox/>`
+  - Buttons
+    - `<button type="button">Click Me!</button>`
+- EventHandlers:
+  - `onclick` event occurs when the user clicks on an element
+  - `onchange` event occurs when the value of an element has been changed
+  - `onmouseover` event occurs when the mouse pointer is moved onto an element
+  - `onsubmit` event occurs when a form is submitted
+  - `addEventListener()` method attaches an event handler to the specified element without overwriting existing event handlers
+    - `element.addEventListener('click', function() { console.log('clicked'); });` . The first argument is the event type, the second argument is the function to be executed when the event occurs.
 
+### Event bubling
+- Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element. This type of propagation is supported by all major browsers.
+- [Event bubling example](bubbling.html)
