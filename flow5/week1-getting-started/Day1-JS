@@ -1,7 +1,0 @@
-# Javascript 101
-- Javascript is a programming language that is primaryly used to make web pages interactive. It is a scripting language that is used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
-- Javascript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based.
-
-## Javascript in the browser
-- In a Single Page Application (SPA) the browser is responsible for rendering the HTML, CSS and JavaScript. The browser is also responsible for executing the JavaScript code. From the first request made by the user, the whole application is send from the server to the client. The browser then renders the HTML, CSS and JavaScript. The JavaScript code is executed in the browser. The JavaScript code can then make requests to the server to get data. The data is then used to update the HTML and CSS in the browser. This is called the client-side of the application.
-

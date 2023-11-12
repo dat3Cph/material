@@ -1,0 +1,147 @@
+# Javascript 101
+- Javascript is a programming language that is primaryly used to make web pages interactive. It is a scripting language that is used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
+- Javascript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based.
+- Most important data types are:
+  - `string`
+  - `number`
+  - `boolean`
+  - `null`
+  - `undefined`
+  - `object`
+  - `array`
+  - `function`
+- Javascript is a dynamically typed language. This means that you don't have to specify the data type of a variable when you declare it. The type will be determined automatically while the program is being processed: `var x = 5;` or `var x = "John";`
+- String operations:
+  - `+` is used to concatenate strings
+  - `+=` is used to concatenate strings and assign the result to a variable
+  - `===` is used to compare two strings (3 equal signs checks for equal value and equal type)
+- String methods:
+  - `length` returns the length of a string
+    - `var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";` `var sln = txt.length;`
+  - `indexOf()` returns the index of (the position of) the first occurrence of a specified text in a string
+    - `var str = "Please locate where 'locate' occurs!";` `var pos = str.indexOf("locate");`
+  - `lastIndexOf()` returns the index of the last occurrence of a specified text in a string
+    - `var str = "Please locate where 'locate' occurs!";` `var pos = str.lastIndexOf("locate");`
+  - `search()` searches a string for a specified value and returns the position of the match
+    - `var str = "Please locate where 'locate' occurs!";` `var pos = str.search("locate");`
+  - `slice()` extracts a part of a string and returns the extracted part in a new string
+    - `var str = "Apple, Banana, Kiwi";` `var res = str.slice(7, 13);`
+  - `substring()` extracts the characters from a string, between two specified indices, and returns the new sub string
+    - `var str = "Apple, Banana, Kiwi";` `var res = str.substring(7, 13);`
+- Array operations:
+  - `+` is used to concatenate arrays
+  - `+=` is used to concatenate arrays and assign the result to a variable
+  - `===` is used to compare two arrays (3 equal signs checks for equal value and equal type)
+- Array methods:
+  - `length` returns the length of an array
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `var len = fruits.length;`
+  - `indexOf()` searches the array for an element and returns its position
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `var a = fruits.indexOf("Apple");`
+  - `lastIndexOf()` returns the index of the last occurrence of a specified element in an array
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `var a = fruits.lastIndexOf("Apple");`
+  - `push()` adds a new element to an array (at the end)
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.push("Kiwi");`
+  - `pop()` removes the last element of an array
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.pop();`
+  - `shift()` removes the first array element and "shifts" all other elements to a lower index
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.shift();`
+  - `unshift()` adds a new element to an array (at the beginning), and "unshifts" older elements
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.unshift("Lemon");`
+  - `splice()` adds/removes elements from an array
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.splice(2, 0, "Lemon", "Kiwi");`
+  - `slice()` selects a part of an array, and returns the new array
+    - `var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];` `var citrus = fruits.slice(1, 3);`
+  - `concat()` creates a new array by merging (concatenating) existing arrays
+    - `var myGirls = ["Cecilie", "Lone"];` `var myBoys = ["Emil", "Tobias", "Linus"];` `var myChildren = myGirls.concat(myBoys);`
+  - `sort()` sorts an array alphabetically
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.sort();`
+  - `reverse()` reverses the elements in an array
+    - `var fruits = ["Banana", "Orange", "Apple", "Mango"];` `fruits.reverse();`
+  - `forEach()` calls a function once for each array element
+    - `var fruits = ["apple", "orange", "cherry"];` `fruits.forEach(myFunction);`
+  - `map()` creates a new array by performing a function on each array element
+    - `var numbers = [4, 9, 16, 25];` `var x = numbers.map(Math.sqrt);`
+  - `filter()` creates a new array with array elements that passes a test
+    - `var numbers = [45, 4, 9, 16, 25];` `var over18 = numbers.filter(myFunction);`
+  - `reduce()` runs a function on each array element to produce (reduce it to) a single value
+    - `var numbers = [45, 4, 9, 16, 25];` `var sum = numbers.reduce(myFunction);`
+- Object operations:
+  - create new object: `var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};`
+  - `+` is used to concatenate objects
+    - `var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; var morePerson = {firstName:"Jane", lastName:"Doe", age:50, eyeColor:"blue"}; var people = person + morePerson;`
+  - `+=` is used to concatenate objects and assign the result to a variable
+  - `===` is used to compare two objects (3 equal signs checks for equal value and equal type)
+    - `var person1 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; var person2 = {firstName:"Jane", lastName:"Doe", age:50, eyeColor:"blue"}; var isSamePerson = person === morePerson;`
+  - `Object.keys()` returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would
+    - `var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; var keys = Object.keys(person);`
+  - `Object.values()` returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop
+    - `var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; var values = Object.values(person);`
+  - `Object.entries()` returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop
+    - `var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; var entries = Object.entries(person);`
+- Number operators:
+    - `+` is used to add numbers
+    - `-` is used to subtract numbers
+    - `*` is used to multiply numbers
+    - `/` is used to divide numbers
+    - `%` is used to divide numbers and return the remainder
+    - `++` is used to increment numbers
+    - `--` is used to decrement numbers
+- Number methods:
+    - `toString()` returns a number as a string
+      - `var x = 123;` `var y = x.toString();`
+    - `toFixed()` formats a number with a specific number of digits to the right of the decimal
+      - `var x = 9.656;` `x.toFixed(0);` `x.toFixed(2);` `x.toFixed(4);` `x.toFixed(6);`
+    - `toPrecision()` formats a number to a specified length
+      - `var x = 9.656;` `x.toPrecision();` `x.toPrecision(2);` `x.toPrecision(4);` `x.toPrecision(6);`
+    - `Number()` can be used to convert JavaScript variables to numbers
+    - `parseInt()` parses a string and returns a whole number
+      - `parseInt("10");` `parseInt("10.33");` `parseInt("10 20 30");` `parseInt("10 years");` `parseInt("years 10");`
+    - `parseFloat()` parses a string and returns a number
+        - `parseFloat("10");` `parseFloat("10.33");` `parseFloat("10 20 30");` `parseFloat("10 years");` `parseFloat("years 10");`
+- Boolean operations:
+    - `&&` is used to check if two or more expressions are true
+      - `const a = 10; const b = 20; if (a > 5 && b > 10) { console.log('true'); }`
+    - `||` is used to check if one or more expressions are true
+      - `const a = 10; const b = 20; if (a > 5 || b > 10) { console.log('true'); }`
+    - `!` is used to reverse the result of a boolean expression
+- Boolean methods:
+    - `toString()` returns a boolean as a string
+      - `var x = false;` `var y = x.toString();`
+- Function operations:
+    - `()` is used to call a function
+    - `()` is used to pass arguments to a function
+    - `()` is used to pass parameters to a function
+- Arrow functions:
+    - `const x = (x, y) => x * y;`
+    - `const x = (x, y) => { return x * y; }`
+- Template literals:
+    - `const x = `Hello ${name}`;` // also for multi-line strings
+- for…of for…in:
+    - `for (let value of array) { console.log(value); }`
+    - `for (let property in object) { console.log(property); }`
+- Destructuring:
+    - `const { name, age } = person;`
+- Spread operator:
+    - `const newArray = [...oldArray, 1, 2];`
+- Rest operator:
+    - `const sortArgs = (...args) => { return args.sort(); }`
+- Logical and (&&) : Returns true if both expressions are true, otherwise it returns false.
+Logical or(||) :Returns true if one or both expressions are true, otherwise it returns false.
+- Ternary operator:
+  - `let age = 16; let voteable = (age < 18) ? "Too young":"Old enough"; // output-> Too young`
+
+- Nullish coalescing operator (??)
+  - According to MDN: “The nullish coalescing operator ( ?? ) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand”.
+    - `const foo = null ?? 'default string'; console.log(foo); // expected output: "default string"`
+- Optional chaining (?.)
+  - According to MDN: “The optional chaining operator ( ?. ) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. The ?. operator functions similarly to the . chaining operator, except that instead of causing an error if a reference is nullish ( null or undefined ), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.”
+    - `const adventurer = { name: 'Alice', cat: { name: 'Dinah' } }; const dogName = adventurer.dog?.name; console.log(dogName); // expected output: undefined`
+### JS peculiarities:
+
+
+
+
+
+## Javascript in the browser
+- In a Single Page Application (SPA) the browser is responsible for rendering the HTML, CSS and JavaScript. The browser is also responsible for executing the JavaScript code. From the first request made by the user, the whole application is send from the server to the client. The browser then renders the HTML, CSS and JavaScript. The JavaScript code is executed in the browser. The JavaScript code can then make requests to the server to get data. The data is then used to update the HTML and CSS in the browser. This is called the client-side of the application.
+
