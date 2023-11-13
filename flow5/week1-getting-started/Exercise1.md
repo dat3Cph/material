@@ -45,6 +45,8 @@ let newArray = names.myFilter(function(name) {…});
 
 ## 1.4 Event Bubbling and Event Arguments
 
+You might want to check [out this page](https://javascript.info/bubbling-and-capturing), that describes event bubbling.
+
 1.4.1 In a new HTML page, add two divs, each with a unique id. Style both ids with this class:
 
 ```css
