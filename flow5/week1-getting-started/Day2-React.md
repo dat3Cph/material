@@ -1,6 +1,6 @@
 # So what is React?
 
-<img src="../images/reactlogo.png" align="center" width="500">
+<img src="../images/reactlogo.png" align="right" width="500">
 
 React, often referred to as React.js or ReactJS, is a popular JavaScript library for building user interfaces, particularly web applications with interactive elements. Developed and maintained by Facebook, React focuses on the efficient rendering and updating of UI components in response to data changes. Here are some key points about React:
 
