@@ -1,6 +1,6 @@
 # Starting a new React project with Vite
 
-<img src="./images/vitelogo.png" width="200" style="float:right">
+<img src="./images/vitelogo.png" width="200" align="right">
 
 Vite is a build tool that significantly improves the frontend development experience. It's designed to offer faster build times and a simpler configuration compared to older bundlers like Webpack.
 
