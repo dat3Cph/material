@@ -1,12 +1,22 @@
 # React 2: Fetching from an API
 
+These exercises introduces two important aspects of React.
+
+1. useState (how to store data on the client in variables)
+2. useEffect (how to evoke functions on life cycle events)
+
+And then we will work with more Javascript functionality:
+
+1. fetch (fetching data from api's)
+2. click events
+
 ## Fetch and display jokes
 
 ### 1.1 Click event
 
 Create a simple React Component that can fetch and display a Chuck Norris joke fetched from this API: `https://api.chucknorris.io/jokes/random` whenever a button “Get ChuckNorris” is clicked.
 
-Use this code, and figure out how the various parts work:
+Use this code to get started, and figure out how the various parts work:
 
 - useState
 - useEffect
@@ -38,6 +48,8 @@ function JokeComponent() {
 export default JokeComponent;
 
 ```
+
+Then add the button and click-event. Refactor the fetching part in a separate function would be a good way to start ...
 
 ### 1.2 useEffect part 1
 

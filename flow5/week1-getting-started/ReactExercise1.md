@@ -4,8 +4,9 @@ The next two exercises focus on props and how to pass props into components. So 
 
 ## Props-1
 
-Here you will make a react component in a separate file and export it. The component uses another component 3 times with different effect/content. 
- In the src folder, add a new file `file3.js`, and `import React` in the first line.
+Here you will make a react component in a separate file and export it. The component uses another component 3 times with different effect/content.
+
+In the src folder, add a new file `file3.js`, and `import React` in the first line.
 Copy the two functions below into this file (remember to export to your App component):
 
 ```javascript

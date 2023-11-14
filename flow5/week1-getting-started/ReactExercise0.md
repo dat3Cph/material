@@ -1,5 +1,7 @@
 # React 0: Import/export + spread, and destructuring
 
+This exercise is about structuring your React app into parts and learning more about Javascript.
+
 ## 1. Create a React project
 
 1.1 Create a new React app using Vite ([use this guide](../../setup/vite.md))
