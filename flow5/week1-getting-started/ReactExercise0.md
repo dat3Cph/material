@@ -1,4 +1,4 @@
-# Javascript Exercise 2: Import/export + spread, and destructuring
+# React 0: Import/export + spread, and destructuring
 
 ## 1. Create a React project
 
@@ -91,9 +91,9 @@ And this:
 
 (Extra) Use Object Destructuring and the spread syntax, to create a new object `personV2` from person, but with two new fields: phone and friends. The last one must be initialized with the values from males and females (must be done as a simple one-liner). Console log the value, which should print something similar to this:
 
-```json
+```console
 email: "kurt@wonnegut.dk"
-firstName: "Kurt"
+firstName: "Kurt
 friends: ["Peter", "Jan", "Janne", "Sarah"]
 gender: "Male"
 lastName: "Wonnegut"

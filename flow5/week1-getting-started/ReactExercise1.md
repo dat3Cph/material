@@ -1,4 +1,4 @@
-# 3 Composing Components
+# React 1: Composing Components
 
 The next two exercises focus on props and how to pass props into components. So make sure to [read about props](https://react.dev/learn/passing-props-to-a-component) first, they are one of the top-5 MOST IMPORTANT PARTS to understand in React.
 
@@ -37,7 +37,7 @@ Verify that your new component is rendered
 ## Props-2
 
 Let's make the example above a bit more interesting.
-First, open file2.js and add this export to the file:
+First, open `file2.js` and add this export to the file:
 
 ```javascript
 export const persons = [
@@ -47,7 +47,7 @@ export const persons = [
 ];
 ```
 
-In `File3.js`, import persons  and add a new functional Component (below the Welcome Component) called WelcomePerson.
+In `File3.js`, import persons  and add a new functional Component (below the Welcome Component) called `WelcomePerson`.
 
 This component should take a full person object as parameter/props and it should render firstName, lastName and email for this person.
 
@@ -57,12 +57,12 @@ In the MultiWelcome component, below the three usages of the original Welcome co
 <WelcomePerson person={persons[0]}  />
 ```
 
-Hint: In the WelcomePerson function, the person is available in the arguments as props.person or if using destructuring ({person}) just as person.
+Hint: In the `WelcomePerson` function, the person is available in the arguments as `props.person` or if using destructuring (`{person}`) just as person.
 
-Handle list of persons of arbitrary sizes. In the example above your “list” could only handle exactly three persons. Use our old friend `map()` below the three hardcoded lines in the MultiWelcome component to something similar to this (fill in the few missing parts):
+Handle list of persons of arbitrary sizes. In the example above your “list” could only handle exactly three persons. Use our old friend `map()` below the three hardcoded lines in the MultiWelcome component to something similar to this (fill in the few missing parts - where the dots are):
 
 ```javascript
-{persons.map((      )=><WelcomePerson        />)}
+{persons.map((  ....    )=><WelcomePerson  ....      />)}
 ```
 
 This will probably provide a nasty warning in the console. Read about keys here (a topic for tomorrow) to solve this problem.
