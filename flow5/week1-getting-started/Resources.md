@@ -2,7 +2,7 @@
 
 ## Internal docs
 
--- [Create React project with Vite](../../setup/vite.md)
+- [Create React project with Vite](../../setup/vite.md)
 
 ## Videos internal resources
 
