@@ -49,7 +49,7 @@ export default JokeComponent;
 
 ```
 
-Then add the button and click-event. Refactor the fetching part in a separate function would be a good way to start ...
+Then add the button and click-event. Check here [how to add an `onClick` event](https://react.dev/learn#responding-to-events) to a button component. Refactor the fetching part in a separate function would be a good way to start ...
 
 ### 1.2 useEffect part 1
 
@@ -61,4 +61,4 @@ Hints: you need to add an Accept key to the http header. Indicating that we will
 
 Ensure that the required timer for the dad jokes is cancelled when the user leaves the page.
 
-Hint: `clearInterval`is the keyword here
+Hint: `clearInterval`is the keyword to look for.
