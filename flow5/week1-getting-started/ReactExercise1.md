@@ -65,4 +65,4 @@ Handle list of persons of arbitrary sizes. In the example above your “list” 
 {persons.map((  ....    )=><WelcomePerson  ....      />)}
 ```
 
-This will probably provide a nasty warning in the console. Read about keys here (a topic for tomorrow) to solve this problem.
+This will probably provide a nasty warning in the console. Read about [keys](https://react.dev/learn/rendering-lists) here (a topic for next week) to solve this problem.

@@ -10,6 +10,10 @@
 
 ## 2. Understanding ES6 Modules – import and export
 
+This exercise is about splitting a Javascript file into several parts, and putting the pieces together in a modular fashion.
+
+Skim through this article on [import and export of modules in Javascript](https://www.freecodecamp.org/news/javascript-modules/).
+
 2.1 In the src folder, create a new JavaScript file called `file1.js` and paste in the following content:
 
 ```javascript
@@ -49,7 +53,7 @@ import upper, {text1,text2, text3} from "./file1";
 
 ## 3 Spread operator: Object and Array Destructuring
 
-3.1 Skim this article first for a "[dead Simple intro to Destructuring JavaScript Objects](http://wesbos.com/destructuring-objects/)"
+3.1 Skim this article first for a "[dead Simple intro to Destructuring JavaScript Objects](http://wesbos.com/destructuring-objects/)" and this "[Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)"
 
 3.2 Create a new file: `file2.js` to hold only a single object and export it like below:
 
