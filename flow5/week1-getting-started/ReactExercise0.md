@@ -74,7 +74,8 @@ In `App.js` import the object from `file2.js` and put it in a variable: `person`
 Implement a one-liner (using destructuring ...) to initialize (only) two variables, firstName and email.
 
 Add a new `h2` element with headline: Ex2 and a `<p>` element, that prints firstName, email.
-Add these lines to `file2.js`
+
+Add these lines to `file2.js`:
 
 ```javascript
 export const males = ["Peter","Jan"];
