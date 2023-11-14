@@ -45,7 +45,7 @@ Add a feature, so that every 10 second (don’t decrease this number, the risk i
 
 Hints: you need to add an Accept key to the http header. Indicating that we will fetch a json response. For the 10 second timer, look here: [https://javascript.info/settimeout-setinterval](https://javascript.info/settimeout-setinterval)
 
-### useEffect part 2
+### 1.3 useEffect part 2
 
 Ensure that the required timer for the dad jokes is cancelled when the user leaves the page.
 
