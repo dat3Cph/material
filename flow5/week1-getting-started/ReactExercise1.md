@@ -27,7 +27,7 @@ function MultiWelcome() {
 }
 ```
 
-Make sure you understand why the parenthesis is needed after the return statement in the App component, and not in the Welcome Component.
+Make sure you understand why the parenthesis is needed after the return statement in the `MultiWelcome` component, and not in the `Welcome` component.
 
 In `App.js` create a new h2 headline for Ex3 and render the MultiWelcome component under the headline (remember to import it)
 

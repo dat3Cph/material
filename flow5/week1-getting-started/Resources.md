@@ -12,8 +12,17 @@
 
 ## Links external resources
 
+### Javascript
+
 - [Javascript overview](https://javascript.info/)
 - [Javascript guide MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+### React
+
 - [React Dev Docs](https://react.dev/)
 - [WEB APIs MDN](https://developer.mozilla.org/en-US/docs/Web/API)
+- [Neat HTML to JSX convert](- [WEB APIs MDN](https://developer.mozilla.org/en-US/docs/Web/API))
+
+### HTML and CSS
+
 - [CSS guide w3schools](https://www.w3schools.com/css/)
