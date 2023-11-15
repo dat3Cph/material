@@ -21,7 +21,7 @@
 
 - [React Dev Docs](https://react.dev/)
 - [WEB APIs MDN](https://developer.mozilla.org/en-US/docs/Web/API)
-- [Neat HTML to JSX convert](https://transform.tools/html-to-jsx)
+- [Neat HTML to JSX converter](https://transform.tools/html-to-jsx)
 
 ### HTML and CSS
 
