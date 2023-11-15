@@ -34,7 +34,7 @@ Here are the steps to start a React project using Vite:
    npm run dev
    ```
 
-   This will start the Vite development server. You can view your application by opening `http://localhost:3000` in your web browser.
+   This will start the Vite development server. You can view your application by opening `http://localhost:5173` in your web browser (or the port that Vite suggests).
 
 6. **Building and Running in Production**: To build the application for production, use:
 
