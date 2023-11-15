@@ -61,4 +61,4 @@ Hints: you need to add an Accept key to the http header. Indicating that we will
 
 Ensure that the required timer for the dad jokes is cancelled when the user leaves the page.
 
-Hint: `clearInterval`is the keyword to look for.
+Hint: `clearInterval`is the keyword to look for. Check [this article for details](https://www.codementor.io/@damianpereira/how-to-use-clearinterval-inside-react-s-useeffect-and-why-it-is-important-1si7mztjlk). The article demonstrates why `clearInterval` is important, and how to implement it in a useEffect hook.
