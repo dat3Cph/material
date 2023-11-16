@@ -1,0 +1,14 @@
+# wednesday: react 1
+- Create new vite project: `npm create vite@latest my-react-app`
+- Select `react` and `javascript`
+- `cd my-react-app`
+- `npm install`
+- `code .`
+- `npm run dev`
+- Open in browser
+- Remove everything inside the App() function/Component in `App.js` except css import
+- Add a new file and create some import
+- Show in App.js
+- Show `props`
+- Show `useState`
+- Show `fetch` and Show `useEffect`

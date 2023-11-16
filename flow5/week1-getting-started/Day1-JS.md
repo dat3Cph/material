@@ -1,4 +1,5 @@
 # Javascript 101
+- In VS CODE install extension: `Live Server`
 - Javascript is a programming language that is primaryly used to make web pages interactive. It is a scripting language that is used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
 - Javascript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based.
 - Most important data types are:

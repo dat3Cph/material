@@ -25,7 +25,7 @@ Try to look at `countries_europe.svg` in a texteditor (use VS Code). Do it by dr
 
 ## 4. Fetching country data
 
-Luckily, the `REST API` given here: [http://restcountries.com/v3.1/alpha/de](http://restcountries.com/v3.1/alpha/de) uses ISO-country codes as well. The endpoint responds with a JSON encapsulated data package with all the information needed (+ a lot more) to fill out the details (just test the link above in a browser).
+Luckily, the `REST API` given here: [https://restcountries.com/v3.1/alpha/de](http://restcountries.com/v3.1/alpha/de) uses ISO-country codes as well. The endpoint responds with a JSON encapsulated data package with all the information needed (+ a lot more) to fill out the details (just test the link above in a browser).
 
 So the exercise boils down to: 
 
