@@ -1,4 +1,4 @@
-# Getting started with JavaScript and React
+# Week1: Getting started with JavaScript and React
 
 ## Learning Objectives
 
