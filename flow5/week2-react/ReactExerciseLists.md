@@ -47,7 +47,7 @@ export default function ListDemo() {
 
 1.4 Add the missing part in `MemberDemo` to use `MemberTable` and pass down members to it
 
-1.5 Fix the code to avoid the error: “Warning: Each child in a list should have a unique "key" prop.”
+1.5 Fix the code to avoid the error: “Warning: Each child in a list should have a unique "key" prop". Hint: You might use `crypto.randomUUID()` as key.
 
 ## 2. Please reflect on the following questions
 
