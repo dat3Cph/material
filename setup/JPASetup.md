@@ -7,10 +7,8 @@
 
 ---
 
-</br>
 <img src="./images/intellij_setup_1.png" width="400" height="400">
 
-</br>
 
 ## 5. Open the pom.xml file and add the following dependencies:
 
@@ -59,7 +57,6 @@
             <scope>test</scope>
         </dependency>
 </dependencies>
-
 ```
 
 ---
@@ -70,28 +67,24 @@
 
     <hibernate-version>6.2.4.Final</hibernate-version>
     <junit.version>5.9.1</junit.version>
-
 ```
 
 ---
 
 ## 7. Create a new java class file called HibernateConfig.
 
-</br>
+
 <img src="./images/hibernateconfig_2.png" width="300" height="400">
-</br>
+
 
 ## 8. Copy and paste the following [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2) into the HibernateConfig.class.
 
-</br>
+
 
 **If you get an import error, try to run Maven lifecycle "install"**
 
 ---
 
-</br>
 <img src="./images/maven_lifecycle_3.png" width="300" height="400" >
-
-</br>
 
 ---
