@@ -44,4 +44,5 @@ How to implement the json-server:
 
 ## Handing in the assignment
 
-The assignment should be handed in as a link to a GitHub repository.
+Do a short video presentation of your project where you show your user interface, explain how it works and guide us 
+through your code. Both your link to the video and code should be emailed to your group-teacher.
