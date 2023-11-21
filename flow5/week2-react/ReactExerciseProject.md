@@ -16,6 +16,8 @@ Here are some ideas for inspiration:
 - A Workout App
 - A Card Game App
 
+<img src="./images/react-crud-api.png" width="800" height="400">
+
 ## Requirements
 
 The project has to contain the following:
