@@ -2,11 +2,9 @@
 
 ## Assignment
 
-Together with your group, create a small CRUD application using React and the 
+Together with your group, create a small CRUD application with help of React and the 
 [JSON Server](https://www.npmjs.com/package/json-server). The application should be able to create, read, update 
-and delete data from the server. The data should be persisted in the server. Think about what kind of data you 
-want to store in the server. It could be a list of books, movies, cars, etc.
-
+and delete data from the server. Try to use all the skills you have learned so far in the course.
 
 Here are some ideas for inspiration:
 
