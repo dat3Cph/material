@@ -22,7 +22,7 @@ The project has to contain the following:
 
 - A `README.md` file with a description of the project.
 - A `package.json` file with all the dependencies.
-- A `http` file with all the CRUD calls.
+- A `http` file with all the CRUD method calls.
 - Use React hooks like `useState`, `useEffect` etc.
 - Use the `fetch` API to communicate with the server.
 - Use the `json-server` to persist data.
