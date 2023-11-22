@@ -151,7 +151,7 @@ Insert into `index.html` in the `head` section:
 Create a new folder `util` and a file `persistence.js`:
 
 ```javascript
-export function fetchDataPart2(url, callback, method, body) {
+export function fetchData(url, callback, method, body) {
 
     const headers =
         {
