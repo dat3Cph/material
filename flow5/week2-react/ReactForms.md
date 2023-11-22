@@ -12,7 +12,7 @@ This is a guided tutorial in which we will:
 
 ## The video series
 
-Code happily along with the video tutorials - and use the snippets from this file when needed. In this way we can speed up the work a bit.
+Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=2ee87351-82f5-4bc9-addc-b0b9013e1dc7) - and use the snippets from this file when needed. In this way we can speed up the work a bit. The videos are called: `forms_01` to `forms_07` - or how many is needed ;-)
 
 ### 1. Getting the project configured
 
