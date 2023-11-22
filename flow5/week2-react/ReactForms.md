@@ -66,6 +66,12 @@ Code happily along with the video tutorials - and use the snippets from this fil
   }
 ```
 
+A snippet for the `package.json`:
+
+```json
+    "jsonserver": "json-server --watch data/db.json --port 3000"
+```
+
 ### 3. Creating components
 
 - PersonForm.jsx
