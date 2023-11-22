@@ -72,6 +72,16 @@ A snippet for the `package.json`:
     "jsonserver": "json-server --watch data/db.json --port 3000"
 ```
 
+And one for the `vite.config.js`:
+
+```json
+server: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  }
+```
+
 ### 3. Creating components
 
 - PersonForm.jsx
