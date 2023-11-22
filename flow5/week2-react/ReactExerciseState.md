@@ -12,7 +12,7 @@ In this exercise we will create a simple count component using the `useState` ho
 
 ## 2. useState: Create a simple count component using the useState hook
 
-2.1 In your App.js file, create a component that has a button which when pressed should increment a count value, initially by one, and print the result in the component.
+2.1 Create a component called `Counter.jsx` that has a button which when pressed should increment a count value, initially by one, and print the result in the component. Insert the component in `App.jsx`.
 
 2.2 Add a new button to the component which when pressed, should decrement the count value by one.
 
