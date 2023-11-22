@@ -148,6 +148,42 @@ Insert into `index.html` in the `head` section:
 
 ### 6. Fetching persons from the JSON-server
 
+Create a new folder `util` and a file `persistence.js`:
+
+```javascript
+export function fetchDataPart2(url, callback, method, body) {
+
+    const headers =
+        {
+            'Accept': 'application/json'
+        }
+
+    if (method === 'POST' || method === 'PUT') {
+        headers['Content-Type'] = 'application/json'
+    }
+
+    const options = {
+        method,
+        headers
+    }
+
+    if (body) {
+        options.body = JSON.stringify(body);
+    }
+
+    fetch(url, options)
+        .then(res => res.json())
+        .then(data => callback(data))
+        .catch(err => {
+            if (err.status) {
+                err.fullError.then(e => console.log(e.detail))
+            } else {
+                console.log("Network error");
+            }
+        })
+}
+```
+
 ### 7. Showing the persons
 
 ### 8. Inserting new persons
