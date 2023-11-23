@@ -73,7 +73,7 @@ Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.
 A snippet for the `package.json`:
 
 ```json
-    "jsonserver": "json-server --watch data/db.json --port 3000"
+    "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
 ```
 
 And one for the `vite.config.js`:
@@ -85,6 +85,8 @@ server: {
     }
   }
 ```
+
+Also, install the VS Code extention `REST Client` af Huachao Mao. This makes it possible to create a `dev.http` file to test out the api as we do it in IntelliJ.
 
 ### 3. Creating components
 
