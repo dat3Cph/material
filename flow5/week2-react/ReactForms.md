@@ -88,6 +88,47 @@ server: {
 
 Also, install the VS Code extention `REST Client` af Huachao Mao. This makes it possible to create a `dev.http` file to test out the api as we do it in IntelliJ.
 
+This is a suggestion for a `dev.http` file for testing:
+
+```javascript
+GET http://localhost:3000/api
+
+###
+
+GET http://localhost:3000/api/2
+
+###
+
+POST http://localhost:3000/api
+Content-Type: application/json
+Accept: application/application/json
+
+{
+    "age": "22",
+    "name": "Steve",
+    "email": "steve@test.com",
+    "gender": "male"
+  }
+
+###
+
+PUT http://localhost:3000/api/2
+Content-Type: application/json
+Accept: application/json
+
+{
+    "age": "22",
+    "name": "Steve",
+    "email": "steve@gmail.com",
+    "gender": "male"
+}
+
+### 
+
+DELETE http://localhost:3000/api/6
+Accept: application/json
+```
+
 ### 3. Creating components
 
 - PersonForm.jsx
