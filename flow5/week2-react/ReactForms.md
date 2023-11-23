@@ -18,6 +18,14 @@ We aim for something like this mockup:
 
 Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=2ee87351-82f5-4bc9-addc-b0b9013e1dc7) - and use the snippets from this file when needed. In this way we can speed up the work a bit. The videos are called: `forms_01` to `forms_07` - or how many is needed ;-)
 
+Certainly! Here are the HTML links for the data you provided:
+
+1. [Get started](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f69f405-a1b8-4e0d-a9e5-b0c20110e8e3)
+2. [Create components](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f81fe7a9-099a-4366-aa84-b0c20111517b)
+3. [Get all persons](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0ed05562-8fbc-4ee2-bdfa-b0c2011394ed)
+4. [Delete](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=38c297ea-1511-424d-b770-b0c300dee4a7)
+5. [Create and update](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f937e84-afc9-4819-819b-b0c3010e3226)
+
 ### 1. Getting the project configured
 
 - Create a React project with [Vite](../../setup/vite.md)
