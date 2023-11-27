@@ -32,7 +32,7 @@ Vi have the following endpoints:
 
 ```
 ### POST CAR
-POST http://localhost:3003/api/v1/cars
+POST http://46.101.183.184:3005/api/v1/cars
 Accept: application/json
 Content-Type: application/json
 
@@ -49,11 +49,11 @@ Content-Type: application/json
 }
 
 ### GET ALL
-GET http://localhost:3003/api/v1/cars
+GET http://46.101.183.184:3005/api/v1/cars
 Accept: application/json
 
 ### GET ONE
-GET http://localhost:3003/api/v1/cars/656337c7e59f6df22aa458d9
+GET http://46.101.183.184:3005/api/v1/cars/656337c7e59f6df22aa458d9
 Accept: application/json
 ```
 
