@@ -59,6 +59,11 @@ Benefits of using a reverse proxy:
 A load balancer is a device that acts as a reverse proxy and distributes network or application traffic across a
 number of servers.
 
+## Conclusion
+
+    Forward proxy is there to protect clients
+    Reverse proxy is there to protect the servers
+
 ### Why use a load balancer?
 
 - High availability
