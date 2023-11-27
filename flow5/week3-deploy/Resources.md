@@ -1,5 +1,0 @@
-# Resources
-
-## Videos 
-
-## Links 
