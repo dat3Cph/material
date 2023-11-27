@@ -1,5 +1,5 @@
-# Deployment Front and Back
-## Learning Objectives monday: frontend deployment
+# Deployment Front 
+## Learning Objectives monday: frontend deployment and error handling
 1. Understand Docker Basics:
   -  Define what Docker is and understand its role in containerization.
   -  Learn the fundamental concepts, such as images, containers, and Dockerfile.
@@ -23,6 +23,211 @@ Push Docker Images to Container Registry:
 Deploy React App with Docker Compose:
   -  Learn how to use Docker Compose to define and manage multi-container Docker applications.
   -  Create a docker-compose.yml file to orchestrate the deployment of the React app along with other services.
+
+### Error handling
+Vi have the following endpoints:
+- `GET http://46.101.183.184:3005/api/v1/cars` - get all cars
+- `GET http://46.101.183.184:3005/api/v1/cars/:id` - get car by id
+- `POST http://46.101.183.184:3005/api/v1/cars` - post a new car
+
+```
+### POST CAR
+POST http://localhost:3003/api/v1/cars
+Accept: application/json
+Content-Type: application/json
+
+{
+ "name": "Blue Corolla", 
+  "speed": 120,
+  "color": "Blue",
+  "model": "Corolla",
+  "year": 2022,
+  "price": 30000,
+  "available": true,
+  "brand": "Toyota",
+  "description": "A nice car"
+}
+
+### GET ALL
+GET http://localhost:3003/api/v1/cars
+Accept: application/json
+
+### GET ONE
+GET http://localhost:3003/api/v1/cars/656337c7e59f6df22aa458d9
+Accept: application/json
+```
+
+#### Writing error messages in react apps
+Common ways to handle errors in react apps:
+
+```javascript
+const [error, setError] = useState(null);
+
+const handleCreateCar = async (car) => {
+  try {
+    const response = await fetch('http://some-url/api/v1/cars', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(car)
+    });
+    if (response.ok) {
+      const data = await response.json();
+      ...do something with the data
+    } else {
+      const data = await response.json();
+      setError(data.message);
+    }
+  } catch (error) {
+    setError(error.message);
+  }
+}
+```
+The problem in the above code is we have to repeat the same error handling code in every function that makes a request to the backend. We can solve this by creating a custom hook that handles errors for us:
+
+```javascript
+import { useState } from 'react';
+
+export const useFetch = () => {
+  const [error, setError] = useState(null);
+
+  const handleHttpErrors = async (res) => {
+    if (!res.ok) {
+      return Promise.reject({ status: res.status, fullError: res.json() })
+    }
+    return res.json();
+  }
+
+  const makeOptions = (method, withToken, body) => {
+    method = method ? method : 'GET';
+    var opts = {
+      method: method,
+      headers: {
+        ...(['PUT', 'POST'].includes(method) && { //using spread operator to conditionally add member to headers object.
+          "Content-type": "application/json"
+        }),
+        "Accept": "application/json"
+      }
+    }
+    if (withToken && loggedIn()) {
+      opts.headers["x-access-token"] = getToken();
+    }
+    if (body) {
+      opts.body = JSON.stringify(body);
+    }
+    return opts;
+  }
+
+  const fetchAny = async (url, handleData, handleError, method, withToken, body) => {
+    if (properties.backendURL)
+      url = properties.backendURL + url;
+    const options = makeOptions(method, withToken, body);
+    try {
+      const res = await fetch(url, options);
+      const data = await handleHttpErrors(res);
+      handleData(data);
+    } catch (error) {
+      if (error.status) {
+        error.fullError.then(e => {if(handleError) handleError(error.status+': '+e.message)});
+        console.log("ERROR:",error.status);
+      }
+      else { console.log("Network error"); }
+    }
+    console.log(options);
+  }
+
+  return { error, fetchAny };
+}
+```
+
+Now we can use the custom hook in our components:
+
+```javascript
+const { error, fetchAny } = useFetch();
+
+const handleCreateCar = async (car) => {
+  fetchAny('http://some-url/api/v1/cars', (data) => {
+    ...do something with the data
+  }, (error) => {
+    setError(error);
+  }, 'POST', car, false);
+}
+```
+
+
+#### Class exercise
+- See what error messages you get from posting insufficent data to the cars api
+- See what error messages you get from using a wrong id when getting a car
+- Clone the [starter code](https://github.com/HartmannDemoCode/errorhandlingex.git) for the Cars app
+- Create an input field for a car id and a button to get a car by id. Show the car details as a list of key value pairs
+- If a car with the given id does not exist, show an error message and the status code
+
+#### Error handling utils
+
+```javascript
+function fetchAny(url, handleData, handleError, method, withToken, body) {
+
+  if (properties.backendURL)
+    url = properties.backendURL + url;
+  const options = makeOptions(method, withToken, body);
+  fetch(url, options)
+    .then(res => handleHttpErrors(res))
+    .then(data => handleData? handleData(data): null)
+    .catch(err => {
+      if (err.status) {
+        err.fullError.then(e => {if(handleError) handleError(err.status+': '+e.message)});
+        console.log("ERROR:",err.status);
+      }
+      else { console.log("Network error"); }
+    }
+    );
+  console.log(options);
+
+  function makeOptions(method, withToken, body) {
+    method = method ? method : 'GET';
+    var opts = {
+      method: method,
+      headers: {
+        ...(['PUT', 'POST'].includes(method) && { //using spread operator to conditionally add member to headers object.
+          "Content-type": "application/json"
+        }),
+        "Accept": "application/json"
+      }
+    }
+    if (withToken && loggedIn()) {
+      opts.headers["x-access-token"] = getToken();
+    }
+    if (body) {
+      opts.body = JSON.stringify(body);
+    }
+    return opts;
+  }
+  function handleHttpErrors(res) {
+    if (!res.ok) {
+      return Promise.reject({ status: res.status, fullError: res.json() })
+    }
+    return res.json();
+  }
+}
+```
+ 
+### CORS
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, or port) from its own.
+
+In order to make a request from a different origin, the server must add the following headers to the response:
+- `Access-Control-Allow-Origin: *` - allow all origins
+- `Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS` - allow all methods
+- `Access-Control-Allow-Headers: Content-Type` - allow the Content-Type header
+
+In Javalin we can do this by adding the following code to the app for all public routes:
+```java
+app.before(ctx -> {
+  ctx.header("Access-Control-Allow-Origin", "*");
+  ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  ctx.header("Access-Control-Allow-Headers", "Content-Type");
+});
+```
 
 ### Deployment guide
 This is a guide to deploy a react vite app to Digital Ocean using Docker and Github Actions.
@@ -72,7 +277,7 @@ The docker file will be used to build the image for the app. The image will be u
 
 ```dockerfile
 # Use the official Node image as a base image
-FROM node:14-alpine
+FROM node:18-alpine
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
