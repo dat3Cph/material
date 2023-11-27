@@ -319,7 +319,7 @@ services:
     restart: always
 ```
 - scp docker-compose.yml to the droplet: `scp docker-compose.yml root@<ip-address>:/root/<path-to-project>`
-
+- If port 3000 is already in use on the droplet, change the port in like this: `3001:3000`
 
 #### Class exercise
 - Find a frontend project that you have made in the past
