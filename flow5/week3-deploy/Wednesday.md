@@ -19,7 +19,9 @@ preceded by the word by (“vote by proxy”).
 
 <img src="../images/forward-proxy.png" height="328" width="416" alt="forward-proxy">
 
-****A forward proxy is a proxy that is used by clients to access other servers.****
+### What is a forward proxy?
+
+A forward proxy is a proxy that is used by clients to access other servers.
 
 Benefits of using a forward proxy:
 
@@ -32,9 +34,10 @@ Benefits of using a forward proxy:
 
 <img src="../images/reverse-proxy.png" height="328" width="416" alt="reverse-proxy">
 
+### What is a reverse proxy?
 
-**A reverse proxy is a type of proxy server that retrieves resources on behalf of a client from one or more servers. 
-These resources are then returned to the client as though they originated from the proxy server itself.**
+A reverse proxy is a type of proxy server that retrieves resources on behalf of a client from one or more servers. 
+These resources are then returned to the client as though they originated from the proxy server itself.
 
 
 Benefits of using a reverse proxy:
