@@ -155,7 +155,6 @@ const handleCreateCar = async (car) => {
 }
 ```
 
-
 #### Class exercise
 - See what error messages you get from posting insufficent data to the cars api
 - See what error messages you get from using a wrong id when getting a car
@@ -163,55 +162,6 @@ const handleCreateCar = async (car) => {
 - Create an input field for a car id and a button to get a car by id. Show the car details as a list of key value pairs
 - If a car with the given id does not exist, show an error message and the status code
 
-#### Error handling utils
-
-```javascript
-function fetchAny(url, handleData, handleError, method, withToken, body) {
-
-  if (properties.backendURL)
-    url = properties.backendURL + url;
-  const options = makeOptions(method, withToken, body);
-  fetch(url, options)
-    .then(res => handleHttpErrors(res))
-    .then(data => handleData? handleData(data): null)
-    .catch(err => {
-      if (err.status) {
-        err.fullError.then(e => {if(handleError) handleError(err.status+': '+e.message)});
-        console.log("ERROR:",err.status);
-      }
-      else { console.log("Network error"); }
-    }
-    );
-  console.log(options);
-
-  function makeOptions(method, withToken, body) {
-    method = method ? method : 'GET';
-    var opts = {
-      method: method,
-      headers: {
-        ...(['PUT', 'POST'].includes(method) && { //using spread operator to conditionally add member to headers object.
-          "Content-type": "application/json"
-        }),
-        "Accept": "application/json"
-      }
-    }
-    if (withToken && loggedIn()) {
-      opts.headers["x-access-token"] = getToken();
-    }
-    if (body) {
-      opts.body = JSON.stringify(body);
-    }
-    return opts;
-  }
-  function handleHttpErrors(res) {
-    if (!res.ok) {
-      return Promise.reject({ status: res.status, fullError: res.json() })
-    }
-    return res.json();
-  }
-}
-```
- 
 ### CORS
 Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, or port) from its own.
 
@@ -222,12 +172,24 @@ In order to make a request from a different origin, the server must add the foll
 
 In Javalin we can do this by adding the following code to the app for all public routes:
 ```java
-app.before(ctx -> {
-  ctx.header("Access-Control-Allow-Origin", "*");
-  ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  ctx.header("Access-Control-Allow-Headers", "Content-Type");
-});
+app.updateConfig(config -> {
+  config.accessManager((handler, ctx, permittedRoles) -> {
+    ctx.header("Access-Control-Allow-Origin", "*");
+    ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+    ctx.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    ctx.header("Access-Control-Allow-Credentials", "true");
+
+    if (ctx.method().equals("OPTIONS"))
+      ctx.status(200).result("OK");
+  });
 ```
+
+#### Class exercise
+- Find one of your old working projects with javalin. 
+- Run the project and make a get request to one of the endpoints
+- Open the developer tools in the browser and check the response headers
+- Add the code above to the app and check the response headers again
+- Can you see the difference?
 
 ### Deployment guide
 This is a guide to deploy a react vite app to Digital Ocean using Docker and Github Actions.
@@ -343,4 +305,24 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/europemap:latest
 ```
+#### Docker compose file
+The docker compose file will be used to run the app in a container on the droplet.
 
+```yaml
+version: "3.9"
+
+services:
+  app:
+    image: your-docker-username/your-app-name:latest
+    ports:
+      - 3000:3000
+    restart: always
+```
+- scp docker-compose.yml to the droplet: `scp docker-compose.yml root@<ip-address>:/root/<path-to-project>`
+
+
+#### Class exercise
+- Find a frontend project that you have made in the past
+- Deploy the project to Docker Hub using Docker and Github Actions
+- Pull the image from Docker Hub to your Digital Ocean droplet and run it (using docker-compose)
+- Check that it is working in the browser
