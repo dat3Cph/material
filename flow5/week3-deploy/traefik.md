@@ -86,6 +86,20 @@ services:
       - "traefik.http.routers.api.entrypoints=websecure"
       - "traefik.http.routers.api.tls.certresolver=myresolver"
       - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      REPO_USER: webtrade
+      REPO_PASS: <DOCKER_HUB_TOKEN>
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
+    networks:
+      - backend
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 600 --cleanup --debug # checks for updates every 600 seconds (10 min), cleans up old images, and outputs debug logs
 ```
 - `.env` file in root of project next to `docker-compose.yml`: 
 ```env
@@ -96,5 +110,6 @@ DEPLOYED=TRUE
 SECRET_KEY=FGHkj89DFi345DKWdsd8911G22Woas31v
 TOKEN_EXPIRE_TIME=1800000
 ISSUER=cphbusinessapps.dk
+
 
 ```
