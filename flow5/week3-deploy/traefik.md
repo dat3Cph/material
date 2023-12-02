@@ -15,22 +15,35 @@ services:
   traefik:
     image: "traefik:v2.10"
     container_name: "traefik"
+    restart: unless-stopped
     command:
-      #- "--log.level=DEBUG"
-      - "--api.insecure=true"
+      - "--log.level=DEBUG"
+      # - "--api.insecure=true"
+      - "--api.dashboard=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       #- "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=thomas@webtrade.dk"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      # Enable dashboard
+      - "--api.dashboard=true"
+    # Dynamic Configuration
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik_https.rule=Host(`traefik.cphbusinessapps.dk`)"
+      - "traefik.http.routers.traefik_https.entrypoints=websecure"
+      - "traefik.http.routers.traefik_https.tls=true"
+      - "traefik.http.routers.traefik_https.tls.certResolver=myresolver"
+      - "traefik.http.routers.traefik_https.service=api@internal"
     ports:
       - "443:443"
-      - "8080:8080"
+      - "80:80"
     networks:
       - backend
     volumes:
