@@ -128,4 +128,65 @@ export default {
     getPhoto: (id) => photos.find(photo=>photo.id === id),
     getAll: () => photos,
 };
-````
+```
+
+### Links
+The last thing we need to do is to add links to the urls we want to navigate to. We can do this by using the `Link` or `NavLink` component.
+
+```jsx
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="logo">Your Logo</div>
+      <nav className="nav-menu">
+        <NavLink to="/" exact="true" className={({isActive}) => (isActive ? "active" : 'none')}>
+          Home
+        </NavLink>
+        <NavLink to="/photos" className={({isActive}) => (isActive ? "active" : 'none')}>
+          Photos
+        </NavLink>
+        <NavLink to="/articles" className={({isActive}) => (isActive ? "active" : 'none')}>
+          Articles
+        </NavLink>
+      </nav>
+    </header>
+  );
+};
+```
+
+### Styling the Header Component
+We can create a `Header.css` file and import it into the `Header.js` component.
+
+```css
+/* Header.css */
+.header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 10px; */
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  padding: 1.5em;
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px; /* Adjust the spacing between menu items */
+  }
+  
+  .nav-menu a.active {
+    font-weight: bold; /* Style for the active link */
+    color: red
+  }
+  
+```
