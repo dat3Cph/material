@@ -67,8 +67,8 @@ In above example, the App component will be rendered when the URL matches `/` or
 
 Here we can see how we can use the react router hooks `useParams` and `useNavigate` to get the url parameters and navigate to a new url.
 
-````jsx
 - `photos.js`:
+
 ```jsx
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 ...
@@ -88,7 +88,7 @@ import { Outlet, useNavigate, useParams } from "react-router-dom";
       })}
       <Outlet />
     </>
-````
+```
 
 And the `Photo.js` component:
 
@@ -105,7 +105,9 @@ useEffect(() => {
 ```
 
 ### Getting the data
+
 - `photoFacade.js`:
+
 ```jsx
 const photos = [
     {
@@ -131,6 +133,7 @@ export default {
 ```
 
 ### Links
+
 The last thing we need to do is to add links to the urls we want to navigate to. We can do this by using the `Link` or `NavLink` component.
 
 ```jsx
@@ -155,6 +158,7 @@ const Header = () => {
 ```
 
 ### Styling the Header Component
+
 We can create a `Header.css` file and import it into the `Header.js` component.
 
 ```css
