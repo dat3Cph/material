@@ -4,6 +4,7 @@
 
 - forward proxy vs reverse proxy
 - load balancer
+- certification (Let's Encrypt)
 - deployment environment
 - what is traefik ?
 - deployment setup
@@ -18,7 +19,7 @@ preceded by the word by (“vote by proxy”).
 ### Forward proxy
 
 <img src="../images/forward-proxy.png" height="328" width="416" alt="forward-proxy">
-
+[.gitignore](..%2F..%2F.gitignore)
 ### What is a forward proxy?
 
 A forward proxy is a proxy that is used by clients to access other servers.
@@ -50,7 +51,7 @@ Benefits of using a reverse proxy:
 - Compression
 - Caching
 
-## Conclusion
+### Conclusion
 
     Forward proxy is there to protect clients
     Reverse proxy is there to protect the servers
