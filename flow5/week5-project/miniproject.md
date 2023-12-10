@@ -1,4 +1,4 @@
-# Full Scale SPA Project
+# Full Scale SPA mini-project
 
 ## Assignment
 
