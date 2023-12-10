@@ -22,5 +22,5 @@ The list of requirements are not exhaustive, but you should aim for these:
 
 You don't need to hand in the assignment, but we will look forward to seeing the result on Friday 22nd for a "Grand Demo", and during our interactions until then.
 
-![construction](./images/construction_2.png)
+![construction](./images/construction_2.jpg)
 *Credits: DALL-E* - spooky result ;-)
