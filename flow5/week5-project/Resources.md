@@ -4,11 +4,40 @@
 
 - API: Get a copy of the `security_jon` branch: [Hotel API security version](https://github.com/dat3Cph/hotel_exercise_rest/tree/security_jon)
 - [React SPA demo with login and routing](https://github.com/jonbertelsen/3semjwt_logindemo)
+- [How to get started with a full SPA](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ca07b411-015c-43c7-9c03-b0d40189fa9d)
 
-## Videos internal resources
+## External resources
 
-- [How to get started with a full SPA]()
+## UX / UI
 
-## Videos external resources
+- [Denne video opsummerer Laws of UX](https://www.youtube.com/watch?t=1&v=fYs2Mdyasuc)
+- [Lynkursus i Figma (10 min)](https://www.youtube.com/watch?t=1&v=nZ57MPVbHUg)
+
+## HTML
+
+- [W3Schools HTML](https://www.w3schools.com/html/default.asp)
+- [MDN webdocs](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+## Responsivt webdesign (RWD)
+
+- [RWD: 10 basics you need to know (6:37)](https://www.youtube.com/watch?v=zF6VSky4SIc)
+- [A complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox in 15 minutes](https://www.youtube.com/watch?v=fYq5PXgSsbE)
+- [Media queries in 7 minutes](https://www.youtube.com/watch?v=yU7jJ3NbPdA)
+
+## CSS
+
+- [W3Schools CSS](https://www.w3schools.com/css/default.asp)
+- [MDN webdocs](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Links external resources
+
+- [Positioning]()
+- [Flexbox]()
+- [Grid]( )
+- [Media queries]()
+
+## UX / UI
+
+- [The Difference Between UX and UI Design: A Beginner’s Guide](https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/)
+- [Laws of UX](https://lawsofux.com/en/) er en side der samler og overskueliggør principper for godt interface design
