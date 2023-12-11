@@ -23,6 +23,7 @@
 ## Responsivt webdesign (RWD)
 
 - [RWD: 10 basics you need to know (6:37)](https://www.youtube.com/watch?v=zF6VSky4SIc)
+- [Learn CSS Position in 9 minutes](https://www.youtube.com/watch?v=jx5jmI0UlXU)
 - [A complete guide to CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Flexbox in 15 minutes](https://www.youtube.com/watch?v=fYq5PXgSsbE)
 - [Flexbox Froggy Game](https://flexboxfroggy.com/)
@@ -30,6 +31,7 @@
 - [Get started with grid WITHOUT being overwhelmed](https://www.youtube.com/watch?v=8QSqwbSztnA)
 - [Learn CSS Grid in 20 minutes](https://www.youtube.com/watch?v=9zBsdzdE4sM)
 - [Media queries in 7 minutes](https://www.youtube.com/watch?v=yU7jJ3NbPdA)
+- [Learn React Portal In 12 Minutes By Building A Modal](https://www.youtube.com/watch?v=LyLa7dU5tp8)
 
 ## CSS
 
