@@ -1,11 +1,11 @@
 # Tokens and authentication with React (SPA’s)
 - In this part, we will create a simple REACT-SPA, that will use the backend created in the first part of the semester. The application must include two views, one for unauthenticated users (the login view below) and one,  rendered after a successful login. 
 
-- The second view should make a request to one of the protected endpoints on the server, and provide a logout button. Both components below are encapsulated in an “outer” component, and we will use the “Lifting state up” pattern to synchronize the two. 
+- The second view should make a request to a protected endpoint on the server, and provide a logout button. Both components below are encapsulated in an “outer” component, and we will use the “Lifting state up” pattern to synchronize the two. 
 
 <img src="../images/Week4exSecurity1.png">
 
-- While you go through this exercise, you should observe how it mirrors all the steps you did, when you tested the backend with Postman.
+- While you go through this exercise, you should observe how it mirrors all the steps you did, when you tested the backend with a http file or postman.
 
 ## Getting started
 
