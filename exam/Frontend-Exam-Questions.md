@@ -18,7 +18,7 @@
 
 1. Component Basics:
 - What is a React component?
--     Explain the benefits of using components compared to how you would build a web application in vanilla javascript.
+- Explain the benefits of using components compared to how you would build a web application in vanilla javascript.
 2. JSX:
 - What is JSX? Provide an example.
 - How does JSX differ from HTML?
