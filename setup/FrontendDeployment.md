@@ -76,7 +76,7 @@
     - Check your github actions to see if the build was successful and go to hub.docker.com to see if your image was pushed.
     - SSH into your Digital Ocean droplet and `cd` into the folder where you want to store your project.
     - If you have done a previous deployment of backend or frontend - Execute `docker compose down` to stop any running containers.
-    - Find your docker-compose file (or create a new one if [not done before](./traefik.md), e.g. when you did the backend deployment) and add the following service:
+    - Find your docker-compose file ([or create a new one if not done before](./traefik.md), e.g. when you did the backend deployment) and add the following service:
       ```yml
       <NAME TO GIVE YOUR SERVICE>:
         image: "<YOUR DOCKERHUB USERNAME>/<YOUR APPLICATION DOCKER IMAGE>:latest"
