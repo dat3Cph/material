@@ -13,9 +13,8 @@
 
 - [JPA Starter Project](./JPASetup.md)
 
-## CICD Part 1
+## CICD
 - [Github actions, Docker hub and Digital Oceand deployment](https://github.com/HartmannDemoCode/github_actions_demo/blob/main/CICD.README.md#setup-project-for-cicd)
+- [Traefik setup with docker-compose](./traefik.md)
+- [Frontend deployment](./FrontendDeployment.md)
 
-## React Vite project
-
-- [Use these instructions]()
