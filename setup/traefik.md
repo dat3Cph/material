@@ -26,7 +26,7 @@ services:
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       #- "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
-      - "--certificatesresolvers.myresolver.acme.email=thomas@webtrade.dk"
+      - "--certificatesresolvers.myresolver.acme.email=<YOUR EMAIL HERE>"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
       - "443:443"
@@ -44,7 +44,7 @@ services:
       - backend
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`whoami.cphbusinessapps.dk`)"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.<YOUR DOMAIN HERE>.dk`)"
       - "traefik.http.routers.whoami.entrypoints=websecure"
       - "traefik.http.routers.whoami.tls.certresolver=myresolver"
 
@@ -119,7 +119,7 @@ networks:
     driver: bridge
 ```
 - `.env` file in root of project next to `docker-compose.yml`: 
-```env
+```shell
 CONNECTION_STR=jdbc:postgresql://db:5432/
 DB_USERNAME=dev
 DB_PASSWORD=ax2
@@ -127,6 +127,4 @@ DEPLOYED=TRUE
 SECRET_KEY=FGHkj89DFi345DKWdsd8911G22Woas31v
 TOKEN_EXPIRE_TIME=1800000
 ISSUER=cphbusinessapps.dk
-
-
 ```
