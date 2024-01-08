@@ -12,6 +12,7 @@
 7. What is the difference between localStorage and sessionStorage in JavaScript?
 8. What is the scope of a variable in JavaScript? Explain the difference between global and local scope.
 9. What is the purpose of the window object in JavaScript?
+10. What is the spread operator in JavaScript and how does it differ from the rest parameter?
 
 ## React
 
