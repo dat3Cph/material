@@ -3,16 +3,15 @@
 
 ## JavaScript
 
-1. Explain the concept of prototypes in JavaScript.
-2. What are higher-order functions in JavaScript? Give an example.
-3. What are the purposes and differences between the package.json and package-lock.json files?
-4. What is a callback function in JavaScript and when would you use one?
-5. Explain the concept of promises in JavaScript. How do they differ from callbacks?
-6. What is the difference between synchronous and asynchronous programming and how does async and await fit into this?
-7. Explain the concept of event bubbling in JavaScript.
-8. What is the difference between localStorage and sessionStorage in JavaScript?
-9. What is the scope of a variable in JavaScript? Explain the difference between global and local scope.
-10. What is the purpose of the window object in JavaScript?
+1. What are higher-order functions in JavaScript? Give an example.
+2. What are the purposes and differences between the package.json and package-lock.json files?
+3. What is a callback function in JavaScript and when would you use one?
+4. Explain the concept of promises in JavaScript. How do they differ from callbacks?
+5. What is the difference between synchronous and asynchronous programming and how does async and await fit into this?
+6. Explain the concept of event bubbling in JavaScript.
+7. What is the difference between localStorage and sessionStorage in JavaScript?
+8. What is the scope of a variable in JavaScript? Explain the difference between global and local scope.
+9. What is the purpose of the window object in JavaScript?
 
 ## React
 
