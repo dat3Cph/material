@@ -102,7 +102,7 @@ Example code here: https://raw.githubusercontent.com/HartmannDemoCode/callbackIn
 - Function<T,V>: **One argument (T) -> returns result (V)** (for more advanced use cases, you can use BiFunction<T,U,V> for two arguments) 
 - Supplier<T>: **Zero arguments -> returns (T)**.
 
-**1. Predicate:**
+### Predicate:
 A Predicate is a functional interface that **represents a boolean-valued function of a single argument**. It's often used for filtering elements in collections or making boolean decisions based on a condition.
 
 ```java
@@ -119,7 +119,7 @@ public class PredicateExample {
 }
 ```
 
-**2. Consumer:**
+### Consumer:
 A Consumer is a functional interface that represents **an operation that takes a single input and has no result**. It's often used for side effects, like printing or modifying elements.
 
 ```java
@@ -137,7 +137,7 @@ public class ConsumerExample {
 }
 ```
 
-**3. Function:**
+### Function:
 A Function is a functional interface that represents a function that takes **one argument and produces a result**. It's often used for transforming input into output.
 
 ```java
@@ -154,7 +154,7 @@ public class FunctionExample {
 }
 ```
 
-**4. Supplier:**
+### Supplier:
 A Supplier is a functional interface that represents a supplier of **results, with no input arguments**. It's often used to generate or provide values.
 
 ```java
@@ -242,7 +242,7 @@ Simplifying Lambda expressions using method references.
 
 - Types of method references: static, instance, and constructor references.
 
-Method references in Java provide a concise way to refer to methods or constructors and use them as arguments for higher-order functions like those provided by the Stream API, functional interfaces, and more. Here are examples of static, instance, and constructor method references:
+Method references in Java provide a concise way to refer to methods or constructors and use them as arguments for higher-order functions like those provided by the Stream API. Here are examples of static, instance, and constructor method references:
 
 **1. Static Method Reference:**
 
@@ -298,6 +298,7 @@ import java.util.function.BiFunction;
 class Person {
     private String name;
 
+    // 3 constructors:
     public Person() {
         this.name = "Unknown";
     }

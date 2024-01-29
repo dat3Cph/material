@@ -26,22 +26,22 @@ Hint: Check these explanations and examples on [lambda expressions](./Java8DeepD
 
 ## 2. Functional Programming
 
-Implement the following methods using lambda expressions (First create the appropriate functional interfaces: `MyTransformingType` and `MyValidatingType`). You should provide each inteface with a single method that is appropriate for the task.
+1. Create a functional interface `MyTransformingType` that has a method that can take an integer and return another integer (transforming the first one in some way)
+2. Creae another functional interface `MyValidatingType` that has a method, that can take an integer and return a boolean (based on some kind of validation of the boolean, e.g. is it divisible by 3 or whatever) 
+3. Implement the following methods using lambda expressions.
 
 Create the following 2 methods that use the functional interfaces, to perform map and filter operations on an array of integers:
 
 - `int[] map(int[] a, MyTransformingType op)`
 - `int[] filter(int[] a, MyValidatingType op)`
 
-When running the above map and filter methods, you should provide them with an integer array and a lambda expression that performs the map or filter operation. For example, to double all the values in an array, you would call the map method like this:
-
-Check hints for how the [map](./ExerciseHints.md#the-map-function) and [filter](./ExerciseHints.md#the-filter-function) methods work.
+When running the above map and filter methods, you should provide them with an integer array and a lambda expression that performs the map or filter operation. For example, to double all the values in an array, you would call the map method like this: `map(myArray, (x) -> x * 2);`
 
 ## 3. Functional Interfaces
 
 Apply the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`:
 
-1. Use `Predicate` to filter a list of integers, so only those divisible by 3 remain.
+1. Use `Predicate` to filter a list of integers, so only those divisible by 7 remain.
 2. Use `Supplier` to create a list of Employee objects based on a list of names like `Arrays.asList("John", "Jane", "Jack", "Joe", "Jill")`.
 Hint: Check these explanations and examples on [Supplier](./ExerciseHints.md#supplier).
 3. Use `Consumer` to print the list of Employee objects.
