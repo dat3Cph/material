@@ -1,7 +1,6 @@
 # General guides and code bases
 
 ## Templates
-
 - [Assignment Template](https://github.com/dat3Cph/3sem-assignments-template)
 
 ##  3rd semester setup
