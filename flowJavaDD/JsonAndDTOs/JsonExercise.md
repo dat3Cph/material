@@ -53,6 +53,3 @@ Answer the following questions: [link](https://www.w3schools.com/js/js_json_intr
 7. Create a method that can print out the DTO objects in the array in a nice format.
 
 
-## Optional
-
-- Install a JSON viewer plugin in your browser. This will make it easier to read JSON files in the browser. One possible plugin is [JSONView](https://chrome.google.com/webstore/detail/jsonview/gmegofmjomhknnokphhckolhcffdaihd) for Chrome and Firefox.
