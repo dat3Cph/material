@@ -48,8 +48,6 @@ Answer the following questions: [link](https://www.w3schools.com/js/js_json_intr
  `isActive` (string)
 ```
 
-5. Create a method that can convert an Account object to a DTO object.
-6. Create a method that can convert an array of Account objects to an array of DTO objects.
 7. Create a method that can print out the DTO objects in the array in a nice format.
 
 
