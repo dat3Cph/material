@@ -10,3 +10,6 @@
 - [Flight Complex DTO and read json file](https://github.com/HartmannDemoCode/webscraping/blob/main/src/main/java/dk/cphbusiness/webscraping/ReadFlightData.java)
 - [Class Exercise: Fetch 10 jokes into a list of DTOs](https://icanhazdadjoke.com/api)
 
+## Wednesday
+- [Threads](https://docs.google.com/presentation/d/1eMVE9neCE3iQcQ58J_MbVUufRoiEX-xWf2N7Rxo54_M/edit?usp=sharing)
+- Demo project: [Github](https://github.com/HartmannDemoCode/ThreadsDemo.git)
