@@ -89,12 +89,8 @@
 
 ## 8. Copy and paste the following [Link](https://gist.github.com/tysker/cdf831680b964aa8dedd5545079e43b2) into the HibernateConfig.class.
 
-
-
 **If you get an import error, try to run Maven lifecycle "install"**
-
----
 
 <img src="./images/maven_lifecycle_3.png" width="300" height="400" >
 
----
+
