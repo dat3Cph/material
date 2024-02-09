@@ -6,7 +6,7 @@
 
 ## Videos external resources
 
-- [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
+- [Entity Lifecycle Model](https://www.youtube.com/watch?v=Y7PpjerZkc0)
 - [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
 - [Pagination in JPQL](https://www.youtube.com/watch?v=Xny3OJquWuo)
 
@@ -17,11 +17,11 @@
 - [Jakarta Persistence PDF](https://jakarta.ee/zh/specifications/persistence/3.1/jakarta-persistence-spec-3.1.pdf)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
-- [Thorben Hansen](https://thorben-janssen.com/)
+- [Thorben Hansen (Hibernate Expert)](https://thorben-janssen.com/)
   
 ### Life cycle
 
-- [The role of the entity manager in JPA](../theory/entitymanager.md)
+- [The role of the entity manager in JPA](../flowJPA/theory/entitymanager.md)
 - [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
 
 ### JPQL
