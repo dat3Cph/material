@@ -19,6 +19,7 @@
 
 <img src="./images/intellij_setup_1.png" width="400" height="400">
 
+---
 
 5. Open the pom.xml file and add the following dependencies:
 
