@@ -1,16 +1,26 @@
-# How to create a basic Maven project with JUnit 5, Hibernate, PostgresSQL and Lombok.
+# JPA-Maven Setup in IntelliJ
 
-## 1. Open IntelliJ and create a new project.
-## 2. Select Maven and Java 17.
-## 3. In advanced settings, add groupId.
-## 4. Click finish.
+## Technologies
+
+- Maven
+- Java 17
+- JPA
+- Hibernate
+- PostgresSQL
+
+## How-to
+
+1. Open IntelliJ and create a new project.
+2. Select Maven and Java 17 or higher.
+3. In advanced settings, add groupId.
+4. Click finish.
 
 ---
 
 <img src="./images/intellij_setup_1.png" width="400" height="400">
 
 
-## 5. Open the pom.xml file and add the following dependencies:
+5. Open the pom.xml file and add the following dependencies:
 
 ```XML
  <dependencies>
@@ -61,7 +71,7 @@
 
 ---
 
-## 6. Add the following lines into the properties tag
+6. Add the following lines into the properties tag
 
 ```xml
 
@@ -71,7 +81,7 @@
 
 ---
 
-## 7. Create a new java class file called HibernateConfig.
+7. Create a new java class file called HibernateConfig.
 
 
 <img src="./images/hibernateconfig_2.png" width="300" height="400">
