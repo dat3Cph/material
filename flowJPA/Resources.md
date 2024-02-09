@@ -2,7 +2,7 @@
 
 ## Theory and examples (provided by teachers)
 
-- [CRUD examples with a single entity](../theory/crudexamples.md)
+- [CRUD examples with a single entity](../flowJPA/theory/crudexamples.md)
 
 ## Videos external resources
 
