@@ -11,6 +11,8 @@
 
 ***
 
+### Instructions:
+
 1. [ ] Create a new Java project using Maven.
 2. [ ] Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, `email` and `age`. Remember to include a no-arg constructor.
 3. [ ] Use JPA annotations to map the entity class to a database table named `students`.
