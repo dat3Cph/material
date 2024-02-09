@@ -1,10 +1,15 @@
 # JPA Lifecycle and Annotations
 
-<img src="../images/jpaentityflow.png" alt="JPA Entity Flow" width="508" height="250">
 
 ### Objective: 
 
 **Apply JPA annotations to map Java classes to database tables and understand the entity lifecycle.**
+
+***
+
+<img src="../images/jpaentityflow.png" alt="JPA Entity Flow" width="508" height="250">
+
+***
 
 1. [ ] Create a new Java project using Maven.
 2. [ ] Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, `email` and `age`. Remember to include a no-arg constructor.
