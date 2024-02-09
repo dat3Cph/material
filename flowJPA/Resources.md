@@ -1,10 +1,5 @@
 # Resources
 
-## Videos internal resources
-
-- [JPA Introduction](#): TBD
-- [JPA Entities](#): TBD
-
 ## Theory and examples (provided by teachers)
 
 - [CRUD examples with a single entity](../theory/crudexamples.md)
@@ -17,11 +12,12 @@
 
 ## Links external resources
 
-### Jakarta Persistence
+### Persistence
 
 - [Jakarta Persistence PDF](https://jakarta.ee/zh/specifications/persistence/3.1/jakarta-persistence-spec-3.1.pdf)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
+- [Thorben Hansen](https://thorben-janssen.com/)
   
 ### Life cycle
 

@@ -21,7 +21,7 @@ Create a Java application that uses Java Persistence API (JPA) with Hibernate to
 ## Steps
 
 1. **Set Up a New Project**:
-   - Create a new Maven project in your IDE using this [tutorial](https://github.com/dat3Cph/backend/blob/main/setup/JPASetup.md)
+   - Create a new Maven project in your IDE using this [tutorial](https://github.com/dat3Cph/material/blob/sem2024spring/setup/JPASetup.md#jpa-maven-setup-in-intellij)
 
 2. Create a new database in Postgres for the project.
 
