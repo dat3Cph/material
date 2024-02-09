@@ -1,8 +1,9 @@
 # Resources
 
-## Theory and examples (provided by teachers)
+## Theory and examples
 
 - [CRUD examples with a single entity](../flowJPA/theory/crudexamples.md)
+- [The role of the entity manager in JPA](../flowJPA/theory/entitymanager.md)
 
 ## Videos external resources
 
@@ -21,7 +22,6 @@
   
 ### Life cycle
 
-- [The role of the entity manager in JPA](../flowJPA/theory/entitymanager.md)
 - [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
 
 ### JPQL
