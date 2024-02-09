@@ -1,13 +1,15 @@
-# Student Exercise
+# JPA Lifecycle and Annotations
 
-**Exercise 1: Mapping Entities and Annotations**
-Objective: Apply JPA annotations to map Java classes to database tables and understand entity lifecycle.
+## Objective: 
+
+**Apply JPA annotations to map Java classes to database tables and understand entity lifecycle.**
 
 1. Create a new Java project using Maven.
 2. Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, `email` and `age`. Remember to include a no-arg constructor.
-3. Use JPA annotations to map the entity class to a database table named `students`. The `email` property should be unique.
-4. Include appropriate annotations such as `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` to define the primary key and attributes mapping.
-5. Add a Main class with a main method and one static property: `EntityManagerFactory`.
+3. Use JPA annotations to map the entity class to a database table named `students`.
+4. Add a constraint to the `email` attribute to ensure that the email address is unique.
+5. Include appropriate annotations such as `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` to define the primary key and attributes mapping.
+5. Add a `Main.class` including a main method 
 6. Create the following methods and add it to the Main class:
    - `public static void createStudent(Student student)` - This method should create a new student and persist it to the database.
    - `public static Student readStudent(int id)` - This method should read a student from the database using the student's id.
@@ -51,17 +53,3 @@ Objective: Apply JPA annotations to map Java classes to database tables and unde
 17. Get the first name of the oldest student in the database. 
 18. Get the youngest student in the database. 
 19. Get the `sum` of all ages of all students in the database.
-
-**Exercise 2: Q & A**
-
-1. Why do we need a no-arg constructor in an entity class?
-2. Investigate where we in our code can change the following: 
-   - specify the database dialect?
-   - specify the JDBC connection properties?
-   - add annotated classes?
-3. What is the purpose of the `@GeneratedValue` annotation and what are the different strategies that can be used to generate primary key values for entities?
-4. In Java, we have something called `try with resources`. What does it do and how can we use it in our code?
-5. What is the difference between `persist()` and `merge()` methods in JPA?
-6. What is the difference between the `TypedQuery` and `Query` interfaces in JPA?
-7. What is the difference between the `getSingleResult()` and `getResultList()` methods in JPA?
-8. What are the different states of an entity in JPA?
