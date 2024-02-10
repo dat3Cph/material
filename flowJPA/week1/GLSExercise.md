@@ -1,11 +1,11 @@
-Exercise: GLS Package Tracking System - Part 1
+# Exercise: GLS Package Tracking System - Part 1
 
 <img src="../images/glsdelivery.jpg" alt="gls delivery" width="1600" >
 
-Scenario:
+### Scenario:
 GLS (Global Logistics Services) wants to develop a package tracking system to manage the delivery of packages. As part of the initial phase, they need to create a basic system using Java, JPA, and JPQL to manage package information.
 
-Requirements:
+### Requirements:
 1. Create an entity named "Package" using Lombok to manage package information. The "Package" entity should have the following attributes:
     - ID (auto-generated primary key)
     - Tracking number (String)
@@ -28,7 +28,7 @@ Requirements:
 6. Use Maven for project management.
 
 
-Hints:
+### Hints:
 - Use Jakarta Persistence (JPA) annotations to map the entity attributes to database columns.
 - Implement JPQL queries for retrieving packages based on certain criteria, such as tracking number or delivery status.
 
