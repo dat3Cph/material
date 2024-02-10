@@ -134,4 +134,6 @@ public class PackageDAOTest {
 }
 ```
 
+### Expected Outcome:
+
 This exercise should provide a solid foundation for understanding JPA (ORM) and JPQL in the context of building a package tracking system. In part 2, you can introduce more complex relationships between entities to further enhance the system.
