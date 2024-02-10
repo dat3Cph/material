@@ -4,7 +4,7 @@
 
 In this part of the exercise, we'll extend the GLS Package Tracking System to include more complex relationships between entities and introduce additional functionality.
 
-Requirements:
+### Requirements:
 
 1. Extend the existing package tracking system to include a new entity named "Location" using Lombok to manage location information. The "Location" entity should have the following attributes:
    - ID (auto-generated primary key)
@@ -31,7 +31,7 @@ Requirements:
 
 7. Use Jakarta Persistence (JPA) annotations to map the relationships between entities.
 
-Code Snippets:
+### Code Snippets:
 
 1. Location Entity with Lombok:
 
@@ -112,6 +112,6 @@ public class Package {
 
 5. Write additional JUnit tests to cover the new functionality, including creating shipments, associating shipments with packages, and retrieving packages with their shipments.
 
-## Conclusion
+## Expected Outcome
 
 By completing Part 2 of the exercise, you'll gain a deeper understanding of how to manage complex relationships between entities using JPA and how to implement more advanced features in a Java-based application.
