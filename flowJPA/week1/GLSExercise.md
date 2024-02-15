@@ -32,83 +32,23 @@ GLS (Global Logistics Services) wants to develop a package tracking system to ma
 - Use Jakarta Persistence (JPA) annotations to map the entity attributes to database columns.
 - Implement JPQL queries for retrieving packages based on certain criteria, such as tracking number or delivery status.
 
-Code Snippets:
-
-1. Package Entity with Lombok:
-
-```java
-import lombok.Data;
-import javax.persistence.*;
-
-@Entity
-@Data
-public class Package {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String trackingNumber;
-    private String senderName;
-    private String receiverName;
-
-    @Enumerated(EnumType.STRING)
-    private DeliveryStatus deliveryStatus;
-
-    // Define pre-update and pre-persist life cycle methods here
-}
-```
-
-2. PackageDAO Class:
-
-```java
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.util.List;
-
-public class PackageDAO {
-    private EntityManager entityManager;
-
-    public PackageDAO() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gls-persistence-unit");
-        entityManager = emf.createEntityManager();
-    }
-
-    public void persistPackage(Package pkg) {
-        entityManager.getTransaction().begin();
-        entityManager.persist(pkg);
-        entityManager.getTransaction().commit();
-    }
-
-    // Implement other CRUD operations here
-}
-```
-
-3. DeliveryStatus Enum:
-
-```java
-public enum DeliveryStatus {
-    PENDING,
-    IN_TRANSIT,
-    DELIVERED
-}
-```
 
 4. JUnit Test Example:
 
 ```java
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PackageDAOTest {
-    private static EntityManager entityManager;
-    private static PackageDAO packageDAO;
+    
+   private static PackageDao packageDao;
+   private static EntityManagerFactory emfTest;
 
-    @BeforeAll
-    public static void setUp() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gls-persistence-unit");
-        entityManager = emf.createEntityManager();
-        packageDAO = new PackageDAO();
-    }
 
+   @BeforeAll
+   static void setUpAll() {
+      emfTest = HibernateConfig.getEntityManagerFactory();
+      hotelDao = HotelDao.getInstance(emfTest);
+   }
+   
     @AfterAll
     public static void tearDown() {
         entityManager.close();
