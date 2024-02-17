@@ -46,3 +46,4 @@
 
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
 - [Date and Time Mappings with Hibernate and JPA](https://thorben-janssen.com/hibernate-jpa-date-and-time/)
+- [Java Test Container Hibernate Setup](https://gist.github.com/tysker/74eac7ad0dc0d52c3af8e87907d487e7)
