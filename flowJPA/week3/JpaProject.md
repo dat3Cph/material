@@ -30,13 +30,16 @@ Happy coding!
 - [US-7] As a user I want to get a list of all postcodes and city names in Denmark
 - [US-8] As a user I want to get all the information about a person (address, hobbies etc.) given a phone number
 - [US-9] As a user I want to be able to do CRUD operations on all JPA entities unless it wouldn't make sense for a given entity.
-- [US-10] … Add more meaningful services of your own choice.
+- [US-10] As a user I want to see all people on an address with a count on how many hobbies each person has (Use Java Streams for this one)
+- [US-11] … Add more meaningful services of your own choice.
 
 ### Project Requirements
 
 - [R-1] The project must include the following technologies
     - JPA
     - JPQL
+    - Java Streams API
+    - Java Generics
     - Maven
     - JDK 17^
     - JUnit 5
@@ -48,20 +51,20 @@ Happy coding!
 - [R-3] The project must be documented in a README.md file(*)
 - [R-4] The project must contain meaningful unit tests. (70 - 80 % of the methods must be tested (DAO, Entity ...))
 - [R-5] JPA annotations must be used for mapping domain classes
-- [R-6] JPQL must be used for all CRUD operations
+- [R-6] JPQL must be used for some CRUD operations
 - [R-7] JPA annotations must include minimum once an @Enumerated, @PrePersist and @PreUpdate.
-- [R-8] The phone number as to follow the Danish rules for phone numbers (e.g. +45 12345678)
-- [R-9] If you use a Date property in an entity, it must be a java.time.LocalDate, java.time.Date or java.time.LocalDateTime and not just a String
+- [R-8] DAO must make use of java generics so we can use the DAO on different data types.
+- [R-9] All date/time properties must be made with java.time.LocalDate, java.time.Date or java.time.LocalDateTime and not just a String
 - [R-10] DAO classes should follow the Singleton Pattern
+- [R-11] Make filter methods on one or more DAO classes to use for searching on location, age, hobbies or name (E.g. find all people with last name = "Hansson") 
 
 ### Optional Requirements
 
 - [OPT-1] 100 % CRUD coverage for all entities
 - [OPT-2] 100 % test coverage of all DAO classes.
 - [OPT-3] Create a method that you could use later in connection with pagination (e.g. a method that returns a list of persons given a page number and a page size)
-- [OPT-4] Provide a search functionality that allows users to filter and find others based on various criteria, such as location, age, or common hobbies.
-- [OPT-5] Add a Logger to your project and log all CRUD operations to the Console and all exceptions to a file.
-- [OPT-6] … Add more meaningful services of your own choice.
+- [OPT-4] Add a Logger to your project and log all CRUD operations to the Console and all exceptions to a file.
+- [OPT-5] … Add more meaningful services of your own choice.
 
 ### README.md
 
