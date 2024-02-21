@@ -31,86 +31,9 @@ In this part of the exercise, we'll extend the GLS Package Tracking System to in
 
 7. Use Jakarta Persistence (JPA) annotations to map the relationships between entities.
 
-### Code Snippets:
+8. Update PackageDAO and ShipmentDAO classes to handle CRUD operations for the new entities and relationships.
 
-1. Location Entity with Lombok:
-
-```java
-import lombok.Data;
-import javax.persistence.*;
-
-@Entity
-@Data
-public class Location {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private Double latitude;
-    private Double longitude;
-    private String address;
-}
-```
-
-2. Shipment Entity:
-
-```java
-import lombok.Data;
-import javax.persistence.*;
-import java.time.LocalDateTime;
-
-@Entity
-@Data
-public class Shipment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "package_id")
-    private Package pkg;
-
-    @ManyToOne
-    @JoinColumn(name = "source_location_id")
-    private Location sourceLocation;
-
-    @ManyToOne
-    @JoinColumn(name = "destination_location_id")
-    private Location destinationLocation;
-
-    private LocalDateTime shipmentDateTime;
-}
-```
-
-3. Modify Package Entity:
-
-```java
-import lombok.Data;
-import javax.persistence.*;
-import java.util.List;
-
-@Entity
-@Data
-public class Package {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String trackingNumber;
-    private String senderName;
-    private String receiverName;
-
-    @Enumerated(EnumType.STRING)
-    private DeliveryStatus deliveryStatus;
-
-    @OneToMany(mappedBy = "pkg", cascade = CascadeType.ALL)
-    private List<Shipment> shipments;
-}
-```
-
-4. Update PackageDAO and ShipmentDAO classes to handle CRUD operations for the new entities and relationships.
-
-5. Write additional JUnit tests to cover the new functionality, including creating shipments, associating shipments with packages, and retrieving packages with their shipments.
+9. Write additional JUnit tests to cover the new functionality, including creating shipments, associating shipments with packages, and retrieving packages with their shipments.
 
 ## Expected Outcome
 
