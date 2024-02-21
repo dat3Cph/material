@@ -36,7 +36,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ```JAVA
         // Driver
-        String saveDriver(String name, String surname, BigDecimal salary);
+        void saveDriver(String name, String surname, BigDecimal salary);
         Driver getDriverById(String id);
         Driver updateDriver(Driver driver);
         void deleteDriver(String id);
@@ -50,7 +50,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ```JAVA
         // WasteTruck
-        int saveWasteTruck(String brand, String registrationNumber, int capacity);
+        void saveWasteTruck(String brand, String registrationNumber, int capacity);
         WasteTruck getWasteTruckById(int id);
         void setWasteTruckAvailable(WasteTruck wasteTruck, boolean available);
         void deleteWasteTruck(int id);
