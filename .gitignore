@@ -137,3 +137,6 @@ buildNumber.properties
 # End of https://www.toptal.com/developers/gitignore/api/java,maven,intellij+all
 **/moodletable.md
 **/moodletable.md.old
+
+# Files to escape
+**/agenda.md
