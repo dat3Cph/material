@@ -2,7 +2,7 @@
 
 ## Links
 
-- [JPA Project Setup](../../../setup/JPASetup.md)
+- [JPA Project Setup](https://github.com/dat3Cph/material/blob/sem2024spring/setup/JPASetup.md#jpa-maven-setup-in-intellij)
 
 ## Introduction
 

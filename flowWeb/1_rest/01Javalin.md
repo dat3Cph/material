@@ -11,7 +11,7 @@
 <dependency>
     <groupId>io.javalin</groupId>
     <artifactId>javalin</artifactId>
-    <version>4.3.0</version>
+    <version>5.5.0</version>
 </dependency>
 ```
 4. Create a new Java class called `App.java` in the `src/main/java` folder.

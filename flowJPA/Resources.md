@@ -1,31 +1,27 @@
 # Resources
 
-## Videos internal resources
+## Theory and examples
 
-- [JPA Introduction](#): TBD
-- [JPA Entities](#): TBD
-
-## Theory and examples (provided by teachers)
-
-- [CRUD examples with a single entity](../theory/crudexamples.md)
+- [CRUD examples with a single entity](../flowJPA/theory/crudexamples.md)
+- [The role of the entity manager in JPA](../flowJPA/theory/entitymanager.md)
 
 ## Videos external resources
 
-- [Entity Lifecycle Model](https://www.youtube.com/watch?v=tciSOIQngig)
+- [Entity Lifecycle Model](https://www.youtube.com/watch?v=Y7PpjerZkc0)
 - [Best practice advices jpa relation mapping](https://www.youtube.com/watch?v=tciSOIQngig)
 - [Pagination in JPQL](https://www.youtube.com/watch?v=Xny3OJquWuo)
 
 ## Links external resources
 
-### Jakarta Persistence
+### Persistence
 
 - [Jakarta Persistence PDF](https://jakarta.ee/zh/specifications/persistence/3.1/jakarta-persistence-spec-3.1.pdf)
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
+- [Thorben Hansen (Hibernate Expert)](https://thorben-janssen.com/)
   
 ### Life cycle
 
-- [The role of the entity manager in JPA](../theory/entitymanager.md)
 - [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
 
 ### JPQL
@@ -50,3 +46,6 @@
 
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
 - [Date and Time Mappings with Hibernate and JPA](https://thorben-janssen.com/hibernate-jpa-date-and-time/)
+- [Java Test Container Hibernate Setup](https://gist.github.com/tysker/74eac7ad0dc0d52c3af8e87907d487e7)
+- [Java TestContainers Maven Pom file](https://gist.github.com/tysker/4314223070471e51fd2f44a408dbc880)
+- [Maven Dependency file for Testing](https://gist.github.com/tysker/4314223070471e51fd2f44a408dbc880)
