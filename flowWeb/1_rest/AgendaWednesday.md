@@ -1,7 +1,9 @@
 # Agenda
 ## Topics
 - **Part 1: 60 min.**
-- Catch up from last: `Arrays.asList` gets us a non-resizable list (wrap in `new ArrayList` to make it resizable)
+- Catch up from last: 
+  - `Arrays.asList` gets us a non-resizable list (wrap in `new ArrayList` to make it resizable)
+  - Recap `Routes` and `Handlers` and `Controllers` and `DAOs` (See the PersonEntityController)
 - CRUD (Focus on UPDATE and DELETE)
 - Path parameters
 - Query parameters
