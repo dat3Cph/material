@@ -2,11 +2,7 @@
 
 Our German developer team has developed the first version of an API for a hotel chain. It's not quite finished yet. Germans think in terms of quality. Hence, we've been tasked with adding integration tests to the project, so we can meet the usual standards. "Quadratisch praktisch gut," as they say:
 
-1. Clone the branch `apitestexercise` from the repository: [https://github.com/dat3Cph/hotel_exercise_rest](https://github.com/dat3Cph/hotel_exercise_rest) and get it running on your local dev-setup. Hint! Use 
-```console
-git clone -b apitestexercise git@github.com:dat3Cph/hotel_exercise_rest.git
-```
-2. Use Rest Assured, JUnit 5, and Hamcrest matchers to test all the finished endpoints.
+1. Based on your code from last week (Hotel API), you should now add integration tests to the project. You should use Rest Assured, JUnit 5, and Hamcrest matchers to test all the finished endpoints. 
 
 ![Bates hotel](./images/bates_hotel.jpg)
 
