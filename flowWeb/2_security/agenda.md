@@ -47,5 +47,15 @@
   - Demonstrate how to use a variety of Hamcrest matchers to write expressive
   assertions in Rest Assured tests.
   - Given, When, Then - BDD (Behavior Driven Development) style of writing tests (Gherkin language)
-  - 
-3. 
+
+
+# Agenda Wednesday JWT
+1. Explain the concept of JWT (JSON Web Tokens) and its role in securing RESTful web services.
+2. Show the JavalinDemo Security server in action
+  - Register a user
+  - Login a user and get a token
+  - Access a protected endpoint with the token
+3. Show how the users password is hashed and salted in db.
+4. Show how to implement JWT-based authentication and authorization in a Javalin application.
+5. Demonstrate how to secure REST endpoints using JWTs to control access to resources.
+7. Show how to salt and hash passwords with bcrypt.
