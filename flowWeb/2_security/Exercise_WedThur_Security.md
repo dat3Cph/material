@@ -1,4 +1,8 @@
 # Security Exercise
+## Assistance
+- [video help for below code examples](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d329a3f7-1a16-41d9-9e92-b13200c2a4b0)
+- [hashing passwords video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d3b7d78-48cc-4286-8ebb-b13200acb994)
+- [Code](../../setup/securityCode.md)
 Use an existing Rest project from last week or create a new one. Now add security and Rest Assured tests to the project.
 
 ## Part 1 Hashing Passwords

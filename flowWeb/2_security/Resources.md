@@ -1,6 +1,6 @@
 # Resources
 
-## Monday (TEST Assured)
+## Monday (TEST RestAssured)
 
 Reading material:
 
@@ -17,9 +17,11 @@ Watch this video:
 ### Preparation materials
 
 - [Password hashing with bcrypt](https://www.youtube.com/watch?t=1&v=O6cmuiTBZVs) (7 min)
+- [VIDEO: Bcrypt demo](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d3b7d78-48cc-4286-8ebb-b13200acb994)
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (Skim 10-15 min)
 - [How does JWT work?](https://www.youtube.com/watch?t=test&v=K6pwjJ5h0Gg) (1:06 min)
 - [JSON Web Tokens](https://www.youtube.com/watch?t=1&v=oXxbB5kv9OA) (first 24 min ONLY)
+- [VIDEO: JWT code demo](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d329a3f7-1a16-41d9-9e92-b13200c2a4b0)
 
 ### Other security related links
 
