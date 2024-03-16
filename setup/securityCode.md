@@ -133,11 +133,6 @@ public String createToken(UserDTO user) {
     }
 }
 ```
-## Create Token
-- The 
-
-
-
 
 ## Making requests with JWT
 - Now that we can register a new user, login a user with username and password and get a token, we can access a protected endpoint with the token:
@@ -189,6 +184,29 @@ public Handler authenticate() {
 }
 ```
 - The above code checks for the `Authorization` header and verifies the token. If the token is valid, the user will be added to the context as an attribute and the request will be passed on to the endpoint. If the token is invalid or missing, the user will get a 403 Forbidden response.
+
+### Verifying the token
+- When the token is received in the `authenticate` method, it is verified in the `securityController.verifyToken` method.
+- The `securityController.verifyToken` method:
+```java
+@Override
+    public UserDTO verifyToken(String token) {
+        boolean IS_DEPLOYED = (System.getenv("DEPLOYED") != null);
+        String SECRET = IS_DEPLOYED ? System.getenv("SECRET_KEY") : Utils.getPropertyValue("SECRET_KEY","config.properties");
+
+        try {
+            if (tokenUtils.tokenIsValid(token, SECRET) && tokenUtils.tokenNotExpired(token)) {
+                return tokenUtils.getUserWithRolesFromToken(token);
+            } else {
+                throw new NotAuthorizedException(403, "Token is not valid");
+            }
+        } catch (ParseException | JOSEException | NotAuthorizedException e) {
+            e.printStackTrace();
+            throw new ApiException(HttpStatus.UNAUTHORIZED.getCode(), "Unauthorized. Could not verify token");
+        }
+    }
+```
+
 - Finally the roles are checked in the `ApplicationConfig`:
 ```java
 public ApplicationConfig checkSecurityRoles() {
