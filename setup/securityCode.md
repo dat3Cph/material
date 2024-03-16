@@ -2,6 +2,21 @@
 - [video help for below code examples](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d329a3f7-1a16-41d9-9e92-b13200c2a4b0)
 - [hashing passwords video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d3b7d78-48cc-4286-8ebb-b13200acb994)
 
+## POM.xml dependencies for security code below
+```xml
+<dependency>
+    <groupId>com.nimbusds</groupId>
+    <artifactId>nimbus-jose-jwt</artifactId>
+    <version>9.10</version>
+</dependency>
+<dependency>
+    <groupId>org.mindrot</groupId>
+    <artifactId>jbcrypt</artifactId>
+    <version>0.4</version>
+</dependency>
+```
+- The `nimbuds-jose-jwt` dependency is used for creating and verifying JWT tokens and the `jbcrypt` dependency is used for hashing passwords.
+
 ## Security Routes
 ```java
 public static EndpointGroup getSecurityRoutes() {
@@ -118,6 +133,11 @@ public String createToken(UserDTO user) {
     }
 }
 ```
+## Create Token
+- The 
+
+
+
 
 ## Making requests with JWT
 - Now that we can register a new user, login a user with username and password and get a token, we can access a protected endpoint with the token:
@@ -203,5 +223,3 @@ public ApplicationConfig checkSecurityRoles() {
 ```
 - In the above method the roles are checked against the user and the allowed roles for the endpoint. If the user has the correct role, the request will be passed on to the endpoint. If not, the user will get a 403 Forbidden response.
 - The list of permitted roles comes from the last argument to the `get` method in the `getSecuredRoutes` method above.
-
-
