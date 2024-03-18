@@ -206,6 +206,23 @@ public Handler authenticate() {
         }
     }
 ```
+- SecurityController -> authenticate:
+```java
+    @Override
+    public boolean authorize(UserDTO user, Set<String> allowedRoles) {
+        // Called from the ApplicationConfig.setSecurityRoles
+
+        AtomicBoolean hasAccess = new AtomicBoolean(false); // Since we update this in a lambda expression, we need to use an AtomicBoolean
+        if (user != null) {
+            user.getRoles().stream().forEach(role -> {
+                if (allowedRoles.contains(role.toUpperCase())) {
+                    hasAccess.set(true);
+                }
+            });
+        }
+        return hasAccess.get();
+    }
+```
 
 - Finally the roles are checked in the `ApplicationConfig`:
 ```java

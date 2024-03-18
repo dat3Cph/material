@@ -22,6 +22,7 @@ Watch this video:
 - [How does JWT work?](https://www.youtube.com/watch?t=test&v=K6pwjJ5h0Gg) (1:06 min)
 - [JSON Web Tokens](https://www.youtube.com/watch?t=1&v=oXxbB5kv9OA) (first 24 min ONLY)
 - [VIDEO: JWT code demo](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d329a3f7-1a16-41d9-9e92-b13200c2a4b0)
+- [Code for security setup](../../setup/securityCode.md)
 
 ### Other security related links
 
