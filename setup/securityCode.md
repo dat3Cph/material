@@ -268,3 +268,22 @@ public ApplicationConfig checkSecurityRoles() {
 ```
 - In the above method the roles are checked against the user and the allowed roles for the endpoint. If the user has the correct role, the request will be passed on to the endpoint. If not, the user will get a 403 Forbidden response.
 - The list of permitted roles comes from the last argument to the `get` method in the `getSecuredRoutes` method above.
+- NotAuthorizedException is a custom exception that extends RuntimeException and is thrown when the user is not authorized to access the endpoint.
+```java
+public class NotAuthorizedException extends Exception {
+    private final int statusCode;
+
+    public NotAuthorizedException(int statusCode, String message) {
+        super(message);
+        this.statusCode = statusCode;
+    }
+    public NotAuthorizedException(int statusCode, String message, Throwable cause) {
+        super(message, cause);
+        this.statusCode = statusCode;
+    }
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+}
+```
