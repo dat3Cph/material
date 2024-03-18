@@ -206,6 +206,16 @@ public Handler authenticate() {
         }
     }
 ```
+- `tokenIsValid` checks if the token is valid and `tokenNotExpired` checks if the token is expired. If the token is valid and not expired, the user will be returned from the token.
+```java
+    public boolean tokenIsValid(String token, String secret) throws ParseException, JOSEException, NotAuthorizedException {
+        SignedJWT jwt = SignedJWT.parse(token);
+        if (jwt.verify(new MACVerifier(secret)))
+            return true;
+        else
+            throw new NotAuthorizedException(403, "Token is not valid");
+    }
+```
 - SecurityController -> authenticate:
 ```java
     @Override
