@@ -1,4 +1,4 @@
-# Exercise TDD
+# Optional Exercise - TDD (Only if you have finished monday exercise - security)
 ![](../images/tdd.png)
 
 ## Steps
