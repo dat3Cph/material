@@ -1,6 +1,6 @@
 # SchoolHack Workshop API
 
-<img src="https://www.nightingaleseldercare.com/assets/images/events-1080x608.png" width="900" height="600" alt="event">
+<img src="https://i.imgur.com/H3kvxAU.png" width="900" height="600" alt="event">
 
 ## Overview
 
