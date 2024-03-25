@@ -38,11 +38,12 @@ The platform will be responsible for consuming the API and displaying the events
 2. After that you need to create all Java entities and the DAOs that will allow you to interact with the database.
 3. Then you need to implement the API that will allow the platform to manage the events/workshops and the users.
 
-Remember only to use a DTO when sending data to the frontend. Authentication and authorization should be implemented as
-shown in the previous project.
+- Remember only to use a DTO when sending data to the frontend. 
+- Authentication and authorization should be implemented as shown in the previous project.
+- For all Date and time properties, do not use a string. Use the `LocalDateTime` class from the `java.time` package.
+- 
 
-The above properties are guidelines, and you can add more properties if you think they are necessary. You can also
-change the properties names or even the structure of the entities if you think it is necessary.
+The above properties are guidelines, you can add and change the properties as you see fit.
 
 Think about the relationships between the entities and how you can implement them in the database. For example, an event
 can have multiple registrations, and a user can have multiple registrations. How can you implement this relationship in
