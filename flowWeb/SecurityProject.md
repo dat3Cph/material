@@ -1,5 +1,7 @@
 # SchoolHack Workshop API
 
+<img src="https://www.nightingaleseldercare.com/assets/images/events-1080x608.png" alt="event">
+
 ## Overview
 
 The SchoolHack Workshop API is a RESTful API that allows you to create, read, update, and delete events.
@@ -51,7 +53,7 @@ Think about the security of the API. How can you make sure that only users with 
 endpoints?
 How can you make sure that the passwords are secure and hashed before being stored in the database?
 
-**Remember to test your endpoints and DAO methods to make sure they are working correctly.**
+Remember to test your endpoints and DAO methods to make sure they are working correctly.
 
 ***
 
