@@ -10,9 +10,7 @@ On the platform, students can see the events/workshops that are going to be held
 Your job is to implement the API that will allow the platform to manage the events/workshops. NO FRONTEND IS REQUIRED!
 The platform will be responsible for consuming the API and displaying the events/workshops to the students.
 
-The platform needs to have the following properties:
-
-- **Events**: The events/workshops that are going to be held.
+**The platform needs to have the following properties:**
 
 - **Title**: The title of the event/workshop.
 - **Description**: A brief description of the event/workshop.
@@ -30,14 +28,33 @@ The platform needs to have the following properties:
 - **Updated at**: The date when the event/workshop was last updated. (This field should be automatically filled by the
   API)
 - **Deleted at**: The date when the event/workshop was deleted. (This field should be automatically filled by the API)
-
-**User properties**: The users that are going to register or to create events/workshops.
-
 - **Name**: The name of the user.
 - **Email**: The email of the user.
 - **Phone**: The phone number of the user.
 - **Role**: The role of the user. It could be a student, an instructor, or an admin.
 - **Password**: The password of the user.
+
+1. You first need to create the database schema (EER) that will store the events/workshops and the users.
+2. After that you need to create all Java entities and the DAOs that will allow you to interact with the database.
+3. Then you need to implement the API that will allow the platform to manage the events/workshops and the users.
+
+Remember only to use a DTO when sending data to the frontend. Authentication and authorization should be implemented as
+shown in the previous project.
+
+The above properties are guidelines, and you can add more properties if you think they are necessary. You can also
+change the properties names or even the structure of the entities if you think it is necessary.
+
+Think about the relationships between the entities and how you can implement them in the database. For example, an event
+can have multiple registrations, and a user can have multiple registrations. How can you implement this relationship in
+the database?
+
+Think about the security of the API. How can you make sure that only users with the correct role can access the
+endpoints?
+How can you make sure that the passwords are secure and hashed before being stored in the database?
+
+**Remember to test your endpoints and DAO methods to make sure they are working correctly.**
+
+***
 
 ## API Endpoints
 
@@ -74,6 +91,7 @@ The API should have the following endpoints:
 The following user stories should be implemented:
 
 **Student Stories**
+
 - As a user, I want to see all the events/workshops that are going to be held.
 - As a user, I want to see the details of a specific event/workshop.
 - As a user, I want to register for an event/workshop.
@@ -82,6 +100,7 @@ The following user stories should be implemented:
   the password? )
 
 **Instructor Stories**
+
 - As an instructor, I want to create a new event/workshop.
 - As an instructor, I want to update an event/workshop.
 - As an instructor, I want to cancel an event/workshop.
@@ -89,14 +108,33 @@ The following user stories should be implemented:
 - As an instructor, I want to see all the registrations for an event/workshop.
 
 **Admin Stories**
+
 - As an admin, I want to see all the users.
 - As an admin, I want to see all the events/workshops.
 
-**General Stories** 
+**General Stories**
+
 - Implement a way to filter events by category and status.
 
 Remember that the API should be secure and only allow users with the correct role to access the endpoints. Also, the
-passwords should be hashed before being stored in the database. 
+passwords should be hashed before being stored in the database.
+
+**Documentation (README.md)**:
+
+- Add the finished EER diagram to the README.md file.
+- The API should have proper documentation that explains how to use the API and what each endpoint does.
+
+
+**Below is an example of how the API documentation should look like:**
+
+| HTTP method | REST Resource      |                                   | Comment                     |
+|-------------|--------------------|-----------------------------------|-----------------------------|
+| GET         | `/api/test`        | `response:` [{response body}]     | Retrieve all tests          |
+| GET         | `/api/test/{id}`   | `response:` {response body}       | Retrieve a test by its ID   |
+| GET         | `/api/test1/test2` | `response:` [{response body}]     | Retrieve test by some value | 
+| POST        | `/api/test`        | `request payload:` {request body} | Add a new test.             |
+| PUT         | `/api/test/{id}`   | `request payload:` {request body} | Update a test ID            |
+
 
 
 
