@@ -1,6 +1,6 @@
 # React: Tick Counter
 
-Often when we have breaks during a teaching session, we use this [Tick Counter](https://www.tickcounter.com/timer) for timing the duration of the break. 
+Often when we have breaks during a teaching session, we use a [Tick Counter](https://www.tickcounter.com/timer) like the one below for timing the duration of the break. 
 
 ![Timer](./images/tickcounter.png)
 
