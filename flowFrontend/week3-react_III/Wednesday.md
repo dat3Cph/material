@@ -1,13 +1,4 @@
-# Deployment with Traefik
-
-## Agenda
-
-- forward proxy vs reverse proxy
-- load balancer
-- certification (Let's Encrypt)
-- deployment environment
-- what is traefik ?
-- deployment setup
+# Proxies and Load Balancers
 
 ## Proxy
 
@@ -76,8 +67,6 @@ number of servers.
 - Content-based routing
 - Health checks
 - Caching
-
-## Traefik
 
 
 
