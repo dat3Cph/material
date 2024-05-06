@@ -37,3 +37,6 @@
 
 - [W3Schools CSS](https://www.w3schools.com/css/default.asp)
 - [MDN webdocs](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+
+The content is the same for both weeks so far because the idea is that we learn each technology/subject, not one by one, but combined with the others. This way we can see how they interact and how they can be used together.
