@@ -1,4 +1,4 @@
-## Tuesday: React III
+## React Week III
 
 <img src="../images/login.png" width="300">
 <img src="../images/homepage.png" width="300">
