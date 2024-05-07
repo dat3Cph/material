@@ -4,6 +4,7 @@ Before you begin make sure you have the following:
 - Your domain is pointing to DigitalOcean DNS servers. 
 - Wildcard DNS record for your domain (*.your_domain.com)
 
+**Remember to replace port 5173 in your Frontend Nginx configuration with port 80 and rebuild the frontend image.**
 
 ### Part 1:
 
