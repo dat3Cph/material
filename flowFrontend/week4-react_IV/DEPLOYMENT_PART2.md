@@ -29,8 +29,9 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 ```nginx
 server {
-    listen       80;
-    listen  [::]:80;
+    # Both ports below has to be changed to the port 80 in Part 3
+    listen       5173;
+    listen  [::]:5173;
     server_name  localhost;
 
     location / {
