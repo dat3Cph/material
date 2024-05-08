@@ -31,4 +31,6 @@
 
 ## Exercises
 
-- [Deployment Part 1](https://gist.github.com/tysker/8721758e955e77552bf4812dd55686eb)
+- [Deployment Part 1](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week3-react_III/DEPLOYMENT_PART1.md#deployment-part1-backend)
+- [Deployment Part 2](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week4-react_IV/DEPLOYMENT_PART2.md#deployment-part-2)
+- [Deployment Part 3](https://github.com/dat3Cph/material/blob/sem2024spring/flowFrontend/week4-react_IV/DEPLOYMENT_PART3.md#deployment-part-3-tr%C3%A6fik)
