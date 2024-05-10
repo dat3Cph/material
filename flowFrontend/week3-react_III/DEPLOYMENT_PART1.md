@@ -122,7 +122,6 @@ build.yml`
 
 Replace `<your-api-name>` with the name of your API. This will be the name of the Docker image.
 
-```yaml
 name: API JAVALIN WORKFLOW
 on:
   push:
