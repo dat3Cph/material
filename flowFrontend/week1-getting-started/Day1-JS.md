@@ -88,9 +88,9 @@
     - `++` is used to increment numbers
     - `--` is used to decrement numbers
 - Number methods:
-    - `toString()` returns a number as a string
-      - `var x = 123;` `var y = x.toString();`
-    - `toFixed()` formats a number with a specific number of digits to the right of the decimal
+    - `toString()` returns a number as a string 
+      - `var x = 123;` `var y = x.toString();`  
+    - `toFixed()` formats a number with a specific number of digits to the right of the decimal  
       - `var x = 9.656;` `x.toFixed(0);` `x.toFixed(2);` `x.toFixed(4);` `x.toFixed(6);`
     - `toPrecision()` formats a number to a specified length
       - `var x = 9.656;` `x.toPrecision();` `x.toPrecision(2);` `x.toPrecision(4);` `x.toPrecision(6);`
