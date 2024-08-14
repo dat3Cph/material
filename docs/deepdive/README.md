@@ -1,6 +1,6 @@
 ---
 title: Java Deep Dive
-description: Oversigt
+description: Overview of Java Deep Dive Content
 layout: default
 nav_order: 2
 has_children: true
