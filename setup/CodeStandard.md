@@ -1,10 +1,20 @@
 # Code Standard 3 semester 2024
 
 1. **Naming Conventions**:
-    - **Classes and Interfaces**: Use UpperCamelCase (e.g., `CustomerAccount`, `DataProcessor`).
+    - **Classes, Interfaces**: Use UpperCamelCase (e.g., `CustomerAccount`, `DataProcessor`).
+    - **Interfaces implementations**: Use UpperCamelCase and `Impl`(e.g., `CustomerAccountImpl`, `DataProcessorImpl`)
+    ```java
+     interface CustomerAccount {
+        // interface blueprint
+     }
+     class CustomerAccountImpl {
+        // interface implementation
+     }
+    ```
     - **Methods and Variables**: Use lowerCamelCase (e.g., `calculateTotal`, `orderId`).
     - **Constants**: Use all uppercase letters with words separated by underscores (e.g., `MAX_BUFFER_SIZE`).
     - Use english for all naming conventions. (class, methods, interfaces osv.)
+
 
 2. **Indentation and Spacing**:
     - Use 4 spaces per indentation level. Do not use tabs.
