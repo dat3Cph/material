@@ -9,7 +9,7 @@ RUN gem install jekyll bundler
 # RUN gem install jekyll-sitemap
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
 # Copy the Gemfile and Gemfile.lock to ensure they're cached
 COPY Gemfile Gemfile.lock ./
