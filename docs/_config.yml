@@ -1,0 +1,65 @@
+title: 3. semester på Cphbusiness
+theme: just-the-docs
+description: Diverse undervisningsmaterialer på 3. semester datamatiker uddannelsen på Cphbusiness
+url: https://dat3Cph.github.io
+logo: '/assets/images/cphbusiness.png'
+favicon_ico: '/assets/images/favicon.ico'
+aux_links:
+  Repository: https://github.com/dat3Cph/material/
+nav_enabled: true
+heading_anchors: true
+search_enabled: true
+ga_tracking: G-9D1SPNY5YF
+plugins:
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-sitemap
+
+readme_index:
+  enabled: true
+  remove_originals: true
+  with_frontmatter: false
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: light
+
+# Back to top link
+back_to_top: true
+back_to_top_text: 'Top'
+
+# For copy button on code
+enable_copy_code_button: true
+
+footer_content: '2. semester forår 2024'
+last_edit_timestamp: true
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+exclude:
+  # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # specific to the theme website:
+  - bin/
+  - lib/
+  - '*.gemspec'
+  - '*.gem'
+  - LICENSE.txt
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - CODE_OF_CONDUCT.md
+  - docker-compose.yml
+  - Dockerfile
+  # theme test code
+  - fixtures/
