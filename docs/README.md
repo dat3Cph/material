@@ -1,5 +1,5 @@
 ---
-title: Oversigt
+title: Overview
 layout: default
 nav_order: 1
 permalink: /
@@ -7,6 +7,10 @@ permalink: /
 
 # DAT 3. semester
 
-Selve afviklingen af 3. semester foregår via Moodle. Dvs, at man på Moodle kan se tid/sted for undervisningen og hvad der arbejdes med hvornår. Det meste af indholdet ligger her på GitHub. Det har vi valgt at gøre fordi mange af materialerne indholder kodestumper, som GitHub kan gengive med fremhævning af syntaks og mulighed for at kopiere indholdet. Det sparer os alle for meget tid og besvær.
+The actual running of the 3rd semester takes place via Moodle. This means that on Moodle you can see the schedule and what is being worked on when. Most of the content is located here on GitHub. We have chosen to do this because many of the materials contain code snippets that GitHub can reproduce with syntax highlighting and the ability to copy the content. This saves us all a lot of time and effort.
 
-Og en sidste fin ting med disse GitHub pages: der er en fin søgefunktion, så du hurtigt kan finde materialerne uden helt at vide hvor de ligger.
+A nice thing about these GitHub pages: there's a search function, so you can quickly find what
+you are looking for. Just type in the search box at the top of the page.
+
+And as a final touch, we've built a customGPT AI model,
+which you can freely ask for help. It's not perfect, but it should be able to help you. You can find it [here](https://app.customgpt.ai/projects/33053/ask-me-anything?embed=1&shareable_slug=d9d5671cb9f0c994caf22ac4506cdd93){: .btn .btn-blue }
