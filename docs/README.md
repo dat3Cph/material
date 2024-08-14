@@ -13,4 +13,4 @@ A nice thing about these GitHub pages: there's a search function, so you can qui
 you are looking for. Just type in the search box at the top of the page.
 
 And as a final touch, we've built a customGPT AI model,
-which you can freely ask for help. It's not perfect, but it should be able to help you. You can find it [here](https://app.customgpt.ai/projects/33053/ask-me-anything?embed=1&shareable_slug=d9d5671cb9f0c994caf22ac4506cdd93){: .btn .btn-blue }
+which you can freely ask for help. It's not perfect, but it should be able to help you. You can find it [here](https://app.customgpt.ai/projects/33053/ask-me-anything?embed=1&shareable_slug=d9d5671cb9f0c994caf22ac4506cdd93)
