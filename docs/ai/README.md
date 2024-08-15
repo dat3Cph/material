@@ -11,7 +11,7 @@ permalink: /ai/
 Herunder kan du åbne for en prompt, der primært anvender pensum fra datamatikerstudiet på Cphbusiness.
 Den er baseret på chatGPT 4o.
 
-[Åbn for lidt AI hjælp](https://app.customgpt.ai/projects/38881/ask-me-anything?embed=1){: .btn .btn-blue }
+[Åbn for lidt AI hjælp](https://app.customgpt.ai/projects/38881/ask-me-anything?embed=1&shareable_slug=0524389955e4d02b57f2c12aca4fff50){: .btn .btn-blue }
 
 ## Prompts
 
