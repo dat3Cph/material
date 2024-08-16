@@ -1,8 +1,8 @@
 ---
-title: Think Datastructures
+title: Think Datastructures Book
 description: Lærebog om brug af datastrukturer i Java
 layout: default
-nav_order: 10
+nav_order: 13
 parent: Java
 grand_parent: Toolbox
 permalink: /toolbox/java/think-datastuctures/

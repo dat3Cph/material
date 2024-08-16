@@ -1,15 +1,25 @@
+---
+title: Resources
+description: Java Deep Dive I Resources
+layout: default
+nav_order: 2
+has_children: false
+parent: Java Deep Dive I
+permalink: /deepdive-1/resources
+---
+
 # Resources
 
 ## Internal resources
 
-- [Functional programming](./Java8DeepDive.md#what-is-functional-programming) and [concepts](./Java8DeepDive.md#functional-programming-concepts)
-- [Lambda expressions](./Java8DeepDive.md#lambda-expressions)
-- [Functional interfaces](./Java8DeepDive.md#functional-interfaces)
-- [Java Time API](./Java8DeepDive.md#java-time-api)
-- [Method references (::)](./Java8DeepDive.md#method-references)
-- [Streams](./Java8DeepDive2.md#streams)
-- [Collectors](./Java8DeepDive2.md#collectors)
-- [Generics](./Java8DeepDive2.md#generics)
+- [Functional programming](../toolbox/java/deepdive/functional_programming.md) and [concepts](../toolbox/java/deepdive/functional_programming.md#functional-programming-concepts)
+- [Lambda expressions](../toolbox/java/deepdive/lambdas.md)
+- [Functional interfaces](../toolbox/java/deepdive/functional_programming.md#functional-interfaces)
+- [Java Time API](../toolbox/java/deepdive/datetime.md)
+- [Method references (::)](../toolbox/java/deepdive/functional_programming.md#method-references)
+- [Streams](../toolbox/java/deepdive/streams.md)
+- [Collectors](../toolbox/java/deepdive/streams.md#collectors)
+- [Generics](../toolbox/java/deepdive/generics.md)
 
 ## Recommended video resources
 

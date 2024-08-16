@@ -1,32 +1,29 @@
 ---
-title: Java Time API
-description: Diverse materialer om Java Time API
+title: Date and Time API
+description: Java 8 Date and Time API
 layout: default
-nav_order: 8
+nav_order: 1
 parent: Java
 grand_parent: Toolbox
-permalink: /toolbox/java/timeapi/
+permalink: /toolbox/java/date-time-api/
 ---
 
-# Java 8 Dates
+# Java 8 Date and Time API
 
-The Java Time API, introduced in Java 8, provides a modern way to work with dates, times, and time intervals. It addresses many of the shortcomings of the older `java.util.Date` and `java.util.Calendar` classes.
+The Java Time API: java.time.*, introduced in Java 8, provides a modern way to work with dates, times, and time intervals. It addresses many of the shortcomings of the older `java.util.Date` and `java.util.Calendar` classes.
 
 Here are some additional advantages and features of the Java Time API:
 
-## 1. Immutability and Thread Safety
+1. **Immutability and Thread Safety:**
+   The Java Time API classes are immutable, meaning their state cannot be changed after creation. This immutability ensures thread safety and prevents unexpected modifications to date and time values.
 
-The Java Time API classes are immutable, meaning their state cannot be changed after creation. This immutability ensures thread safety and prevents unexpected modifications to date and time values.
+2. **Clarity and Readability:**
+   The Java Time API provides classes with clear and intuitive names for representing various aspects of date and time, such as `LocalDate`, `LocalTime`, `LocalDateTime`, `ZonedDateTime`, and more. This makes code more readable and less error-prone.
 
-## 2. Clarity and Readability
+3. **Time Zones**
+   The API provides better support for working with time zones, including the `ZoneId` class for representing time zones and the `ZoneOffset` class for representing fixed time zone offsets.
 
-The Java Time API provides classes with clear and intuitive names for representing various aspects of date and time, such as `LocalDate`, `LocalTime`, `LocalDateTime`, `ZonedDateTime`, and more. This makes code more readable and less error-prone.
-
-## 3. Time Zones
-
-The API provides better support for working with time zones, including the `ZoneId` class for representing time zones and the `ZoneOffset` class for representing fixed time zone offsets.
-
-Working with time zones in the Java Time API involves using the `ZoneId` class to represent different time zones and converting date-time values between them. Here's an example that demonstrates how to work with time zones:
+   Working with time zones in the Java Time API involves using the `ZoneId` class to represent different time zones and converting date-time values between them. Here's an example that demonstrates how to work with time zones:
 
 ```java
 import java.time.LocalDateTime;
@@ -69,9 +66,8 @@ Make sure to provide valid time zone IDs like `"America/New_York"` and `"Europe/
 
 When working with time zones, remember that converting between time zones may result in different local times due to daylight saving time transitions and other considerations.
 
-## 4. Parsing and Formatting
-
-The `DateTimeFormatter` class allows for customizable parsing and formatting of date and time values. It supports patterns, predefined formats, and localized formatting.
+4. **Parsing and Formatting:**
+   The `DateTimeFormatter` class allows for customizable parsing and formatting of date and time values. It supports patterns, predefined formats, and localized formatting.
 
 ```java
 import java.time.LocalDateTime;
@@ -91,7 +87,7 @@ public class DateTimeFormatterExample {
 }
 ```
 
-## 5. Period
+5. **Period:**
 
 `Period` represents a date-based amount of time, typically representing the difference between two dates in terms of years, months, and days. It can be used to calculate differences between dates and perform operations that involve date-based intervals.
 
@@ -117,7 +113,7 @@ public class PeriodExample {
 
 In this example, the `Period.between` method calculates the difference between `startDate` and `endDate` and returns a `Period` object representing the difference in terms of years, months, and days.
 
-## 6. Duration
+6. **Duration:**
 
 `Duration` represents a time-based amount of time, typically representing the difference between two instants (timestamps) in terms of hours, minutes, seconds, and nanoseconds. It's useful for working with time-based intervals, like measuring the time between two events.
 
@@ -171,8 +167,7 @@ In this example, the `Duration.between` method calculates the difference between
 
 Both `Period` and `Duration` provide methods for addition, subtraction, and comparison, making it easier to perform various operations involving time intervals. They play a crucial role in making date and time calculations more accurate and readable using the Java Time API.
 
-## 7. Temporal Adjusters
-
+7. **Temporal Adjusters:**
    The API includes a set of built-in temporal adjusters that allow you to manipulate dates and times easily. For example, you can get the first or last day of the month, the next Tuesday, and more.
    Get the next friday from the current date:
 
@@ -192,8 +187,7 @@ public class TemporalAdjusterExample {
 }
 ```
 
-## 8. Arithmetic Operations
-
+8. **Arithmetic Operations:**
    Java Time API classes support arithmetic operations like addition and subtraction, allowing you to perform calculations on dates and times more naturally.
 
 ```java
@@ -232,18 +226,14 @@ public class AddingSubtractingPeriodsExample {
 }
 ```
 
-## 9. Compatibility with Legacy Code
+9. **Compatibility with Legacy Code:**
+   The Java Time API includes methods to convert between new API classes and older `Date` and `Calendar` classes, making it easier to transition from the old date and time handling.
 
-The Java Time API includes methods to convert between new API classes and older `Date` and `Calendar` classes, making it easier to transition from the old date and time handling.
+10. **Immutable Collections:**
+   Some classes, such as `MonthDay`, `YearMonth`, and `Year`, provide immutable collections of values related to specific dates or times, like all the months in a year.
 
-## 10. Immutable Collections
+11. **Local Date-Time Adjustments:**
+   The `LocalDateTime` class has methods for adding and subtracting time units, enabling you to adjust date-time values easily.
 
-Some classes, such as `MonthDay`, `YearMonth`, and `Year`, provide immutable collections of values related to specific dates or times, like all the months in a year.
-
-## 11. Local Date-Time Adjustments
-
-The `LocalDateTime` class has methods for adding and subtracting time units, enabling you to adjust date-time values easily.
-
-## 12. Daylight Saving Time Handling
-
-The API handles daylight saving time transitions automatically, so you don't need to worry about the complexities of time changes due to daylight saving.
+12. **Daylight Saving Time Handling:**
+    The API handles daylight saving time transitions automatically, so you don't need to worry about the complexities of time changes due to daylight saving.

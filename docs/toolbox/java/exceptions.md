@@ -2,7 +2,7 @@
 title: Exceptions i Java
 description: Lær at lave exceptions i Java
 layout: default
-nav_order: 3
+nav_order: 5
 parent: Java
 grand_parent: Toolbox
 permalink: /toolbox/java/exceptions/

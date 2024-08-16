@@ -2,7 +2,7 @@
 title: DocJava OOP
 description: Lærebogsmaterialer fra DocJava
 layout: default
-nav_order: 2
+nav_order: 3
 parent: Java
 grand_parent: Toolbox
 permalink: /toolbox/java/docjava-oop/

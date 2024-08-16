@@ -1,29 +1,27 @@
 ---
-title: Java Deep Dive I
-description: Overview of Java Deep Dive I Content
+title: Java Deep Dive II
+description: Overview of Java Deep Dive II Content
 layout: default
-nav_order: 2
+nav_order: 4
 has_children: true
-permalink: /deepdive-1/
+permalink: /deepdive-2/
 ---
 
-# Java Deep Dive part 1
+# Java Deep Dive part 2
 
 Topics covered in this week are:
 
-- Java Streams
-- Java lambdas
-- Java Time and Date API
-- Java Functional Programming
-- Java Generics
+- Java Executor Service
+- Java Futures and Callables
+- Json
+- DTO
+- Fetching data from an API
 
 ## Monday
 
 Prepare for the week
 
 ## Tuesday (class)
-
-### Prepare for the class
 
 Watch these videos - and code along:
 
@@ -35,8 +33,6 @@ Skim these articles
 - [Java Lambda Expression](https://www.javatpoint.com/java-lambda-expressions)
 - [Java Streams](https://stackify.com/streams-guide-java-8/)
 
-### In-class exercises
-
 ## Wednesday (CodeLab)
 
 Time to code!
@@ -47,8 +43,6 @@ CodeLab exercises on Java Streams, Java Time API, and Lambdas. All day is devote
 
 ## Thursday (class)
 
-### Prepare for the class
-
 Watch these videos - and code along:
 
 - [Functional programming (9:17)](https://www.youtube.com/watch?t=1&v=dAPL7MQGjyM&ab_channel=HiteshChoudhary)
@@ -57,8 +51,6 @@ Watch these videos - and code along:
 Skim this article:
 
 - [Java Generics](https://www.baeldung.com/java-generics)
-
-### In-class exercises
 
 ## Friday (exercise day)
 

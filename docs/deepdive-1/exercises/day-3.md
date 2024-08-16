@@ -1,4 +1,16 @@
-# Week 4 Java Deep Dive Exercise
+---
+title: Day 3
+description: Exercise for day 3
+layout: default
+nav_order: 4
+parent: Exercises
+grand_parent: Java Deep Dive I
+permalink: /deepdive-1/exercises/day-3
+---
+
+
+# Day 3: Java Deep Dive Exercise
+
 This exercise combines the concepts of generics, lambda expressions, streams, and dates. The exercise involves creating a simple task list application using Java. You'll need to implement classes to manage tasks, create a task list, and perform operations like filtering, sorting, and date-based calculations.
 
 **Exercise: Task List Application**
@@ -16,7 +28,7 @@ Create a Java program that simulates a task list application. Follow these steps
 
    Create a `GardenTask` class that extends the `Task` class. The `GardenTask` class must have an additional attribute called `gardenLocation` (String) that stores the location of the garden where the task needs to be performed.
 
-2. **Create the TaskList Class:**
+3. **Create the TaskList Class:**
 
    Create a `TaskList` class that manages a collection of Tasks (and GardenTasks). Include methods to:
    - Add tasks to the list.
@@ -28,7 +40,7 @@ Create a Java program that simulates a task list application. Follow these steps
 
    The class must be generic and accept any Task or subtype of Task. The class must also implement the `Iterable` interface to allow iterating over the tasks.
 
-3. **Main Application:**
+4. **Main Application:**
 
    In the main application:
    - Create instances of `Task` and `GardenTask` and add them to a `TaskList`.
@@ -105,6 +117,3 @@ class TaskList<T extends Task> {
 In this example, the `TaskList` class is parameterized with a type `T` that extends the `Task` class. This ensures that the `TaskList` can only work with subclasses of `Task`, providing type safety and better organization of your code.
 
 By using generics in your `Task` and `TaskList` classes, you can create more robust and flexible code that adheres to Java's type system and promotes cleaner, safer, and more reusable code.
-
-
-```

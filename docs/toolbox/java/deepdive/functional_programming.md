@@ -3,13 +3,14 @@ title: Functional Programming
 description: Theory for functional programming in Java
 layout: default
 nav_order: 1
-parent: Java Deep Dive
-permalink: /deepdive/functional-programming/
+parent: Java
+grand_parent: Toolbox
+permalink: /toolbox/java/functional-programming/
 ---
 
-# Java 8 Deep Dive
+# Java 8 Deep Dive II
 
-## Day 1
+## Day 1: Functional Programming
 
 ## Introduction to Java 8 Features
 

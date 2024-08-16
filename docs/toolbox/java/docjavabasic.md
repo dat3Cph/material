@@ -2,7 +2,7 @@
 title: DocJava Basic
 description: Lærebogsmaterialer fra DocJava
 layout: default
-nav_order: 1
+nav_order: 2
 parent: Java
 grand_parent: Toolbox
 permalink: /toolbox/java/docjava-basic/

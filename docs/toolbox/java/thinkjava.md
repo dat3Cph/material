@@ -1,8 +1,8 @@
 ---
-title: Think Java
+title: Think Java Book
 description: Lærebog om Java
 layout: default
-nav_order: 9
+nav_order: 14
 parent: Java
 grand_parent: Toolbox
 permalink: /toolbox/java/think-java/
