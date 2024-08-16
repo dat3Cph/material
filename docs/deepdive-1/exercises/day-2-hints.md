@@ -1,3 +1,14 @@
+---
+title: Day 2 Hints
+description: Exercise Hints for day 2
+layout: default
+nav_order: 4
+parent: Exercises
+grand_parent: Java Deep Dive I
+nav_exclude: true
+permalink: /deepdive-1/exercises/day-2-hints/
+---
+
 # Exercise hints for Java Deep Dive week
 
 ## The map function
@@ -59,7 +70,9 @@ public class Car {
     }
 }
 ```
+
 Creating 10 cars with random names and prices between 0 and 1000000:
+
 ```java
 
 import java.util.ArrayList;

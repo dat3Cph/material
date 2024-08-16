@@ -8,9 +8,9 @@ grand_parent: Java Deep Dive I
 permalink: /deepdive-1/exercises/day-2
 ---
 
-# Day 2: Functional Programming
+# Day 2: Functional Programming and Lambda Expressions
 
-## 1. Lambda
+## 1. Lambda Expressions
 
 Based on the following functional interface:
 
@@ -34,7 +34,7 @@ Implement the following methods that take either 2 integers or integer arrays an
 - `int operate(int a, int b, ArithmeticOperation op)`
 - `int[] operate(int[] a, int[] b, ArithmeticOperation op)`
 
-Hint: Check these explanations and examples on [lambda expressions](./Java8DeepDive.md#lambda-expressions).
+Hint: Check these explanations and examples on [lambda expressions](../../toolbox/java/deepdive/lambdas).
 
 ## 2. Functional Programming
 
@@ -58,7 +58,7 @@ Apply the functional interfaces from the `java.util.function` package: `Predicat
 3.1 Use `Predicate` to filter a list of integers, so only those divisible by 7 remain.
 
 3.2 Use `Supplier` to create a list of Employee objects based on a list of names like `Arrays.asList("John", "Jane", "Jack", "Joe", "Jill")`.
-Hint: Check these explanations and examples on [Supplier](./ExerciseHints.md#supplier).
+Hint: Check these explanations and examples on [Supplier](.//day-2-hints.md#supplier).
 
 3.3 Use `Consumer` to print the list of Employee objects.
 
@@ -66,7 +66,7 @@ Hint: Check these explanations and examples on [Supplier](./ExerciseHints.md#sup
 
 3.5 Use `Predicate`to check if a given employee is older than 18.
 
-Check these hints for [explanations of the built-in functional interfaces](../../toolbox/java/functional_programming.md).
+Check these hints for [explanations of the built-in functional interfaces](./day-2-hints.md).
 
 ## 4. Time API
 

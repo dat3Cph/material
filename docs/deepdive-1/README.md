@@ -17,6 +17,8 @@ Topics covered in this week are:
 - Java Functional Programming
 - Java Generics
 
+[Learning objectives](./learningobjectives.md)
+
 ## Monday
 
 Prepare for the week
@@ -37,13 +39,15 @@ Skim these articles
 
 ### In-class exercises
 
+[Exercise for day 1: Streams and Date-Time API](./exercises/day-1.md)
+
 ## Wednesday (CodeLab)
 
 Time to code!
 
 CodeLab exercises on Java Streams, Java Time API, and Lambdas. All day is devoted to pair programming and Github collaboration.
 
-[CodeLab Exercise for week 34](./exercises/codelab_week_34.md)
+[CodeLab Exercise](./exercises/codelab.md)
 
 ## Thursday (class)
 
@@ -60,9 +64,11 @@ Skim this article:
 
 ### In-class exercises
 
+[Exercise for day 2: Functional programming](./exercises/day-2.md)
+
 ## Friday (exercise day)
 
-- [Friday bonus exercise](./exercises/friday_week34_bonus.md)
+- [Friday bonus exercise](./exercises/day-3.md)
 
 <hr>
 
