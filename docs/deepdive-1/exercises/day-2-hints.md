@@ -9,7 +9,7 @@ nav_exclude: true
 permalink: /deepdive-1/exercises/day-2-hints/
 ---
 
-# Exercise hints for Java Deep Dive week
+# Exercise hints for Java Deep Dive I week
 
 ## The map function
 

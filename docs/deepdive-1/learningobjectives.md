@@ -32,8 +32,6 @@ permalink: /deepdive-1/learning-objectives/
 
 2.4 **Apply Generics in Common Data Structures**: Learners should be able to apply generics to commonly used Java data structures like `List`, `Set`, `Map`, etc., and understand the benefits and limitations of using generics with these collections.
 
-2.5 **Understand Type Erasure**: Learners should have a basic understanding of type erasure in Java, including how generic type information is removed at runtime and the implications this has for using generics in Java.
-
 ### 3. Understand and use the Java 8 Date and Time API
 
 3.1 **Understand the Need for the New Date and Time API**: Learners should be able to explain the limitations of the pre-Java 8 date and time handling (e.g., `java.util.Date` and `java.util.Calendar`) and how the new API, introduced in `java.time` package, addresses these issues with a more consistent and user-friendly approach.
@@ -58,4 +56,4 @@ permalink: /deepdive-1/learning-objectives/
 
 4.4 **Apply Stream API for Functional Data Processing**: Learners should be able to leverage the Stream API to process collections of data using functional programming techniques, such as filtering, mapping, and reducing data in a declarative manner.
 
-4.5 **Understand and Implement Recursion and Functional Composition**: Learners should understand how to compose functions (combining multiple functions to form more complex operations), which is fundamental to writing clean and effective functional code.
+4.5 **Understand and Implement Functional Composition**: Learners should understand how to compose functions (combining multiple functions to form more complex operations), which is fundamental to writing clean and effective functional code.

@@ -5,7 +5,7 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: Java Deep Dive I
-permalink: /deepdive-1/exercises/day-1
+permalink: /deepdive-1/exercises/day-1/
 ---
 
 # Day 1: Exercises
@@ -24,21 +24,26 @@ Create a collection of `Book` objects to work with. You can either create a samp
 
 1.3 **Stream Processing:**
 
-- Use the Stream API to perform the following operations on the collection of books:
-  - Find the average rating of all books.
-  - Filter and display books published after a specific year.
-  - Sort books by rating in descending order.
-  - Find and display the title of the book with the highest rating.
-  - Group books by author and calculate the average rating for each author's books.
-  - Calculate the total number of pages for all books (assuming each book has a fixed number of pages).
+Use the Stream API to perform the following operations on the collection of books:
 
-1.4 **Chaining and Composition:**
+1. Find the average rating of all books.
+2. Filter and display books published after a specific year.
+3. Sort books by rating in descending order.
+4. Find and display the title of the book with the highest rating.
+5. Group books by author and calculate the average rating for each author's books.
+6. Calculate the total number of pages for all books (assuming each book has a fixed number of pages).
+
+### Hints
+
+#### Chaining and Composition
 
 Chain multiple Stream operations together to perform complex tasks, such as filtering and sorting.
 
-1.5 **Collecting Results:**
+#### Collecting Results
 
 Use terminal operations like `collect`, `forEach`, or `reduce` to collect and display the results of your Stream operations.
+
+#### Structure your code
 
 Here's a simplified example of what the code structure might look like:
 
@@ -76,28 +81,32 @@ public class StreamProcessing {
 
 ## 2. Collectors
 
+### Introduction
+
 In Java, Collectors is a utility class provided by the java.util.stream package that offers various methods to perform reduction and aggregation operations on streams of data. Collectors are used in conjunction with the Stream API to collect elements from a stream into various data structures or perform aggregation operations like summing, grouping, counting, and more.
 
 Collectors provide a convenient way to gather the results of stream operations and convert them into different formats, such as lists, sets, maps, or even custom data structures. They encapsulate the logic required for accumulating, transforming, and processing elements in a streamlined and efficient manner.
 
 Here are some common tasks that can be achieved using collectors:
 
-### Collecting Elements into a Collection
+#### Collecting Elements into a Collection
 
 - Collectors.toList(): Collects elements into a List.
 - Collectors.toSet(): Collects elements into a Set.
 - Collectors.toCollection(): Collects elements into a specified collection type.
 
-### Aggregations and Reductions
+#### Aggregations and Reductions
 
 - `Collectors.summingInt()`,  `summingLong()`,  `summingDouble()`: Calculates the sum of elements.
 - `Collectors.averagingInt()`, `averagingLong()`, `averagingDouble()`: Calculates the average of elements.
 - `Collectors.counting()`: Counts the number of elements.
 - `Collectors.maxBy()`, `minBy()`: Finds the maximum or minimum element based on a specified comparator.
 
-### Grouping Elements
+#### Grouping Elements
 
 Collectors.groupingBy(): Groups elements by a specified classifier and returns a map.
+
+### Exercises
 
 2.1 **Create the Transaction Class:**
 
@@ -111,16 +120,18 @@ Create a collection of `Transaction` objects to work with. You can either create
 
 Use the `Collectors` class to perform the following operations on the list of transactions:
 
-- Calculate the total sum of all transaction amounts.
-- Group transactions by currency and calculate the sum of amounts for each currency.
-- Find the highest transaction amount.
-- Find the average transaction amount.
+1. Calculate the total sum of all transaction amounts.
+2. Group transactions by currency and calculate the sum of amounts for each currency.
+3. Find the highest transaction amount.
+4. Find the average transaction amount.
 
 2.4 **Collecting Results:**
 
 Use the `collect` method with different `Collectors` to aggregate and collect the results of your operations.
 
 Here's a simplified example of what the code structure might look like:
+
+### Hints
 
 ```java
 import java.util.List;
@@ -222,36 +233,36 @@ This exercise will challenge you to design a generic solution that allows for th
 
 Imagine you have a collection of **employees**, each with attributes like `name`, `age`, `department`, and `salary`. Your task is to perform various data analysis tasks using lambda expressions and streams.
 
-4.1 Create the Employee Class:
-4.2 Create an Employee class with attributes like name, age, department, and salary.
-4.3 Data Collection:
+4.1 Create the `Employee` Class with attributes like `name`, `age`, `department`, and `salary`.
 
-- Create a collection of Employee objects to work with. You can either create a sample dataset or read data from a file or database.
+4.2 Data Collection: Create a collection of Employee objects to work with. You can either create a sample dataset or read data from a file or database.
 
-4.4 Data Analysis:
+4.3 Data Analysis:
 
-- Implement the following tasks using lambda expressions and streams:
-- Calculate the average age of all employees.
-- Find the employee with the highest salary.
-- Group employees by department and calculate the average salary for each department.
-- Count the number of employees in each department.
-- Find the three oldest employees.
-- Filter and display employees whose salary is above a certain threshold.
+1. Implement the following tasks using lambda expressions and streams:
+2. Calculate the average age of all employees.
+3. Find the employee with the highest salary.
+4. Group employees by department and calculate the average salary for each department.
+5. Count the number of employees in each department.
+6. Find the three oldest employees.
+7. Filter and display employees whose salary is above a certain threshold.
 
-4.5 Sorting:
+4.4 Sorting
 
-- Use the `sorted` method to sort employees based on different criteria, such as `age`, `salary`, or `name`.
+Use the `sorted` method to sort employees based on different criteria, such as `age`, `salary`, or `name`.
 
-4.6 Custom Functional Interfaces:
+### We can do this on day 2 (so not on day 1)
 
-- Define custom functional interfaces to represent various operations. For example, you could define an interface for filtering employees based on a certain condition.
+4.5 Custom Functional Interfaces
 
-4.7 Advanced Operations:
+Define custom functional interfaces to represent various operations. For example, you could define an interface for filtering employees based on a certain condition.
+
+4.6 Advanced Operations:
 
 Implement more complex operations, such as:
 
-- Combine multiple streams or operations.
-- Transform data, such as calculating bonuses based on employee performance.
-- Handle cases where some attributes might be missing (use `Optional` to handle null values).
+1. Combine multiple streams or operations.
+2. Transform data, such as calculating bonuses based on employee performance.
+3. Handle cases where some attributes might be missing (use `Optional` to handle null values).
 
 This exercise will challenge your ability to work with lambda expressions, functional interfaces, and the Stream API in more complex scenarios. It also provides an opportunity to practice real-world data analysis tasks that often involve processing and transforming collections of data.

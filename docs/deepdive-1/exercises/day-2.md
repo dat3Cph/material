@@ -22,12 +22,12 @@ interface ArithmeticOperation {
 
 Implement the following arithmetic operations using lambda expressions:
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Modulus
-- Power
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulus
+6. Power
 
 Implement the following methods that take either 2 integers or integer arrays and an `ArithmeticOperation` and return the result of the operation:
 
@@ -53,24 +53,28 @@ When running the above map and filter methods, you should provide them with an i
 
 ## 3. Functional Interfaces
 
-Apply the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`:
+Now we will apply the functional interfaces from the `java.util.function` package: `Predicate`, `Consumer`, `Supplier`, `Function`:
 
-3.1 Use `Predicate` to filter a list of integers, so only those divisible by 7 remain.
+3.1 Explain to your nabour what the following functional interfaces do: `Predicate`, `Consumer`, `Supplier`, `Function`.
 
-3.2 Use `Supplier` to create a list of Employee objects based on a list of names like `Arrays.asList("John", "Jane", "Jack", "Joe", "Jill")`.
-Hint: Check these explanations and examples on [Supplier](.//day-2-hints.md#supplier).
+3.2 Use `Predicate` to filter a list of integers, so only those divisible by 7 remain.
 
-3.3 Use `Consumer` to print the list of Employee objects.
+3.3 Use `Supplier` to create a list of Employee objects based on a list of names like `Arrays.asList("John", "Jane", "Jack", "Joe", "Jill")`.
+Hint: Check these explanations and examples on [Supplier](./day-2-hints.md#supplier).
 
-3.4 Use `Function` to convert a list of Employee objects to a list of names.
+3.4 Use `Consumer` to print the list of Employee objects.
 
-3.5 Use `Predicate`to check if a given employee is older than 18.
+3.5 Use `Function` to convert a list of Employee objects to a list of names.
+
+3.6 Use `Predicate`to check if a given employee is older than 18.
 
 Check these hints for [explanations of the built-in functional interfaces](./day-2-hints.md).
 
 ## 4. Time API
 
-Add a birth date to the Employee class and implement the following tasks using the Java Time API:
+Look at the following Employee class used in the [bonus exercise on day 1](./day-1.md#4-bonus-exercise). If you haven't done the bonus exercise, you should now create the Employee class and list of employees by following the instructions in the bonus exercise 4.1 and 4.2.
+
+Add a `birthdate` to the `Employee` class and implement the following tasks using the Java Time API:
 
 4.1 Calculate the age of each employee based on their birthdate
 
