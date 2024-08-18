@@ -3,6 +3,7 @@ title: IOC
 layout: default
 parent: Design patterns
 nav_order: 8
+permalink: /toolbox/designpatterns/ioc/
 ---
 
 # Inversion of Control Patterns

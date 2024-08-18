@@ -3,6 +3,7 @@ title: DTO
 layout: default
 parent: Design patterns
 nav_order: 4
+permalink: /toolbox/designpatterns/dto/
 ---
 
 # DTO (Data Transfer Object) Pattern

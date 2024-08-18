@@ -3,6 +3,7 @@ title: Facade
 layout: default
 parent: Design patterns
 nav_order: 5
+permalink: /toolbox/designpatterns/facade/
 ---
 
 # Facade Design Pattern

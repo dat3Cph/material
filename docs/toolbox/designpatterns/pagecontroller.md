@@ -3,6 +3,8 @@ title: Page Controller
 layout: default
 parent: Design patterns
 nav_order: 12
+permalink: /toolbox/designpatterns/page-controller/
+
 ---
 
 # Page Controller Design Pattern

@@ -3,6 +3,7 @@ title: Command
 layout: default
 parent: Design patterns
 nav_order: 1
+permalink: /toolbox/designpatterns/command/
 ---
 
 # Command Pattern

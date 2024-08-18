@@ -3,6 +3,7 @@ title: Data Mapper
 layout: default
 parent: Design patterns
 nav_order: 3
+permalink: /toolbox/designpatterns/datamapper/
 ---
 
 # Data Mapper Design Pattern

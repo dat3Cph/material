@@ -3,6 +3,7 @@ title: Low Coupling
 layout: default
 parent: Design patterns
 nav_order: 9
+permalink: /toolbox/designpatterns/lowcoupling/
 ---
 
 # Low Coupling Design Principle

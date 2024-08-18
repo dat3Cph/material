@@ -3,6 +3,7 @@ title: Observer
 layout: default
 parent: Design patterns
 nav_order: 11
+permalink: /toolbox/designpatterns/observer/
 ---
 
 # Observer Design Pattern

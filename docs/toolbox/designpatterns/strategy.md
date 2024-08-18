@@ -3,6 +3,7 @@ title: Strategy
 layout: default
 parent: Design patterns
 nav_order: 15
+permalink: /toolbox/designpatterns/strategy/
 ---
 
 # Strategy Design Pattern

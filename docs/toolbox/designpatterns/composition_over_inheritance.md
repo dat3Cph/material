@@ -3,6 +3,7 @@ title: Composition over inheritance
 layout: default
 parent: Design patterns
 nav_order: 2
+permalink: /toolbox/designpatterns/composition-over-inheritance/
 ---
 
 

@@ -3,6 +3,7 @@ title: Factory
 layout: default
 parent: Design patterns
 nav_order: 6
+permalink: /toolbox/designpatterns/factory/
 ---
 
 # Factory Design Pattern
