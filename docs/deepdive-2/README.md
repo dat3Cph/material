@@ -21,7 +21,7 @@ Topics covered in this week are:
 
 ## Monday
 
-Prepare for the week
+Prepare for the week.
 
 ## Tuesday (class)
 

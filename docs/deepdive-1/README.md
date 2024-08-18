@@ -21,7 +21,8 @@ Topics covered in this week are:
 
 ## Monday
 
-Prepare for the week
+Prepare for the week. Jörg, Thomas, and Jon will visit Bornholm from 9:30 - 11:30 for an introduction. The students
+in Lyngby will have time to prepare for Tuesday's class.
 
 ## Tuesday (class)
 
