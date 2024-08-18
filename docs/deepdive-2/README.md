@@ -17,7 +17,7 @@ Topics covered in this week are:
 - DTO
 - Fetching data from an API
 
-[Learning objectives](./learningobjectives.md)
+[Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
 

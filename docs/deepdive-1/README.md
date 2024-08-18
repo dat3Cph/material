@@ -17,7 +17,7 @@ Topics covered in this week are:
 - Java Functional Programming
 - Java Generics
 
-[Learning objectives](./learningobjectives.md)
+[Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
 
