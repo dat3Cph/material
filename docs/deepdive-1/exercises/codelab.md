@@ -16,17 +16,17 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 
 ## Exercise Overview
 
-## Repository
-
-[Flight data Repo](https://github.com/dat3Cph/flightapp) - a simple application that reads a CSV file with flight data and calculates the total flight time for each airline.]
-
 ## Instructions
 
 ### 1. Team up (2 x 2)
 
-### 2. Fork the repository (one per team)
+### 2. Setup the development environment (one per team of 2 x 2)
 
-### 3. Checkout the develop branch
+1. One team member should fork [Flight data Repo](https://github.com/dat3Cph/flightapp) - a simple application that reads a CSV file with flight data and calculates the total flight time for each airline.]
+2. Add all team members as collaborators to the forked repository
+3. Protect the `main` branch and the `develop` branch from pushing directly to it. Only allow Pull Requests to merge into these branches.
+4. Every team member should clone the forked repository to their local machine
+5. Checkout the develop branch (each member)
 
 ### 4. Get aqainted with the code
 
