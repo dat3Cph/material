@@ -38,6 +38,7 @@ GEM
       webrick (~> 1.7)
     jekyll-default-layout (0.1.5)
       jekyll (>= 3.0, < 5.0)
+    jekyll-fontawesome-svg (0.3.4)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-readme-index (0.3.0)
@@ -95,6 +96,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3.3)
   jekyll-default-layout
+  jekyll-fontawesome-svg
   jekyll-readme-index
   jekyll-relative-links
   jekyll-sitemap
