@@ -17,21 +17,21 @@ Topics covered in this week are:
 - DTO
 - Fetching data from an API
 
+[Learning objectives](./learningobjectives.md)
+
 ## Monday
 
 Prepare for the week
 
 ## Tuesday (class)
 
-Watch these videos - and code along:
+### Prepare for the class
 
-- [Lambda basics (13:04)](https://www.youtube.com/watch?t=1&v=tj5sLSFjVj4&ab_channel=CodingwithJohn)
-- [Java Streams (19:12)](https://www.youtube.com/watch?t=1&v=Q93JsQ8vcwY&ab_channel=Amigoscode)
+Watch these videos - and code along:
 
 Skim these articles
 
-- [Java Lambda Expression](https://www.javatpoint.com/java-lambda-expressions)
-- [Java Streams](https://stackify.com/streams-guide-java-8/)
+### In-class exercises
 
 ## Wednesday (CodeLab)
 
@@ -39,22 +39,17 @@ Time to code!
 
 CodeLab exercises on Java Streams, Java Time API, and Lambdas. All day is devoted to pair programming and Github collaboration.
 
-[CodeLab Exercise for week 34](./exercises/codelab_week_34.md)
-
 ## Thursday (class)
+
+### Prepare for the class
 
 Watch these videos - and code along:
 
-- [Functional programming (9:17)](https://www.youtube.com/watch?t=1&v=dAPL7MQGjyM&ab_channel=HiteshChoudhary)
-- [Generics in Java (17:33)](https://www.youtube.com/watch?t=1&v=K1iu1kXkVoA&ab_channel=CodingwithJohn)
-
 Skim this article:
 
-- [Java Generics](https://www.baeldung.com/java-generics)
+### In-class exercises
 
 ## Friday (exercise day)
-
-- [Friday bonus exercise](./exercises/friday_week34_bonus.md)
 
 <hr>
 
