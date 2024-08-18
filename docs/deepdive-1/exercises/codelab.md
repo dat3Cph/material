@@ -12,13 +12,19 @@ permalink: /deepdive-1/exercises/codelab/
 
 Work in progress ....
 
-This CodeLab exercise is designed to help you practice the concepts you have learned in the Java Deep Dive I module on day-1. You will be working on a series of tasks that involve Java Streams, Java Time API, Lambdas and Generics. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and collaboration using Github.
+This CodeLab exercise is designed to help you practice the concepts you have learned in the Java Deep Dive I module on day-1. You will be working on a series of tasks that involve Java Streams, Java Time API, and maybe Lambdas. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and collaboration using Github.
+
+![Pair programming](./images/pairprogramming.gif)
 
 ## Exercise Overview
 
 ## Instructions
 
 ### 1. Team up (2 x 2)
+
+1. Team up in pairs of 2
+2. Find another pair to team up with
+3. Create a team of 4 people in Moodle
 
 ### 2. Setup the development environment (one per team of 2 x 2)
 
