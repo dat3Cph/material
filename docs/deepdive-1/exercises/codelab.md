@@ -37,7 +37,8 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 ### 4. Get aqainted with the code
 
 1. Run the application (find the Main class in `FlightReader`) and see how it works
-2. Look at the code and understand how it works. How does the duration of the flights get calculated and more?
+2. Look at the code and understand how it works. How does the duration of the flights get calculated and more? You might want to
+know more about the [Lombok library](../../toolbox/java/deepdive/lombok.md) and how it is used in the code to simplify getters, setters, and more.
 3. Look at the json file and discuss the structure of the data with your team
 4. Make sure that the data in the json file correlates with the data printed in the console
 5. Find the unit-test and run it.
