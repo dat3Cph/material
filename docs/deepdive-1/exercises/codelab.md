@@ -30,17 +30,25 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 
 ### 4. Get aqainted with the code
 
+1. Run the application (find the Main class in `FlightReader`) and see how it works
+2. Look at the code and understand how it works. How does the duration of the flights get calculated and more?
+3. Look at the json file and discuss the structure of the data with your team
+4. Make sure that the data in the json file correlates with the data printed in the console
+5. Find the unit-test and run it.
+6. See if you can understand the test and what it is testing. Could it be improved?
+
 ### 5. Identify tasks, break them down and assign to pair programmers as Issues in Github
 
 Inspiration for tasks:
 
-1. Refactor the code (remove dead code, improve variable names, extract DTO etc.)
-2.
+1. Refactor the code (remove dead code, improve variable names, extract DTO to a separate class etc.)
+2. Add a new feature (e.g. calculate the average flight time for each airline)
+3. Add a new feature (e.g. calculate the total flight time for each airline)
 
 ### 6. Start working on the tasks (round 1)
 
 1. Create a branch off the `develop` branch for each task
-2. Work on the task
+2. Work on the tasks in pairs
 
 ### 7. Pull request
 
@@ -51,6 +59,9 @@ Inspiration for tasks:
 
 1. Review the Pull Request
 2. Provide feedback
-3. Merge the Pull Request
+3. Merge the Pull Request and delete the branch
 
 ### 9. Repeat
+
+1. Identify the next tasks.
+2. Repeat steps 5-8 for the next tasks
