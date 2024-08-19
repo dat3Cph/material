@@ -182,53 +182,6 @@ public class CollectorsExercise {
 }
 ```
 
-## 3. Generics
-
-In this exercise, you will create a generic data storage system using interfaces and classes. Your goal is to design a flexible solution that can store and retrieve data of various types while maintaining type safety.
-
-3.1 **Create a Generic Storage Interface:**
-Create a generic interface called `DataStorage<T>` that defines methods for storing and retrieving data of type `T`.
-
-```java
-interface DataStorage<T> {
-    String store(T data); // return a unique ID for the stored data or the filename
-    T retrieve(String source); // retrieve data from the specified source (like a file or database table or ID)
-}
-```
-
-3.2 **Implement Storage Classes:**
-Implement three classes that implement the `DataStorage` interface:
-
-- `MemoryStorage<T>`: Stores data in memory.
-- `FileStorage<T>`: Stores data in a file.
-- `DatabaseStorage<T>`: Stores data in a database. (Only do this if you have time)
-
-Implement the classes using appropriate data structures (e.g., instance variable, files, or database connections).
-
-In the first instance, you can just use a String to store the data and retrieve it. If you have time, then your implementation should ensure type safety by only allowing data of the specified type to be stored and retrieved. Hint: See [this file](SerializeObjects.md) for help on how to read and write objects to a file.
-
-3.3 **Main Application:**
-
-In the main application, create instances of each storage class and demonstrate their usage by storing and retrieving data of different types.
-
-```java
-public class DataStorageApp {
-    public static void main(String[] args) {
-        DataStorage<String> memoryStorage = new MemoryStorage<>();
-        memoryStorage.store("Hello, world!");
-        String retrievedString = memoryStorage.retrieve(null);
-
-        DataStorage<Employee> fileStorage = new FileStorage<>();
-        String filename = fileStorage.store(new Employee("John", 30));
-        Employee retrievedInt = fileStorage.retrieve(filename);
-
-        // Create and demonstrate DatabaseStorage
-    }
-}
-```
-
-This exercise will challenge you to design a generic solution that allows for the storage and retrieval of various types of data while maintaining type safety. It will also give you hands-on experience in working with generics in both interface declarations and class implementations.
-
 ## 4. Bonus exercise
 
 Imagine you have a collection of **employees**, each with attributes like `name`, `age`, `department`, and `salary`. Your task is to perform various data analysis tasks using lambda expressions and streams.
@@ -266,3 +219,19 @@ Implement more complex operations, such as:
 3. Handle cases where some attributes might be missing (use `Optional` to handle null values).
 
 This exercise will challenge your ability to work with lambda expressions, functional interfaces, and the Stream API in more complex scenarios. It also provides an opportunity to practice real-world data analysis tasks that often involve processing and transforming collections of data.
+
+## 5. Time API
+
+Add a `birthdate` to the `Employee` class and implement the following tasks using the Java Time API:
+
+5.1 Calculate the age of each employee based on their birthdate
+
+5.2 Calculate the average age of all employees
+
+5.3 Filter and display employees who have birthdays in a specific month.
+
+5.4 Group employees by birth month and display the count of employees in each group.
+
+5.5 List all employees who has a birthday in the current month.
+
+Check these hints for [explanations of the date and time API in Java 8](../../toolbox/java/deepdive/datetime.md).

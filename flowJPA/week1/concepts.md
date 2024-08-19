@@ -1,8 +1,6 @@
 # ORM Wikipedia
 
-
 **What are the similarities and differences between JPA and hibernate?**
-
 
 Java Persistence API (JPA) and Hibernate are closely related concepts, but they have distinct roles and relationships. Let's examine the similarities and differences between them:
 

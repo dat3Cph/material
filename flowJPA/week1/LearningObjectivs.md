@@ -1,8 +1,6 @@
 # JPA Week 1
 
 ## Learning Objectives
-
-
 1. Be able to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and JPA.
     - Create a PostgresSQL server and a database with help of Docker.
     - How to configure Hibernate to establish a database connection.
