@@ -69,7 +69,7 @@ Inspiration for first round tasks:
 
 ### 9. Repeat
 
-1. Identify the next tasks (get inspiration fro the list below)
+1. Identify the next tasks (get inspiration from the list below)
 2. Repeat steps 5-8 for the next tasks
 
 ## Inspiration for tasks

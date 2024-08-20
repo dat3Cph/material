@@ -67,3 +67,7 @@ Conducting a code review using pull requests is a common practice in collaborati
 4. **Learning Opportunity**: Use code reviews as an opportunity for learning and improving both the code and the team’s skills.
 
 By following these steps and keeping these considerations in mind, a team can conduct effective and efficient code reviews using pull requests, leading to higher-quality code and a more collaborative development process.
+
+## Additional Resources
+
+- [Crafting Better Code Reviews](https://medium.com/@vaidehijoshi/crafting-better-code-reviews-1a5fc00a9312)
