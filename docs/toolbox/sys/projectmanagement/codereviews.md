@@ -39,6 +39,9 @@ Conducting a code review using pull requests is a common practice in collaborati
 2. **Specific Suggestions**: Where possible, suggest specific improvements or alternatives, providing code examples if helpful.
 3. **Ask Questions**: If something is unclear, ask questions to understand the developer's intentions better.
 
+![Code review](./images/review.webp)
+© geek & poke, <http://geek-and-poke.com>
+
 ## 5. **Handle Discussions and Iterations**
 
 1. **Discussion**: Engage in discussions if there are disagreements or different perspectives on how something should be implemented.

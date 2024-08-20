@@ -61,7 +61,7 @@ Inspiration for first round tasks:
 1. Create a Pull Request to merge the task branch into the `develop` branch
 2. Assign the Pull Request to the other pair for review
 
-### 8. Review
+### 8. Review ([description of how to conduct code reviews using pull requests](../../toolbox/sys/projectmanagement/codereviews.md))
 
 1. Review the Pull Request
 2. Provide feedback
