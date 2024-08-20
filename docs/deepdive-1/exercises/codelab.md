@@ -80,3 +80,4 @@ Inspiration for first round tasks:
 4. Add a new feature (make a list of all flights sorted by arrival time)
 5. Add a new feature (calculate the total flight time for each airline)
 6. Add a new feature (make a list of all flights sorted by duration)
+7. Refactor the code where needed. Make sure that the code is clean and easy to read.
