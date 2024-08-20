@@ -48,7 +48,7 @@ know more about the [Lombok library](../../toolbox/java/deepdive/lombok.md) and 
 
 Inspiration for first round tasks:
 
-1. Add a new feature (e.g. calculate the average flight time for a specific airline. For example, calculate the **average flight time** for all flights operated by Lufthansa)
+1. Add a new feature (e.g. calculate the **average flight time** for a specific airline. For example, calculate the average flight time for all flights operated by Lufthansa)
 2. Add a new feature (e.g. calculate the **total flight time** for a specifc airline. For example, calculate the total flight time for all flights operated by Lufthansa)
 
 ### 6. Start working on the tasks (round 1)
