@@ -46,11 +46,10 @@ know more about the [Lombok library](../../toolbox/java/deepdive/lombok.md) and 
 
 ### 5. Identify tasks, break them down and assign to pair programmers as Issues in Github
 
-Inspiration for tasks:
+Inspiration for first round tasks:
 
-1. Refactor the code (remove dead code, improve variable names, extract DTO to a separate class etc.)
-2. Add a new feature (e.g. calculate the average flight time for each airline)
-3. Add a new feature (e.g. calculate the total flight time for each airline)
+1. Add a new feature (e.g. calculate the average flight time for a specific airline. For example, calculate the **average flight time** for all flights operated by Lufthansa)
+2. Add a new feature (e.g. calculate the **total flight time** for a specifc airline. For example, calculate the total flight time for all flights operated by Lufthansa)
 
 ### 6. Start working on the tasks (round 1)
 
@@ -70,5 +69,14 @@ Inspiration for tasks:
 
 ### 9. Repeat
 
-1. Identify the next tasks.
+1. Identify the next tasks (get inspiration fro the list below)
 2. Repeat steps 5-8 for the next tasks
+
+## Inspiration for tasks
+
+1. Add a new feature (make a list of flights that are operated between two specific airports. For example, all flights between Fukuoka and Haneda Airport)
+2. Add a new feature (make a list of flights that leaves before a specific time in the day. For example, all flights that leave before 08:00)
+3. Add a new feature (calculate the average flight time for each airline)
+4. Add a new feature (make a list of all flights sorted by arrival time)
+5. Add a new feature (calculate the total flight time for each airline)
+6. Add a new feature (make a list of all flights sorted by duration)
