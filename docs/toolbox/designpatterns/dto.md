@@ -4,6 +4,7 @@ layout: default
 parent: Design patterns
 nav_order: 4
 permalink: /toolbox/designpatterns/dto/
+grand_parent: Toolbox
 ---
 
 # DTO (Data Transfer Object) Pattern

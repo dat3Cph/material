@@ -48,7 +48,7 @@ Time to code!
 
 CodeLab exercises on Java Streams, Java Time API, and Lambdas. All day is devoted to pair programming and Github collaboration.
 
-[CodeLab Exercise](./exercises/codelab.md)
+- [CodeLab Exercise](./exercises/codelab.md)
 
 ## Thursday (class)
 

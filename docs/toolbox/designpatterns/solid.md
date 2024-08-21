@@ -2,6 +2,7 @@
 title: SOLID
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 14
 permalink: /toolbox/designpatterns/solid/
 ---

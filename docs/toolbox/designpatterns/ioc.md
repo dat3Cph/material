@@ -2,6 +2,7 @@
 title: IOC
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 8
 permalink: /toolbox/designpatterns/ioc/
 ---

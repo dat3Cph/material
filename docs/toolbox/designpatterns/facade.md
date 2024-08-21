@@ -2,6 +2,7 @@
 title: Facade
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 5
 permalink: /toolbox/designpatterns/facade/
 ---

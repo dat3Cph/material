@@ -2,6 +2,7 @@
 title: High Cohesion
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 7
 permalink: /toolbox/designpatterns/high-cohesion/
 ---

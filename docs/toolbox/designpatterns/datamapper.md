@@ -2,6 +2,7 @@
 title: Data Mapper
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 3
 permalink: /toolbox/designpatterns/datamapper/
 ---

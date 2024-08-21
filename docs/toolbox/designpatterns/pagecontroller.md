@@ -2,6 +2,8 @@
 title: Page Controller
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
+grand_parent: Toolbox
 nav_order: 12
 permalink: /toolbox/designpatterns/page-controller/
 

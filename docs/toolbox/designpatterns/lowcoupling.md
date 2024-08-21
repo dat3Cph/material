@@ -2,6 +2,7 @@
 title: Low Coupling
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 9
 permalink: /toolbox/designpatterns/lowcoupling/
 ---

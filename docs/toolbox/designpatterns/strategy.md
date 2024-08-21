@@ -2,6 +2,7 @@
 title: Strategy
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 15
 permalink: /toolbox/designpatterns/strategy/
 ---

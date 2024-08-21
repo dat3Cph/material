@@ -2,6 +2,7 @@
 title: MVC
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 10
 permalink: /toolbox/designpatterns/mvc/
 

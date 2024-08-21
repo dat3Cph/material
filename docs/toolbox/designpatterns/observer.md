@@ -2,6 +2,7 @@
 title: Observer
 layout: default
 parent: Design patterns
+grand_parent: Toolbox
 nav_order: 11
 permalink: /toolbox/designpatterns/observer/
 ---
