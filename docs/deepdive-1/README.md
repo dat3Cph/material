@@ -40,7 +40,7 @@ Skim these articles
 
 ### In-class exercises
 
-[Exercise for day 1: Streams and Date-Time API](./exercises/day-1.md)
+- [Exercise for day 1: Streams and Date-Time API](./exercises/day-1.md)
 
 ## Wednesday (CodeLab)
 
@@ -65,7 +65,7 @@ Skim this article:
 
 ### In-class exercises
 
-[Exercise for day 2: Functional programming](./exercises/day-2.md)
+- [Exercise for day 2: Functional programming](./exercises/day-2.md)
 
 ## Friday (exercise day)
 
