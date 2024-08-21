@@ -182,15 +182,15 @@ public class CollectorsExercise {
 }
 ```
 
-## 4. Bonus exercise
+## 3. Bonus exercise
 
 Imagine you have a collection of **employees**, each with attributes like `name`, `age`, `department`, and `salary`. Your task is to perform various data analysis tasks using lambda expressions and streams.
 
-4.1 Create the `Employee` Class with attributes like `name`, `age`, `department`, and `salary`.
+3.1 Create the `Employee` Class with attributes like `name`, `age`, `department`, and `salary`.
 
-4.2 Data Collection: Create a collection of Employee objects to work with. You can either create a sample dataset or read data from a file or database.
+3.2 Data Collection: Create a collection of Employee objects to work with. You can either create a sample dataset or read data from a file or database.
 
-4.3 Data Analysis:
+3.3 Data Analysis:
 
 1. Implement the following tasks using lambda expressions and streams:
 2. Calculate the average age of all employees.
@@ -200,17 +200,17 @@ Imagine you have a collection of **employees**, each with attributes like `name`
 6. Find the three oldest employees.
 7. Filter and display employees whose salary is above a certain threshold.
 
-4.4 Sorting
+3.4 Sorting
 
 Use the `sorted` method to sort employees based on different criteria, such as `age`, `salary`, or `name`.
 
 ### We can do this on day 2 (so not on day 1)
 
-4.5 Custom Functional Interfaces
+3.5 Custom Functional Interfaces
 
 Define custom functional interfaces to represent various operations. For example, you could define an interface for filtering employees based on a certain condition.
 
-4.6 Advanced Operations:
+3.6 Advanced Operations:
 
 Implement more complex operations, such as:
 
@@ -220,18 +220,18 @@ Implement more complex operations, such as:
 
 This exercise will challenge your ability to work with lambda expressions, functional interfaces, and the Stream API in more complex scenarios. It also provides an opportunity to practice real-world data analysis tasks that often involve processing and transforming collections of data.
 
-## 5. Time API
+## 4. Time API
 
 Add a `birthdate` to the `Employee` class and implement the following tasks using the Java Time API:
 
-5.1 Calculate the age of each employee based on their birthdate
+4.1 Calculate the age of each employee based on their birthdate
 
-5.2 Calculate the average age of all employees
+4.2 Calculate the average age of all employees
 
-5.3 Filter and display employees who have birthdays in a specific month.
+4.3 Filter and display employees who have birthdays in a specific month.
 
-5.4 Group employees by birth month and display the count of employees in each group.
+4.4 Group employees by birth month and display the count of employees in each group.
 
-5.5 List all employees who has a birthday in the current month.
+4.5 List all employees who has a birthday in the current month.
 
 Check these hints for [explanations of the date and time API in Java 8](../../toolbox/java/deepdive/datetime.md).
