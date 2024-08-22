@@ -93,7 +93,7 @@ Implement three classes that implement the `DataStorage` interface:
 
 Implement the classes using appropriate data structures (e.g., instance variable, files, or database connections).
 
-In the first instance, you can just use a String to store the data and retrieve it. If you have time, then your implementation should ensure type safety by only allowing data of the specified type to be stored and retrieved. Hint: See [this file](SerializeObjects.md) for help on how to read and write objects to a file.
+In the first instance, you can just use a String to store the data and retrieve it. If you have time, then your implementation should ensure type safety by only allowing data of the specified type to be stored and retrieved. Hint: See [this file](./day-2-hints.md#how-to-serialize-objects-in-java-and-write-them-to-a-file) for help on how to read and write objects to a file.
 
 4.3 **Main Application:**
 
