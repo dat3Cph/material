@@ -192,13 +192,14 @@ Imagine you have a collection of **employees**, each with attributes like `name`
 
 3.3 Data Analysis:
 
-1. Implement the following tasks using lambda expressions and streams:
-2. Calculate the average age of all employees.
-3. Find the employee with the highest salary.
-4. Group employees by department and calculate the average salary for each department.
-5. Count the number of employees in each department.
-6. Find the three oldest employees.
-7. Filter and display employees whose salary is above a certain threshold.
+Implement the following tasks using lambda expressions and streams:
+
+1. Calculate the average age of all employees.
+2. Find the employee with the highest salary.
+3. Group employees by department and calculate the average salary for each department.
+4. Count the number of employees in each department.
+5. Find the three oldest employees.
+6. Filter and display employees whose salary is above a certain threshold.
 
 3.4 Sorting
 

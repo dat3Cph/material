@@ -34,7 +34,7 @@ Implement the following methods that take either 2 integers or integer arrays an
 - `int operate(int a, int b, ArithmeticOperation op)`
 - `int[] operate(int[] a, int[] b, ArithmeticOperation op)`
 
-Hint: Check these explanations and examples on [lambda expressions](../../toolbox/java/deepdive/lambdas).
+Hint: Check these explanations and examples on [lambda expressions](../../toolbox/java/deepdive/lambdas.md).
 
 ## 2. Functional Programming
 
@@ -123,7 +123,10 @@ The methods defined in Step 2 "Functional Programming" can be implemented using 
 
 Check these hints for [method references](../../toolbox/java/deepdive/functional_programming.md#method-references).
 
-## 10. Bonus exercise
+## 10. Bonus exercise (optional)
+
+This is the same exercise as we did on day-1, but now we can use lambda expressions and streams to solve it and also
+use the functional interfaces we have learned about (Predicate, Consumer, Supplier, Function).
 
 Imagine you have a collection of **employees**, each with attributes like `name`, `age`, `department`, and `salary`. Your task is to perform various data analysis tasks using lambda expressions and streams.
 
