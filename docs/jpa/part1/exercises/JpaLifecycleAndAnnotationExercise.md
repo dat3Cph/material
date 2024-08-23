@@ -7,7 +7,7 @@
 
 ***
 
-<img src="../images/jpaentityflow.png" alt="JPA Entity Flow" width="508" height="250">
+<img src="../../images/jpaentityflow.png" alt="JPA Entity Flow" width="508" height="250">
 
 ***
 

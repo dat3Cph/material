@@ -1,6 +1,6 @@
 # Exercise: GLS Package Tracking System - Part 2
 
-<img src="../images/glsdelivery.jpg" alt="gls delivery" width="1600" >
+<img src="../../images/glsdelivery.jpg" alt="gls delivery" width="1600" >
 
 In this part of the exercise, we'll extend the GLS Package Tracking System to include more complex relationships between entities and introduce additional functionality.
 

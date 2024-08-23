@@ -1,6 +1,6 @@
 # Exercise: GLS Package Tracking System - Part 1
 
-<img src="../images/glsbear.png" alt="gls delivery" width="700" height="700" >
+<img src="../../images/glsbear.png" alt="gls delivery" width="700" height="700" >
 
 ### Scenario:
 GLS (Global Logistics Services) wants to develop a package tracking system to manage the delivery of packages. As part of the initial phase, they need to create a basic system using Java, JPA, and JPQL to manage package information.

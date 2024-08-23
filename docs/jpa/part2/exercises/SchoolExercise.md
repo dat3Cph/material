@@ -2,7 +2,7 @@
 
 ### 1. Set up the data model as shown in the diagram below.
 
-<img src="../images/school_eer_model.png" alt="School ERD" width="500"/>
+<img src="../../images/school_eer_model.png" alt="School ERD" width="500"/>
 
 ### 2. Using JPQL to find solutions to the following challenges:
 

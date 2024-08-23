@@ -1,10 +1,10 @@
 ---
 title: Resources
-description: Java Deep Dive I Resources
+description: JPA Resources
 layout: default
-nav_order: 2
-has_children: false
-parent: jpa
+nav_order: 3
+has_children: true
+parent: JPA
 permalink: /jpa/resources
 ---
 

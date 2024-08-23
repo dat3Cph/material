@@ -1,4 +1,15 @@
-# JPA Week 1
+---
+title: Learning Objectives Part 1
+description: JPA Learning objectives
+layout: default
+nav_order: 1
+has_children: true
+parent: JPA Part 1
+grand_parent: JPA
+permalink: jpa/part1/learning-objectives-part1/
+---
+
+# JPA Part 1
 
 ## Learning Objectives
 
