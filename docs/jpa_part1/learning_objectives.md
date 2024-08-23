@@ -6,7 +6,7 @@ nav_order: 1
 has_children: true
 parent: JPA Part 1
 grand_parent: JPA
-permalink: jpa/part1/learning-objectives-part1/
+permalink: /learning-objectives-part1/
 ---
 
 # JPA Part 1

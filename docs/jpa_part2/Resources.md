@@ -2,10 +2,10 @@
 title: Resources
 description: JPA Resources
 layout: default
-nav_order: 3
-has_children: true
-parent: JPA
-permalink: /jpa/resources
+nav_order: 1
+has_children: false
+parent: JPA Part 2
+permalink: /part2/resources
 ---
 
 

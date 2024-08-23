@@ -9,7 +9,7 @@ The product has a name, a description and a price.
 The price for each order line is the quantity times the price.
 The total price for an order is the sum of all its order lines.
 
-![Domain model](../../images/JPA_Order_Exercise_Domain.svg)
+![Domain model](../../jpa_part1/images/JPA_Order_Exercise_Domain.svg)
 
 1. Examine and understand the model.
 2. Create a Maven Java Application with IntelliJ, and use Object Relational Mapping (JPA) to implement the OO classes and the corresponding Database Tables [^1] [^2].

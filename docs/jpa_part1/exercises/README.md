@@ -2,9 +2,8 @@
 title: Exercises
 description: Exercises for JPA Part 1
 layout: default
-nav_order: 3
+nav_order: 2
 parent: JPA Part 1
-grand_parent: JPA
 has_children: true
 permalink: /part1/exercises/
 ---
@@ -13,6 +12,7 @@ permalink: /part1/exercises/
 
 ## Tuesday
 
+- [Lombok (In Class Exercise)](./lombok)
 - [Points Exercise (In Class Exercise)](./points)
 - [Unicorns JPA CRUD](./unicorn)
 - [Unicorn Snippets](./unicorn_snippets)
@@ -23,7 +23,6 @@ permalink: /part1/exercises/
 
 ## Thursday
 
-- [Lombok (In Class Exercise)](./lombok)
 - [JPQL (In Class Exercise)](./jpqlqueries)
 - [Student DB CRUD](./student)
 - [JPA Lifecycle Annotations Exercise](./jpalifecycleannotations)

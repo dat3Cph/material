@@ -12,7 +12,7 @@ permalink: part2/exercises/school/
 
 ### 1. Set up the data model as shown in the diagram below.
 
-![School ERD](../../images/school_eer_model.png)
+![School ERD](../../jpa_part1/images/school_eer_model.png)
 
 ### 2. Using JPQL to find solutions to the following challenges:
 

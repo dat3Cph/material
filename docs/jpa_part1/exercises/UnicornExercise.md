@@ -26,7 +26,7 @@ Create a Java application that uses Java Persistence API (JPA) with Hibernate to
 3. A relational database (PostgreSQL).
 4. Maven for dependency management.
 
-![Alt text](../../images/unicorn.png)
+![Alt text](../images/unicorn.png)
 
 ## Steps
 

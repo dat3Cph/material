@@ -1,18 +1,18 @@
 ---
-title: JPA Part 2
+title: JPA Part 1
 description: JPA Overview
 layout: default
-nav_order: 2
-parent: JPA
+nav_order: 3    
 has_children: true
-permalink: /jpa/part2
+permalink: /jpa-part1
 ---
 
-# JPA Part 2
+
+# JPA Part 1
 
 ## Learning objectives
 
-- [Learning objectives part 2](./learning-objectives-part2)
+- [Learning objectives for the week (part 1)](./learning-objectives-part1)
 
 ## Monday
 
