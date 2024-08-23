@@ -1,3 +1,13 @@
+---
+title: JPA Lifecycle Annotations Exercise
+description: jpa lifecycle and annotations exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 1
+permalink: part1/exercises/jpalifecycleannotations/
+---
+
 # JPA Lifecycle and Annotations
 
 

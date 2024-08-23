@@ -1,3 +1,13 @@
+---
+title: Dolphin Exercise
+description: dolphin exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 2
+permalink: part2/exercises/dolphin
+---
+
 # Dolphin exercise (1:1 and 1:m relations)
 
 ## Before we begin

@@ -1,3 +1,13 @@
+---
+title: Unicorn
+description: unicorn exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 1
+permalink: part1/exercises/unicorn/
+---
+
 # Exercise: Java JPA with Hibernate - Standard CRUD Operations on Unicorn Entity
 
 ## Check pantopto videos with solutions

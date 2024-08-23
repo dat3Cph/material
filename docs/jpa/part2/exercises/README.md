@@ -9,5 +9,24 @@ has_children: true
 permalink: /part2/exercises/
 ---
 
+# Exercises for JPA Part 2
 
-Hallo part2
+## Tuesday
+
+- [Dolphin Exercise](./dolphin)
+- [Recycling Exercise](./recycling)
+
+
+## Wednesday
+
+-- TODO
+
+## Thursday
+
+- [School Exercise](./school)
+
+
+
+## Friday
+
+- [GLS Exercise Part 2](./gls-part2)

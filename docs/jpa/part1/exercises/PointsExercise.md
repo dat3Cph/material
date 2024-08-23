@@ -1,8 +1,14 @@
+---
+title: Point
+description: point exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 1
+permalink: part1/exercises/points/
+---
+
 # The Point exercise
-
-## Links
-
-- [JPA Project Setup](https://github.com/dat3Cph/material/blob/sem2024spring/setup/JPASetup.md#jpa-maven-setup-in-intellij)
 
 ## Introduction
 

@@ -1,3 +1,13 @@
+---
+title: Recycling
+description: recycling exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 2
+permalink: part2/exercises/recycling/
+---
+
 # Recycling Exercise
 
 ### 1. Create a new JPA project using Maven.
@@ -12,7 +22,7 @@
 - the driver constructor should only take the name, surname and salary as a parameter
 - the truck constructor should only take the brand, capacity and registration number as a parameter
 
-<img src="../../images/recycling1.png" width="723" height="333" alt="recycling eer">
+![recycling eer](../../images/recycling1.png)
 
 ### 3. Create a method in the Driver class to generate a String id with the following constrains:
 
@@ -24,7 +34,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ### 4. Use this method below to validate the id of the Driver class.
 
-```JAVA
+```java
     public Boolean validateDriverId(String driverId) {
     return driverId.matches("[0-9][0-9][0-9][0-9][0-9][0-9]-[A-Z][A-Z]-[0-9][0-9][0-9][A-Z]");
     }
@@ -34,7 +44,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ### 6. Create a new package called `dao` and add two interfaces called `IDriverDAO` and `IWasteTruckDAO` and add the following code to their interface:
 
-```JAVA
+```java
         // Driver
         void saveDriver(String name, String surname, BigDecimal salary);
         Driver getDriverById(String id);
@@ -48,7 +58,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
         Driver fetchDriverWithHighestSalary();
 ```
 
-```JAVA
+```java
         // WasteTruck
         void saveWasteTruck(String brand, String registrationNumber, int capacity);
         WasteTruck getWasteTruckById(int id);
@@ -63,7 +73,7 @@ The id for the driver should be a string with the format `ddMMyy-XX-XXXL`.
 
 ### 8. Use the following sql script to populate data: 
 
-```SQL
+```sql
 -- Add 5 rows to the "truck" table
 INSERT INTO truck (id, brand, capacity, is_available, registration_number)
 VALUES

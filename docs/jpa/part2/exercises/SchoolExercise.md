@@ -1,8 +1,18 @@
+---
+title: School Exercise
+description: school exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 2
+permalink: part2/exercises/school/
+---
+
 # School Exercise (JPQL)
 
 ### 1. Set up the data model as shown in the diagram below.
 
-<img src="../../images/school_eer_model.png" alt="School ERD" width="500"/>
+![School ERD](../../images/school_eer_model.png)
 
 ### 2. Using JPQL to find solutions to the following challenges:
 
@@ -14,7 +24,7 @@
 
 2. Create a `dao` package and add a new interface called `StudentDAO` and add the following code to the interface:
 
-```JAVA
+```java
 public interface IStudentDAO {
     // find all students in the system with the first name Anders
     List<Student> findAllStudentsByFirstName(String firstName);
@@ -43,7 +53,7 @@ public interface IStudentDAO {
 
 4. In the root of the project add a new class called `Populate` and add the following code to the class:
 
-```JAVA
+```java
 public class Populate {
     public static void main(String[] args) {
         EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();

@@ -1,3 +1,13 @@
+---
+title: Lombok Exercise
+description: lombok exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 1
+permalink: part1/exercises/lombok/
+---
+
 # Coding Exercise: Demonstrate Lombok in Java
 
 Lombok is a popular library in Java that helps reduce boilerplate code. One of its most used features is 
@@ -65,6 +75,10 @@ public class Main {
 Person(firstName=John, lastName=Doe, age=25)
 26
 ```
+
+## Reading
+
+Go to the Lombok homepage and read the documentation. https://projectlombok.org/
 
 ## Challenge:
 For those who want to explore further, try adding more Lombok annotations to the `Person` class like `@EqualsAndHashCode`, and `@Builder` and observe the functionalities they bring.

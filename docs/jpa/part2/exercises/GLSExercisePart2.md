@@ -1,6 +1,16 @@
-# Exercise: GLS Package Tracking System - Part 2
+---
+title: GLS
+description: gls exercise part 2
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 2
+permalink: part2/exercises/gls-part2/
+---
 
-<img src="../../images/glsdelivery.jpg" alt="gls delivery" width="1600" >
+## Exercise: GLS Package Tracking System - Part 2
+
+![gls delivery](../../images/glsdelivery.jpg)
 
 In this part of the exercise, we'll extend the GLS Package Tracking System to include more complex relationships between entities and introduce additional functionality.
 

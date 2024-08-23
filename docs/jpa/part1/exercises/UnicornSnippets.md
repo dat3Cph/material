@@ -1,3 +1,13 @@
+---
+title: Unicorn Snippets
+description: unicorn snippet
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 1
+permalink: part1/exercises/unicorn_snippets/
+---
+
 # Snippets for Unicorn JPA exercise
 
 ## Unicorn.class
