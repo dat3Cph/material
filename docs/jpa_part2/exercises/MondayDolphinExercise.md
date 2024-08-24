@@ -25,7 +25,7 @@ The Domain model below shows the entities from the tutorial. Those are sketched 
 
 The new user story is added to the domain model in red.
 
-![Dolphin Domain Model](../../jpa_part1/images/dolphin_domain_1.jpg)
+![Dolphin Domain Model](../../images/dolphin_domain_1.jpg)
 
 ### Todo (add functionality and refactor)
 

@@ -1,3 +1,13 @@
+---
+title: ORM Wikipedia
+description: orm wikipedia
+layout: default
+nav_order: 1
+parent: ORM
+grand_parent: Toolbox
+permalink: /toolbox/orm/orm-wikipedia/
+---
+
 # ORM Wikipedia
 
 

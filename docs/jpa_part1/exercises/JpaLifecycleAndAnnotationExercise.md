@@ -17,7 +17,7 @@ permalink: part1/exercises/jpalifecycleannotations/
 
 ***
 
-<img src="../images/jpaentityflow.png" alt="JPA Entity Flow" width="508" height="250">
+![JPA Entity Flow](../../images/jpaentityflow.png)
 
 ***
 

@@ -1,3 +1,13 @@
+---
+title: Entity Manager(Factory)
+description: entity manager in JPA
+layout: default
+nav_order: 1
+parent: ORM
+grand_parent: Toolbox
+permalink: /toolbox/orm/entity-manager/
+---
+
 # The role of the entity manager in JPA
 
 **Prompt: What is the role of the entity manager in JPA?**

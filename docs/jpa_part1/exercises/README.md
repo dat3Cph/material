@@ -21,10 +21,11 @@ permalink: /part1/exercises/
 
 -- TODO
 
-## Thursday
+## Thursday     
 
 - [JPQL (In Class Exercise)](./jpqlqueries)
 - [Student DB CRUD](./student)
+- [Tester Exercise](./tester)
 - [JPA Lifecycle Annotations Exercise](./jpalifecycleannotations)
 
 

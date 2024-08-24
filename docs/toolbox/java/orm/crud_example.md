@@ -1,3 +1,13 @@
+---
+title: CRUD Examples
+description: crud examples 
+layout: default
+nav_order: 1
+parent: ORM
+grand_parent: Toolbox
+permalink: /toolbox/java/crud/
+---
+
 # These are CRUD examples prompted from ChatGpt and modified to our setup with Hibernate
 
 - [Create (persist)](#persist)

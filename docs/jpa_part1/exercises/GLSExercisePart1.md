@@ -1,5 +1,5 @@
 ---
-title: GLS
+title: GLS Part 1
 description: gls exercise part 1
 layout: default
 nav_order: 1
@@ -10,7 +10,7 @@ permalink: part1/exercises/gls-part1/
 
 ## Exercise: GLS Package Tracking System - Part 1
 
-![](../images/glsbear.png)
+![](../../images/glsbear.png)
 
 ### Scenario:
 GLS (Global Logistics Services) wants to develop a package tracking system to manage the delivery of packages. As part of the initial phase, they need to create a basic system using Java, JPA, and JPQL to manage package information.

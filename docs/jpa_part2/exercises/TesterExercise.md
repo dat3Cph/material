@@ -1,3 +1,13 @@
+---
+title: Tester Exercise
+description: tester exercise
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: JPA Part 2
+permalink: part2/exercises/tester/
+---
+
 # Tester Exercise (JPQL)
 
 ### 1. Create a new JPA project using Maven.
@@ -6,7 +16,7 @@
 
 ### 3. In the model package create a new entity class called `Employee` and add the following code to the class:
 
-```JAVA
+```java
     @Id
     @Column(name = "id", nullable = false, length = 6)
     private String id;
@@ -32,7 +42,7 @@
 
 ### 4. In the `dao` package add a new interface called `EmployeeDAO` and add the following code to the interface:
 
-```JAVA
+```java
 public interface IEmployeeDAO {
     // fetch all employees with a salary > 100000 and return a list of their salaries
     List<BigDecimal> fetchAllEmployeesWithSalaryGreaterThan100000();
@@ -58,7 +68,7 @@ public interface IEmployeeDAO {
 
 ### 6. In the root of the project add a new class called `Populate` and add the following code to the class:
 
-```JAVA
+```java
 public class Populate {
 
     private static final EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();

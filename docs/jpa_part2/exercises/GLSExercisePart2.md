@@ -1,5 +1,5 @@
 ---
-title: GLS
+title: GLS Part 2
 description: gls exercise part 2
 layout: default
 nav_order: 1
@@ -10,7 +10,7 @@ permalink: part2/exercises/gls-part2/
 
 ## Exercise: GLS Package Tracking System - Part 2
 
-![gls delivery](../../jpa_part1/images/glsdelivery.jpg)
+![gls delivery](../../images/glsdelivery.jpg)
 
 In this part of the exercise, we'll extend the GLS Package Tracking System to include more complex relationships between entities and introduce additional functionality.
 

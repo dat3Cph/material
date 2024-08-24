@@ -22,7 +22,7 @@ permalink: part2/exercises/recycling/
 - the driver constructor should only take the name, surname and salary as a parameter
 - the truck constructor should only take the brand, capacity and registration number as a parameter
 
-![recycling eer](../../jpa_part1/images/recycling1.png)
+![recycling eer](../../images/recycling1.png)
 
 ### 3. Create a method in the Driver class to generate a String id with the following constrains:
 
