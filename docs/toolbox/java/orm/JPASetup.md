@@ -1,3 +1,13 @@
+---
+title: JPA setup in IntelliJ
+description: How to setup JPA in IntelliJ
+layout: default
+nav_order: 5
+parent: ORM
+grand_parent: Toolbox
+permalink: /toolbox/orm/jpa-setup/
+---
+
 # JPA-Maven Setup in IntelliJ
 
 ## Technologies
