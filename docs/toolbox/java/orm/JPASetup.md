@@ -27,7 +27,7 @@ permalink: /toolbox/orm/jpa-setup/
 
 ---
 
-[Setup](./images/intellij_setup_1.png)
+![Setup](./images/intellij_setup_1.png)
 
 ---
 
@@ -94,10 +94,10 @@ permalink: /toolbox/orm/jpa-setup/
 
 7. Create a new java class file called HibernateConfig.
 
-[HibernateConfig](./images/hibernateconfig_2.png)
+![HibernateConfig](./images/hibernateconfig_2.png)
 
 ## 8. Copy and paste the following [Link](https://gist.github.com/jonbertelsen/aad0bd7e1dcc6ed72d983c23dd2967ac) into the HibernateConfig.class
 
 **If you get an import error, try to run Maven lifecycle "install"**
 
-[Maven lifecycle](./images/maven_lifecycle_3.png)
+![Maven lifecycle](./images/maven_lifecycle_3.png)
