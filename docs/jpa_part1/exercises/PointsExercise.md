@@ -30,12 +30,13 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
     - `y` (int)
 5. Add the correct annotations to the entity. (@Entity, @Id, @GeneratedValue)
     - Use the `identity` strategy for the `@GeneratedValue` annotation
-6. Use Lombok to generate getters, toString  and a NoArgsConstructor 
+6. Use Lombok to generate getters, toString  and a NoArgsConstructor
 7. Create a constructor that takes `x` and `y` as parameters
 8. Remember to add the entity to the Hibernate config file
 9. Create a new class called Main and add a main method to it
 10. Add the following code to the main method:
-```jav
+
+```java
     EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
     EntityManager em = emf.createEntityManager();
 
@@ -66,7 +67,6 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
         em.close();
         emf.close();
     }
-
 ```
 
 11. Run the code and verify that it works. Check either in PgAdmin or in IntelliJ's database tool that the data is actually stored in the database.
@@ -77,7 +77,7 @@ Lombok will also be used to reduce boilerplate code. PostgresSQL and PgAdmin wil
 
 ## Conclusion
 
-By completing this exercise, you've laid the foundation for building more complex applications that involve database interactions. 
-You've learned how to organize code by separating database operations into a DAO (Data Access Object) class, enhancing code modularity 
-and testability. Remember that this exercise only scratches the surface of what JPA and Hibernate can offer, and you can build upon this 
+By completing this exercise, you've laid the foundation for building more complex applications that involve database interactions.
+You've learned how to organize code by separating database operations into a DAO (Data Access Object) class, enhancing code modularity
+and testability. Remember that this exercise only scratches the surface of what JPA and Hibernate can offer, and you can build upon this
 knowledge to create sophisticated and efficient data-driven applications.
