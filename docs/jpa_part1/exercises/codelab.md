@@ -12,7 +12,7 @@ permalink: /jpa-part-1/exercises/codelab/
 
 This CodeLab exercise is designed to help you practice the concepts you have learned in the JPA 1 module on day 1. You will be working on a series of tasks that involve Java Persistence API, with Entities and DAOs. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and collaboration using Github.
 
-![Pair programming](./images/pairprogramming.gif)
+![Pair programming](../../deepdive-1/exercises/images/pairprogramming.gif)
 
 ## Exercise Overview
 
