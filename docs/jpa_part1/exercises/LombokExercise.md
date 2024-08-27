@@ -5,26 +5,28 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: JPA Part 1
-permalink: part1/exercises/lombok/
+permalink: /jpa-part-1/exercises/lombok/
 ---
 
 # Coding Exercise: Demonstrate Lombok in Java
 
-Lombok is a popular library in Java that helps reduce boilerplate code. One of its most used features is 
-to generate getter, setter, constructor, and `toString()` methods without having to manually write them. 
+Lombok is a popular library in Java that helps reduce boilerplate code. One of its most used features is
+to generate getter, setter, constructor, and `toString()` methods without having to manually write them.
 Let's use that as a basis for our exercise.
 
-## Requirements:
+## Requirements
+
 1. Setup a new Java project with Maven.
 2. Add Lombok as a dependency.
 3. Create a simple `Person` class with a few fields.
 4. Use Lombok annotations to auto-generate the required methods.
 
-#### Steps:
+#### Steps
 
 1. **Setup Lombok Dependency**
 
 For Maven, add the following to your `pom.xml`:
+
 ```xml
 <dependency>
     <groupId>org.projectlombok</groupId>
@@ -58,6 +60,7 @@ public class Person {
 3. **Test the Person class**
 
 Now create a `Main` class to test out the `Person` class:
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -70,7 +73,8 @@ public class Main {
 }
 ```
 
-## Expected Output:
+## Expected Output
+
 ```
 Person(firstName=John, lastName=Doe, age=25)
 26
@@ -78,7 +82,9 @@ Person(firstName=John, lastName=Doe, age=25)
 
 ## Reading
 
-Go to the Lombok homepage and read the documentation. https://projectlombok.org/
+Go to the Lombok homepage and read the documentation. <https://projectlombok.org/> or to
+our [Toolbox](../../toolbox/java/deepdive/lombok.md) for more information.
 
-## Challenge:
+## Challenge
+
 For those who want to explore further, try adding more Lombok annotations to the `Person` class like `@EqualsAndHashCode`, and `@Builder` and observe the functionalities they bring.

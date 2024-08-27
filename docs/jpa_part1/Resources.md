@@ -5,7 +5,7 @@ layout: default
 nav_order: 1
 has_children: false
 parent: JPA Part 1
-permalink: /part1/resources
+permalink: /jpa-part-1/resources
 ---
 
 

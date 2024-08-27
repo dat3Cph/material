@@ -5,17 +5,19 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: JPA Part 1
-permalink: part1/exercises/gls-part1/
+permalink: /jpa-part-1/exercises/gls-part1/
 ---
 
 ## Exercise: GLS Package Tracking System - Part 1
 
 ![](../../images/glsbear.png)
 
-### Scenario:
+### Scenario
+
 GLS (Global Logistics Services) wants to develop a package tracking system to manage the delivery of packages. As part of the initial phase, they need to create a basic system using Java, JPA, and JPQL to manage package information.
 
-### Requirements:
+### Requirements
+
 1. Create an entity named "Package" using Lombok to manage package information. The "Package" entity should have the following attributes:
     - ID (auto-generated primary key)
     - Tracking number (String)
@@ -37,11 +39,10 @@ GLS (Global Logistics Services) wants to develop a package tracking system to ma
 
 6. Use Maven for project management.
 
+### Hints
 
-### Hints:
 - Use Jakarta Persistence (JPA) annotations to map the entity attributes to database columns.
 - Implement JPQL queries for retrieving packages based on certain criteria, such as tracking number or delivery status.
-
 
 4. JUnit Test Example:
 
@@ -84,6 +85,6 @@ public class PackageDAOTest {
 }
 ```
 
-### Expected Outcome:
+### Expected Outcome
 
 This exercise should provide a solid foundation for understanding JPA (ORM) and JPQL in the context of building a package tracking system. In part 2, you can introduce more complex relationships between entities to further enhance the system.

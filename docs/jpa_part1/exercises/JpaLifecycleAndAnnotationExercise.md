@@ -5,13 +5,12 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: JPA Part 1
-permalink: part1/exercises/jpalifecycleannotations/
+permalink: /jpa-part-1/exercises/jpalifecycleannotations/
 ---
 
 # JPA Lifecycle and Annotations
 
-
-### Objective: 
+### Objective
 
 **Apply JPA annotations to map Java classes to database tables and understand the entity lifecycle.**
 
@@ -21,7 +20,7 @@ permalink: part1/exercises/jpalifecycleannotations/
 
 ***
 
-### Instructions:
+### Instructions
 
 1. [ ] Create a new Java project using Maven.
 2. [ ] Define a simple entity class called "Student" with attributes like `id`, `firstName`, `lastName`, `email` and `age`. Remember to include a no-arg constructor.
@@ -34,7 +33,7 @@ permalink: part1/exercises/jpalifecycleannotations/
    - `public static Student readStudent(int id)` - This method should read a student from the database using the student's id.
    - `public static Student updateStudent(Student updStd)` - This method should update an existing student in the database.
    - `public static void deleteStudent(int id)` - This method should delete a student from the database using the student's id.
-   - `public static List<Student> readAllStudents()` - This method should retrieve all students from the database and return them as a list. Use a `TypedQuery` to retrieve all students. 
+   - `public static List<Student> readAllStudents()` - This method should retrieve all students from the database and return them as a list. Use a `TypedQuery` to retrieve all students.
 
 _In all the methods above, remember to open and close the `EntityManager` and `EntityManagerFactory` objects._
 _You can use either the `try-with-resources` or the `finally` block to close the objects._

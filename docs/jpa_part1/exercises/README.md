@@ -5,7 +5,7 @@ layout: default
 nav_order: 2
 parent: JPA Part 1
 has_children: true
-permalink: /part1/exercises/
+permalink: /jpa-part-1/exercises/
 ---
 
 # Exercises for JPA Part 1
@@ -21,13 +21,12 @@ permalink: /part1/exercises/
 
 -- TODO
 
-## Thursday     
+## Thursday
 
 - [JPQL (In Class Exercise)](./jpqlqueries)
 - [Student DB CRUD](./student)
 - [Tester Exercise](./tester)
 - [JPA Lifecycle Annotations Exercise](./jpalifecycleannotations)
-
 
 ## Friday
 
