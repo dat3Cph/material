@@ -19,7 +19,7 @@ permalink: /jpa-part-1/exercises/
 
 ## Wednesday
 
--- TODO
+-- [codelab](./codelab.md)
 
 ## Thursday
 
