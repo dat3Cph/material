@@ -62,6 +62,6 @@ permalink: /jpa-part-1/resources
 
 ### Code Snippets
 
-- [Testcontainers](https://gist.github.com/tysker/312d237728d58c84533aae6cad661307)
+- [Test dependencies](https://gist.github.com/tysker/312d237728d58c84533aae6cad661307)
 - [Hibernate Config file Part 1](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
-- [Hibernate Config file Part 2 incl. testcontainer](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
+- [Testcontainer Hibernate config file](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
