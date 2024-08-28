@@ -25,7 +25,6 @@ permalink: /jpa-part-1/exercises/
 
 - [JPQL (In Class Exercise)](./jpqlqueries)
 - [Student DB CRUD](./student)
-- [Tester Exercise](./tester)
 - [JPA Lifecycle Annotations Exercise](./jpalifecycleannotations)
 
 ## Friday
