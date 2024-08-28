@@ -6,13 +6,12 @@ nav_order: 1
 has_children: true
 parent: JPA Part 1
 grand_parent: JPA
-permalink: /learning-objectives-part1/
+permalink: /jpa-part-1/learning-objectives-part-1/
 ---
 
 # JPA Part 1
 
 ## Learning Objectives
-
 
 1. Be able to create a simple Maven project with JUnit 5, Hibernate, PostgresSQL and JPA.
     - Create a PostgresSQL server and a database with help of Docker.

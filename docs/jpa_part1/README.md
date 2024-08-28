@@ -4,7 +4,7 @@ description: JPA Overview
 layout: default
 nav_order: 3    
 has_children: true
-permalink: /jpa-part1
+permalink: /jpa-part-1
 ---
 
 
@@ -12,7 +12,7 @@ permalink: /jpa-part1
 
 ## Learning objectives
 
-- [Learning objectives for the week (part 1)](./learning-objectives-part1)
+- [Learning objectives for the week (part 1)](./learning_objectives.md)
 
 ## Monday
 
@@ -40,7 +40,7 @@ permalink: /jpa-part1
 
 CodeLab exercises on JPA. All day is devoted to pair programming and Github collaboration.
 
-- [CodeLabExercise](#)
+- [CodeLabExercise](./exercises/codelab.md)
 
 ## Thursday (class)
 
@@ -55,9 +55,7 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 
 - [Java annotations](https://www.youtube.com/watch?v=DkZr7_c9ry8&t=1s)
 
-
 ## Friday (exercise day)
-
 
 ### Slides
 

@@ -5,7 +5,7 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: JPA Part 1
-permalink: part1/exercises/jpqlqueries/
+permalink: /jpa-part-1/exercises/jpqlqueries/
 ---
 
 # JPQL Queries

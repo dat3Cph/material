@@ -1,3 +1,13 @@
+---
+title: JPA setup in IntelliJ
+description: How to setup JPA in IntelliJ
+layout: default
+nav_order: 5
+parent: ORM
+grand_parent: Toolbox
+permalink: /toolbox/orm/jpa-setup/
+---
+
 # JPA-Maven Setup in IntelliJ
 
 ## Technologies
@@ -17,7 +27,7 @@
 
 ---
 
-<img src="./images/intellij_setup_1.png" width="400" height="400">
+![Setup](./images/intellij_setup_1.png)
 
 ---
 
@@ -84,10 +94,10 @@
 
 7. Create a new java class file called HibernateConfig.
 
-<img src="./images/hibernateconfig_2.png" width="300" height="400">
+![HibernateConfig](./images/hibernateconfig_2.png)
 
 ## 8. Copy and paste the following [Link](https://gist.github.com/jonbertelsen/aad0bd7e1dcc6ed72d983c23dd2967ac) into the HibernateConfig.class
 
 **If you get an import error, try to run Maven lifecycle "install"**
 
-<img src="./images/maven_lifecycle_3.png" width="300" height="400" >
+![Maven lifecycle](./images/maven_lifecycle_3.png)

@@ -5,7 +5,7 @@ layout: default
 nav_order: 1
 parent: Exercises
 grand_parent: JPA Part 1
-permalink: part1/exercises/unicorn/
+permalink: /jpa-part-1/exercises/unicorn/
 ---
 
 # Exercise: Java JPA with Hibernate - Standard CRUD Operations on Unicorn Entity
@@ -13,7 +13,6 @@ permalink: part1/exercises/unicorn/
 ## Check pantopto videos with solutions
 
 [Folder with videos](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=8bab5bee-ab23-48a4-b037-b0650179a4c0)
-
 
 ## Objective
 
