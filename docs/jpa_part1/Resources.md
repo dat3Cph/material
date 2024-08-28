@@ -59,3 +59,9 @@ permalink: /part1/resources
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
 - [Date and Time Mappings with Hibernate and JPA](https://thorben-janssen.com/hibernate-jpa-date-and-time/)
 - [Java Test Container Hibernate Setup](https://gist.github.com/tysker/74eac7ad0dc0d52c3af8e87907d487e7)
+
+### Code Snippets
+
+- [Testcontainers](https://gist.github.com/tysker/312d237728d58c84533aae6cad661307)
+- [Hibernate Config file Part 1](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
+- [Hibernate Config file Part 2 incl. testcontainer](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
