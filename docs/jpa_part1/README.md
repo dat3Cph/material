@@ -57,7 +57,7 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 
 ## Friday (exercise day)
 
-- [GLS Part 1](./exercises/GLSExercise.md)
+- [GLS Part 1](./exercises/GLSExercisePart1.md)
 
 ### Slides
 
