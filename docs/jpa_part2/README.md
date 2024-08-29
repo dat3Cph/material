@@ -47,7 +47,7 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 
 #### Reading
 
-- [One-To-Many](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
+- [Many-To-Many](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
 
 ## Friday (exercise day)
 
