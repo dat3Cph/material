@@ -19,7 +19,7 @@ permalink: /jpa-part-1/exercises/
 
 ## Wednesday
 
--- [codelab](./codelab.md)
+- [Codelab](./codelab.md)
 
 ## Thursday
 
@@ -29,4 +29,4 @@ permalink: /jpa-part-1/exercises/
 
 ## Friday
 
-- [GLS Exercise Part 1](./gls-part1)
+- [GLS Part 1](./GLSExercisePart1.md)

@@ -12,20 +12,21 @@ permalink: /part2/exercises/
 
 ## Tuesday
 
-- [Dolphin Exercise](./dolphin)
-- [Recycling Exercise](./recycling)
+- [Dolphin Exercise](./dolphin.md)
+- [Recycling Exercise](./recycling.md)
 
 
 ## Wednesday
 
--- TODO
+- [codelab](./codelab.md)
 
 ## Thursday
 
-- [School Exercise](./school)
+- [School Exercise](./school.md)
+- [Domain Model Exercise](./domainmodel.md)
 
 
 
 ## Friday
 
-- [GLS Exercise Part 2](./gls-part2)
+- [GLS Part 2](./GLSExercisePart2.md)")

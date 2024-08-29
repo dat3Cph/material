@@ -4,8 +4,8 @@ description: JPA Resources
 layout: default
 nav_order: 1
 has_children: false
-parent: JPA Part 2
-permalink: /part2/resources
+parent: JPA Part 1
+permalink: /jpa-part-1/resources
 ---
 
 
@@ -31,7 +31,7 @@ permalink: /part2/resources
 - [Interface EntityManager](https://docs.oracle.com/javaee/5/api/javax/persistence/EntityManager.html)
 - [JAVA Persistence Wikipedia](https://en.wikibooks.org/wiki/Java_Persistence)
 - [Thorben Hansen (Hibernate Expert)](https://thorben-janssen.com/)
-  
+
 ### Life cycle
 
 - [Entity Life Cycle Model in JPA & Hibernate](https://thorben-janssen.com/entity-lifecycle-model/)
@@ -58,4 +58,9 @@ permalink: /part2/resources
 
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
 - [Date and Time Mappings with Hibernate and JPA](https://thorben-janssen.com/hibernate-jpa-date-and-time/)
-- [Java Test Container Hibernate Setup](https://gist.github.com/tysker/74eac7ad0dc0d52c3af8e87907d487e7)
+
+### Code Snippets
+
+- [Test dependencies](https://gist.github.com/tysker/312d237728d58c84533aae6cad661307)
+- [Hibernate Config file Part 1](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)
+- [Testcontainer Hibernate config file](https://gist.github.com/tysker/7acb26d9bfeeba46a2d2fd4b513fa8c0)

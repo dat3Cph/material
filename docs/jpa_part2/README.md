@@ -27,8 +27,6 @@ permalink: /jpa-part2
 
 CodeLab exercises on JPA. All day is devoted to pair programming and Github collaboration.
 
-- [CodeLabExercise](#)
-
 ## Thursday (class)
 
 ### Prepare for class
@@ -37,4 +35,5 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 
 ## Friday (exercise day)
 
+- [GLS Part 2]("./exercises/GLSExercisePart2")
 
