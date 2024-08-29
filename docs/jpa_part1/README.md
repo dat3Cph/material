@@ -57,6 +57,8 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 
 ## Friday (exercise day)
 
+- [GLS Part 1](./exercises/GLSExercise.md)
+
 ### Slides
 
 - [ORM-JPA Basics](https://efif-my.sharepoint.com/:p:/g/personal/jorg_cphbusiness_dk/EZVvVZzWXOhLqERgtCMPNeMBoMdShTCo9BSSaOi_Jwttow?e=ghoiPK)
