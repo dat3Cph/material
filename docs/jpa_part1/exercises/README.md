@@ -29,4 +29,4 @@ permalink: /jpa-part-1/exercises/
 
 ## Friday
 
-- [GLS Part 1](./GLSExercisePart1.md)
+- [GLS Part 1](./gls_part1.md)

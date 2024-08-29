@@ -29,4 +29,4 @@ permalink: /part2/exercises/
 
 ## Friday
 
-- [GLS Part 2](./GLSExercisePart2.md)")
+- [GLS Part 2](./gls_part2.md)
