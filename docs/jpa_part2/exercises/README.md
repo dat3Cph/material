@@ -18,7 +18,7 @@ permalink: /part2/exercises/
 
 ## Wednesday
 
-- [codelab](./codelab.md)
+- [Codelab](./codelab.md)
 
 ## Thursday
 
