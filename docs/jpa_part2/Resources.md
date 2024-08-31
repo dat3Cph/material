@@ -4,8 +4,8 @@ description: JPA Resources
 layout: default
 nav_order: 1
 has_children: false
-parent: JPA Part 1
-permalink: /jpa-part-1/resources
+parent: JPA Part 2
+permalink: /jpa-part-2/resources
 ---
 
 
