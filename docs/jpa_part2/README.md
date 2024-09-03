@@ -36,7 +36,7 @@ refers to an IntelliJ template that a student has made. The template contains a 
 
 ## Wednesday (CodeLab)
 
-CodeLab exercises on JPA. All day is devoted to pair programming and Github collaboration.
+- [CodeLab exercises on JPA](./exercises/codelab.md). All day is devoted to pair programming and Github collaboration.
 
 ## Thursday (class)
 
@@ -52,3 +52,5 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 - [Many-To-Many](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
 
 ## Friday (exercise day)
+
+- [GLS Part 2](./exercises/gls_part2.md)
