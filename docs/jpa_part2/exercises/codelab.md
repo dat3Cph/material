@@ -22,7 +22,7 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 
 1. Team up in pairs of 2
 2. Find another pair to team up with
-3. Create a team of 4 people in Moodle
+3. [Create a team of 4 people in Moodle](https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=729403)
 
 ### 2. Set up the development environment (one per team of 2 x 2)
 
