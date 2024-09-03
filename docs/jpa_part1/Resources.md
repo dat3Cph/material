@@ -50,6 +50,8 @@ permalink: /jpa-part-1/resources
 - [OneToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/one-to-many.html)
 - [ManyToMany](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
 
+- [owning and inverse side](https://www.javacodegeeks.com/2013/04/jpa-determining-the-owning-side-of-a-relationship.html)
+
 ### Lombok
 
 - [Intro to project Lombok](https://www.baeldung.com/intro-to-project-lombok)
