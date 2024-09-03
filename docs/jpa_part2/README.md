@@ -34,7 +34,7 @@ refers to an IntelliJ template that a student has made. The template contains a 
 
  ![Hint](./images/intellij_template_location.png)
 
- and the template can be downloaded [here](./download/JPA_StartCode.zip)
+ and the template can be downloaded [here](./download/JPA_Template_Fall_2024.zip)
 
 - [Source Code for the above Video](https://github.com/jonbertelsen/dolphin_fall2023)
 
