@@ -60,15 +60,18 @@ Ask yourself the following questions before you start implementing the relations
 The following tasks are suggestions for the first round of tasks. You can add more tasks as you go along.
 
 1. Create an Enum for the Course class as shown in the diagram and add the correct annotations to the Course class.
-2. Implement the GenericDAO interface for the Course class.
-3. Implement the GenericDAO interface for the Teacher class.
-4. Implement the GenericDAO interface for the Student class.
-5. Add the relations between the entities as shown in the diagram.
+2. Add the correct annotations to the Teacher class as shown in the diagram.
+3. Add the correct annotations to the Student class as shown in the diagram.
+4. Add the correct annotations to the Course class as shown in the diagram. 
+5. Implement the GenericDAO interface for the CourseDAO class and implement the methods. 
+6. Implement the GenericDAO interface for the TeacherDAO class and implement the methods. 
+7. Implement the GenericDAO interface for the StudentDAO class and implement the methods. 
+8. Add the relations between the entities as shown in the diagram.
    - a) student can attend many courses
    - b) a course can have many students
    - c) course can have only one teacher
-   - d) a teacher can teach many courses
-6. Look at the [DTO](../../toolbox/designpatterns/dto.md) diagram below and implement the methods in the DAO classes to get the data as shown in the diagram.
+   - d) a teacher can teach many courses 
+9. Look at the [DTO](../../toolbox/designpatterns/dto.md) diagram below and implement the methods in the DAO classes to get the data as shown in the diagram.
 
 ![codelab_school_dto](codelab_school_dto.drawio.png)
 
