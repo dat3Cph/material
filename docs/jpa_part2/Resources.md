@@ -54,6 +54,10 @@ permalink: /jpa-part-2/resources
 
 - [Intro to project Lombok](https://www.baeldung.com/intro-to-project-lombok)
 
+### Testcontainers
+
+- [How to use testcontainers](https://thorben-janssen.com/hibernate-testcontainers-a-perfect-match-for-your-tests/)
+
 ### Other
 
 - [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/#the-hashcode-contract)
