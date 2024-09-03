@@ -15,7 +15,7 @@ permalink: /jpa-part2
 
 ## Monday
 
-- ToDo
+- Friday exercise review. Prepare a short presentation of your solution to the Friday exercise.
 
 ## Tuesday (class)
 
@@ -29,7 +29,13 @@ permalink: /jpa-part2
 
 #### Video
 
-- [JPA relations](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%226c569295-f604-4241-89e8-b06900ed8d21%22)
+- [JPA relations](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%226c569295-f604-4241-89e8-b06900ed8d21%22). In the video about 1:1 relations Jon
+refers to an IntelliJ template that a student has made. The template contains a projects setup with HibernateConfig and pom.xml ready made. Fast food for the people ;-) However, the link given in the video is not active anymore. But this is the hint given:
+
+ ![Hint](./images/intellij_template_location.png)
+
+ and the template can be downloaded [here](./download/JPA_StartCode.zip)
+
 - [Source Code for the above Video](https://github.com/jonbertelsen/dolphin_fall2023)
 
 ## Wednesday (CodeLab)
@@ -50,4 +56,3 @@ CodeLab exercises on JPA. All day is devoted to pair programming and Github coll
 - [Many-To-Many](https://www.logicbig.com/tutorials/java-ee-tutorial/jpa/many-to-many.html)
 
 ## Friday (exercise day)
-
