@@ -1,11 +1,11 @@
 ---
-title: CRUD Examples
+title: JPA CRUD Examples
 description: crud examples 
 layout: default
-nav_order: 1
+nav_order: 4
 parent: ORM
 grand_parent: Toolbox
-permalink: /toolbox/java/crud/
+permalink: /toolbox/java/jpa/crud/
 ---
 
 # These are CRUD examples prompted from ChatGpt and modified to our setup with Hibernate
@@ -175,7 +175,7 @@ This is a basic example to demonstrate how you might persist a `Book` entity usi
 
 ## Delete / Remove
 
-** Prompt: create a similar example for remove**
+**Prompt: create a similar example for remove**
 
 Certainly! Below is an additional method named `addBook` in the `BookRepository` class for persisting a `Book` entity to the database.
 
