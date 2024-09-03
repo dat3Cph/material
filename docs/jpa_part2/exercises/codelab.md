@@ -10,7 +10,7 @@ permalink: /jpa-part-2/exercises/codelab/
 
 # JPA part II - CodeLab Exercise
 
-This CodeLab exercise is designed to help you practice the concepts you have learned in the JPA 1 module on day 1. You will be working on a series of tasks that involve Java Persistence API, with Entities and DAOs. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and collaboration using Github.
+This CodeLab exercise is designed to help you practice the concepts you have learned on the first day of JPA part 2. You will be working on a series of tasks that involve Java Persistence API, with Entities and DAOs. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and collaboration using Github.
 
 ![codelab_school_exercise](codelab_school_exercise.drawio.png)
 
@@ -25,7 +25,6 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 3. Create a team of 4 people in Moodle
 
 ### 2. Set up the development environment (one per team of 2 x 2)
-
 
 1. **ONE** team member should clone the following GitHub repository: `git clone -b code-lab-3 https://github.com/tysker/3sem-codelab-exercises.git`.
 2. Delete the `.git` folder in the project folder.
@@ -49,6 +48,7 @@ Most of the code is already written for you. You need to implement the missing p
 **Remember to write integration tests for the DAO classes.**
 
 Ask yourself the following questions before you start implementing the relationships:
+
 - What are the relationship between the entities?
 - Which one should be the owning side of the relationship and what does that mean?
 - Should the relationship be unidirectional or bidirectional?
@@ -68,7 +68,7 @@ The following tasks are suggestions for the first round of tasks. You can add mo
    - b) a course can have many students
    - c) course can have only one teacher
    - d) a teacher can teach many courses
-6. Look at the dto diagram below and implement the methods in the DAO classes to get the data as shown in the diagram.
+6. Look at the [DTO](../../toolbox/designpatterns/dto.md) diagram below and implement the methods in the DAO classes to get the data as shown in the diagram.
 
 ![codelab_school_dto](codelab_school_dto.drawio.png)
 
