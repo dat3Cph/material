@@ -14,15 +14,19 @@ permalink: part2/exercises/gls-part2/
 
 In this part of the exercise, we'll extend the GLS Package Tracking System to include more complex relationships between entities and introduce additional functionality.
 
-### Requirements:
+### Requirements and Instructions for the entities and relationships
 
-1. Extend the existing package tracking system to include a new entity named "Location" using Lombok to manage location information. The "Location" entity should have the following attributes:
+Read the requirements below and sketch a domain model to visualize the entities, and the relationships between them. Think of the domain model from the codelab exercise ![Domain model](https://dat3cph.github.io/material/jpa_part2/exercises/codelab_school_exercise.drawio.png) - use the same notation.
+
+1. Extend the existing package tracking system to include a new entity named "Location" to manage location information. The "Location" entity should have the following attributes:
+
    - ID (auto-generated primary key)
    - Latitude (Double)
    - Longitude (Double)
    - Address (String)
 
 2. Create a new entity named "Shipment" to represent the movement of packages between locations. The "Shipment" entity should have the following attributes:
+
    - ID (auto-generated primary key)
    - Package (ManyToOne relationship with the Package entity)
    - Source location (ManyToOne relationship with the Location entity)
@@ -35,15 +39,9 @@ In this part of the exercise, we'll extend the GLS Package Tracking System to in
 
 4. Modify the "Package" entity to include a OneToMany relationship with the "Shipment" entity.
 
-5. Update the DAO and entity classes to handle the new relationships and attributes.
+5. Update the DAO and entity classes to handle the new relationships and attributes. You might want to create new DAO classes for the "Location" and "Shipment" entities as well, and begin by implementing the CRUD operations for these entities little by little. A good approach is to start with the "Location" entity and then move on to the "Shipment" entity. And also to first implement the read operations (find by ID, find all, etc.) and then move on to the create. Update, and delete operations are usually the most complex to implement.
 
-6. Write additional JUnit tests to verify the functionality of the new features.
-
-7. Use Jakarta Persistence (JPA) annotations to map the relationships between entities.
-
-8. Update PackageDAO and ShipmentDAO classes to handle CRUD operations for the new entities and relationships.
-
-9. Write additional JUnit tests to cover the new functionality, including creating shipments, associating shipments with packages, and retrieving packages with their shipments.
+6. Write additional JUnit tests (integration tests) to verify the functionality of the new features.
 
 ## Expected Outcome
 
