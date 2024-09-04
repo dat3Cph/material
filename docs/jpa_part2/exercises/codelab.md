@@ -26,7 +26,7 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 
 ### 2. Set up the development environment (one per team of 2 x 2)
 
-1. **ONE** team member should copy-paste the following link into a bash/cmd terminal: `git clone -b code-lab-3 https://github.com/tysker/3sem-codelab-exercises.git`. (the -b code-lab-3 is the branch you should clone)
+1. **ONE** team member should copy-paste the following link into a bash/cmd terminal: `git clone -b code-lab-3 https://github.com/tysker/3sem-codelab-exercises.git`. (This will clone the repository on the `code-lab-3` branch)
 2. Delete the `.git` folder in the project folder.
 3. Create a new GitHub repository and push the project to the new repository.
 4. Make everybody else collaborators on the repo.
