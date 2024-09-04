@@ -1,11 +1,11 @@
 ---
-title: Entity Manager(Factory)
+title: JPA Entity Manager(Factory)
 description: entity manager in JPA
 layout: default
-nav_order: 1
+nav_order: 3
 parent: ORM
 grand_parent: Toolbox
-permalink: /toolbox/orm/entity-manager/
+permalink: /toolbox/java/jpa/entity-manager/
 ---
 
 # The role of the entity manager in JPA

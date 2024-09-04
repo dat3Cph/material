@@ -16,6 +16,7 @@ permalink: /jpa-part-2/resources
 - [CRUD examples with a single entity](../toolbox/java/crud/)
 - [The role of the entity manager in JPA](..//toolbox/orm/entity-manager/)
 - [ORM Wiki](../toolbox/orm/orm-wikipedia/)
+- [JPA documentation in brief](../toolbox/java/orm/)
 
 ## Videos external resources
 
