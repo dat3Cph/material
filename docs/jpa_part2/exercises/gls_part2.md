@@ -16,7 +16,7 @@ In this part of the exercise, we'll extend the GLS Package Tracking System to in
 
 ### Requirements and Instructions for the entities and relationships
 
-Read the requirements below and sketch a domain model to visualize the entities, and the relationships between them. Think of the domain model from the codelab exercise ![Domain model](https://dat3cph.github.io/material/jpa_part2/exercises/codelab_school_exercise.drawio.png) - use the same notation.
+Read the requirements below and sketch a domain model to visualize the entities, and the relationships between them. Think of the domain model from the codelab exercise [Domain model](https://dat3cph.github.io/material/jpa_part2/exercises/codelab_school_exercise.drawio.png) - use the same notation.
 
 1. Extend the existing package tracking system to include a new entity named "Location" to manage location information. The "Location" entity should have the following attributes:
 
