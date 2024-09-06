@@ -39,7 +39,7 @@ Watch this video:
 
 - [What is a REST API? (9:11)](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
 
-Skim through these articles:
+Skim through these inhouse articles:
 
 1. [What is an URI?](../toolbox/dataintegration/uri.md)
 2. [What is JSON?](../toolbox/dataintegration//json.md)
