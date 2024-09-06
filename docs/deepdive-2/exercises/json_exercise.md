@@ -4,8 +4,9 @@ description: Java Deep Dive II Exercise DTO and JSON
 layout: default
 nav_order: 1
 has_children: false
-parent: Java Deep Dive II
-permalink: /deepdive-2/learning-objectives/
+grand_parent: Java Deep Dive II
+parent: Exercises
+permalink: /deepdive-2/exercises/json-dto
 ---
 
 # JSON DTO Exercise
