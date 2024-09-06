@@ -1,5 +1,5 @@
 ---
-title: JSON DTO Exercise
+title: Rest API to DTOs
 description: Java Deep Dive II Exercise DTO and JSON
 layout: default
 nav_order: 1
