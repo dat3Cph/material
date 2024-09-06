@@ -21,9 +21,7 @@ Topics covered in this week are:
 
 ## Monday
 
-Reviews. We take a look at the Friday exercise.
-
-Brief review on the Friday assignment:
+Online review on the Friday assignment:
 
 - What did you solve?
 - Show your code an run it in IntelliJ
@@ -31,7 +29,7 @@ Brief review on the Friday assignment:
 - What did you learn?
 - Questions for the review team
 
-Prepare for the week.
+For the rest of the day: Prepare for the week. Watch the videos and read the articles.
 
 ## Tuesday (class)
 
