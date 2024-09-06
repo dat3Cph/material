@@ -17,9 +17,19 @@ Topics covered in this week are:
 - DTO
 - Fetching data from an API
 
-[Learning objectives for the week](./learningobjectives.md)
+[Learning objectives for the week](learningObjectives.md)
 
 ## Monday
+
+Reviews. We take a look at the Friday exercise.
+
+Brief review on the Friday assignment:
+
+- What did you solve?
+- Show your code an run it in IntelliJ
+- Think about what you could have done differently
+- What did you learn?
+- Questions for the review team
 
 Prepare for the week.
 
@@ -27,17 +37,27 @@ Prepare for the week.
 
 ### Prepare for the class
 
-Watch these videos - and code along:
+Watch this video:
 
-Skim these articles
+[REST API](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
+
+Read this article:
+
+[JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 
 ### In-class exercises
+
+[DTO Exercise](./exercises/api_exercise.md)
+
+[JSON Exercise](./exercises/json_exercise.md)
+
+[Demo code](https://github.com/HartmannDemoCode/webscraping)
 
 ## Wednesday (CodeLab)
 
 Time to code!
 
-CodeLab exercises on Java Streams, Java Time API, and Lambdas. All day is devoted to pair programming and Github collaboration.
+CodeLab exercises. All day is devoted to pair programming and Github collaboration.
 
 ## Thursday (class)
 
