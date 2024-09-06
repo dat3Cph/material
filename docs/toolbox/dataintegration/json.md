@@ -1,10 +1,10 @@
 ---
-title: What is JSON?
+title: JSON
 description: Example of a JSON object and array
 layout: default
 parent: Data Integration
 grand_parent: Toolbox
-nav_order: 1
+nav_order: 2
 permalink: /toolbox/dataintegration/json/
 ---
 
@@ -58,7 +58,8 @@ permalink: /toolbox/dataintegration/json/
 
 ### Common Use Cases of JSON
 
-1. **Web APIs:** JSON is widely used in RESTful APIs to transmit data between the server and client in web applications.
+1. **Web APIs:** JSON is widely used in [RESTful APIs](./rest_api.md) to transmit data between the server and client in web applications.
+
    - Example: When fetching data from a web server using JavaScript (e.g., `fetch()` or `XMLHttpRequest`), the data is often returned in JSON format.
 
    Example of a response from a REST API:

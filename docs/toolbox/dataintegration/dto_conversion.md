@@ -4,7 +4,7 @@ description: How to convert DTOs to JSON and vice versa
 layout: default
 parent: Data Integration
 grand_parent: Toolbox
-nav_order: 2
+nav_order: 5
 permalink: /toolbox/dataintegration/dto-conversions/
 ---
 

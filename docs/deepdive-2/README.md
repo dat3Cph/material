@@ -35,21 +35,27 @@ For the rest of the day: Prepare for the week. Watch the videos and read the art
 
 ### Prepare for the class
 
-Watch this video: [What is a REST API? (9:11)](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
+Watch this video:
 
-Read these articles:
+- [What is a REST API? (9:11)](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
 
-- [What is JSON?](../toolbox/dataintegration//json.md)
-- [What is a DTO?](../toolbox/designpatterns/dto.md)
-- [JSON and DTO conversions](../toolbox/dataintegration/dto_conversion.md)
+Skim through these articles:
+
+1. [What is an URI?](../toolbox/dataintegration/uri.md)
+2. [What is JSON?](../toolbox/dataintegration//json.md)
+3. [What is a DTO?](../toolbox/designpatterns/dto.md)
+4. [JSON and DTO conversions](../toolbox/dataintegration/dto_conversion.md)
+5. [What is a REST API?](../toolbox/dataintegration/rest_api.md)
+6. [What is Jackson?](../toolbox/dataintegration/jackson.md)
+7. [Fetching json from an API](../toolbox/dataintegration/httpclient.md)
 
 ### In-class exercises
 
-[DTO Exercise](./exercises/api_exercise.md)
+1. [DTO Exercise](./exercises/dto_exercise.md)
+2. [JSON Exercise](./exercises/json_exercise.md)
+3. [Rest API Exercise](./exercises/api_exercise.md)
 
-[JSON Exercise](./exercises/json_exercise.md)
-
-[Demo code](https://github.com/HartmannDemoCode/webscraping)
+- [Demo code](https://github.com/HartmannDemoCode/webscraping)
 
 ## Wednesday (CodeLab)
 
@@ -66,6 +72,9 @@ Watch these videos - and code along:
 Skim this article:
 
 ### In-class exercises
+
+- []()
+- []()
 
 ## Friday (exercise day)
 
