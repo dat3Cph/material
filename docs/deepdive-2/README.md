@@ -35,13 +35,13 @@ For the rest of the day: Prepare for the week. Watch the videos and read the art
 
 ### Prepare for the class
 
-Watch this video:
+Watch this video: [What is a REST API? (9:11)](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
 
-[REST API](https://youtu.be/lsMQRaeKNDk?si=hi35_BWNJNM8e4LY)
+Read these articles:
 
-Read this article:
-
-[JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+- [What is JSON?](../toolbox/dataintegration//json.md)
+- [What is a DTO?](../toolbox/designpatterns/dto.md)
+- [JSON and DTO conversions](../toolbox/dataintegration/dto_conversion.md)
 
 ### In-class exercises
 
