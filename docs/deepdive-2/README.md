@@ -53,7 +53,7 @@ Skim through these inhouse articles:
 
 1. [DTO Exercise](./exercises/dto_exercise.md)
 2. [JSON Exercise](./exercises/json_exercise.md)
-3. [Move TMDB API Exercise](./exercises/tmdb_exercise.md)
+3. [Movie TMDB API Exercise](./exercises/tmdb_exercise.md)
 
 - [Demo code](https://github.com/HartmannDemoCode/webscraping)
 
