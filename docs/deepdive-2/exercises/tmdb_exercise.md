@@ -55,13 +55,13 @@ The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. 
 
 3. **Adding functionality**
 
-Add a new class `MovieController` with the following methods:
+Add a new class `MovieService` with the following methods:
 
 - `getByRating` that can take a rating or similar as a parameter and return all movies with that rating or lower or if you prefer, use the quality rating and find all movies with a specific rating e.g 8.5 and higher. You will need to return the movies in a List of MovieDTOs.
 
-- `getSortedByReleaseDate` that returns all movies sorted by release date descending.
+- `getSortedByReleaseDate` that takes a query string and returns all movies sorted by release date descending.
 
-- Write unit tests for the MovieController where you search for the following titles tests the result agains the expected out result. Make a strategy for how to test the methods in the MovieController:
+- Write unit/integration tests for the `MovieService` where you search for the following titles tests the result agains the expected out result. Make a strategy for how to test the methods in the MovieService class:
 
   - The Shawshank Redemption
   - The Godfather
@@ -75,4 +75,10 @@ Add a new class `MovieController` with the following methods:
   - Fight Club
   - Inception
 
-- Then test the other methods in the MovieController.
+- Then test the other method in the `MovieService` class.
+
+4. **Extra**
+
+- Add a methods to the `MovieService` that you find useful.
+
+For example, a method that can return the average rating of all movies in the list. Or a method that can return the movie with the highest rating. Or a method that can return the movie with the lowest rating. Or a method that can return the movie with the longest title. Or a method that can return the movie with the shortest title. Or a method that can return the movie with the longest runtime. Or a method that can return the movie with the shortest runtime. Or a method that can return the movie with the most votes. Or a method that can return the movie with the least votes. Or a method that can return the movie with the highest revenue. Or a method that can return the movie with the lowest revenue. Or a method that can return the movie with the highest budget. Or a method that can return the movie with the lowest budget. Or a method that can return the movie with the highest popularity. Or a method that can return the movie with the lowest popularity. Or a method that can return the movie with the highest vote count. Or a method that can return the movie with the lowest vote count. Or a method that can return the movie with the highest vote average. Or a method that can return the movie with the lowest vote average. Or a method that can return the movie with the highest runtime. Or a method that can return the movie with the lowest runtime. Or a method that can return the movie with the highest revenue. Or a method that can return the movie with the lowest revenue. Or a method that can return the movie with the highest budget. Or a method that can return the movie with the lowest budget. Or a method that can return the movie with the highest popularity. Or a method that can return the movie with the lowest popularity. Or a method that can return the movie with the highest vote count. Or a method that can return the movie with the lowest vote count. Or a method that can return the movie with the highest vote average. Or a method that can return the movie with the lowest vote average. Or a method that can return the movie with the highest runtime. Or a method that can return the movie with the lowest runtime. Or a method that can return the movie with the highest revenue. Or a method that can return the movie with the lowest revenue. Or a method that can return the movie with the highest budget. Or a method that can return the movie with the lowest budget. Or a method that can return the movie with the highest popularity. Or a method that can return the movie with the lowest popularity. Or a method that can return the movie with the highest vote count.
