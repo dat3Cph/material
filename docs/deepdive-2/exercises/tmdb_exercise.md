@@ -2,7 +2,7 @@
 title: The Movie Database API
 description: Java Deep Dive II Exercise DTO and JSON
 layout: default
-nav_order: 2
+nav_order: 4
 has_children: false
 grand_parent: Java Deep Dive II
 parent: Exercises
