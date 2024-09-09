@@ -9,120 +9,171 @@ parent: Exercises
 permalink: /deepdive-2/exercises/dto/
 ---
 
-# DTO Exercise
+# DTOs: When, Why, and How to Use Them
 
-## The Problem
+## The Problem - read and understand
 
-You have an entity that you want to return to the client. You have a few options:
+In web applications, we often need to send data between different layers (e.g., from the server to the client). You have a few options when returning data from a controller method:
 
-1. Return the entity directly.
-2. Return a DTO.
+1. Return the domain model / entity directly.
+2. Return a Data Transfer Object (DTO).
 
-Which one should you choose? When should you choose one over the other? How do you know which one to choose?
+But when should you use a DTO instead of an entity? What is the purpose of a DTO, and how does it help in building maintainable, scalable applications?
 
 ## The Solution
 
-The answer is simple: **it depends**.
-You should use a DTO when you want to return a subset of the entity's attributes.
-You should use an entity when you want to return all the entity's attributes.
+The choice between returning an entity or a DTO depends on several factors, including security, performance, and the need to decouple your internal logic from the external API.
 
-## Scenario 1: Return the Entity Directly
+You should use a **DTO** when:
 
-You have an entity called `City` with the following attributes:
+- You want to limit which attributes of an entity are exposed to the client (e.g., hiding sensitive data).
+- You need to transform or aggregate data to create a custom response format.
+- You want to decouple your domain model / entity from the API contract to allow independent evolution of each.
 
-* `town` - string
-* `zip_code` - string
-* `state` - string
-* `country` - string
+You might return the **entity directly** in simpler scenarios, where you trust the consumer of the data (e.g., internal microservices) or when exposing all fields from the entity is acceptable.
 
-You have a controller method called `show` that returns a `City` object.
+---
+
+## Scenario 1: Returning an entity Directly
+
+You have a `City` entity representing cities with the following attributes:
 
 ```java
-public City show() {
-    return new City("New York", "10001", "NY", "USA");
+public class City {
+    private String name;
+    private String zipCode;
+    private String state;
+    private String country;
+    private String mayorName;
+    private double budget;
+    // Getters and setters
 }
 ```
 
-You have a view that renders the `City` object.
+Your controller method returns this entity:
+
+```java
+public City showCity() {
+    return new City("New York", "10001", "NY", "USA", "John Doe", 5000000);
+}
+```
+
+Your view renders all the attributes directly:
 
 ```html
-<h1>City</h1>
-<p>City: {{city.town}}</p>
+<h1>City Information</h1>
+<p>City: {{city.name}}</p>
+<p>Zip Code: {{city.zipCode}}</p>
+<p>State: {{city.state}}</p>
+<p>Country: {{city.country}}</p>
+<p>Mayor: {{city.mayorName}}</p>
+<p>Budget: ${{city.budget}}</p>
+```
+
+In this case, the entire city object is exposed to the client. This approach can lead to **over-exposing data**, such as the mayor’s name or the city’s budget, which may not be necessary for the client. Additionally, if the entity changes (e.g., adding sensitive internal fields), you risk unintentionally exposing new data.
+
+---
+
+## Scenario 2: Using a DTO
+
+To avoid exposing unnecessary or sensitive fields, you can introduce a **DTO**. A DTO is a lightweight object that carries only the data you want to share with the client.
+
+Here’s a `CityDTO` that includes only the essential public information:
+
+```java
+public class CityDTO {
+    private String name;
+    private String zipCode;
+    private String state;
+    private String country;
+    
+    public CityDTO(String name, String zipCode, String state, String country) {
+        this.name = name;
+        this.zipCode = zipCode;
+        this.state = state;
+        this.country = country;
+    }
+    
+    // Getters
+}
+```
+
+In your controller, you now map the `City` entity to `CityDTO`:
+
+```java
+public CityDTO showCity() {
+    City city = new City("New York", "10001", "NY", "USA", "John Doe", 5000000);
+    return new CityDTO(city.getName(), city.getZipCode(), city.getState(), city.getCountry());
+}
+```
+
+Your view renders only the DTO fields:
+
+```html
+<h1>City Information</h1>
+<p>City: {{city.name}}</p>
 <p>Zip Code: {{city.zipCode}}</p>
 <p>State: {{city.state}}</p>
 <p>Country: {{city.country}}</p>
 ```
 
-## Scenario 2: Return a DTO
+Here, the sensitive fields like `mayorName` and `budget` are not exposed, providing better control over what data the client can access.
 
-You have an entity called `City` with the following attributes:
+---
 
-* `town` - string
-* `zip_code` - string
-* `state` - string
-* `country` - string
-* `full_name` - string
-* `full_address` - string
-* `full_name_and_address` - string
+### Common Mistakes and Misconceptions
 
-You have a controller method called `show` that returns a `City` object.
+- **Returning an entity Instead of a DTO**:
+  When exposing your domain model / entity, you risk revealing unnecessary or sensitive data to external systems or clients. It also tightly couples your API response structure to your internal entity, making future changes difficult.
 
-```java
-public City show() {
-    return new City("New York", "10001", "NY", "USA");
-}
-```
+- **Creating a DTO That Is a Direct Copy of an entity**:
+  If your DTO is simply a 1-to-1 copy of your entity, it doesn’t add much value. A DTO should focus on what the client needs, potentially merging or transforming data from multiple entities, reducing over-fetching, and ensuring clarity in API responses.
 
-You have a view that renders the `City` object.
+- **Adding Business Logic to a DTO**:
+  DTOs are meant to be simple containers for data, not for business logic. Business logic should remain in the entity or service layer to maintain separation of concerns.
 
-```html
-<h1>City</h1>
-<p>City: {{city.fullName}}</p>
-<p>Zip Code: {{city.fullAddress}}</p>
-<p>State: {{city.fullNameAndAddress}}</p>
-```
+---
 
-## Common Mistakes
+### Review
 
-* Returning an entity directly when you should be returning a DTO.
-* Creating a DTO that is a direct copy of an entity.
-* Creating a DTO that is a direct copy of a database table.
-* Creating too many DTOs that are all very similar.
-* Adding business logic to a DTO.
+- A **DTO (Data Transfer Object)** is a lightweight class used to carry data between layers of an application, often between the backend and frontend. It contains no business logic, just data.
+- A **Model / Entity** typically represents the domain entity in the business layer and can contain logic and relationships.
+- **Use a DTO** when:
+  - You need to control or limit the data exposed to the client.
+  - You want to ensure API response structures are decoupled from internal models.
+  - You need to aggregate data or create custom projections for specific use cases.
 
-This exercise is designed to help you understand the difference between a DTO and an entity.
-It is also designed to help you understand the difference between an entity and a database table.
+#### Summary
 
-## Quick Review
+In summary, DTOs are used to create a clear boundary between your internal model / entities and the data that gets exposed to external systems. They help ensure that your API remains flexible, maintainable, and secure by giving you full control over what is returned to the client.
 
-* A DTO is a data transfer object.
-* A DTO is a class that is used to transfer data between different layers of an application.
-* DTOs are objects that carry data between processes in order to reduce the number of method calls.
-* The pattern was interpreted as a way to encapsulate data transfer in a single object.
-* The pattern was first introduced by Martin Fowler in 1998. <https://martinfowler.com/books/eaa.html>
+---
 
-## The Exercise
+### Further Exercises
 
-You are given an entity called `User` with the following attributes:
+1. Create a new model, `Person`, with attributes like `firstName`, `lastName`, `dateOfBirth`, and `socialSecurityNumber`.
+2. Write a DTO, `PersonDTO`, that only exposes the person's `firstName` and `lastName`, hiding the `dateOfBirth` and `socialSecurityNumber`.
+3. Write a controller method that maps `Person` to `PersonDTO` and returns it to the client.
+4. You are given an entity called `User` with the following attributes:
 
-* `id` - integer
-* `first_name` - string
-* `last_name` - string
-* `email` - string
+- `id` - integer
+- `first_name` - string
+- `last_name` - string
+- `email` - string
 
 You are given an entity called `BankAccount` with the following attributes:
 
-* `id` - integer
-* `user_id` - integer
-* `account_number` - string
-* `balance` - double
-* `created_at` - date
-* `updated_at` - date
+- `id` - integer
+- `user_id` - integer
+- `account_number` - string
+- `balance` - double
+- `created_at` - date
+- `updated_at` - date
 
 Task 1: Create a DTO called `UserDTO` with the following attributes:
 
-* `fullName` - string
-* `email` - string
+- `fullName` - string
+- `email` - string
 
 Task 2: Create a main method that creates a `User` object and a `UserDTO` object.
 
@@ -130,18 +181,18 @@ Task 3: Print out the fullName from the `UserDTO` object.
 
 Task 4: Create a DTO called `BankAccountDTO` with the following attributes:
 
-* `accountNumber` - string
-* `balance` - double
-* `createdAt` - date
+- `accountNumber` - string
+- `balance` - double
+- `createdAt` - date
 
 Task 5: In the main method create a `BankAccount` object and a `BankAccountDTO` object.
 
 Task 6: Create a DTO called `BankAccountWithUserDTO` with the following attributes:
 
-* `accountNumber` - string
-* `balance` - double
-* `fullName` - string
-* `email` - string
+- `accountNumber` - string
+- `balance` - double
+- `fullName` - string
+- `email` - string
 
 Task 7: In the main method create a `BankAccountWithUserDTO` object with help from the User and BankAccount objects.
 
