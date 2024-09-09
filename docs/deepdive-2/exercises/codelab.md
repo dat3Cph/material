@@ -2,7 +2,7 @@
 title: CodeLab
 description: DeepDive II CodeLab Exercise
 layout: default
-nav_order: 2
+nav_order: 4
 parent: Exercises
 grand_parent: Java Deep Dive II
 permalink: /deepdive-2/exercises/codelab/
