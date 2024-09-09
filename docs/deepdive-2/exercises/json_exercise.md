@@ -26,7 +26,7 @@ Answer the following questions: [link for help](https://www.w3schools.com/js/js_
 1. Create a new file called `account.json`
 2. Create a JSON object with the following properties in account.json (the notation is pseudo code):
 
-```
+```plaintext
  `firstName` (string)
  `lastName` (string)
  `birthDate` (string)
@@ -52,7 +52,7 @@ Answer the following questions: [link for help](https://www.w3schools.com/js/js_
 3. You can use a JAVA library to convert the JSON object to a JAVA object or vice versa. For example [Jackson](../../toolbox/dataintegration/jackson.md).
 4. Create a DTO class that has the following properties:
 
-```
+```plaintext
  `fullName` (string)
  `city` (string)
  `zipCode` (string)
