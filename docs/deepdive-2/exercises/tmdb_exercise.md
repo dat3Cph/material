@@ -1,5 +1,5 @@
 ---
-title: Rest API to DTOs
+title: The Movie Database API
 description: Java Deep Dive II Exercise DTO and JSON
 layout: default
 nav_order: 2

@@ -1,5 +1,5 @@
 ---
-title: DTOs
+title: DTO Exercise
 description: Java Deep Dive II Exercise DTO
 layout: default
 nav_order: 1

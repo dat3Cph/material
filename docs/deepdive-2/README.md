@@ -53,13 +53,15 @@ Skim through these inhouse articles:
 
 1. [DTO Exercise](./exercises/dto_exercise.md)
 2. [JSON Exercise](./exercises/json_exercise.md)
-3. [Movie TMDB API Exercise](./exercises/tmdb_exercise.md)
+3. [Activity Logger Exercise](./exercises/activity_logger_exercise.md)
 
 - [Demo code](https://github.com/HartmannDemoCode/webscraping)
 
 ## Wednesday (CodeLab)
 
 Time to code!
+
+- [Movie TMDB API Exercise](./exercises/tmdb_exercise.md)
 
 CodeLab exercises. All day is devoted to pair programming and Github collaboration.
 
