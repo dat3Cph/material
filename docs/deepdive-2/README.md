@@ -61,9 +61,9 @@ Skim through these inhouse articles:
 
 Time to code!
 
-- [Movie TMDB API Exercise](./exercises/tmdb_exercise.md)
+- [Codelab / Movie TMDB API Exercise](./exercises/codelab.md)
 
-CodeLab exercises. All day is devoted to pair programming and Github collaboration.
+All day is devoted to pair programming and Github collaboration.
 
 ## Thursday (class)
 

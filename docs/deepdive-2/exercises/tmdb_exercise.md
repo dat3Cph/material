@@ -45,11 +45,11 @@ You can also find info on movies from IMDB through TMDB. Try this: Request the m
 
 (the slightly harder - but cooler and more useful way)
 
-Now the fun begins. We will use Java to fetch data from the `TMDB API`. We will use the [`HttpClient`](../../toolbox/dataintegration/httpclient.md) class to make the requests. We will also use the `ObjectMapper` class from the [Jackson library](../../toolbox/dataintegration/jackson.md) to [map]((../../toolbox/dataintegration/dto_conversion.md)) the [JSON](../../toolbox/dataintegration/json.md) response to [DTOs](../../toolbox/designpatterns/dto.md).
+Now the fun begins. We will use Java to fetch data from the `TMDB API`. We will use the [`HttpClient`](../../toolbox/dataintegration/httpclient.md) class to make the requests. We will also use the `ObjectMapper` class from the [Jackson library](../../toolbox/dataintegration/jackson.md) to [map](../../toolbox/dataintegration/dto_conversion.md) the [JSON](../../toolbox/dataintegration/json.md) response to [DTOs](../../toolbox/designpatterns/dto.md).
 
 The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. We will then add some functionality that can operate on the MovieDTOs.
 
-1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO.
+1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO. If you work with pair programming, one person can write the DTO and the other can write the code to fetch the data from the API. Also, when working together with another team of two, you can let the other team take the next exercise (2). However, you should all work together and share the same DTO's.
 
 2. Get the release date from the API response and add it to the MovieDTO (as a `LocalDate`) and leave the release year as a `String`.
 
