@@ -45,11 +45,25 @@ You can also find info on movies from IMDB through TMDB. Try this: Request the m
 
 (the slightly harder - but cooler and more useful way)
 
+In these exercises you will need to use your api-key to fetch data from the TMDB API. However, we don't want to type the api-key explicitly in the code. Instead, we will enter the api-key in IntelliJ IDEA as a environment variable. This is a more secure way to handle sensitive information. We did the same trick on 2nd semester:
+
+![env](./images/api_1.png)
+![env](./images/api_2.png)
+![env](./images/api_3.png)
+
+Then from Java you can access the environment variable like this:
+
+```java
+String apiKey = System.getenv("API_KEY");
+```
+
+That's it. Then we can avoid pushing the api-key to the repository.
+
 Now the fun begins. We will use Java to fetch data from the `TMDB API`. We will use the [`HttpClient`](../../toolbox/dataintegration/httpclient.md) class to make the requests. We will also use the `ObjectMapper` class from the [Jackson library](../../toolbox/dataintegration/jackson.md) to [map](../../toolbox/dataintegration/dto_conversion.md) the [JSON](../../toolbox/dataintegration/json.md) response to [DTOs](../../toolbox/designpatterns/dto.md).
 
 The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. We will then add some functionality that can operate on the MovieDTOs.
 
-1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO. The result is to be able to print out the `overview` from, let's say "Mifunes sidste sang" (id=139). If you work with pair programming, one person can write the DTOs and the other can write the code to fetch the data from the API. Also, when working together with another team of two, you can let the other team take the next exercise (2). However, you should all work together and share the same DTO's.
+1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO. The result is to be able to print out the `overview` from, let's say "Mifunes sidste sang" (id=139). If you work with pair programming, one person can write the DTOs and the other can write the code to fetch the data from the API. Also, when working together with another team of two, you can let the other team take the next exercise (2). However, you should all work together and share the same DTO's. This endpoint will get you going: [https://developer.themoviedb.org/reference/movie-details](https://developer.themoviedb.org/reference/movie-details)
 
 2. This exercise is about expanding on the MovieDTO. We want get the release date from the API response and add it to the MovieDTO (as a `LocalDate`). This can be achieved by adding an extra `JavaTimeModule` to the Jackson `ObjectMapper`. Like this:
 
