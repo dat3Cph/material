@@ -38,7 +38,18 @@ All data will be held in an `ActivityDTO`. The `ActivityDTO` will contain / refe
 
 - To get the current weather in Roskilde: [https://vejr.eu/api.php?location=Roskilde&degree=C](https://vejr.eu/api.php?location=Roskilde&degree=C)
 
-- To get info about the city of Roskilde: [https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde](https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde)
+- To get info about the city of Roskilde: [https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde](https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde). 
+
+OBS! The DAWA API need to have http version set to 1.1 to work. This can be done by adding the following line of code to your `HttpClient` (`.version(HttpClient.Version.HTTP_1_1)`):
+
+```java
+HttpRequest request = HttpRequest
+                    .newBuilder()
+                    .version(HttpClient.Version.HTTP_1_1)
+                    .uri(new URI(encodedURL))
+                    .GET()
+                    .build();
+```
 
 ## The exercise
 
