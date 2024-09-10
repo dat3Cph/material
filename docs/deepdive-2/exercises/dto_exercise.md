@@ -189,7 +189,7 @@ Task 4: Create a DTO called `BankAccountDTO` with the following attributes:
 - `balance` - double
 - `createdAt` - date
 
-Task 5: In the main method create a `BankAccount` object and a `BankAccountDTO` object.
+Task 5: In the `main()` method create a `BankAccount` object and a `BankAccountDTO` object.
 
 Task 6: Create a DTO called `BankAccountWithUserDTO` with the following attributes:
 
