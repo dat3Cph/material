@@ -63,9 +63,11 @@ The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. 
 
 Add a new class `MovieService` with the following methods:
 
-- `getByRating` that can take a rating or similar as a parameter and return all movies with that rating or lower or if you prefer, use the quality rating and find all movies with a specific rating e.g 8.5 and higher. You will need to return the movies in a List of MovieDTOs.
+- Refactor your from above, so you can fetch the movie data from the API by `id` and return a `MovieDTO` object. Call the method `getMovieById` and make sure it returns a `MovieDTO` object.
 
-- `getSortedByReleaseDate` that takes a query string and returns all movies sorted by release date descending.
+- `getByRating` that can take a rating/voting or similar as a parameter and return all movies with that rating between a lower and upper rating. Find all movies with a specific rating betwee 8.5 and 9.0. You will need to return the movies in a List of MovieDTOs. You might need to consult chatGPT for the best way to do this. Also notice, that the resulting json might contain many pages of movies. You can use the `page` parameter to navigate through the pages. You can also use the `vote_average.gte` and `vote_average.lte` parameters to filter the results. This endpoint will get you there: [https://developer.themoviedb.org/reference/discover-movie](https://developer.themoviedb.org/reference/discover-movie)
+
+- `getSortedByReleaseDate` that takes a query string and returns all movies sorted by release date descending. You will need to return the movies in a List of MovieDTOs. And then use a Java stream to sort the movies by release date.
 
 - Write unit/integration tests for the `MovieService` where you search for the following titles tests the result agains the expected out result. Make a strategy for how to test the methods in the MovieService class:
 
