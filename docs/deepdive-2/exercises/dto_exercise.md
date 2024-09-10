@@ -40,6 +40,7 @@ You have a `City` entity representing cities with the following attributes:
 
 ```java
 public class City {
+    private Long id;
     private String name;
     private String zipCode;
     private String state;
@@ -50,7 +51,7 @@ public class City {
 }
 ```
 
-Your controller method returns this entity:
+Your controller / service method returns this entity:
 
 ```java
 public City showCity() {
@@ -82,12 +83,14 @@ Here’s a `CityDTO` that includes only the essential public information:
 
 ```java
 public class CityDTO {
+    private Long id;
     private String name;
     private String zipCode;
     private String state;
     private String country;
     
-    public CityDTO(String name, String zipCode, String state, String country) {
+    public CityDTO(Long id, String name, String zipCode, String state, String country) {
+        this.id = id;
         this.name = name;
         this.zipCode = zipCode;
         this.state = state;
@@ -102,8 +105,8 @@ In your controller, you now map the `City` entity to `CityDTO`:
 
 ```java
 public CityDTO showCity() {
-    City city = new City("New York", "10001", "NY", "USA", "John Doe", 5000000);
-    return new CityDTO(city.getName(), city.getZipCode(), city.getState(), city.getCountry());
+    City city = new City(1L, "New York", "10001", "NY", "USA", "John Doe", 5000000);
+    return new CityDTO(city.getId(), city.getName(), city.getZipCode(), city.getState(), city.getCountry());
 }
 ```
 
@@ -111,6 +114,7 @@ Your view renders only the DTO fields:
 
 ```html
 <h1>City Information</h1>
+<p>ID: {{city.id}}</p>
 <p>City: {{city.name}}</p>
 <p>Zip Code: {{city.zipCode}}</p>
 <p>State: {{city.state}}</p>
