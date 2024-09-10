@@ -23,8 +23,6 @@ You will be able to build a real solution with a frontend later this semester. B
 
 All data will be held in an `ActivityDTO`. The `ActivityDTO` will contain / reference a `WeatherInfoDTO` and a `CityInfoDTO`. The content of `WeatherInfoDTO` and `CityInfoDTO` can be obtained from two external APIs. The domain model may look like this:
 
-```java
-
 ## Domain model
 
 ![Activity Logger domain model](./images/activity_logger_domain.png)
@@ -38,7 +36,7 @@ All data will be held in an `ActivityDTO`. The `ActivityDTO` will contain / refe
 
 - To get the current weather in Roskilde: [https://vejr.eu/api.php?location=Roskilde&degree=C](https://vejr.eu/api.php?location=Roskilde&degree=C)
 
-- To get info about the city of Roskilde: [https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde](https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde). 
+- To get info about the city of Roskilde: [https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde](https://dawa.aws.dk/steder?hovedtype=Bebyggelse&undertype=by&prim%C3%A6rtnavn=Roskilde).
 
 OBS! The DAWA API need to have http version set to 1.1 to work. This can be done by adding the following line of code to your `HttpClient` (`.version(HttpClient.Version.HTTP_1_1)`):
 
