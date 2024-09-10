@@ -155,9 +155,9 @@ In summary, DTOs are used to create a clear boundary between your internal model
 
 ### Further Exercises
 
-1. Create a new model, `Person`, with attributes like `firstName`, `lastName`, `dateOfBirth`, and `socialSecurityNumber`.
+1. Create a new model / entity, `Person`, with attributes like `firstName`, `lastName`, `dateOfBirth`, and `socialSecurityNumber`.
 2. Write a DTO, `PersonDTO`, that only exposes the person's `firstName` and `lastName`, hiding the `dateOfBirth` and `socialSecurityNumber`.
-3. Write a controller method that maps `Person` to `PersonDTO` and returns it to the client.
+3. Write a controller / service method that maps `Person` to `PersonDTO` and returns it to the client.
 4. You are given an entity called `User` with the following attributes:
 
 - `id` - integer
