@@ -49,9 +49,15 @@ Now the fun begins. We will use Java to fetch data from the `TMDB API`. We will 
 
 The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. We will then add some functionality that can operate on the MovieDTOs.
 
-1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO. If you work with pair programming, one person can write the DTO and the other can write the code to fetch the data from the API. Also, when working together with another team of two, you can let the other team take the next exercise (2). However, you should all work together and share the same DTO's.
+1. Get the Movie `overview` from the API response (for a particular `ID`) and add it to a properly designed MovieDTO. The result is to be able to print out the `overview` from, let's say "Mifunes sidste sang" (id=139). If you work with pair programming, one person can write the DTOs and the other can write the code to fetch the data from the API. Also, when working together with another team of two, you can let the other team take the next exercise (2). However, you should all work together and share the same DTO's.
 
-2. Get the release date from the API response and add it to the MovieDTO (as a `LocalDate`) and leave the release year as a `String`.
+2. This exercise is about expanding on the MovieDTO. We want get the release date from the API response and add it to the MovieDTO (as a `LocalDate`). This can be achieved by adding an extra `JavaTimeModule` to the Jackson `ObjectMapper`. Like this:
+
+      ```java
+      objectMapper.registerModule(new JavaTimeModule());
+      ```
+
+      We also need you to make a getter method, `getReleaseYear()`, that can return the release year as a `String`. So the result of this exercise is to be able to print out the release year of the movie "Mifunes sidste sang" (id=139) and others.
 
 3. **Adding functionality**
 
