@@ -75,29 +75,29 @@ The plan is to fetch some moviedata from the TMDB API and map it to a MovieDTO. 
 
 3. **Adding functionality**
 
-Add a new class `MovieService` with the following methods:
+    Add a new class `MovieService` with the following methods:
 
-- Refactor your from above, so you can fetch the movie data from the API by `id` and return a `MovieDTO` object. Call the method `getMovieById` and make sure it returns a `MovieDTO` object.
+    - Refactor your from above, so you can fetch the movie data from the API by `id` and return a `MovieDTO` object. Call the method `getMovieById` and make sure it returns a `MovieDTO` object.
 
-- `getByRating` that can take a rating/voting or similar as a parameter and return all movies with that rating between a lower and upper rating. Find all movies with a specific rating betwee 8.5 and 9.0. You will need to return the movies in a List of MovieDTOs. You might need to consult chatGPT for the best way to do this. Also notice, that the resulting json might contain many pages of movies. You can use the `page` parameter to navigate through the pages. You can also use the `vote_average.gte` and `vote_average.lte` parameters to filter the results. This endpoint will get you there: [https://developer.themoviedb.org/reference/discover-movie](https://developer.themoviedb.org/reference/discover-movie)
+    - `getByRating` that can take a rating/voting or similar as a parameter and return all movies with that rating between a lower and upper rating. Find all movies with a specific rating betwee 8.5 and 9.0. You will need to return the movies in a List of MovieDTOs. You might need to consult chatGPT for the best way to do this. Also notice, that the resulting json might contain many pages of movies. You can use the `page` parameter to navigate through the pages. You can also use the `vote_average.gte` and `vote_average.lte` parameters to filter the results. This endpoint will get you there: [https://developer.themoviedb.org/reference/discover-movie](https://developer.themoviedb.org/reference/discover-movie)
 
-- `getSortedByReleaseDate` that takes a query string and returns all movies sorted by release date descending. You will need to return the movies in a List of MovieDTOs. And then use a Java stream to sort the movies by release date.
+    - `getSortedByReleaseDate` that takes a query string and returns all movies sorted by release date descending. You will need to return the movies in a List of MovieDTOs. And then use a Java stream to sort the movies by release date.
 
-- Write unit/integration tests for the `MovieService` where you search for the following titles tests the result agains the expected out result. Make a strategy for how to test the methods in the MovieService class:
+    - Write unit/integration tests for the `MovieService` where you search for the following titles tests the result agains the expected out result. Make a strategy for how to test the methods in the MovieService class:
 
-  - The Shawshank Redemption
-  - The Godfather
-  - The Dark Knight
-  - The Godfather: Part II
-  - The Lord of the Rings: The Return of the King
-  - Pulp Fiction
-  - 12 Angry Men
-  - The Good, the Bad and the Ugly
-  - Forrest Gump
-  - Fight Club
-  - Inception
+      - The Shawshank Redemption
+      - The Godfather
+      - The Dark Knight
+      - The Godfather: Part II
+      - The Lord of the Rings: The Return of the King
+      - Pulp Fiction
+      - 12 Angry Men
+      - The Good, the Bad and the Ugly
+      - Forrest Gump
+      - Fight Club
+      - Inception
 
-- Then test the other method in the `MovieService` class.
+    - Then test the other method in the `MovieService` class.
 
 4. **Extra**
 
