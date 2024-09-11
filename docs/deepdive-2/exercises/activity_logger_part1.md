@@ -1,15 +1,15 @@
 ---
-title: Activity Logger Exercise
+title: Activity Logger part 1
 description: Java Deep Dive II Exercise DTO and JSON
 layout: default
 nav_order: 3
 has_children: false
 grand_parent: Java Deep Dive II
 parent: Exercises
-permalink: /deepdive-2/exercises/activity-logger/
+permalink: /deepdive-2/exercises/activity-logger-part-1/
 ---
 
-# Activity Logger Exercise
+# Activity Logger Exercise Part 1
 
 Your task is to create a proof of concept solution for a site where people can log their fitness activities. More precisely for walking, jogging og cycling. Many advanced systems exist on the market today, like Stava, Garmin Connect, Endomondo, Nike+, but for many people these apps are overly complicated. So we go simple.
 
