@@ -21,7 +21,6 @@ Create a simple Java program with the following code and run it in IntelliJ. Try
 ### Example Code
 
 ```java
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -29,9 +28,6 @@ public class CallableFutureExample {
     public static void runTasks() {
         // Create a fixed thread pool with 3 threads
         ExecutorService executor = Executors.newFixedThreadPool(3);
-
-        // Create a list to hold the Future objects
-        List<Future<String>> futures = new ArrayList<>();
 
         // Create 3 Callable tasks and submit them to the executor
         Callable<String> task1 = () -> {
@@ -50,16 +46,20 @@ public class CallableFutureExample {
         };
 
         // Submit the task and add the Future to the list
-        Future<String> future = executor.submit(task1);
-        futures.add(future);
-        futures.add(executor.submit(task2));
-        futures.add(executor.submit(task3));
-        
+
+        List<Future<String>> futures = null;
+        try {
+            futures = executor.invokeAll(List.of(task1, task2, task3));
+        }
+        catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         // Wait for all tasks to complete and retrieve their results
-        for (Future<String> fut : futures) {
+        for (Future<String> future : futures) {
             try {
                 // get() blocks until the result is available
-                String result = fut.get();
+                String result = future.get();
                 System.out.println(result);
             }
             catch (InterruptedException | ExecutionException e) {
@@ -73,23 +73,123 @@ public class CallableFutureExample {
 }
 ```
 
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Record the start time
+        long startTime = System.currentTimeMillis();
+
+        CallableFutureExample.runTasks();
+
+        long endTime = System.currentTimeMillis();
+        long duration = endTime - startTime;
+        System.out.println("Task runtime: " + duration + " milliseconds");
+    }
+}
+```
+
 ### Explanation
 
-1. **ExecutorService**: We use a fixed thread pool with 3 threads to execute the tasks concurrently.
-2. **Callable**: Each task is represented by a `Callable<String>` which returns a `String`. The `Callable` simulates some work (sleeping for a number of seconds based on the task ID) and then returns a message indicating the task is complete.
-3. **Future**: After submitting each task, we store the `Future<String>` object in a list. The `Future` allows us to retrieve the result of the task later, once it is done.
-4. **Waiting for Completion**: We loop through the list of futures and call `future.get()`, which blocks until the task is complete. Once the task is complete, we print the result.
-5. **Shutdown**: After all tasks are complete, we shut down the executor.
+This code demonstrates how to execute multiple **asynchronous tasks** using the **`Callable`** interface and **`Future`** objects in conjunction with an **`ExecutorService`**. Here's an explanation of each section of the code:
 
-### Output (Example)
+### 1. **Imports**
 
-```plaintext
+```java
+import java.util.List;
+import java.util.concurrent.*;
+```
+
+- **`java.util.List`**: This is for handling lists of `Future` objects, which represent the results of asynchronous tasks.
+- **`java.util.concurrent.*`**: This imports classes from the `java.util.concurrent` package, including `Callable`, `ExecutorService`, `Executors`, `TimeUnit`, and `Future`.
+
+### 2. **runTasks Method**
+
+This method demonstrates how to create a fixed thread pool with `ExecutorService`, submit multiple `Callable` tasks, and retrieve their results using `Future`.
+
+### 3. **Creating a Thread Pool**
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(3);
+```
+
+- The **`ExecutorService`** is created with a fixed thread pool of 3 threads using `Executors.newFixedThreadPool(3)`. This pool can run up to 3 tasks concurrently.
+
+### 4. **Creating Callable Tasks**
+
+```java
+Callable<String> task1 = () -> {
+    TimeUnit.SECONDS.sleep(1);
+    return "Task " + 1 + " completed";
+};
+
+Callable<String> task2 = () -> {
+    TimeUnit.SECONDS.sleep(2);
+    return "Task " + 2 + " completed";
+};
+
+Callable<String> task3 = () -> {
+    TimeUnit.SECONDS.sleep(3);
+    return "Task " + 3 + " completed";
+};
+```
+
+- Three **`Callable<String>`** tasks are defined using lambda expressions. Each task sleeps for a certain number of seconds (`1`, `2`, and `3` seconds) to simulate work, and then returns a completion message (e.g., `"Task 1 completed"`).
+- **`Callable`** is similar to `Runnable`, but it can return a result (in this case, a `String`).
+
+### 5. **Submitting Tasks with `invokeAll`**
+
+```java
+futures = executor.invokeAll(List.of(task1, task2, task3));
+```
+
+- **`invokeAll()`**: This method is used to submit a collection of `Callable` tasks (`task1`, `task2`, `task3`) to the executor service. It returns a `List<Future<String>>`, where each `Future` corresponds to a task and allows you to retrieve its result.
+- **Blocking Behavior**: The `invokeAll` method **blocks** until all tasks are finished. This means the main thread will wait for all three tasks to complete.
+
+### 6. **Retrieving Results from Futures**
+
+```java
+for (Future<String> future : futures) {
+    try {
+        String result = future.get();
+        System.out.println(result);
+    }
+    catch (InterruptedException | ExecutionException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+- For each `Future<String>` in the `futures` list, the `get()` method is called to retrieve the result of the corresponding `Callable` task.
+- **`get()`**: Blocks until the task is completed and the result is available.
+- **Error Handling**: `get()` can throw `InterruptedException` (if the current thread is interrupted while waiting) or `ExecutionException` (if the task throws an exception during execution), so these exceptions are caught and handled.
+
+### 7. **Shutting Down the Executor**
+
+```java
+executor.shutdown();
+```
+
+- **`shutdown()`**: Initiates an orderly shutdown of the executor service, meaning no new tasks will be accepted, but previously submitted tasks will continue to be executed.
+
+### Full Execution Flow
+
+1. Three tasks (`task1`, `task2`, `task3`) are created, each simulating work by sleeping for `1`, `2`, and `3` seconds, respectively.
+2. The tasks are submitted to the `ExecutorService` using `invokeAll()`, which waits for all tasks to complete.
+3. Once all tasks finish, their results are printed to the console using `Future.get()`.
+4. The executor is gracefully shut down after all tasks are complete.
+
+### Example Output
+
+```
 Task 1 completed
 Task 2 completed
 Task 3 completed
 ```
 
-### Notes
+The tasks complete in the order of their sleep durations. The first task (1-second sleep) completes first, followed by the second (2-second sleep), and finally the third (3-second sleep).
 
-- The `get()` method on a `Future` blocks until the task has completed, ensuring that we wait for each task to finish before printing its result.
-- The tasks are executed concurrently, but because they sleep for `taskId` seconds, the tasks finish in increasing order (Task 1, Task 2, Task 3) based on their sleep durations.
+### Benefits of this Approach
+
+- **Efficient Task Management**: By using a fixed thread pool, the system can manage the number of concurrent threads efficiently.
+- **Simplified Handling of Asynchronous Tasks**: With `Callable` and `Future`, you can manage asynchronous tasks that return values and easily retrieve their results once they finish.
+- **Blocking Behavior Control**: `invokeAll()` ensures that the main thread waits for all tasks to complete before moving on, allowing for sequential result processing.

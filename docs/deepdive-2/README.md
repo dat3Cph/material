@@ -69,6 +69,15 @@ All day is devoted to pair programming and Github collaboration.
 
 ### Prepare for the class
 
+Watch these videos:
+
+- [Java ExecutorService Part: 1 (20:55)](https://www.youtube.com/watch?t=1&amp;v=Nb85yJ1fPXM)  
+- [Java ExecutorService Part: 2 (21:31)](https://www.youtube.com/watch?t=1&amp;v=MB_qCXBSgK0)
+
+Read this tutorial:
+
+- [Java ExecutorService tutorial](https://www.baeldung.com/java-executor-service-tutorial)
+
 ### In-class exercises
 
 - [Callables and Executor Example](./exercises/executor_callables.md)
