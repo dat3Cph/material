@@ -2,7 +2,7 @@
 title: Activity Logger part 2
 description: Java Deep Dive II Exercise DTO and JSON
 layout: default
-nav_order: 7
+nav_order: 9
 has_children: false
 grand_parent: Java Deep Dive II
 parent: Exercises

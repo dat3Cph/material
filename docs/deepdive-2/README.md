@@ -69,14 +69,10 @@ All day is devoted to pair programming and Github collaboration.
 
 ### Prepare for the class
 
-Watch these videos - and code along:
-
-Skim this article:
-
 ### In-class exercises
 
-- []()
-- []()
+- [Callables and Executor Example](./exercises/executor_callables.md)
+- [Threaded Fetches from Joke API's](./exercises/thread_jokes.md)
 
 ## Friday (exercise day)
 
