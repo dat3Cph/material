@@ -28,7 +28,7 @@ This exercise can be done little by little. Start by getting one joke from one A
 
         ```java
         String[] urls = new String[]{
-            "https://icanhazdadjoke.com/api",
+            "https://icanhazdadjoke.com/",
             "https://api.chucknorris.io/jokes/random",
             "https://api.kanye.rest",
             "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
