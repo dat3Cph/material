@@ -83,6 +83,10 @@ Read this tutorial:
 - [Callables and Executor Example](./exercises/executor_callables.md)
 - [Threaded Fetches from Joke API's](./exercises/thread_jokes.md)
 
+### Slides
+
+- [Java Executor Service](./docs/ThreadsFuturesCallables.pdf)
+
 ## Friday (exercise day)
 
 - [Friday exercise](./exercises/activity_logger_part2.md)
