@@ -13,7 +13,8 @@ permalink: /deepdive-2/exercises/activity-logger-part-2/
 
 This is the Friday exercise for Java Deep Dive II. The exercise is a continuation of the exercise from Tuesday. Your task is to persist the data from the external APIs in a database.
 
-The first part of the exercise can be found [here](./activity_logger_part1.md).
+- The first part of the exercise can be found [here](./activity_logger_part1.md)
+- In case you haven't completed the first part, you can find a solution [here](https://github.com/jonbertelsen/activitylogger) that you can use as a starting point.
 
 Just to recap. The json from the WeatherInfo API looks like this:
 
