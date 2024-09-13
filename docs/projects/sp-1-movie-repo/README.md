@@ -57,7 +57,7 @@ Below is a suggestion of how you can structure the project. You are free to stru
 
 - Make sure that the code is well documented and that the code is clean and readable.
 - Share the code on Github.
-- Hand in the [assignment on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=731120)
+- Hand in the [assignment on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=731120) Make sure to include a link to the Github repository. One group member should hand in the assignment per group.
 
 ## Day 5 (monday of the next week)
 
@@ -76,6 +76,15 @@ We would like to be able to deliver the following functionality:
 5. In case you want to add a new movie to the database, you should be able to do that as well. You should also be able to update and delete movies from the database. Not necessarily all fields, but at least the title and the release date.
 6. We would like to be able to search for a movie by title. The search should be case insensitive and should return all movies that contain the search string in the title.
 7. We would like to be able to get the total average rating of all movies in the database, the top-10 lowest and highest rated movies, and the top-10 most popular movies.
+
+## Bonus functionality (optional)
+
+If your group has time, you can add the following functionality:
+
+1. We would like to be able to see a list of all movies that a particular actor has been part of.
+2. We would like to be able to see a list of all movies that a particular director has directed.
+3. Make the backend able to fetch data again - and check if there are new movies in the TMDb API. If there are new movies, add them to the database. If there are movies that are no longer in the TMDb API, remove them from the database.
+4. Fetch the movies from the TMDb API in parallel (more pages at the same time) by using `Futures`. Make sure to limit the number of parallel requests to the TMDb API. You can use the `ExecutorService` class to do this.
 
 ## Hints
 
