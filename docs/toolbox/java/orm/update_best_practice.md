@@ -9,15 +9,13 @@ permalink: /toolbox/java/jpa/updates/
 ---
 
 
-# Update Best Practices in JPA (Java Persistence API)
+# Best Practices for Handling Partial Updates in JPA
 
-Let’s walk through how you can handle partial updates in a **plain Java** application, using **JPA** and **Hibernate** (but not Spring Boot). The same principles apply, but we’ll use **standard JPA** features like `EntityManager`.
+Let’s walk through how you can handle partial updates in a **plain Java** application, using **JPA** and **Hibernate**.
 
-Here's a step-by-step guide on how to handle a `PUT` or `PATCH` request where only some attributes are updated, without using Spring Boot.
+Here's a step-by-step guide on how to handle a `PUT` or `PATCH` request where only some attributes are updated.
 
-### Best Practices for Handling Partial Updates in JPA (without Spring)
-
-#### General Approach
+## General Approach
 
 1. **Fetch the entity from the database**.
 2. **Apply only the provided changes** to the entity.
@@ -67,7 +65,7 @@ public class Person {
 
 ### 3. **Service Layer for Updating an Entity**
 
-This is the core part where you handle the update of the `Person` entity without relying on Spring's utilities. We will manually handle the transactions and use `EntityManager` to manage the JPA lifecycle.
+This is the core part where you handle the update of the `Person` entity. We will manually handle the transactions and use `EntityManager` to manage the JPA lifecycle.
 
 #### 3.1. **Update Method**
 
@@ -83,9 +81,9 @@ public class PersonService {
 
     private EntityManagerFactory emf;
 
-    public PersonService() {
+    public PersonService(EntityManagerFactory emf) {
         // Initialize EntityManagerFactory (configure in persistence.xml)
-        this.emf = Persistence.createEntityManagerFactory("my-persistence-unit");
+        this.emf = emf;
     }
 
     public Person updatePerson(Long personId, PersonDTO updatedPersonDTO) {
@@ -142,11 +140,11 @@ public class PersonService {
 
 ### Explanation of the Code
 
-1. **`EntityManagerFactory`**: We create an `EntityManagerFactory` to manage entity managers. This factory is typically set up in a `persistence.xml` file, which defines how JPA will interact with the database.
+1. **`EntityManagerFactory`**: We get an `EntityManagerFactory` to manage entity managers. This factory is typically set up in a `HibernateConfig` file, which defines how JPA will interact with the database.
   
 2. **`EntityManager`**: For each operation, an `EntityManager` is created. This is the core JPA interface used to interact with entities and the database.
 
-3. **Transaction Management**: We manually begin and commit (or rollback) transactions using `EntityTransaction` since we’re not relying on Spring's `@Transactional` support.
+3. **Transaction Management**: We manually begin and commit (or rollback) transactions using `EntityTransaction`.
   
 4. **Partial Updates**: Only the fields that are not `null` in the incoming `PersonDTO` are applied to the `Person` entity. If a field is missing in the `PersonDTO`, we leave the corresponding field in the `Person` entity unchanged.
 
@@ -160,31 +158,6 @@ In this approach, null checks are done manually:
 
 - Before applying any update, we check if the field in the DTO is `null`. If it's `null`, we skip that update, ensuring that only fields explicitly provided in the request are updated.
 - You can extend this with **validation** to check for valid data before applying updates.
-
-### Persistence Configuration Example
-
-Here’s an example of what your `persistence.xml` might look like if you're using Hibernate as the JPA provider:
-
-#### **persistence.xml**
-
-```xml
-<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
-    <persistence-unit name="my-persistence-unit">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydatabase" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="password" />
-
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-            <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.format_sql" value="true" />
-        </properties>
-    </persistence-unit>
-</persistence>
-```
 
 ### 5. **Handling PUT and PATCH Requests**
 
