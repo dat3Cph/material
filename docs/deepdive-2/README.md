@@ -53,7 +53,7 @@ Skim through these inhouse articles:
 
 1. [DTO Exercise](./exercises/dto_exercise.md)
 2. [JSON Exercise](./exercises/json_exercise.md)
-3. [Movie TMDB API Exercise](./exercises/tmdb_exercise.md)
+3. [Activity Logger Exercise](./exercises/activity_logger_part1.md)
 
 - [Demo code](https://github.com/HartmannDemoCode/webscraping)
 
@@ -61,22 +61,35 @@ Skim through these inhouse articles:
 
 Time to code!
 
-CodeLab exercises. All day is devoted to pair programming and Github collaboration.
+- [Codelab / Movie TMDB API Exercise](./exercises/codelab.md)
+
+All day is devoted to pair programming and Github collaboration.
 
 ## Thursday (class)
 
 ### Prepare for the class
 
-Watch these videos - and code along:
+Watch these videos:
 
-Skim this article:
+- [Java ExecutorService Part: 1 (20:55)](https://www.youtube.com/watch?t=1&amp;v=Nb85yJ1fPXM)  
+- [Java ExecutorService Part: 2 (21:31)](https://www.youtube.com/watch?t=1&amp;v=MB_qCXBSgK0)
+
+Read this tutorial:
+
+- [Java ExecutorService tutorial](https://www.baeldung.com/java-executor-service-tutorial)
 
 ### In-class exercises
 
-- []()
-- []()
+- [Callables and Executor Example](./exercises/executor_callables.md)
+- [Threaded Fetches from Joke API's](./exercises/thread_jokes.md)
+
+### Slides
+
+- [Java Executor Service](./docs/ThreadsFuturesCallables.pdf)
 
 ## Friday (exercise day)
+
+- [Friday exercise](./exercises/activity_logger_part2.md)
 
 <hr>
 

@@ -64,7 +64,7 @@ Creating custom templates can save you a lot of time by providing a consistent s
 
 If you're working with Java Persistence API (JPA) projects, you might want to create a custom template that includes the necessary dependencies, configurations, and project structure for JPA projects. Here's an example of "installing" and using such a template:
 
-1. **Download the Template**: [JPA Template for IntelliJ IDEA](./download/JPA_Template_Fall_2024.zip)
+1. **Download the Template**: [Template for IntelliJ IDEA JPA/DeepDive weeks](./download/dd_startcode.zip)
 2. Move the template (zip-file) to IntelliJ's `projectTemplates" folder on your local machine.
     - **Windows**: `C:\Users\<YourUsername>\.IntelliJIdea<version>\config\projectTemplates`
     - **macOS**: `/Users/<YourUsername>/Library/Application Support/JetBrains/IntelliJIdea<version>/projectTemplates`
@@ -74,4 +74,4 @@ If you're working with Java Persistence API (JPA) projects, you might want to cr
     - Open IntelliJ IDEA.
     - Go to `File` > `New` > `Project...`.
     - Look for the option to select a project template (buttom of the window).
-    - Select the JPA template and proceed to create your new project.
+    - Select the `dd_startcode` template and proceed to create your new project.
