@@ -13,7 +13,11 @@ permalink: /rest-intro/exercises/dogs-api
 
 ## Exercise with javalin and CRUD
 
-![Meditative Dog](./images/meditative_dog.gif)
+In this exercise we want to create a small API for a dog dictionary. The API should be able to handle CRUD operations for dogs. Just to get our feet wet with REST APIs and Javalin.
+
+<div style="float: right; margin: 0 0 10px 10px;">
+    <img src="./images/meditative_dog.gif" alt="Meditative Dog">
+</div>
 
 1. Setup project with javalin
 2. Create a new javalin server running on port 7007 that can handle the following routes representing a dog ressource:

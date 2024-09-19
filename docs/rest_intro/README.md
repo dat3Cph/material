@@ -27,6 +27,8 @@ permalink: /rest-intro
 
 - [Http Status Codes Explained (5:06)](https://www.youtube.com/watch?v=qmpUfWN7hh4)
 
+- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ)
+
 #### Reading
 
 - [REST API Tutorial](https://restfulapi.net/). Read the following chapters:
@@ -38,17 +40,22 @@ permalink: /rest-intro
   - [HTTP Methods](https://restfulapi.net/http-methods/)
   - [HTTP Response Codes](https://restfulapi.net/http-status-codes/)
 
-- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ)
-
 - [API documentation](https://www.postman.com/api-platform/api-documentation/)
 
 - [Javalin documentation](https://javalin.io/documentation) (skim quickly)
 
 ### Exercises in in class
 
+- [Dog API](./exercises/dogs_api.md)
+- [Vet API](./exercises/veterinarian_api.md)
+
 ## Wednesday (CodeLab)
 
+- TBD
+
 ## Thursday (class)
+
+- TBD
 
 ### Prepare for class
 
