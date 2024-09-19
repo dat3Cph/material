@@ -10,7 +10,8 @@ permalink: /rest-intro/exercises/codelab/
 
 # Poem API exchange
 
-![Haiku classic](./images/haiku.jpg){: .ml-3 .mb-5 .float-right}
+![Haiku classic](./images/haiku.jpg){: .mx-auto .d-block .my-5 .md .d-md-none }
+![Haiku classic](./images/haiku.jpg){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right}
 
 This CodeLab exercise is designed to help you practice RESTful API concepts. We will also practice [pair programming](../../toolbox/sys/projectmanagement/pairprogramming.md) and exchanging API endpoints with another team.
 
