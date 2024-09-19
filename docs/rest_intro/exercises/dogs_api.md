@@ -15,9 +15,7 @@ permalink: /rest-intro/exercises/dogs-api
 
 In this exercise we want to create a small API for a dog dictionary. The API should be able to handle CRUD operations for dogs. Just to get our feet wet with REST APIs and Javalin.
 
-<div style="float: right; margin: 0 0 10px 10px;">
-    ![Meditative dog](./images/meditative_dog.gif){: .align-right}
-</div>
+![Meditative dog](./images/meditative_dog.gif){: .ml-3 .float-right}
 
 1. Setup project with javalin
 2. Create a new javalin server running on port 7007 that can handle the following routes representing a dog ressource:

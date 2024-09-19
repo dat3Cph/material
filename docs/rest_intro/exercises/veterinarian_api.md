@@ -13,10 +13,9 @@ permalink: /rest-intro/exercises/vet-api
 
 ## Exercise with Javalin and CRUD
 
-![Cat and dog](./images/cats_and_dogs.jpg)
-
-**Project Description:**
 As a computer science student, you've been engaged by a local veterinarian clinic, "Paws & Whiskers," to develop a RESTful API that will help them manage their patient appointments and information. The clinic has specific requirements for GET methods to retrieve essential data.
+
+![Cat and dog](./images/cats_and_dogs.jpg)
 
 **Client: Paws & Whiskers Veterinary Clinic**
 
