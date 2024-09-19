@@ -10,23 +10,4 @@ permalink: /rest-intro/exercises/
 
 # Exercises for Rest Intro
 
-## Tuesday
-
-- [Lombok (In Class Exercise)](./lombok)
-- [Points Exercise (In Class Exercise)](./points)
-- [Unicorns JPA CRUD](./unicorn)
-- [Unicorn Snippets](./unicorn_snippets)
-
-## Wednesday
-
-- [Codelab](./codelab.md)
-
-## Thursday
-
-- [JPQL (In Class Exercise)](./jpqlqueries)
-- [Student DB CRUD](./student)
-- [JPA Lifecycle Annotations Exercise](./jpalifecycleannotations)
-
-## Friday
-
-- [GLS Part 1](./gls_part1.md)
+Check [week overview](../README.md) for which exercises goes where.
