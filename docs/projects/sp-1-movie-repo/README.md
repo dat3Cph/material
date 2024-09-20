@@ -57,7 +57,7 @@ Below is a suggestion of how you can structure the project. You are free to stru
 
 - Make sure that the code is well documented and that the code is clean and readable.
 - Share the code on Github.
-- Hand in the [assignment on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=731120) Make sure to include a link to the Github repository. One group member should hand in the assignment per group.
+- Hand in the [assignment on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=731120) Make sure to include a link to the Github repository. One group member should hand in the assignment per group. NB! You can wait until Sunday evening to hand in the assignment.
 
 ## Day 5 (monday of the next week)
 
