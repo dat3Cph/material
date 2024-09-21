@@ -3,7 +3,7 @@ title: Git
 description: Git overview
 layout: default
 parent: Toolbox
-nav_order: 3
+nav_order: 6
 permalink: /toolbox/git/
 has_children: true
 ---

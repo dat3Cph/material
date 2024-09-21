@@ -2,7 +2,7 @@
 title: 3D print
 description: Vejledninger til 3D print
 layout: default
-nav_order: 5
+nav_order: 1
 parent: Toolbox
 permalink: /toolbox/3dprint/
 ---

@@ -27,8 +27,6 @@ permalink: /rest-intro
 
 - [Http Status Codes Explained (5:06)](https://www.youtube.com/watch?v=qmpUfWN7hh4)
 
-- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ)
-
 #### Reading
 
 - [REST API Tutorial](https://restfulapi.net/). Read the following chapters:
@@ -40,8 +38,6 @@ permalink: /rest-intro
   - [HTTP Methods](https://restfulapi.net/http-methods/)
   - [HTTP Response Codes](https://restfulapi.net/http-status-codes/)
 
-- [API documentation](https://www.postman.com/api-platform/api-documentation/)
-
 - [Javalin documentation](https://javalin.io/documentation) (skim quickly)
 
 ### Exercises in in class
@@ -51,18 +47,28 @@ permalink: /rest-intro
 
 ## Wednesday (CodeLab)
 
-- TBD
+- [The Great Poem API Exchange](./exercises/codelab.md)
 
 ## Thursday (class)
-
-- TBD
 
 ### Prepare for class
 
 #### Video
 
+- [The Logging Hell](https://www.youtube.com/watch?v=SWHYrCXIL38)
+- [API Documentation and Why it Matters](https://www.youtube.com/watch?v=39Tt1IkLiQQ)
+
 #### Reading
+
+- [Logback](https://www.baeldung.com/logback) - skim
+- [Javalin Exception Mapping](https://javalin.io/documentation#exception-mapping)
+- [API documentation](https://www.postman.com/api-platform/api-documentation/)
 
 ### Exercises in class
 
+- [Logging](../toolbox/javalin/logging.md)
+- TBD
+
 ## Friday (exercise day)
+
+- [Hotel API](./exercises/hotel_api.md)

@@ -2,7 +2,7 @@
 title: Linux
 description: Linux tutorials and commands
 layout: default
-nav_order: 8
+nav_order: 10
 parent: Toolbox
 has_children: true
 permalink: /toolbox/linux/

@@ -1,4 +1,18 @@
-# Exercise with javalin and CRUD
+---
+title: Hotel API part 1
+description: Hotel API part 1
+layout: default
+nav_order: 6
+grand_parent: Rest API intro
+parent: Exercises
+has_children: false
+permalink: /rest-intro/exercises/hotel-api-part-1/
+---
+
+# Exercise with Javalin and CRUD
+
+![Hotel California](./images/hotel_california.jpeg){: .mx-auto .d-block .my-5 .md .d-md-none }
+![Hotel California](./images/hotel_california.jpeg){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right}
 
 ## Part 1 setup project
 
@@ -38,7 +52,6 @@
   - price
 
 - Implement functionality to convert between DTOs and Entities
-
 
 ## Part 2 create API Ressources
 
@@ -82,7 +95,7 @@ In above api, if no request json is specified, then the request body should be e
 
 ## Part 4: (Optional) logging
 
-See small tutorial here: https://mkyong.com/logging/slf4j-logback-tutorial/ and see how I have implemented it in the javalindemo project on [github](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P06LoggingDemo.java). 
+See small tutorial here: <https://mkyong.com/logging/slf4j-logback-tutorial/> and see how I have implemented it in the javalindemo project on [github](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P06LoggingDemo.java).
 
 - Implement logging for all requests and responses
 - Include the following information in the log:
@@ -94,6 +107,5 @@ See small tutorial here: https://mkyong.com/logging/slf4j-logback-tutorial/ and 
   - Response body
 
 ## Part 5 (Optional) Documentation
+
 - Configure javalin to use `RouteOverviewPlugin` to create an interactive documentation of your API.
-
-
