@@ -15,7 +15,7 @@ permalink: /rest-intro
 
 ## Monday
 
-- Review of SP-1. Prepare a short presentation of your solution. Team members prepare to present their solution together. The goal is to get an overview of how far you have come, and what challenges you had, and what you have learned.
+- Review of SP-1. Prepare a short presentation of your solution. Team members prepare to present their solution together. The goal is to get an overview of how far you have come, and what challenges you had, and what you have learned. Your SP-1 team might be split up in more review groups - but to keep it simlple, we will stick to the usual review groups.
 
 ## Tuesday (class)
 
