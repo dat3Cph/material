@@ -11,7 +11,7 @@ permalink: /rest-intro
 
 ## Learning objectives
 
-- [Learning objectives](./learning-objectives.md)
+- [Learning objectives](./learningobjectives.md)
 
 ## Monday
 
