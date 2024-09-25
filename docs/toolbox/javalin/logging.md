@@ -94,14 +94,18 @@ Create a `logback.xml` file in the `src/main/resources` directory to configure L
 
 ### Step 3: Create a Basic Javalin Application
 
-Here's a basic Javalin application that demonstrates how to use logging with SLF4J.
+Here's a basic Javalin application that demonstrates how to use logging with SLF4J and a little errorhandling with Javalin.
 
 ```java
 package dat;
 
 import io.javalin.Javalin;
+import io.javalin.http.HttpStatus;
+import io.javalin.http.InternalServerErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 public class Main {
     // Create a logger instance for this class
@@ -134,19 +138,122 @@ public class Main {
             logger.error("An exception occurred: {}", e.getMessage(), e);
             ctx.status(500).result("Internal Server Error");
         });
+
+        app.error(HttpStatus.INTERNAL_SERVER_ERROR, ctx -> {
+            logger.error("Bummer: {}", ctx.status());
+            Map<String, String> msg = Map.of("error", "Internal Server Error, dude!", "status", String.valueOf(ctx.status()));
+            throw new InternalServerErrorResponse("Off limits!", msg);
+        });
     }
 }
 ```
 
 ### Explanation of the Code
 
-1. **Logger Creation**: A logger instance is created using `LoggerFactory.getLogger(ClassName.class)`.
-2. **Logging Levels**:
-   - `logger.info(...)` logs informational messages.
-   - `logger.error(...)` logs error messages.
-   - You can use other levels like `debug`, `warn`, etc., depending on the context.
-3. **Logback Configuration**: The `logback.xml` file defines how and where the logs will be output, such as the console with a custom format.
-4. **Exception Handling**: The application logs exceptions using the `app.exception` method, demonstrating how to capture and log errors effectively.
+The provided code sets up a simple Javalin application with robust logging, exception, and error handling. Here's a detailed explanation of each section, with a focus on how logging, exceptions, and error handling are managed:
+
+### Code Explanation
+
+1. **Logger Initialization**:
+
+   ```java
+   private static final Logger logger = LoggerFactory.getLogger(Main.class);
+   private static final Logger debugLogger = LoggerFactory.getLogger("app");
+   ```
+
+   - Two loggers are created:
+     - `logger`: Logs messages specific to the `Main` class using its fully qualified name.
+     - `debugLogger`: A separate logger named `"app"`, configured for more detailed debug-level logging if needed.
+
+2. **Javalin Initialization**:
+
+   ```java
+   Javalin app = Javalin.create(config -> {
+       config.showJavalinBanner = false; // Disable default Javalin banner
+   }).start(7070);
+   ```
+
+   - A Javalin instance is created and configured to hide the default startup banner, making the console output cleaner. The server starts on port `7070`.
+
+3. **Route Definitions**:
+   - **Root Route (`/`)**:
+
+     ```java
+     app.get("/", ctx -> {
+         logger.info("Handling request to /");
+         ctx.result("Hello, Javalin with Logging!");
+     });
+     ```
+
+     - Logs an informational message whenever a request is made to the root (`/`) endpoint.
+     - Returns a simple response to the client.
+
+   - **Error Route (`/error`)**:
+
+     ```java
+     app.get("/error", ctx -> {
+         logger.error("An error endpoint was accessed");
+         throw new RuntimeException("This is an intentional error for logging demonstration.");
+     });
+     ```
+
+     - Logs an error message when the `/error` endpoint is accessed.
+     - Intentionally throws a `RuntimeException` to demonstrate error handling and logging.
+
+4. **Logging During Startup**:
+
+   ```java
+   logger.info("Javalin application started on http://localhost:7070");
+   debugLogger.debug("Debug log message from Main class during startup");
+   ```
+
+   - Logs an informational message when the application starts.
+   - Logs a debug message using `debugLogger`, demonstrating how to use a different logger for more detailed logs during startup.
+
+5. **Exception Handling**:
+
+   ```java
+   app.exception(Exception.class, (e, ctx) -> {
+       logger.error("An exception occurred: {}", e.getMessage(), e);
+       ctx.status(500).result("Internal Server Error");
+   });
+   ```
+
+   - Global exception handling is set up for all exceptions.
+   - Logs the exception message and stack trace using the `logger`.
+   - Responds with a 500 status code and a generic error message to the client.
+
+6. **Custom Error Handling for 500 Internal Server Error**:
+
+   ```java
+   app.error(HttpStatus.INTERNAL_SERVER_ERROR, ctx -> {
+       logger.error("Bummer: {}", ctx.status());
+       Map<String, String> msg = Map.of("error", "Internal Server Error, dude!", "status", String.valueOf(ctx.status()));
+       throw new InternalServerErrorResponse("Off limits!", msg);
+   });
+   ```
+
+   - Handles specific HTTP 500 errors.
+   - Logs the error status when such an error occurs.
+   - Throws a custom `InternalServerErrorResponse` with a message and a map of error details, demonstrating more granular control over error responses.
+
+### Highlighted Aspects of Logging, Exception, and Error Handling
+
+- **Logging**:
+  - The code uses SLF4J with Logback (assumed configuration) to log messages at various levels (`INFO`, `ERROR`, `DEBUG`).
+  - Logging is strategically placed to capture key application events, such as startup, request handling, errors, and exceptions.
+
+- **Exception Handling**:
+  - The `app.exception()` method sets up a global exception handler, capturing all exceptions and logging them.
+  - This prevents unhandled exceptions from crashing the application and provides a consistent error response.
+
+- **Error Handling**:
+  - The `app.error()` method targets specific HTTP error codes, in this case, `500 Internal Server Error`, allowing for custom error messages and responses.
+  - Uses structured error responses to inform the client about what went wrong, aiding in debugging and enhancing the client experience.
+
+### Summary
+
+This approach ensures that the Javalin application remains robust, with detailed logs capturing the application’s behavior and errors. This setup is critical for monitoring the application's health, diagnosing issues in production, and understanding the root cause of failures. The use of global exception and error handlers ensures that errors are gracefully managed and logged.
 
 ### Running the Application
 
