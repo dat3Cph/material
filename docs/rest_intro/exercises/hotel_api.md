@@ -25,16 +25,18 @@ permalink: /rest-intro/exercises/hotel-api-part-1/
   - hibernate
   - postgresql
 - Create a new javalin application with 2 ressources: `Hotel`  and `Room`
-- Create a new database in postgresql called `hoteldb`
-- Create a IDAO generic interface with the following methods:
+- Create a new database in postgresql called `hotel`
+- Create a IDAO generic interface with the following methods: *)
   - getAll()
   - getById()
   - create()
   - update()
   - delete()
-- Create an abstract DAO class that implements the IDAO interface
+- Create an abstract DAO class that implements the IDAO interface *)
 - Create a HotelDAO and a RoomDAO that extends the abstract DAO class
 - Add a method to the HotelDAO that returns all rooms for a specific hotel
+
+*) NB! If you have trouble with inheritance and generics, you can skip the generic interface and abstract class and just create the DAO classes with the methods you need.
 
 ## Part 2 DTOs
 
@@ -51,11 +53,11 @@ permalink: /rest-intro/exercises/hotel-api-part-1/
   - number
   - price
 
-- Implement functionality to convert between DTOs and Entities
+- Implement functionality to convert between DTOs and Entities. Both ways.
 
-## Part 2 create API Ressources
+## Part 3 create API Ressources
 
-- Create a HotelController and a RoomController that returns handlers with above functionality using the DTOs
+- Create a HotelController and a RoomController that handles the above functionality using the DTOs
 - Create a new Routes.java file that contains all routes for the application and implement the following routes with json:
   - GET /hotel
     - response json: `[{id: 1, name: "Hotel 1", address: "Address 1"}, {id: 2, name: "Hotel 2", address: "Address 2"}]`
@@ -86,16 +88,18 @@ permalink: /rest-intro/exercises/hotel-api-part-1/
 
 In above api, if no request json is specified, then the request body should be empty.
 
-## Part 3 Error handling
+NB! Use an http file to test the endpoints.
+
+## Part 4 Error handling
 
 - Implement app.error() to handle:
   - 404 Not Found (used for both missing resources and missing routes)
 - Implement app.exception() to handle:
   - IllegalStateException: When posting or updating a hotel or room with incorrect json representation.
 
-## Part 4: (Optional) logging
+## Part 5: (Optional) logging
 
-See small tutorial here: <https://mkyong.com/logging/slf4j-logback-tutorial/> and see how I have implemented it in the javalindemo project on [github](https://github.com/HartmannDemoCode/javalindemo/blob/main/src/main/java/dk/cphbusiness/rest/P06LoggingDemo.java).
+Use our small tutorial from yesterday and use LogBack to log requests, responses, and exceptions.
 
 - Implement logging for all requests and responses
 - Include the following information in the log:
@@ -106,6 +110,10 @@ See small tutorial here: <https://mkyong.com/logging/slf4j-logback-tutorial/> an
   - Response status code
   - Response body
 
-## Part 5 (Optional) Documentation
+## Part 6 (Optional) Documentation
 
 - Configure javalin to use `RouteOverviewPlugin` to create an interactive documentation of your API.
+
+## Monday review
+
+- Prepare a short presentation of your API for Monday's review session. You will have 5 minutes to present your API and show how it works. You can use an http file to demonstrate the API.
