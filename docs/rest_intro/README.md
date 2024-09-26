@@ -62,12 +62,13 @@ permalink: /rest-intro
 
 - [Logback](https://www.baeldung.com/logback) - skim
 - [Javalin Exception Mapping](https://javalin.io/documentation#exception-mapping)
-- [API documentation](https://www.postman.com/api-platform/api-documentation/)
+- [API documentation](https://www.postman.com/api-platform/api-documentation/) - skim
+- [3rd semester documentation format](https://dat3cph.github.io/material/toolbox/rest/rest-api-documentation)
 
 ### Exercises in class
 
 - [Logging](../toolbox/javalin/logging.md)
-- TBD
+- We will work on transforming a simple API into a more advanced API with error handling and logging.
 
 ## Friday (exercise day)
 
