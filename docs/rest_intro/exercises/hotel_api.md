@@ -36,7 +36,7 @@ permalink: /rest-intro/exercises/hotel-api-part-1/
 - Create a HotelDAO and a RoomDAO that extends the abstract DAO class
 - Add a method to the HotelDAO that returns all rooms for a specific hotel
 
-*) NB! If you have trouble with inheritance and generics, you can skip the generic interface and abstract class and just create the DAO classes with the methods you need.
+*) NB! If you have trouble with inheritance and generics, you can skip the generic interface and abstract class and just create the DAO classes with the methods you need. You should also see the hint at the end of this document for more details.
 
 ## Part 2 DTOs
 
@@ -117,3 +117,20 @@ Use our small tutorial from yesterday and use LogBack to log requests, responses
 ## Monday review
 
 - Prepare a short presentation of your API for Monday's review session. You will have 5 minutes to present your API and show how it works. You can use an http file to demonstrate the API.
+
+## Hint on generics and inheritance
+
+When implementing your DAOs, consider creating a generic `IDAO` interface and an `AbstractDAO` class to handle common CRUD operations for any entity type. This approach helps reduce code duplication and makes your code more maintainable. Here’s a quick guide:
+
+1. **Define the `IDAO` Interface**: This interface should specify basic CRUD methods (`getAll()`, `getById()`, `create()`, `update()`, `delete()`) using generics (`<T>`) to handle different types of entities.
+
+2. **Create an `AbstractDAO` Class**: Implement the `IDAO` interface in an abstract class called `AbstractDAO`. This class will provide common implementations of CRUD methods, utilizing an `EntityManager` for database interactions. Use generics to make it flexible for any entity type.
+
+3. **Extend `AbstractDAO` in Specific DAOs**: Create concrete DAO classes like `HotelDAO` and `RoomDAO` that extend `AbstractDAO`. These classes can inherit the common CRUD functionality and add any specific methods needed for their respective entities, such as fetching all rooms for a particular hotel in `HotelDAO`.
+
+4. **Example Method Signatures**:
+   - In `IDAO`: `List<T> getAll();`
+   - In `AbstractDAO`: `public List<T> getAll() { // common implementation }`
+   - In `HotelDAO`: `public List<Room> getRoomsForHotel(int hotelId) { // specific implementation }`
+
+**If you find generics and inheritance challenging**, you can skip this approach and directly implement the required CRUD methods in your DAO classes (`HotelDAO` and `RoomDAO`). However, using the interface and abstract class will make your code cleaner and more reusable.
