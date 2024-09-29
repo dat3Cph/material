@@ -1,10 +1,11 @@
 ---
-title: Test
-description: Teori om test
+title: Test theory
+description: Theory about test and quality assurance
 layout: default
-parent: Toolbox
-nav_order: 14
-permalink: /toolbox/test/
+parent: Test
+grand_parent: Toolbox
+nav_order: 1
+permalink: /toolbox/test/theory
 ---
 
 # Hvordan sikrer I jer, at jeres kode virker?

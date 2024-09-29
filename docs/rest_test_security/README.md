@@ -33,7 +33,7 @@ permalink: /rest-test-security
 
 ### Exercises in in class
 
-[Testing Hotel API](./exercises/hotel_test.md)
+- [Testing Hotel API](./exercises/hotel_test.md)
 
 ## Wednesday (CodeLab)
 
