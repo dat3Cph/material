@@ -1,5 +1,5 @@
 ---
-title: Test theory
+title: Test Theory
 description: Theory about test and quality assurance
 layout: default
 parent: Test

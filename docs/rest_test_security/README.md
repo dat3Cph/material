@@ -27,6 +27,12 @@ permalink: /rest-test-security
 - [Short Rest Assured Tutorial, read 1-7 (5 min)](https://www.baeldung.com/rest-assured-tutorial)
 - [Hamcrest guide (skim and use for reference 10 min)](https://www.baeldung.com/java-junit-hamcrest-guide)
 
+#### Toolbox
+
+- [Rest-assured overview](../toolbox/test/rest_assured.md)
+- [The Gherkin Syntax](../toolbox/test/gherkin-syntax.md)
+- [General Theory about testing](../toolbox/test/testteori.md)
+
 #### Videos
 
 - [Chapter 2 of TAU video tutorial (14:45 min)](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)

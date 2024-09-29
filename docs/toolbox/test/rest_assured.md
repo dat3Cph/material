@@ -22,7 +22,7 @@ permalink: /toolbox/test/rest-assured
 
 1. **Ease of Use:** Testing REST APIs without Rest Assured can involve writing significant boilerplate code using libraries like `HttpURLConnection` or `HttpClient`. Rest Assured abstracts away much of this complexity.
 
-2. **Readable and Maintainable Tests:** The DSL (Domain-Specific Language) used in Rest Assured makes the test cases more readable and easier to maintain. For example:
+2. **Readable and Maintainable Tests:** The DSL (Domain-Specific Language) used in Rest Assured makes the test cases more readable and easier to maintain. For example using the [Gherkin Syntax](./gherkin.md) with Rest Assured:
 
    ```java
    given().
@@ -43,3 +43,7 @@ permalink: /toolbox/test/rest-assured
 4. **Integration and Automation:** It helps automate API tests in CI/CD pipelines, ensuring that any changes to the API are quickly caught, which is crucial for maintaining the health of modern microservices-based architectures.
 
 In summary, **Rest Assured** is widely used because it makes testing RESTful APIs simple, readable, and maintainable, which is especially valuable in projects that involve continuous integration and automated testing.
+
+## Overview of the difference between Rest Assured and regular DAO Integration Testing
+
+![Overview](./images/javalin_test_map.png)
