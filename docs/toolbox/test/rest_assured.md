@@ -25,13 +25,33 @@ permalink: /toolbox/test/rest-assured
 2. **Readable and Maintainable Tests:** The DSL (Domain-Specific Language) used in Rest Assured makes the test cases more readable and easier to maintain. For example using the [Gherkin Syntax](./gherkin.md) with Rest Assured:
 
    ```java
-   given().
-       param("key", "value").
-   when().
-       get("/endpoint").
-   then().
-       statusCode(200).
-       body("name", equalTo("example"));
+    @Test
+    void create()
+    {
+        Hotel h3 = new Hotel("Cab-inn", "Østergade 2", Hotel.HotelType.BUDGET);
+        Room r1 = new Room(117, new BigDecimal(4500), Room.RoomType.SINGLE);
+        Room r2 = new Room(118, new BigDecimal(2300), Room.RoomType.DOUBLE);
+        h3.addRoom(r1);
+        h3.addRoom(r2);
+        HotelDto newHotel = new HotelDto(h3);
+
+        List<RoomDto> roomDtos =
+        given()
+                .contentType(ContentType.JSON)
+                .body(newHotel)
+                .when()
+                .post(BASE_URL + "/hotels")
+                .then()
+                .statusCode(201)
+                .body("id", equalTo(3))
+                .body("hotelName", equalTo("Cab-inn"))
+                .body("hotelAddress", equalTo("Østergade 2"))
+                .body("hotelType", equalTo("BUDGET"))
+                .body("rooms", hasSize(2))
+                .extract().body().jsonPath().getList("rooms", RoomDto.class);
+
+        assertThat(roomDtos, containsInAnyOrder(new RoomDto(r1), new RoomDto(r2)));
+    }
    ```
 
 3. **Comprehensive API Testing:** Rest Assured supports a wide range of features like:
