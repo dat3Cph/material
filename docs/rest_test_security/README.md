@@ -21,15 +21,23 @@ permalink: /rest-test-security
 
 ### Prepare for class
 
+#### Reading
+
+- [Rest-assured.io (5 min)](http://rest-assured.io/)
+- [Short Rest Assured Tutorial, read 1-7 (5 min)](https://www.baeldung.com/rest-assured-tutorial)
+- [Hamcrest guide (skim and use for reference 10 min)](https://www.baeldung.com/java-junit-hamcrest-guide)
+
 #### Videos
 
-#### Reading
+- [Chapter 2 of TAU video tutorial (14:45 min)](https://testautomationu.applitools.com/automating-your-api-tests-with-rest-assured/chapter2.html)
 
 ### Exercises in in class
 
+[Testing Hotel API](./exercises/hotel_test.md)
+
 ## Wednesday (CodeLab)
 
-- TBD
+- [Codelab TBD](./exercises/codelab.md)
 
 ## Thursday (class) - Security
 
@@ -37,9 +45,17 @@ permalink: /rest-test-security
 
 #### Video
 
+- [Passords hashing with bcrypt (7 min)](https://www.youtube.com/watch?t=1&v=O6cmuiTBZVs)
+- [How does JWT work? (1:06 min)](https://www.youtube.com/watch?t=test&v=K6pwjJ5h0Gg)
+- [JSON Web Tokens (first 24 min ONLY)](https://www.youtube.com/watch?t=1&v=oXxbB5kv9OA)
+
 #### Reading
 
+- [CORS (Skim 10-15 min)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
 ### Exercises in class
+
+- [Adding a security layer to the Hotel API](./exercises/hotel_security.md)
 
 ## Friday (exercise day)
 
