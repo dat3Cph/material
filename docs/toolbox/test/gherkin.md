@@ -52,39 +52,33 @@ Here’s how you can integrate Gherkin with Rest Assured:
    These steps link the Gherkin scenario to Java code, using Rest Assured to make API calls and validate responses.
 
    ```java
-   import io.restassured.RestAssured;
-   import io.cucumber.java.en.Given;
-   import io.cucumber.java.en.When;
-   import io.cucumber.java.en.Then;
-   import static io.restassured.RestAssured.given;
-   import static org.hamcrest.Matchers.equalTo;
+   @Test
+    void create()
+    {
+        Hotel h3 = new Hotel("Cab-inn", "Østergade 2", Hotel.HotelType.BUDGET);
+        Room r1 = new Room(117, new BigDecimal(4500), Room.RoomType.SINGLE);
+        Room r2 = new Room(118, new BigDecimal(2300), Room.RoomType.DOUBLE);
+        h3.addRoom(r1);
+        h3.addRoom(r2);
+        HotelDto newHotel = new HotelDto(h3);
 
-   public class ApiStepDefinitions {
+        List<RoomDto> roomDtos =
+        given()
+                .contentType(ContentType.JSON)
+                .body(newHotel)
+                .when()
+                .post(BASE_URL + "/hotels")
+                .then()
+                .statusCode(201)
+                .body("id", equalTo(3))
+                .body("hotelName", equalTo("Cab-inn"))
+                .body("hotelAddress", equalTo("Østergade 2"))
+                .body("hotelType", equalTo("BUDGET"))
+                .body("rooms", hasSize(2))
+                .extract().body().jsonPath().getList("rooms", RoomDto.class);
 
-       @Given("I have the base URL for the API")
-       public void setBaseUrl() {
-           RestAssured.baseURI = "https://api.example.com";
-       }
-
-       @When("I send a GET request to {string}")
-       public void sendGetRequest(String endpoint) {
-           response = given()
-                       .when()
-                       .get(endpoint)
-                       .then()
-                       .extract().response();
-       }
-
-       @Then("I should receive a {int} OK response")
-       public void verifyResponseCode(int statusCode) {
-           response.then().statusCode(statusCode);
-       }
-
-       @Then("the user name should be {string}")
-       public void verifyUserName(String expectedName) {
-           response.then().body("name", equalTo(expectedName));
-       }
-   }
+        assertThat(roomDtos, containsInAnyOrder(new RoomDto(r1), new RoomDto(r2)));
+    }
    ```
 
 3. **Run the Test:**
