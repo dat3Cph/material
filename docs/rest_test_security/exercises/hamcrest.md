@@ -88,10 +88,9 @@ Students should write tests using the following Hamcrest matchers:
 
 ## Read more
 
-- [Toolbox](../../toolbox/test/hamcrest.md)
-- [Hamcrest Matchers](https://www.baeldung.com/hamcrest)
+- [Toolbox overview](../../toolbox/test/hamcrest.md)
+- [Hamcrest Matchers](https://www.baeldung.com/java-junit-hamcrest-guide)
 - [Hamcrest Tutorial](https://www.vogella.com/tutorials/Hamcrest/article.html)
-- [Hamcrest Matchers Cheat Sheet](https://dzone.com/articles/hamcrest-matchers-cheat-sheet)
 
 ## Dependencies
 
