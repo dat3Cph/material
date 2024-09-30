@@ -1,4 +1,4 @@
-# Security layer for Poems API
+# Security layer for Poems API (To do in class on Thursday)
 
 In this exercise, you will add a security layer to the Poems API. The goal is to make sure that only authenticated users can access the API.
 We will use JWT (JSON Web Tokens) to secure the API.
