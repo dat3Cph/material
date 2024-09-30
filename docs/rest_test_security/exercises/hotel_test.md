@@ -2,7 +2,7 @@
 title: Hotel API Test
 description: Rest Assured, JUnit 5, and Hamcrest matchers to test all the finished endpoints.
 layout: default
-nav_order: 2
+nav_order: 4
 grand_parent: Rest API Test and Security
 parent: Exercises
 permalink: /rest-test-security/exercises/hotel-test/

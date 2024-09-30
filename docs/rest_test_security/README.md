@@ -39,7 +39,9 @@ permalink: /rest-test-security
 
 ### Exercises in in class
 
-- [Testing Hotel API](./exercises/hotel_test.md)
+- [Gherkin Syntax](./exercises/gherkin.md)
+- [Hamcrest Matchers](./exercises/hamcrest.md)
+- [Testing Poems API](./exercises/poems.md)
 
 ## Wednesday (CodeLab)
 

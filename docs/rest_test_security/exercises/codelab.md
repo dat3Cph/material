@@ -8,6 +8,4 @@ parent: Exercises
 permalink: /rest-test-security/exercises/codelab/
 ---
 
-# Codelab Rest API Test and Security
-
-TBD
+# Codelab Rest API Test
