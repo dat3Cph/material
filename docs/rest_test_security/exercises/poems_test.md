@@ -61,7 +61,7 @@ Here are the necessary dependencies to carry out REST Assured tests with Hamcres
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
-    <version>5.3.1</version> <!-- Use the latest version available -->
+    <version>5.5.0</version> <!-- Use the latest version available -->
     <scope>test</scope>
 </dependency>
 ```
@@ -104,7 +104,7 @@ If your API responses are JSON, you can add this for easier handling of JSON pay
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>json-path</artifactId>
-    <version>5.3.1</version>
+    <version>5.5.0</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -117,7 +117,7 @@ If your API responses are JSON, you can add this for easier handling of JSON pay
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
-        <version>5.3.1</version>
+        <version>5.5.0</version>
         <scope>test</scope>
     </dependency>
 
@@ -149,7 +149,7 @@ If your API responses are JSON, you can add this for easier handling of JSON pay
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>json-path</artifactId>
-        <version>5.3.1</version>
+        <version>5.5.0</version>
         <scope>test</scope>
     </dependency>
 </dependencies>
