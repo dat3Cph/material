@@ -12,6 +12,8 @@ permalink: /rest-test-security/exercises/gherkin-syntax/
 
 Below are the exercises where you need to transform regular descriptions into **Gherkin syntax**. Each description outlines a typical test case, and your task is to convert these descriptions into Gherkin scenarios using the **Given-When-Then** structure.
 
+![Gherkin](./images/gherkin.jpg)
+
 ---
 
 ### Instructions
