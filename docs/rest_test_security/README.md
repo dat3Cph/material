@@ -41,7 +41,7 @@ permalink: /rest-test-security
 
 - [Gherkin Syntax](./exercises/gherkin.md)
 - [Hamcrest Matchers](./exercises/hamcrest.md)
-- [Testing Poems API](./exercises/poems.md)
+- [Testing Poems API](./exercises/poems_test.md)
 
 ## Wednesday (CodeLab)
 
