@@ -30,7 +30,7 @@ permalink: /rest-test-security
 #### Toolbox
 
 - [Rest-assured overview](../toolbox/test/rest_assured.md)
-- [The Gherkin Syntax](../toolbox/test/gherkin-syntax.md)
+- [The Gherkin Syntax](../toolbox/test//gherkin.md)
 - [General Theory about testing](../toolbox/test/testteori.md)
 
 #### Videos
