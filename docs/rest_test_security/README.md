@@ -49,6 +49,8 @@ permalink: /rest-test-security
 
 ## Thursday (class) - Security
 
+- [Adding a security layer to the Poems API](./exercises/poems_security.md)
+
 ### Prepare for class
 
 #### Video
