@@ -7,8 +7,9 @@ grand_parent: Rest API Test and Security
 parent: Exercises
 permalink: /rest-test-security/exercises/hotel-test/
 ---
+# Codelab: Hotel API Test
 
-# Part I: Integration Testing of Database Functionality (DAO methods)
+## Part I: Integration Testing of Database Functionality (DAO methods)
 
 Our German developer team has developed the first version of an API for a hotel chain. It's not quite finished yet. Germans think in terms of quality. Hence, we've been tasked with adding integration tests to the project, so we can meet the usual standards. "Quadratisch praktisch gut," as they say.
 
