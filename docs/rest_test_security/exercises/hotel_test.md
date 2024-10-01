@@ -2,7 +2,7 @@
 title: Hotel API Test
 description: Rest Assured, JUnit 5, and Hamcrest matchers to test all the finished endpoints.
 layout: default
-nav_order: 4
+nav_order: 5
 grand_parent: Rest API Test and Security
 parent: Exercises
 permalink: /rest-test-security/exercises/hotel-test/
@@ -41,7 +41,18 @@ Our **HibernateConfig** file should be set up to use the test database when runn
 
 ### Startcode and code for inspiration
 
-- In class we have been working on a project that is similar to this one. You can find the code here: [Dogs API](https://github.com/jonbertelsen/dogs/tree/testHoldB)
-- In case your own hotel api is not up'n running, you can clone this one:[Hotel API](https://github.com/jonbertelsen/hotel_api) and make it your own.
+- In class we have been working on a project that is similar to this one. You can find the code here:
+
+      https://github.com/jonbertelsen/dogs/tree/testHoldB
+
+   You can clone a specific branch like this:
+
+      git clone --branch testHoldB https://github.com/jonbertelsen/dogs
+
+- In case your own hotel api is not up'n running, you can clone this one:
+
+      https://github.com/jonbertelsen/hotel_api 
+
+  and make it your own.
 
 Viel Glück with the tests! 🍀

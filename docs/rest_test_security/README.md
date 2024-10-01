@@ -45,7 +45,7 @@ permalink: /rest-test-security
 
 ## Wednesday (CodeLab)
 
-- [Codelab TBD](./exercises/codelab.md)
+- [Codelab](./exercises/codelab.md) and [Hotel API Test](./exercises/hotel_test.md)
 
 ## Thursday (class) - Security
 
@@ -74,4 +74,4 @@ permalink: /rest-test-security
 
 ## Friday (exercise day)
 
-- TBD
+- [Hotel API Security](./exercises/hotel_security.md)
