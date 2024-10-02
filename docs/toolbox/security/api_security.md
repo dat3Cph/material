@@ -2,10 +2,10 @@
 title: API Security
 description: Adding a security layer to the any API
 layout: default
-nav_order: 10
-grand_parent: toolbox
-parent: security
-permalink: /rest-test-security/exercises/api-security/
+nav_order: 1
+grand_parent: Toolbox
+parent: Security
+permalink: /tools/security/api
 ---
 
 # Security Exercise
@@ -88,12 +88,15 @@ public interface ISecurityDAO {
 - Hint: Verify the password in the User´s verifyPassword method: `BCrypt.checkpw(password, this.password);`
 
 ## Part 2 Login and Register Endpoints
+
 - Create a SecurityRoutes class with the following routes:
   - POST /register  // returns a JWT token
   - POST /login     // returns a JWT token
 
 ## Create a SecurityController
+
 - Create a SecurityController that implements the following interface methods:
+
 ```java
 Handler login(); // to get a token after checking username and password
 Handler register(); // to make a new User and get a token
@@ -104,7 +107,9 @@ UserDTO verifyToken(String token) throws Exception;
 ```
 
 ## Update the ApplicationConfig
+
 - Add a SecurityFilter, that looks to see if the user has the correct roles to access the endpoint:
+
 ```java
 app.beforeMatched(ctx -> { // Before matched is different from before, in that it is not called for 404 etc.
   if (ctx.routeRoles().isEmpty()) // no roles were added to the route endpoint so OK
