@@ -11,6 +11,8 @@ permalink: /deployment/
 
 Topics covered in this week are:
 
+Deploying Javalin applications on Docker in the Cloud using:
+
 - Docker
 - Continuous Integration & Deployment
 - GitHub Actions
