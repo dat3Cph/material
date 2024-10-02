@@ -9,6 +9,7 @@ permalink: /rest-test-security/exercises/poems-security/
 ---
 
 # Security layer for Poems API (To do in class on Thursday)
+
 [See this resource for help](../../toolbox/security/api_security.md)
 
 ## Create the security routes
