@@ -83,8 +83,18 @@ public interface ISecurityDAO {
 
 - Use bcrypt to hash the password before storing it in the database.
   - bcrypt link: <https://www.mindrot.org/projects/jBCrypt/>
-  - `<dependency><groupId>org.mindrot</groupId><artifactId>jbcrypt</artifactId><version>${jbcrypt.version}</version></dependency>`
+  - add pom.xml property: `<jbcrypt.version>0.4</jbcrypt.version>`
+
+      ```xml
+        <dependency>
+          <groupId>org.mindrot</groupId>
+          <artifactId>jbcrypt</artifactId>
+          <version>${jbcrypt.version}</version>
+        </dependency>
+      ```
+
 - Hint: Hash the password in the User constructor: `BCrypt.hashpw(userPass, BCrypt.gensalt());`
+
 - Hint: Verify the password in the User´s verifyPassword method: `BCrypt.checkpw(password, this.password);`
 
 ## Part 2 Login and Register Endpoints
@@ -105,6 +115,31 @@ boolean authorize(UserDTO userDTO, Set<String> allowedRoles); // to verify user 
 String createToken(UserDTO user) throws Exception;
 UserDTO verifyToken(String token) throws Exception;
 ```
+
+- You will need these dependency in pom.xml file with various JWT utility classes:
+
+    ```xml
+      <dependency>
+        <groupId>com.github.Hartmannsolution</groupId>
+        <artifactId>TokenSecurity</artifactId>
+        <version>${token.security.version}</version>
+      </dependency>
+    ```
+
+- And this property: `<token.security.version>1.0.4</token.security.version>`
+
+- You also need to add this to the pom.xml file just after the properties:
+  
+    ```xml
+      <repositories>
+        <repository>
+          <id>jitpack.io</id>
+          <url>https://jitpack.io</url>
+        </repository>
+      </repositories>
+    ```
+
+    The jitpack.io repository is where the TokenSecurity library is located. It is not in the Maven Central Repository.
 
 ## Update the ApplicationConfig
 
