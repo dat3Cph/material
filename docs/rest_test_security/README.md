@@ -70,8 +70,8 @@ permalink: /rest-test-security
 
 ### Exercises in class
 
-- [Adding a security layer to the Hotel API](./exercises/hotel_security.md)
+- [Adding a security layer to the Hotel API](./exercises/api_security.md)
 
 ## Friday (exercise day)
 
-- [Hotel API Security](./exercises/hotel_security.md)
+- [Hotel API Security](./exercises/api_security.md)

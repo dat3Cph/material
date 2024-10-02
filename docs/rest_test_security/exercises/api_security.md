@@ -1,11 +1,11 @@
 ---
-title: Hotel API Security
-description: Adding a security layer to the Hotel API
+title: API Security
+description: Adding a security layer to the any API
 layout: default
 nav_order: 7
 grand_parent: Rest API Test and Security
 parent: Exercises
-permalink: /rest-test-security/exercises/hotel-security/
+permalink: /rest-test-security/exercises/api-security/
 ---
 
 # Security Exercise
