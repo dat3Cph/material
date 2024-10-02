@@ -49,8 +49,6 @@ permalink: /rest-test-security
 
 ## Thursday (class) - Security
 
-- [Adding a security layer to the Poems API](./exercises/poems_security.md)
-
 ### Prepare for class
 
 #### Video
@@ -64,13 +62,9 @@ permalink: /rest-test-security
 - [JWT Video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d329a3f7-1a16-41d9-9e92-b13200c2a4b0)
 - [Hashing passwords Video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d3b7d78-48cc-4286-8ebb-b13200acb994)
 
-#### Reading
-
-- [CORS (Skim 10-15 min)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-
 ### Exercises in class
 
-- [Adding a security layer to the Hotel API](./exercises/api_security.md)
+- [Adding a security layer to the Poems API](./exercises/poems_security.md)
 
 ## Friday (exercise day)
 
