@@ -69,4 +69,5 @@ permalink: /rest-test-security
 
 ## Friday (exercise day)
 
-- Adding a security layer to the Hotel API
+- Adding a security layer to the Hotel API. The idea is for you to implement the security layer in the Hotel API. You can use the Poems API as a reference. Some help
+will be added on this page Friday morning around 09:00.
