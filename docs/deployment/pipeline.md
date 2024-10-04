@@ -1,6 +1,6 @@
 ### Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions and Docker
 
-<img src="./images/cicd-pipeline.png">
+<img src="./images/cicd-pipeline.png" alt="pipeline">
 
 #### Introduction
 This tutorial will guide you through creating a CI/CD pipeline for a Java project using GitHub Actions, Docker Hub, and Docker. You will learn how to automate the building, testing, and deployment of your application in a containerized environment and run it on a Digital Ocean server.
