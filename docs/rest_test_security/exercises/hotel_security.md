@@ -17,11 +17,11 @@ Based on your code from last week (Hotel API), you should now add **security** t
 
 - In class we have been working on a project that is similar to this one (Poems). You can find the code here:
 
-      - [Poems API](https://github.com/jonbertelsen/poems/tree/security?tab=readme-ov-file#security-branch)
+- [Poems API](https://github.com/jonbertelsen/poems/tree/security?tab=readme-ov-file#security-branch)
 
-   You can clone a specific branch like this:
+You can clone a specific branch like this:
 
-        git clone --branch architecture https://github.com/jonbertelsen/poems.git
+      git clone --branch architecture https://github.com/jonbertelsen/poems.git
 
 - In case your own hotel api is not up'n running, you can clone this one:
 
