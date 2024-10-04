@@ -41,7 +41,15 @@ For the rest of the day: Prepare for the week. Watch the videos and read the art
 
 Watch this video:
 
+- [CI / CD in 5 minutes](https://www.youtube.com/watch?v=42UP1fxi2SY)
+- [Docker file (from 49:09 - 58:30)](https://youtu.be/pg19Z8LL06w?si=Q0ZWp6fojjCvHw5k&t=2950)
+
 Skim through these articles:
+
+- [Continuous integration vs delivery vs deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+- [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
+-[Docker Compose reference](https://docs.docker.com/compose/intro/features-uses/)
+-[Github Actions (first page)](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
 
 ### In-class exercises
 
