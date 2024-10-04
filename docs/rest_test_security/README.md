@@ -69,8 +69,6 @@ permalink: /rest-test-security
 
 ## Friday (exercise day)
 
-- The task is to add a security layer to the **Hotel API**. You can use the Poems API as a reference. This branch is showing an implementation of the Poems API with security that we did in class Thursday: [Poems API with security](https://github.com/jonbertelsen/poems/tree/security?tab=readme-ov-file#security-branch). Notice the link will open the repository in the security branch and show the README file regarding your task at hand. You might want to clone the repository and run it locally to see how it works. You can clone the branch like this:
+The task is to add a security layer to the **Hotel API**. You can find the exercise here:
 
-```bash
-git clone --branch security https://github.com/jonbertelsen/poems.git
-```
+- [Hotel API Security](./exercises/hotel_security.md)
