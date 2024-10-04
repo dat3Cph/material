@@ -47,8 +47,11 @@ Watch this video:
 Skim through these articles:
 
 - [Continuous integration vs delivery vs deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+
 - [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
+
 -[Docker Compose reference](https://docs.docker.com/compose/intro/features-uses/)
+
 -[Github Actions (first page)](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
 
 ### In-class exercises
@@ -61,7 +64,7 @@ Time to code!
 
 All day is devoted to pair programming and Github collaboration.
 
-## Thursday (class) - Putting the pieces together
+## Thursday (class) - Putting the pieces together - Integration testing with Security
 
 ### Prepare for the class
 
