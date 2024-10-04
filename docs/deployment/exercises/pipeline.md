@@ -1,3 +1,13 @@
+---
+title: Pipeline
+description: Deployment Exercises
+layout: default
+nav_order: 1
+parent: Exercises
+grand_parent: Deployment
+permalink: /deployment/exercises/pipeline/
+---
+
 ### Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions and Docker
 
 <img src="./images/cicd-pipeline.png" alt="pipeline">

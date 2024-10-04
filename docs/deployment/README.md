@@ -45,6 +45,8 @@ Skim through these articles:
 
 ### In-class exercises
 
+- [Pipeline tutorial](exercises/pipeline.md)
+
 ## Wednesday (CodeLab) - Docker, Digital Ocean, Watch Tower, and Caddy Server
 
 Time to code!
