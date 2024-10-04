@@ -50,9 +50,9 @@ Skim through these articles:
 
 - [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
 
--[Docker Compose reference](https://docs.docker.com/compose/intro/features-uses/)
+- [Docker Compose reference](https://docs.docker.com/compose/intro/features-uses/)
 
--[Github Actions (first page)](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
+- [Github Actions (first page)](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
 
 ### In-class exercises
 
