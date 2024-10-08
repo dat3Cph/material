@@ -1,0 +1,20 @@
+@startuml
+skinparam Padding 10
+actor "Developer (1)" as Developer 
+node "GitHub Repo (3)" as github
+node "GitHub Actions (5)" as github_actions
+node "Docker Hub (7)" as docker_hub
+node " " as digital_ocean {
+  rectangle "Digital\nOcean" as digital_label #lightblue
+  node "Watchtower (9)" as watchtower
+  node "Javalin Web API Container (11)" as container
+}
+
+Developer --> github : "Pushes Code (2)"
+github --> github_actions : "Triggers Actions (4)"
+github_actions --> docker_hub : "Pushes Docker Image (6)"
+docker_hub --> watchtower : "Docker Image Pull (8)
+watchtower --> container : "Deploys Javalin\n Web API (10)"
+
+@enduml
+

@@ -1,0 +1,20 @@
+@startuml
+skinparam Padding 10
+
+node "Internet" {
+  [User]
+}
+
+node "Caddy Server" as caddy {
+  [Reverse Proxy]
+}
+
+node "Docker Host" as docker_host {
+  node "Javalin Web API (hotelAPI)" as javalin {
+    [Port 7070]
+  }
+}
+
+User --> caddy : "Requests https://hotel.showcode.dk"
+caddy --> javalin : Proxies to 7070
+@enduml

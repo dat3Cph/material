@@ -56,7 +56,7 @@ Skim through these articles:
 
 ### In-class exercises
 
-- [Pipeline tutorial](exercises/pipeline.md)
+- [Github Actions and Docker Hub Tutorial](exercises/actions_dockerhub.md)
 
 ## Wednesday (CodeLab) - Docker, Digital Ocean, Watch Tower, and Caddy Server
 
@@ -74,7 +74,7 @@ The goal is to have a running web api on a Digital Ocean Droplet with a domain n
 
 ### In-class exercises
 
-- Coming soon. Deployment with Docker, Digital Ocean, Watch Tower, and Caddy Server.
+- First - read this overview carefully: [Full Pipeline](exercises/full_pipeline.md)
 
 ## Thursday (class) - Putting the pieces together - Integration testing with Security
 

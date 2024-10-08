@@ -3,7 +3,7 @@ services:
     build: .
     ports:
       - "4000:4000"
+      - "35729:35729"  # Optional: Expose livereload port
     volumes:
       - .:/usr/src/app
-    command: bundle exec jekyll serve --host 0.0.0.0 --force_polling --source docs
-
+    command: bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload --source docs

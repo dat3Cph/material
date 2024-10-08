@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+skinparam Padding 10
+skinparam DefaultFontSize 20
+
+cloud "Remote Client" as client
+
+node "Docker Host" as docker {
+
+  node "hotelAPI" {
+    [Javalin Web API]
+  }
+  node "db" {
+    [PostgreSQL]
+  }
+  node "watchtower" {
+    [Watchtower]
+  }
+  node "caddy" as caddy {
+  [Caddy]
+}
+
+
+' Define Networks
+
+caddy <-right-> [frontend] : frontend network
+[frontend] <--> hotelAPI: Reverse Proxy
+hotelAPI <--> [backend] : backend network
+[backend] <--> db
+watchtower .right.> hotelAPI : Monitoring for Updates
+
+' Define Data Flow
+}
+
+client --> caddy : "Requests\nhttps://hotel.showcode.dk"
+
+@enduml

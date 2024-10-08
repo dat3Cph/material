@@ -24,4 +24,7 @@ COPY . .
 EXPOSE 4000
 
 # Serve the Jekyll site
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+
+CMD ["sh", "-c", "bundle exec jekyll clean && bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"]
+
+# CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling", "--livereload"]
