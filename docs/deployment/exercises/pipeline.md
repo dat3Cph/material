@@ -13,16 +13,20 @@ permalink: /deployment/exercises/pipeline/
 ![pipeline](./images/cicd-pipeline.png)
 
 #### Introduction
+
 This tutorial will guide you through creating a CI/CD pipeline for a Java project using GitHub Actions, Docker Hub, and Docker. You will learn how to automate the building, testing, and deployment of your application in a containerized environment and run it on a Digital Ocean server.
 
 ### Prerequisites
+
 Before starting, ensure that you have the following:
+
 1. A GitHub repository for your Java project.
 2. A Docker Hub account.
 3. Git and Docker installed on your machine for local testing.
 4. A server on Digital Ocean with Docker installed.
 
 ### CI/CD Pipeline Overview
+
 Our pipeline will consist of the following steps:
 
 1. **Building the Project**: GitHub Actions will pull the code from the repository and build it using Maven.
@@ -63,8 +67,8 @@ Our pipeline will consist of the following steps:
          - name: Login to Docker Hub
            uses: docker/login-action@v2
            with:
-             username: ${{ secrets.DOCKERHUB_USERNAME }}
-             password: ${{ secrets.DOCKERHUB_TOKEN }}
+             username: \${{ secrets.DOCKERHUB_USERNAME }}
+             password: \${{ secrets.DOCKERHUB_TOKEN }}
 
          - name: Set up Docker Buildx
            uses: docker/setup-buildx-action@v2
@@ -75,7 +79,7 @@ Our pipeline will consist of the following steps:
              context: .
              file: ./Dockerfile
              push: true
-             tags: ${{ secrets.DOCKERHUB_USERNAME }}/<your-api-name>:latest
+             tags: \${{ secrets.DOCKERHUB_USERNAME }}/<your-api-name>:latest
    ```
 
 2. **Dockerfile**:
@@ -168,6 +172,7 @@ public class HibernateConfig {
 ```
 
 Make sure to set the following environment variables on your Digital Ocean server:
+
 - `PRODUCTION`
 - `JDBC_DATABASE_URL`
 - `JDBC_DATABASE_USERNAME`
@@ -196,6 +201,7 @@ services:
 ### Step 4: Deploying to Digital Ocean
 
 1. **SSH into Your Digital Ocean Server**:
+
    ```bash
    ssh root@your_server_ip
    ```
@@ -219,6 +225,7 @@ services:
 This command will pull the latest Docker image from Docker Hub and run it with the specified environment variables.
 
 ### Final Thoughts
+
 This pipeline ensures that any change pushed to the `main` branch is automatically built, tested, and deployed to Docker Hub, and can be easily deployed to your Digital Ocean server using `docker-compose`. Encourage your students to experiment with additional workflows and explore the capabilities of GitHub Actions for more complex CI/CD processes.
 
 **Happy Coding!**
