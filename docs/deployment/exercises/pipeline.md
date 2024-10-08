@@ -94,6 +94,7 @@ Our pipeline will consist of the following steps:
 
    ```xml
    <build>
+       <finalName>app</finalName> <!-- This is the name of the jar file -->
        <plugins>
            <!-- Maven Shade Plugin -->
            <plugin>
