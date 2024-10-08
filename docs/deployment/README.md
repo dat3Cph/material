@@ -41,7 +41,18 @@ For the rest of the day: Prepare for the week. Watch the videos and read the art
 
 Watch this video:
 
+- [CI / CD in 5 minutes](https://www.youtube.com/watch?v=42UP1fxi2SY)
+- [Docker file (from 49:09 - 58:30)](https://youtu.be/pg19Z8LL06w?si=Q0ZWp6fojjCvHw5k&t=2950)
+
 Skim through these articles:
+
+- [Continuous integration vs delivery vs deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+
+- [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
+
+- [Docker Compose reference](https://docs.docker.com/compose/intro/features-uses/)
+
+- [Github Actions (first page)](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
 
 ### In-class exercises
 
@@ -49,11 +60,23 @@ Skim through these articles:
 
 ## Wednesday (CodeLab) - Docker, Digital Ocean, Watch Tower, and Caddy Server
 
-Time to code!
+Today we will finish deploying a web api on a Digital Ocean Droplet. We will use Docker, Watch Tower, and Caddy Server to deploy the web api.
 
-All day is devoted to pair programming and Github collaboration.
+The goal is to have a running web api on a Digital Ocean Droplet with a domain name and SSL certificate. The web api should be accessible through the domain name and should be updated automatically when a new version is pushed to the Docker Hub.
 
-## Thursday (class) - Putting the pieces together
+### Prepare for the CodeLab
+
+1. I would be good if you have a **domain name ready**. It takes a little while to get a domain activated and have the dns handling transfered to Digital Ocean. If you don't have a domain name yet, [please follow this tutorial](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e7ebbb-8d17-480b-9ac2-b15600a699f2).
+
+2. Also, sign up on Digital Ocean if you haven't done that already. [Here is a tutorial](../toolbox/deployment/digitalocean_signup.md).
+
+3. Make sure you have a **Droplet** running on Digital Ocean. [Here is a tutorial](../toolbox/deployment/droplet.md).
+
+### In-class exercises
+
+- Coming soon. Deployment with Docker, Digital Ocean, Watch Tower, and Caddy Server.
+
+## Thursday (class) - Putting the pieces together - Integration testing with Security
 
 ### Prepare for the class
 

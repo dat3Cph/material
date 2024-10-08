@@ -21,7 +21,7 @@ Based on your code from last week (Hotel API), you should now add **security** t
 
 You can clone a specific branch like this:
 
-      git clone --branch architecture https://github.com/jonbertelsen/poems.git
+      git clone --branch security https://github.com/jonbertelsen/poems.git
 
 - In case your own hotel api is not up'n running, you can clone this one:
 
