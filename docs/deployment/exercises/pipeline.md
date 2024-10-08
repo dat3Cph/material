@@ -107,6 +107,17 @@ Our pipeline will consist of the following steps:
                            <mainClass>dk.lyngby.Main</mainClass> <!-- Update this with your main class -->
                        </transformer>
                    </transformers>
+                       <filters>
+                        <filter> <!-- This filter is needed to avoid a bug in the shade plugin -->
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>module-info.class</exclude>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
                </configuration>
                <executions>
                    <execution>
