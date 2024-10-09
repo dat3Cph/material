@@ -62,33 +62,33 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
 
        steps:
          - name: Checkout
-           uses: actions/checkout@v3
+           uses: actions/checkout@v4
 
          - name: Set up JDK 17
-           uses: actions/setup-java@v3
+           uses: actions/setup-java@v4
            with:
              java-version: '17'
-             distribution: 'temurin'
+             distribution: 'corretto'
 
          - name: Build with Maven
-           run: mvn --batch-mode --update-snapshots package
+           run: mvn --batch-mode clean package
 
          - name: Login to Docker Hub
-           uses: docker/login-action@v2
+           uses: docker/login-action@v3
            with:
              username: {% raw %}${{ secrets.DOCKERHUB_USERNAME }}{% endraw %}
              password: {% raw %}${{ secrets.DOCKERHUB_TOKEN }}{% endraw %}
 
          - name: Set up Docker Buildx
-           uses: docker/setup-buildx-action@v2
+           uses: docker/setup-buildx-action@v3
 
          - name: Build and push Docker image
-           uses: docker/build-push-action@v4
+           uses: docker/build-push-action@v6
            with:
              context: .
              file: ./Dockerfile
              push: true
-             tags: {% raw %}${{ secrets.DOCKERHUB_USERNAME }}{% endraw %}/<your-api-name>:latest
+             tags: {% raw %}${{ secrets.DOCKERHUB_USERNAME }}{% endraw %}/hotel_api:latest
    ```
 
 2. **Dockerfile**:
@@ -99,69 +99,73 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
    FROM amazoncorretto:17-alpine
 
    # Copy the jar file into the image
-   COPY ./app.jar /app.jar
+   COPY target/app.jar /app.jar
 
    # Expose the port your app runs on
    EXPOSE 7070
 
-   # Command to run your app
-   CMD ["java", "-jar", "/app.jar"]
-   ```
+# Command to run your app
+
+  CMD ["java", "-jar", "/app.jar"]
+
+  ```
 
 3. **Maven Configuration**:
    Make sure you have the `maven-shade-plugin` in your `pom.xml` to package your application into a single JAR file:
 
    ```xml
    <build>
-      <finalName>app</finalName>
-      <plugins>
-          <!-- Maven Shade Plugin for creating a fat JAR -->
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-shade-plugin</artifactId>
-              <version>3.5.1</version>
-              <configuration>
-                  <transformers>
-                      <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                          <mainClass>app.Main</mainClass>
-                      </transformer>
-                  </transformers>
-                  <filters>
-                      <filter>
-                          <artifact>*:*</artifact>
-                          <excludes>
-                              <exclude>module-info.class</exclude>
-                              <exclude>META-INF/*.SF</exclude>
-                              <exclude>META-INF/*.DSA</exclude>
-                              <exclude>META-INF/*.RSA</exclude>
-                          </excludes>
-                      </filter>
-                  </filters>
-              </configuration>
-              <executions>
-                  <execution>
-                      <phase>package</phase>
-                      <goals>
-                          <goal>shade</goal>
-                      </goals>
-                  </execution>
-              </executions>
-          </plugin>
+        <finalName>app</finalName>
+        <plugins>
+            <!-- Maven Shade Plugin for creating a fat JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <outputFile>${project.build.directory}/app.jar</outputFile> <!-- Directly specifies app.jar as the output file -->
+                    <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                            <mainClass>dat.Main</mainClass>
+                        </transformer>
+                    </transformers>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>module-info.class</exclude>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-          <!-- Maven Surefire Plugin for running tests -->
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.0.0</version>
-          </plugin>
-      </plugins>
-   </build>
+            <!-- Maven Surefire Plugin for running tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
    ```
 
   Did you remember to change the `mainClass` to your main class?
 
   ```xml
-      <mainClass>app.Main</mainClass>
+      <mainClass>dat.Main</mainClass>
   ```
 
   This is the class that contains the `main` method. Probably the class that starts your Javalin application like `dat.Main`.
@@ -171,7 +175,7 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
     - `DOCKERHUB_USERNAME`: Your Docker Hub username.
     - `DOCKERHUB_TOKEN`: Your Docker Hub access token.
 
-   Navigate to **Settings** → **Secrets** → **Actions** in your GitHub repository and add these two secrets.
+   Navigate to **Settings** → **Secrets and variables** → **Actions** in your GitHub repository and add these two Repository secrets.
 
 ## Step 2: Configuring Hibernate for Environment-Specific Configurations
 
