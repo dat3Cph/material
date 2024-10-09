@@ -19,7 +19,7 @@ Each team decide on what kind of API they would like to build. Be creative and h
 
 ## General Requirements
 
-This project is meant to be a group exercise. Teams of 2-3 is preferable. The scope is 5 working days. The requirements are as follows:
+This project is meant to be a group exercise. [Teams of 2-3 is preferable](https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=736176). The scope is 5 working days. The requirements are as follows:
 
 ### 1. The API
 
@@ -33,7 +33,7 @@ This project is meant to be a group exercise. Teams of 2-3 is preferable. The sc
 
 ![Caddy Logo](./images/api_hub_logo.png){: .ml-3 .my-5 .float-right style="width: 25%;"}
 
-1. At the beginning of the project, you should decide on the endpoints you would like to have in your API (before you start coding). Use this basic method described in the toolbox: [API documentation](../../toolbox/rest/api_documentation.md). Fill out the Word Document and hand it in on Moodle together with a brief description of what the API is about. Some sort of a vision for the API. The teachers will review the documentation and give you feedback.
+1. At the beginning of the project, you should decide on the endpoints you would like to have in your API (before you start coding). Use this basic method described in the toolbox: [API documentation](../../toolbox/rest/api_documentation.md). Fill out the Word Document and [hand it in on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=736177) together with a brief description of what the API is about. Some sort of a vision for the API. The teachers will review the documentation and give you feedback.
 
 2. The finished API should show the Javalin built in route overview on the `/api/routes endpoint`.
 
@@ -57,9 +57,9 @@ Below is a suggestion of how you can structure the project. You are free to stru
 
 ## Day 1: Monday - getting started
 
-1. Sign up your team on Moodle.
+1. [Sign up your team on Moodle](https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=736176).
 2. Write a description of what the API is about.
-3. Decide and document the endpoints of the API +  Hand in the documentation on Moodle.
+3. Decide and document the endpoints of the API +  Hand in the documentation on Moodle. [Hand it in here](https://cphbusiness.mrooms.net/mod/assign/view.php?id=736177).
 4. Sketch some diagrams of the API. A database ER diagram would be helpful early on.
 5. Create a new project in IntelliJ IDEA and set up the project structure. 6. Share the code on Github with the team.
 
