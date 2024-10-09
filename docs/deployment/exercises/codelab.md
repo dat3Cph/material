@@ -14,7 +14,7 @@ In this exercise, you will set up a full CI/CD pipeline for a Java project using
 
 ## Part 1: Get an overview
 
-First - read this overview carefully: [Full Pipeline](./exercises/full_pipeline.md)
+First - read this overview carefully: [Full Pipeline](./full_pipeline.md)
 
 ## Part 2: Setup a project to deploy
 
