@@ -23,9 +23,9 @@ This project is meant to be a group exercise. [Teams of 2-3 is preferable](https
 
 ### 1. The API
 
-1. Build the API with the techstack and architecture we have used so far. This means that you should use Javalin, JPA, DTOs, Java streams, and **maybe** fetching data from other REST API's.
-2. Make sure that you have a good selection of endpoints. You should have at least 4 endpoints per team member - and all CRUD methods should be implemented.
-3. The endpoints should be secured with JWT tokens. Decide which roles you want to have in your API.
+1. Build the API with the techstack and architecture we have used so far. This means that you should use Javalin, JPA, DTOs, Java streams, and **optionally** fetching data from other REST API's.
+2. Make sure that you have a good selection of endpoints. You should have at least 4 unique endpoints per team member - and all CRUD methods should be implemented.
+3. The endpoints should be secured with JWT tokens. Decide which roles you want to have in your API. Like USER, ADMIN etc.
 4. Make sure that you implement good error handling in your API, and that the API returns the correct status codes and error messages in json format.
 5. Create an http file with manual tests.
 
@@ -35,7 +35,7 @@ This project is meant to be a group exercise. [Teams of 2-3 is preferable](https
 
 1. At the beginning of the project, you should decide on the endpoints you would like to have in your API (before you start coding). Use this basic method described in the toolbox: [API documentation](../../toolbox/rest/api_documentation.md). Fill out the Word Document and [hand it in on Moodle](https://cphbusiness.mrooms.net/mod/assign/view.php?id=736177) together with a brief description of what the API is about. Some sort of a vision for the API. The teachers will review the documentation and give you feedback.
 
-2. The finished API should show the Javalin built in route overview on the `/api/routes endpoint`.
+2. The finished API should show the Javalin built in route overview on the `/api/routes endpoint`. Make it public so that we can see it.
 
 ### 3. Testing the API (and DAOs)
 
@@ -43,7 +43,7 @@ You should write enough tests to cover the important functionality of the backen
 
 1. Write tests for the DAO and Service Layer. Use JUnit, Hamcrest, and test containers. You don't need to test all methods in the Service Layer, and certainly not in the DTOs and Entities. But you should test the methods that are directly used in the endpoints.
 
-2. Write tests for the endpoints. Use JUnit, Hamcrest, Rest Assured, and test containers. You should also test the security of the endpoints, and not only happy path cases. Also test the error handling in the API.
+2. Write tests for the endpoints. Use JUnit, Hamcrest, Rest Assured, and test containers. You should also test the security of the endpoints, and not only happy path cases. Also test the error handling in the API. Could be for unauthorized access, not found, bad request etc.
 
 ### 4. Deploying the API
 
@@ -67,7 +67,7 @@ Below is a suggestion of how you can structure the project. You are free to stru
 
 1. Implement the DTOs, Entities, the DAO and Service layer. Write the CRUD methods for the entities and what is needed for the endpoints.
 2. Setup the deployment pipeline and make work.
-3. Create a populator to populate the database with some data.
+3. Create a populator to populate the database with some data. This makes it easier to manually test the endpoints and also later in  the automated tests.
 4. Begin writing tests for the DAO and Service layer. Maybe just setting it up and writing a few tests.
 
 ## Day 3: Wednesday
@@ -90,6 +90,6 @@ Below is a suggestion of how you can structure the project. You are free to stru
 
 ## Review (Monday, October 30rd)
 
-![Caddy Logo](./images/api_hub_logo_2.png){: .ml-5 .my-4 .float-right style="width: 25%;"}
+![Caddy Logo](./images/api_hub_logo_2.png){: .mr-5 .my-4 .float-left style="width: 25%;"}
 
-Monday is showtime. The teachers will meet on Zoom with all their teams at the same time from 09.00 - 11.00. We gather for 2 hours and go through all the projects. Each group will present their project. Pretend that you are presenting the project to a customer. You should be able to explain the functionality of the backend, and the choices you have made. The "Customers" will ask questions and give feedback. The teachers will also give feedback.
+Monday is showtime! All the teachers and their teams will jump on Zoom together from 9:00 to 11:00. We’ll spend two hours reviewing all the projects, with each group presenting their work. Imagine you're pitching the project to a customer—be ready to explain the backend functionality and your design choices. The “customers” will ask questions and give feedback, and the teachers will also share their thoughts.
