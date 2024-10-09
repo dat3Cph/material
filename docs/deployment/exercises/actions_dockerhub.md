@@ -2,7 +2,7 @@
 title: Actions and Docker Hub
 description: From Local to Github Actions to Docker Hub
 layout: default
-nav_order: 2
+nav_order: 3
 parent: Exercises
 grand_parent: Deployment
 permalink: /deployment/exercises/actions-dockerhub/
@@ -94,7 +94,7 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
 2. **Dockerfile**:
    Create a `Dockerfile` in the root of your project to define how your application should be built and run inside a Docker container.
 
-   ```dockerfile
+   ```bash
    # Start with Amazon Corretto 17 Alpine base image
    FROM amazoncorretto:17-alpine
 
@@ -104,11 +104,11 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
    # Expose the port your app runs on
    EXPOSE 7070
 
-# Command to run your app
+   # Command to run your app
 
-  CMD ["java", "-jar", "/app.jar"]
+   CMD ["java", "-jar", "/app.jar"]
 
-  ```
+   ```
 
 3. **Maven Configuration**:
    Make sure you have the `maven-shade-plugin` in your `pom.xml` to package your application into a single JAR file:

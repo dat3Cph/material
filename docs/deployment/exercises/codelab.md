@@ -1,5 +1,5 @@
 ---
-title: Codelab: Full Pipeline
+title: Codelab - Full Pipeline
 description: Deployment Exercises for the Full Pipeline
 layout: default
 nav_order: 2
@@ -14,7 +14,7 @@ In this exercise, you will set up a full CI/CD pipeline for a Java project using
 
 ## Part 1: Get an overview
 
-First - read this overview carefully: [Full Pipeline](exercises/full_pipeline.md)
+First - read this overview carefully: [Full Pipeline](./exercises/full_pipeline.md)
 
 ## Part 2: Setup a project to deploy
 
@@ -51,11 +51,11 @@ Either push a new commit or run the workflow manually in GitHub Actions.
 
 ## Part 5: Setup Watchtower
 
-The proof in the pooding is to see the image on Docker Hub. When that is done, then follow the [Watchtower Setup](./exercises/watchtower-setup.md) exercise to set up Watchtower and a container for the hotel api on your Digital Ocean Droplet.
+The proof in the pooding is to see the image on Docker Hub. When that is done, then follow the [Watchtower Setup](./watchtower.md) exercise to set up Watchtower and a container for the hotel api on your Digital Ocean Droplet.
 
 ## Part 6: Setup Caddy
 
-When the Watchtower is up and running, then follow the [Caddy Setup](./exercises/caddy-setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
+When the Watchtower is up and running, then follow the [Caddy Setup](./caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
 
 ## Part 7: Celebrate
 

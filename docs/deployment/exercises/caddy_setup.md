@@ -2,7 +2,7 @@
 title: Caddy Setup
 description: Deployment Exercises Caddy Setup
 layout: default
-nav_order: 4
+nav_order: 5
 parent: Exercises
 grand_parent: Deployment
 permalink: /deployment/exercises/caddy-setup/

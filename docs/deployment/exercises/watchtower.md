@@ -2,7 +2,7 @@
 title: Watchtower Setup
 description: Setting up Watchtower for Continuous Deployment
 layout: default
-nav_order: 3
+nav_order: 4
 parent: Exercises
 grand_parent: Deployment
 permalink: /deployment/exercises/watchtower-setup/
@@ -44,7 +44,7 @@ services:
 
   db:
     image: postgres:16.2
-    container_name: db2sem
+    container_name: db
     mem_limit: 1536MB
     mem_reservation: 1024MB
     restart: unless-stopped
@@ -52,18 +52,21 @@ services:
       - backend
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: <dit_sikre_password> # Change this password and pick a hard one
+      POSTGRES_PASSWORD: datdat2024! # Change this password and pick a hard one
     volumes:
       - ./data:/var/lib/postgresql/data/
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
 
 networks:
   backend:
-    name: backend
-    internal: false # in production, it should be true if you don't want to expose this network to the outside world
-    driver: bridge
 ```
 
 It will spin up a container with a Postgres database. We will add Watchtower to this file.
@@ -121,16 +124,17 @@ services:
 To start the Watchtower service with this configuration, run the following commands:
 
 ```bash
-docker-compose up -d
+    docker-compose up -d
 ```
 
 This will start both the `hotelAPI` container and the Watchtower service. Watchtower will check for updates to the `hotelAPI` image on Docker Hub every 5 minutes and automatically update the container if a new version is available.
 
 - Check that the Watchtower container is running:
 
-     ```bash
-        docker ps
-        ```
+  ```bash
+    docker ps
+  ```
+
 - You should see a container named `watchtower` running.
 
 ## Step 3: Test Watchtower
