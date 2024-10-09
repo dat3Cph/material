@@ -66,7 +66,7 @@ The goal is to have a running web api on a Digital Ocean Droplet with a domain n
 
 ### Prepare for the CodeLab
 
-1. I would be good if you have a **domain name ready**. It takes a little while to get a domain activated and have the dns handling transfered to Digital Ocean. If you don't have a domain name yet, [please follow this tutorial](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e7ebbb-8d17-480b-9ac2-b15600a699f2).
+1. It would be good if you have a **domain name ready**. It takes a little while to get a domain activated and have the dns handling transfered to Digital Ocean. If you don't have a domain name yet, [please follow this tutorial](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e7ebbb-8d17-480b-9ac2-b15600a699f2).
 
 2. Also, sign up on Digital Ocean if you haven't done that already. [Here is a tutorial](../toolbox/deployment/digitalocean_signup.md).
 
@@ -74,7 +74,9 @@ The goal is to have a running web api on a Digital Ocean Droplet with a domain n
 
 ### In-class exercises
 
-- First - read this overview carefully: [Full Pipeline](exercises/full_pipeline.md)
+This week's CodeLab is a full pipeline exercise. You will set up a full CI/CD pipeline for a Java project using GitHub Actions, Docker Hub, and Watchtower. You will learn how to automate the building, testing, and deployment of your application in a containerized environment and later run it on a Digital Ocean server.
+
+- [Codelab of the week](./exercises/codelab.md)
 
 ## Thursday (class) - Putting the pieces together - Integration testing with Security
 
