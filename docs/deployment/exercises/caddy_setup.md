@@ -68,7 +68,7 @@ services:
     container_name: hotelAPI
     ports:
       - "7070:7070"
-      environment:
+    environment:
       - DEPLOYED=true
       - DB_NAME=hotel
       - DB_USERNAME=postgres
