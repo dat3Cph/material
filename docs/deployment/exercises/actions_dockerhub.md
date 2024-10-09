@@ -162,13 +162,14 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
 
    ```
 
-  Did you remember to change the `mainClass` to your main class?
+  Did you remember to change the `mainClass` to the name of your main class?
 
   ```xml
-      <mainClass>dat.Main</mainClass>
+      <mainClass>${project.groupId}.Main</mainClass>
   ```
 
-  This is the class that contains the `main` method. Probably the class that starts your Javalin application like `dat.Main`.
+  This is the class that contains the `main` method. Probably the class that starts your Javalin application like `dat.Main`. The package name is also important, but it is
+  insert automatically på the `${project.groupId}`
 
 4. **Setting Up GitHub Secrets**:
    To authenticate with Docker Hub, add two secrets to your GitHub repository:
