@@ -1,6 +1,6 @@
 ---
 title: Caddy Setup
-description: Deployment Exercises Caddy Setup
+description: Deployment Exercises Caddy and HotelAPI Setup
 layout: default
 nav_order: 5
 parent: Exercises
@@ -13,7 +13,7 @@ permalink: /deployment/exercises/caddy-setup/
 
 # Caddy Setup
 
-We use [Caddy Server](https://caddyserver.com/) to handle the domain and SSL certificates for our applications. In this exercise, you will learn how to set up Caddy Server to serve your application over HTTPS.
+We use [Caddy Server](https://caddyserver.com/) to handle the domain and SSL certificates for our applications. In this exercise, you will learn how to set up Caddy Server to serve your application over HTTPS as a reverse proxy.
 
 ![Caddy Setup](./images/caddy.png){: .mx-auto .d-block .my-5 .md .d-md-none style="width: 50%;" }
 ![Caddy Setup](./images/caddy.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right style="width: 50%;"}
@@ -22,14 +22,14 @@ We use [Caddy Server](https://caddyserver.com/) to handle the domain and SSL cer
 
 Caddy is a powerful, enterprise-ready, open-source web server with automatic HTTPS written in [Go](https://en.wikipedia.org/wiki/Go_(programming_language)). It is designed to be easy to use and configure while providing a secure and efficient web server. Caddy is a great choice for serving web applications and websites, especially when you need to handle HTTPS and domain management. Later in the semester, we will also use Caddy to serve static web pages for deploying frontend React applications.
 
-## Prerequisites
+## Prerequisites at this point
 
 1. You will need to have a Docker Image on Docker Hub with your Javalin application. If not, then follow the [Actions and Docker Hub tutorial](./actions_dockerhub.md) tutorial first.
-2. You should also have a Javalin application running on your Droplet in a Docker Container. If that is not the case, then follow the [Watchtower tutorial](./watchtower.md) tutorial first.
+2. You should also have a Javalin application running on your Droplet in a Docker Container. If that is not the case, then follow the [Hotel API tutorial](./hotelAPI_setup.md) tutorial first.
 3. You will need to buy a domain name and setup the DNS at Digital Ocean.
 4. You should have created a subdomain for your Javalin application. For example, if your domain is `mydomain.com`, then you could create a subdomain like `hotel.mydomain.com` for your Javalin application.
 
-## Step 1: Updating the Docker Compose File
+## Step 1-Blue: Updating the Docker Compose File
 
 To add the Caddy server to this Docker Compose file, you can connect it to both the `backend` network (to interact with `db`) and an additional `frontend` network for communication with the `hotelAPI`. This setup allows Caddy to serve as a reverse proxy for the Javalin API while keeping the `db` service on its dedicated network.
 
@@ -141,7 +141,7 @@ In the `Caddyfile`, configure the reverse proxy for the Javalin API:
 
 ```caddyfile
 hotel.showcode.dk {
-    reverse_proxy hotelAPI:7070
+        reverse_proxy hotelAPI:7070
 }
 ```
 

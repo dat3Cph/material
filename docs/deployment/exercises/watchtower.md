@@ -2,7 +2,7 @@
 title: Watchtower Setup
 description: Setting up Watchtower for Continuous Deployment
 layout: default
-nav_order: 4
+nav_order: 6
 parent: Exercises
 grand_parent: Deployment
 permalink: /deployment/exercises/watchtower-setup/

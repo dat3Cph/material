@@ -49,13 +49,13 @@ Navigate to **Settings** → **Secrets and variables** → **Actions** in your G
 
 Either push a new commit or run the workflow manually in GitHub Actions.
 
-## Part 5: Setup Watchtower
+## Part 5: Setup Caddy and the hotelAPI container
 
-The proof in the pooding is to see the image on Docker Hub. When that is done, then follow the [Watchtower Setup](./watchtower.md) exercise to set up Watchtower and a container for the hotel api on your Digital Ocean Droplet.
+In this step we will configure a `docker-compose.yml` file to run the hotelAPI and Caddy server on your Digital Ocean Droplet. Follow the [Caddy Setup](./caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
 
-## Part 6: Setup Caddy
+## Part 6: Setup Watchtower
 
-When the Watchtower is up and running, then follow the [Caddy Setup](./caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
+Now that the hotelAPI is running on your Digital Ocean Droplet, we want to set up Watchtower to automatically deploy new versions of the hotelAPI when a new Docker Image is pushed to Docker Hub. Follow the [Watchtower Setup](./watchtower.md) exercise to add Watchtower to the `docker-compose.yml` file and complete the last step of the automated CI/CD pipeline.
 
 ## Part 7: Celebrate
 

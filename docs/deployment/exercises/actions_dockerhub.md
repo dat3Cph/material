@@ -126,7 +126,7 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
                     <outputFile>${project.build.directory}/app.jar</outputFile> <!-- Directly specifies app.jar as the output file -->
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>dat.Main</mainClass>
+                            <mainClass>${project.groupId}.Main</mainClass>
                         </transformer>
                     </transformers>
                     <filters>
@@ -169,7 +169,7 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
   ```
 
   This is the class that contains the `main` method. Probably the class that starts your Javalin application like `dat.Main`. The package name is also important, but it is
-  insert automatically på the `${project.groupId}`
+  inserted automatically på the `${project.groupId}`
 
 4. **Setting Up GitHub Secrets**:
    To authenticate with Docker Hub, add two secrets to your GitHub repository:
