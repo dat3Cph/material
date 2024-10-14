@@ -16,4 +16,4 @@ This is a collection of mock exams for the Backend course. The exams are designe
 
 This is the first mock exam set:
 
-![The Garden Centre](./docs/garden_centre.pdf)
+[The Garden Centre](./docs/garden_centre.pdf)
