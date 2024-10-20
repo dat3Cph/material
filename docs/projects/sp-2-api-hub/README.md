@@ -61,7 +61,8 @@ Below is a suggestion of how you can structure the project. You are free to stru
 2. Write a description of what the API is about.
 3. Decide and document the endpoints of the API +  Hand in the documentation on Moodle. [Hand it in here](https://cphbusiness.mrooms.net/mod/assign/view.php?id=736177).
 4. Sketch some diagrams of the API. A database ER diagram would be helpful early on.
-5. Create a new project in IntelliJ IDEA and set up the project structure. 6. Share the code on Github with the team.
+5. Create a new project in IntelliJ IDEA and set up the project structure.
+6. Share the code on Github with the team.
 
 ## Day 2: Tuesday
 
