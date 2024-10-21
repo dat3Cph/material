@@ -101,9 +101,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock  # Watchtower needs access to the Docker socket
     environment:
-      - WATCHTOWER_INTERVAL=300  # Interval in seconds (300s = 5 minutes)
-      - WATCHTOWER_CLEANUP=true  # Optional: removes old images after update
-      - WATCHTOWER_INCLUDE_STOPPED=true  # Optional: include stopped containers if needed
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=300  # Check for updates every 300 seconds (5 minutes)
     command: hotelAPI
 ```
 
