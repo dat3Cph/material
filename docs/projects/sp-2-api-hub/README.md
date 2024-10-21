@@ -89,7 +89,7 @@ Below is a suggestion of how you can structure the project. You are free to stru
 3. Deploy the API to a Digital Ocean Droplet one last time.
 4. Hand in the assignment on Moodle. Make sure to include a link to the Github repository and one link to the deployed api. One group member should hand in the assignment per group. NB! You can wait until Sunday evening to hand in the assignment if you wish so.
 
-## Review (Monday, October 30rd)
+## Review (Monday, October 28)
 
 ![Caddy Logo](./images/api_hub_logo_2.png){: .mr-5 .my-4 .float-left style="width: 25%;"}
 
