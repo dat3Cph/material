@@ -138,4 +138,4 @@ mv 2semDockerSetupRemote deployment
 You can check the source files for this exercise:
 
 - [Docker Compose File](./docs/docker-compose.yml)
-- [.env file](./docs/env)
+- [.env file](./docs/env.txt)
