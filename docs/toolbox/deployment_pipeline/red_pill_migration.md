@@ -115,7 +115,3 @@ docker compose up -d
 You should now be able to access the Javalin applications through the Caddy server over HTTPS.
 
 You will also be able to deploy frontend applications in the `site` folder later in the semester.
-
-## Next Step
-
-Now that you have migrated the Caddy and Javalin configurations to the `2semDockerSetupRemote` folder, you can continue with the [Caddy Server tutorial](./caddy_server.md) to learn how to configure the Caddy server to expose the applications over HTTPS.
