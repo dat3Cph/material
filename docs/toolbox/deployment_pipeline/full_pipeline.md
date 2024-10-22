@@ -34,3 +34,7 @@ The illustration at your left shows the full pipeline. Please read these descrip
 A reverse proxy accepts a request from a client, forwards it to a server that can fulfill it, and returns the server’s response to the client.
 
 ![Reverse Proxy](./images/reverseproxy.webp)
+
+## Getting Started
+
+Continue with [Actions and Docker Hub tutorial](./actions_dockerhub.md) tutorial first. It will take you through the steps of setting up a GitHub Actions workflow to build and push a Docker image to Docker Hub (step 1-7)
