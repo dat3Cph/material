@@ -2,10 +2,10 @@
 title: Watchtower Setup
 description: Setting up Watchtower for Continuous Deployment
 layout: default
-nav_order: 6
-parent: Exercises
-grand_parent: Deployment
-permalink: /deployment/exercises/watchtower-setup/
+nav_order: 7
+grand_parent: Toolbox
+parent: Deployment Pipeline
+permalink: /toolbox/deployment-pipeline/watchtower-setup/
 ---
 
 # Watchtower Setup
@@ -88,27 +88,25 @@ In your Docker Compose file, you’ll define the Watchtower service with the nec
 ```yaml
 
 services:
-  hotelAPI:
-    image: your-dockerhub-username/hotelAPI:latest
-    container_name: hotelAPI
-    ports:
-      - "7070:7070"  # Expose the necessary ports
 
   watchtower:
-    image: containrrr/watchtower
+    image: containrrr/watchtower:latest
     container_name: watchtower
     restart: unless-stopped
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock  # Watchtower needs access to the Docker socket
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_POLL_INTERVAL=300  # Check for updates every 300 seconds (5 minutes)
-    command: hotelAPI
+    networks:
+      - frontend
+    command: hotelAPI 
+    depends_on:
+      hotelAPI:
+        condition: service_healthy
 ```
 
 #### Explanation
-
-- **hotelAPI**: This is your main container running the specific Docker image (`your-dockerhub-username/hotelAPI`). You can replace `your-dockerhub-username/hotelAPI` with the exact name of the image on Docker Hub.
 
 - **watchtower**: This container runs Watchtower. The following options are specified:
   - **Volumes**: Watchtower requires access to the Docker socket (`/var/run/docker.sock`) to interact with Docker.
@@ -148,12 +146,12 @@ This will start both the `hotelAPI` container and the Watchtower service. Watcht
      docker logs watchtower
      ```
 
-- The logs will show you what is going wrong. In the testing phase, you might also want to set the `WATCHTOWER_INTERVAL` to a lower value to test if Watchtower is working as expected. For example, set it to 60 seconds.
+- The logs will show you what is going wrong. In the testing phase, you might also want to set the `WATCHTOWER_POLL_INTERVAL` to a lower value to test if Watchtower is working as expected. For example, set it to 60 seconds.
 
 ## Step 5: Testing the endpoint
 
-Depending on your firewall settings, you might need to open the port `7070` on your Droplet. You can do this in the Digital Ocean dashboard. Then you should be able to hit the endpoint of your Javalin application by navigating to `http://your-droplet-ip:7070` and add the necessary path to your API.
+Depending on your firewall settings, you might need to open the port `7070` on your Droplet. You can do this in the Digital Ocean dashboard. Then you should be able to hit the endpoint of your Javalin application by navigating to `http://your-droplet-ip:7070` and add the necessary path to your API. However, the sub domain should also work on https, since Caddy is running. It should be available at `https://hotel.mydomain.com`.
 
-## Next Step: Caddy Setup
+## Next Step: 2nd semester migration - or done
 
-Now that you have set up Watchtower to automatically deploy your Javalin application, you can move on to the next exercise: [Caddy Setup](./caddy_setup.md).
+Now that you have set up Watchtower to automatically deploy your Javalin application, you have completed you setup. In case you need to move your settings from the "Red Pill" setup from 2nd semester, then follow the [Red Pill Migration](./red-pill-migration.md) tutorial. Otherwise, you have made it to the end of the deployment pipeline. Congratulations!

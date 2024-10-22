@@ -3,9 +3,9 @@ title: Full Pipeline
 description: Deployment Exercises
 layout: default
 nav_order: 1
-parent: Exercises
-grand_parent: Deployment
-permalink: /deployment/exercises/full-pipeline/
+grand_parent: Toolbox
+parent: Deployment Pipeline
+permalink: /toolbox/deployment-pipeline/full-pipeline/
 ---
 
 # Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions, Docker
@@ -26,7 +26,7 @@ The illustration at your left shows the full pipeline. Please read these descrip
 5. You can follow the process in the Actions tab on your Github repository. In case the build fails, you will get a notification in the Actions tab. You will also be able to inspect the build logs to see what went wrong.
 6. When the build is successful, the Docker image is pushed to Docker Hub. You can inspect the image in your Docker Hub account.
 7. Docker Hub is used for storing your Docker images. You can see the images in your Docker Hub account. Each image has a tag that corresponds to the commit hash in your Github repository. This way you can always trace back to the code that was used to build the image.
-8. The new built Docker image is not pushed to the Digital Ocean server. Instead, a service that runs on your Droplet called Watchtower is used to pull the image from Docker Hub.
+8. The new built Docker image is not pushed to the Digital Ocean server. Instead, when the `docker compose up` is executed, the image is pulled from Docker Hub.
 9. Watchtower is configured to pull the image from Docker Hub at specific time intervals and run it on the server. This way you can deploy your application to the cloud. Watchtower will also restart the container if it crashes. Check how to [setup Watchtower](./watchtower.md) for more details.
 10. The Docker container will run your Javalin project on a specific port. At the next deployment, Watchtower will pull the new image and run it in a new container and retire the old one. This way you can deploy new versions of your project without downtime at all.
 11. The application is accessed through the http protocol by using a port number.  We will go into more details on how to setup **Caddy Server** to handle the **domain** and **SSL certificates** in the next exercise called [Caddy Setup](./caddy_setup.md). Caddy also acts as a reverse proxy server and static file server.

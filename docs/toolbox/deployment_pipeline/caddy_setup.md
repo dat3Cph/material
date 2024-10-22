@@ -2,10 +2,10 @@
 title: Caddy Setup
 description: Deployment Exercises Caddy and HotelAPI Setup
 layout: default
-nav_order: 5
-parent: Exercises
-grand_parent: Deployment
-permalink: /deployment/exercises/caddy-setup/
+nav_order: 6
+grand_parent: Toolbox
+parent: Deployment Pipeline
+permalink: /toolbox/deployment-pipeline/caddy-setup/
 ---
 
 ![Caddy Logo](./images/caddy_logo.png){: .mx-auto .d-block .my-5 .md .d-md-none  style="width: 25%;"}
@@ -29,97 +29,51 @@ Caddy is a powerful, enterprise-ready, open-source web server with automatic HTT
 3. You will need to buy a domain name and setup the DNS at Digital Ocean.
 4. You should have created a subdomain for your Javalin application. For example, if your domain is `mydomain.com`, then you could create a subdomain like `hotel.mydomain.com` for your Javalin application.
 
-## Step 1-Blue: Updating the Docker Compose File
+## Step 1 (red pill): Merge docker compose files
+
+If you went the red pill way on 2nd semester, you will have a `docker-compose.yml` file in the `~jetty/caddy_deployment` folder on your Droplet. This file configures the Caddy server to serve the Javalin application over HTTPS. You will also have a `Caddyfile` in the same folder that configures the reverse proxy for the Javalin API.
+
+We want to keep all the Docker configurations in one compose file to simplify the deployment process. To do this, we will merge the Caddy and Javalin configurations from the `caddy_deployment` folder to the `2semDockerSetupRemote` folder. This will allow us to keep all the Docker configurations in one compose file and simplify the deployment process.
+
+However, we recommend that you wait with this step until you have completed the other steps in these tutorials. This will ensure that you have a working setup before you start merging the Docker Compose files and you 2nd semester projects. So we begin with testing the hotelAPI first.
+
+But when you have the hotelAPI up and running, then follow these steps to merge the docker compose files:
+
+- [Red Pill Migration](./red-pill-migration.md)
+
+## Step 2 (everyone): Updating the Docker Compose File
+
+Move to the `~jetty/2semDockerSetupRemote` folder on your Droplet and open the `docker-compose.yml` file in an editor (nano).
 
 To add the Caddy server to this Docker Compose file, you can connect it to both the `backend` network (to interact with `db`) and an additional `frontend` network for communication with the `hotelAPI`. This setup allows Caddy to serve as a reverse proxy for the Javalin API while keeping the `db` service on its dedicated network.
 
 Here’s how you can modify the Docker Compose file to include Caddy:
 
-### Updated Docker Compose File
+### Add this into Docker Compose File
 
 ```yaml
-version: '3'
-services:
-  db:
-    image: postgres:16.2
-    container_name: db
-    mem_limit: 1536MB
-    mem_reservation: 1024MB
-    restart: unless-stopped
-    networks:
-      - backend
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: <dit_sikre_password>
-    volumes:
-      - ./data:/var/lib/postgresql/data/
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "5432:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
-
-  hotelAPI:
-    image: your-dockerhub-username/hotelAPI:latest
-    container_name: hotelAPI
-    ports:
-      - "7070:7070"
-    environment:
-      - DEPLOYED=true
-      - DB_NAME=hotel
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=<dit_sikre_password>
-      - CONNECTION_STR=jdbc:postgresql://db:5432/
-      - SECRET_KEY=4c9f92b04b1e85fa56e7b7b0a34f2de4f5b08cd9bb4dfe8ac4d73b4f7f6ef37b
-      - ISSUER=Dit navn
-      - TOKEN_EXPIRE_TIME=1800000
-    depends_on:
-      db:
-        condition: service_healthy
-    networks:
-      - backend
-      - frontend
-
-  watchtower:
-    image: containrrr/watchtower
-    container_name: watchtower
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - WATCHTOWER_INTERVAL=300
-      - WATCHTOWER_CLEANUP=true
-    command: hotelAPI
-
   caddy:
-    image: caddy:latest
-    container_name: caddy
+    image: caddy:2.7.6
     restart: unless-stopped
+    container_name: caddy
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
+      - ./site:/srv
+      - ./caddy_data:/data
+      - ./caddy_config:/config
     networks:
       - frontend
-
-networks:
-  backend:
-    name: backend
-    driver: bridge
-  frontend:
-    name: frontend
-    driver: bridge
+    depends_on:
+      hotelAPI:
+        condition: service_healthy
 
 volumes:
   caddy_data:
   caddy_config:
+  logs:
 ```
 
 ### Explanation of Changes
@@ -132,14 +86,17 @@ volumes:
   - Caddy is only connected to the `frontend` network, as it doesn’t need to access the database.
   - It uses volumes to mount the `Caddyfile` and persist configuration data.
 
-- **hotelAPI Configuration:**
-  - The `hotelAPI` service is now on both the `backend` and `frontend` networks, allowing it to interact with both the database and the Caddy server.
-
-## Step 2: Example Caddyfile Configuration
+## Step 3: Example Caddyfile Configuration
 
 In the `Caddyfile`, configure the reverse proxy for the Javalin API:
 
-```caddyfile
+```bash
+nano Caddyfile
+```
+
+Enter the following configuration with you own domain name:
+
+```plaintext
 hotel.showcode.dk {
         reverse_proxy hotelAPI:7070
 }
@@ -150,16 +107,21 @@ hotel.showcode.dk {
 To start everything, use:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This setup ensures that:
 
 - Caddy can serve requests from `hotel.showcode.dk` and route them to the `hotelAPI`.
 - The `db` service is isolated on the `backend` network and isn’t accessible from the `frontend`, which enhances security by reducing direct access to the database from outside sources.
+- Notice the `healthcheck` configuration for the `db` and `hotelAPI` services. This ensures that the database is running before the `hotelAPI` container starts, and that the `hotelAPI` needs to be in a healty state before Caddy starts routing requests to it.
 
 ## The final setup with network configuration
 
 Below is a visual representation of the network configuration for the services:
 
 ![Caddy Setup](./images/caddy_setup.png)
+
+## Next steps
+
+As a last step we will add Watchtower to the Docker Compose file to ensure that the containers are always up-to-date. Follow the [Watchtower Setup](./watchtower.md) tutorial to complete the deployment pipeline setup.

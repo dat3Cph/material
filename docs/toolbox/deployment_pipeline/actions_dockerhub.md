@@ -3,9 +3,9 @@ title: Actions and Docker Hub
 description: From Local to Github Actions to Docker Hub
 layout: default
 nav_order: 3
-parent: Exercises
-grand_parent: Deployment
-permalink: /deployment/exercises/actions-dockerhub/
+grand_parent: Toolbox
+parent: Deployment Pipeline
+permalink: /toolbox/deployment-pipeline/actions-dockerhub/
 ---
 
 # Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions and Docker
@@ -95,18 +95,20 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
    Create a `Dockerfile` in the root of your project to define how your application should be built and run inside a Docker container.
 
    ```bash
-   # Start with Amazon Corretto 17 Alpine base image
-   FROM amazoncorretto:17-alpine
+    # Start with Amazon Corretto 17 Alpine base image
+    FROM amazoncorretto:17-alpine
 
-   # Copy the jar file into the image
-   COPY target/app.jar /app.jar
+    # Install curl on Alpine
+    RUN apk update && apk add --no-cache curl
 
-   # Expose the port your app runs on
-   EXPOSE 7070
+    # Copy the jar file into the image
+    COPY target/app.jar /app.jar
 
-   # Command to run your app
+    # Expose the port your app runs on
+    EXPOSE 7070
 
-   CMD ["java", "-jar", "/app.jar"]
+    # Command to run your app
+    CMD ["java", "-jar", "/app.jar"]
 
    ```
 
@@ -237,11 +239,11 @@ Make sure to set the following environment variables on your Digital Ocean serve
 - `DB_USERNAME`
 - `DB_PASSWORD`
 
-We will get back to this in a later tutorial when setting up [Watchtower and Docker Compose on Digital Ocean](./watchtower.md).
+We will get back to this in a later tutorial when setting up [The Hotel API](./hotelAPI_setup.md).
 
 ## Next step
 
-Now that you have set up the CI/CD pipeline for your Java project, you can proceed to the next exercise: [Watchtower Setup](./watchtower.md).
+Now that you have set up the CI/CD pipeline for your Java project, you can proceed to the next part of the tutorial: [Setting up Postgres](./postgres_setup.md).
 
 **Happy Coding!**
 
