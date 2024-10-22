@@ -3,8 +3,8 @@ title: 7. Snapshot
 description: Snapshot af Droplet
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/snapshot
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/snapshot
 nav_order: 8
 ---
 

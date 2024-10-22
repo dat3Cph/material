@@ -113,9 +113,8 @@ services:
 - **watchtower**: This container runs Watchtower. The following options are specified:
   - **Volumes**: Watchtower requires access to the Docker socket (`/var/run/docker.sock`) to interact with Docker.
   - **Environment Variables**:
-    - `WATCHTOWER_INTERVAL=300`: This sets Watchtower to check for updates every 300 seconds (5 minutes).
+    - `WATCHTOWER_POLL_INTERVAL=300`: This sets Watchtower to check for updates every 300 seconds (5 minutes).
     - `WATCHTOWER_CLEANUP=true`: Watchtower removes old images after they are updated to free up space.
-    - `WATCHTOWER_INCLUDE_STOPPED=true`: This includes any stopped containers if needed, which might not apply here but could be useful in some cases.
   - **Command**: Specifying `hotelAPI` tells Watchtower to monitor only the `hotelAPI` container. If you omit this, Watchtower will monitor all containers by default.
 
 ### Step 2: Run the Configuration

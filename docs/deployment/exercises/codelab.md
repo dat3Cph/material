@@ -14,7 +14,7 @@ In this exercise, you will set up a full CI/CD pipeline for a Java project using
 
 ## Part 1: Get an overview
 
-First - read this overview carefully: [Full Pipeline](./full_pipeline.md)
+First - read this overview carefully: [Full Pipeline](../../toolbox/deployment_pipeline/full_pipeline.md)
 
 ## Part 2: Setup a project to deploy
 
@@ -51,11 +51,11 @@ Either push a new commit or run the workflow manually in GitHub Actions.
 
 ## Part 5: Setup Caddy and the hotelAPI container
 
-In this step we will configure a `docker-compose.yml` file to run the hotelAPI and Caddy server on your Digital Ocean Droplet. Follow the [Caddy Setup](./caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
+In this step we will configure a `docker-compose.yml` file to run the hotelAPI and Caddy server on your Digital Ocean Droplet. Follow the [Caddy Setup](../../toolbox/deployment_pipeline/caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
 
 ## Part 6: Setup Watchtower
 
-Now that the hotelAPI is running on your Digital Ocean Droplet, we want to set up Watchtower to automatically deploy new versions of the hotelAPI when a new Docker Image is pushed to Docker Hub. Follow the [Watchtower Setup](./watchtower.md) exercise to add Watchtower to the `docker-compose.yml` file and complete the last step of the automated CI/CD pipeline.
+Now that the hotelAPI is running on your Digital Ocean Droplet, we want to set up Watchtower to automatically deploy new versions of the hotelAPI when a new Docker Image is pushed to Docker Hub. Follow the [Watchtower Setup](../../toolbox/deployment_pipeline/watchtower.md) exercise to add Watchtower to the `docker-compose.yml` file and complete the last step of the automated CI/CD pipeline.
 
 ## Part 7: Celebrate
 

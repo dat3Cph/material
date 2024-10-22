@@ -2,9 +2,9 @@
 title: 8. Docker and Caddy
 description: Deployment with your own domain name
 layout: default
-parent: Deployment
+parent: Deployment Infrastructure
 grand_parent: Toolbox
-permalink: /toolbox/deployment/docker-caddy/
+permalink: /toolbox/deployment-infrastructure/docker-caddy/
 nav_order: 9
 ---
 

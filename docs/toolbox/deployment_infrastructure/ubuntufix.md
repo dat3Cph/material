@@ -3,8 +3,8 @@ title: 4. Opret bruger
 description: Opret Jetty bruger i Ubuntu
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/ubuntu-update
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/ubuntu-update
 nav_order: 5
 ---
 

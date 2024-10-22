@@ -3,8 +3,8 @@ title: 6. Postgres
 description: Opsætning Postgres på Droplet
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/postgres-setup
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/postgres-setup
 nav_order: 7
 ---
 # Opsætning af Postgres i en Docker container på en Droplet

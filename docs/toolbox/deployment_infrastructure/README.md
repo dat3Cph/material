@@ -1,11 +1,11 @@
 ---
-title: Deployment
-description: Tutorial on how to deploy your project
+title: Deployment Infrastructure
+description: Tutorial on how to setup a virtual server at Digital Ocean for deployment
 layout: default
 parent: Toolbox
 nav_order: 4
 has_children: true
-permalink: /toolbox/deployment/
+permalink: /toolbox/deployment-infrastructure/
 ---
 
 # Deployment
@@ -40,6 +40,6 @@ I forhold til ovenstående skema, kan du finde ud af hvad du mangler her:
 7. [Tag et snapshot af din Droplet](./snapshot.md)
 8. [Deploy dit website (det gør vi først onsdag)](./docker_caddy_droplet.md)
 
-Her er en oversigt over den overordnede system arkitektur:
+Her er en konceptuel oversigt over den overordnede system arkitektur:
 
 ![System](./images/systemarchitecture.png)

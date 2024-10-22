@@ -3,8 +3,8 @@ title: 1. SSH
 description: Lav en ssh nøgle
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/sshkeys
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/sshkeys
 nav_order: 2
 ---
 

@@ -3,7 +3,7 @@ title: Custom templates
 description: How to make your own custom templates in IntelliJ IDEA
 layout: default
 nav_order: 1
-parent: Ides
+parent: IDEs
 grand_parent: Toolbox
 permalink: /toolbox/ides/intellij/custom-templates
 ---

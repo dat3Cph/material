@@ -16,7 +16,7 @@ On 3rd semester we will guide you through creating a CI/CD pipeline for a Java /
 
 The illustration at your left shows the full pipeline. Please read these descriptions carefully in order to understand the steps included in the pipeline.
 
-![pipeline](./images/fullpipeline.png){: .mx-auto .d-block .my-5 .md .d-md-none }
+![pipeline](./images/fullpipeline.png){: .x mx-auto .d-block .my-5 .md .d-md-none }
 ![pipeline](./images/fullpipeline.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right}
 
 1. Programming the project: You will write the code for your project in Java 17 and Javalin on your local machine. In this semester we will use Javalin as the web framework, and we build RESTful APIs. The projects are built using Maven, and the structure of the project is based on the Maven standard. So you will have a `src/main/java` folder for your Java code, and a `src/main/resources` folder for your resources. You will also have a `src/test/java` folder for your tests. The `pom.xml` file will be the configuration file for Maven, and we need to include a `Dockerfile` that describes how to build an image with the project in step (5). We also need to include a file for Github Actions in the `.github/workflows` folder. This file will describe the steps in the pipeline.

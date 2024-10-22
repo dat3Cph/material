@@ -4,7 +4,7 @@ description: Gennemgang af diverse design patterns
 layout: default
 parent: Toolbox
 has_children: true
-nav_order: 5
+nav_order: 6
 permalink: /toolbox/designpatterns/
 ---
 

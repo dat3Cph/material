@@ -3,8 +3,8 @@ title: 5. Java
 description: Installer Java på Droplet
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/java
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/java
 nav_order: 6
 ---
 

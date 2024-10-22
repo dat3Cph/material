@@ -3,8 +3,8 @@ title: 0. Digital Ocean signup
 description: Tilmeld dig hos Digital Ocean
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/digitalocean-signup
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/digitalocean-signup
 nav_order: 0
 ---
 

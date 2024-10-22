@@ -3,8 +3,8 @@ title: 3. Log på Ubuntu med ssh
 description: Log på Droplet via ssh
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/log-on-droplet
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/log-on-droplet
 nav_order: 4
 ---
 

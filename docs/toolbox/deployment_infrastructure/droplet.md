@@ -3,8 +3,8 @@ title: 2. Opret Droplet
 description: Lav ny Droplet hos Digital Ocean
 layout: default
 grand_parent: Toolbox
-parent: Deployment
-permalink: /toolbox/deployment/droplet
+parent: Deployment Infrastructure
+permalink: /toolbox/deployment-infrastructure/droplet
 nav_order: 3
 ---
 

@@ -22,7 +22,7 @@ Deploying Javalin applications on Docker in the Cloud using:
 - Caddy Server
 - Domains, SSL Certificates, and HTTPS
 
-[Learning objectives for the week](learningObjectives.md)
+[Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
 
@@ -56,7 +56,7 @@ Skim through these articles:
 
 ### In-class exercises
 
-- [Github Actions and Docker Hub Tutorial](exercises/actions_dockerhub.md)
+- [Github Actions and Docker Hub Tutorial](../toolbox/deployment_pipeline/actions_dockerhub.md)
 
 ## Wednesday (CodeLab) - Docker, Digital Ocean, Watch Tower, and Caddy Server
 
@@ -68,9 +68,9 @@ The goal is to have a running web api on a Digital Ocean Droplet with a domain n
 
 1. It would be good if you have a **domain name ready**. It takes a little while to get a domain activated and have the dns handling transfered to Digital Ocean. If you don't have a domain name yet, [please follow this tutorial](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e7ebbb-8d17-480b-9ac2-b15600a699f2).
 
-2. Also, sign up on Digital Ocean if you haven't done that already. [Here is a tutorial](../toolbox/deployment/digitalocean_signup.md).
+2. Also, sign up on Digital Ocean if you haven't done that already. [Here is a tutorial](../toolbox/deployment_infrastructure/digitalocean_signup.md).
 
-3. Make sure you have a **Droplet** running on Digital Ocean. [Here is a tutorial](../toolbox/deployment/droplet.md).
+3. Make sure you have a **Droplet** running on Digital Ocean. [Here is a tutorial](../toolbox/deployment_infrastructure/droplet.md).
 
 ### In-class exercises
 
