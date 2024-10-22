@@ -56,37 +56,36 @@ We don't want to loose our data, so we will keep the `db` service running on the
 2. Open the `docker-compose.yml` file in an editor (nano).
 3. Update the file with the following content:
 
-    ```yaml
-    version: '3'
+   ```yaml
+   version: '3'
 
-    services:
+   services:
 
-      db:
-        image: postgres:16.2
-        container_name: db
-        restart: unless-stopped
-        networks:
-          - backend
-        environment:
-          POSTGRES_USER: ${POSTGRES_USER}
-          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-        volumes:
-          - ./data:/var/lib/postgresql/data/
-          - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-        ports:
-          - "5432:5432"
-        healthcheck:
-          test: ["CMD-SHELL", "pg_isready -U postgres"]
-          interval: 30s
-          timeout: 10s
-          retries: 5
-          start_period: 10s
+     db:
+       image: postgres:16.2
+       container_name: db
+       restart: unless-stopped
+       networks:
+         - backend
+       environment:
+         POSTGRES_USER: ${POSTGRES_USER}
+         POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+       volumes:
+         - ./data:/var/lib/postgresql/data/
+         - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+       ports:
+         - "5432:5432"
+       healthcheck:
+         test: ["CMD-SHELL", "pg_isready -U postgres"]
+         interval: 30s
+         timeout: 10s
+         retries: 5
+         start_period: 10s
 
-    networks:
-      backend:
-        name: backend
-
-    ```
+   networks:
+     backend:
+       name: backend
+   ```
 
 4. It's close to the 2nd semester version, but we have removed the `mem_limit` and `mem_reservation` settings. We have also added `${POSTGRES_USER}` and `${POSTGRES_PASSWORD}` as environment variables. These will be set in the `.env` file later. We have also added a healthcheck to the service, that we will use later.
 

@@ -46,4 +46,4 @@ Her er en oversigt over den overordnede system arkitektur:
 
 ## Deployment Pipeline
 
-Når du har fulgt ovenstående vejledninger, så er du klar til at deploye dit projekt. Vi har lavet en pipeline, som du kan følge. Den er delt op i 6 trin:
+Når du har fulgt ovenstående vejledninger, så er du klar til at deploye dit projekt. Vi har lavet en pipeline, som du kan følge.

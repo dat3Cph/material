@@ -1,0 +1,98 @@
+# Postgres setup for 3rd semester
+# Update environment variables in .env file
+
+version: '3'
+
+services:
+
+  db:
+    image: postgres:16.2
+    container_name: db
+    restart: unless-stopped
+    networks:
+      - backend
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./data:/var/lib/postgresql/data/
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+  hotelAPI:
+    image: jonbertelsen/hotel_api:latest
+    container_name: hotelAPI
+    ports:
+      - "7070:7070"
+    environment:
+      - DEPLOYED=${DEPLOYED}
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - CONNECTION_STR=${CONNECTION_STR}
+      - SECRET_KEY=${SECRET_KEY}
+      - ISSUER=${ISSUER}
+      - TOKEN_EXPIRE_TIME=${TOKEN_EXPIRE_TIME}
+    networks:
+      - backend
+      - frontend
+    volumes:
+      - ./logs:/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7070/api/auth/healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  caddy:
+    image: caddy:2.7.6
+    restart: unless-stopped
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/srv
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+    networks:
+      - frontend
+    depends_on:
+      hotelAPI:
+        condition: service_healthy
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=60  # Check for updates every 300 seconds (5 minutes)
+    networks:
+      - frontend
+    command: hotelAPI 
+    depends_on:
+      hotelAPI:
+        condition: service_healthy
+
+volumes:
+  logs:
+  caddy_data:
+  caddy_config:
+
+networks:
+  backend:
+    name: backend
+  frontend:
+    name: frontend

@@ -29,47 +29,13 @@ Watchtower is a tool used in Docker environments to automate the process of upda
    - Open a terminal and SSH into your Digital Ocean Droplet.
 
 2. **Install Watchtower with docker-compose**:
-You should already have a `docker-compose.yml` file on your Droplet from 2nd semester. It is located in the `~jetty/2semDockerSetupRemote` folder. If not, then follow the [2nd semester tutorial](https://github.com/dat2Cph/2semDockerSetupRemote/tree/main) first and get it fixed.
+You should already have a `docker-compose.yml` file on your Droplet from 2nd semester. It is located in the `~jetty/2semDockerSetupRemote` folder.
 
-The docker-compose file should look like this:
+3. Jump into the `2semDockerSetupRemote` folder:
 
-```yaml
-# Localhost Docker Compose fil for 2. semester på datamatiker uddannelsen i Lyngby forår 2024
-# Opretter en container: 
-# db: Postgresql data base server som kører på port 5432
-
-version: '3.9'
-
-services:
-
-  db:
-    image: postgres:16.2
-    container_name: db
-    mem_limit: 1536MB
-    mem_reservation: 1024MB
-    restart: unless-stopped
-    networks:
-      - backend
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: datdat2024! # Change this password and pick a hard one
-    volumes:
-      - ./data:/var/lib/postgresql/data/
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "5432:5432"
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
-
-networks:
-  backend:
+```bash
+cd ~jetty/2semDockerSetupRemote
 ```
-
-It will spin up a container with a Postgres database. We will add Watchtower to this file.
 
 ## Step 2: Add Watchtower to the `docker-compose.yml` file
 
@@ -158,9 +124,18 @@ Now that you have set up Watchtower to automatically deploy your Javalin applica
 
 ## Bonus Step: Rename the deployment folder
 
-This one is easy. Just rename the `2semDockerSetupRemote` folder to `deployment`:
+This one is easy. Stop your containers and then rename the `2semDockerSetupRemote` folder to `deployment`:
 
 ```bash
+cd ~jetty/2semDockerSetupRemote
+docker-compose down
 cd ~jetty
 mv 2semDockerSetupRemote deployment
 ```
+
+## Source files
+
+You can check the source files for this exercise:
+
+- [Docker Compose File](./docs/docker-compose.yml)
+- [.env file](./docs/env)

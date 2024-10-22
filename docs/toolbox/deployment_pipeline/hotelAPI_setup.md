@@ -40,58 +40,55 @@ So who are you. Blue or Red?
 2. Open the `docker-compose.yml` file in an editor (nano).
 3. Add this services to the file below the Postgres service. Remember to rename the image to you own name instead of `jonbertelsen/hotel_api:latest`:
 
-    ```yaml
-      hotelAPI:
-        image: jonbertelsen/hotel_api:latest
-        container_name: hotelAPI
-        ports:
-          - "7070:7070"
-        environment:
-          - DEPLOYED=${DEPLOYED}
-          - DB_NAME=${DB_NAME}
-          - DB_USERNAME=${DB_USERNAME}
-          - DB_PASSWORD=${DB_PASSWORD}
-          - CONNECTION_STR=${CONNECTION_STR}
-          - SECRET_KEY=${SECRET_KEY}
-          - ISSUER=${ISSUER}
-          - TOKEN_EXPIRE_TIME=${TOKEN_EXPIRE_TIME}
-        networks:
-          - backend
-          - frontend
-        volumes:
-          - ./logs:/logs
-        depends_on:
-          db:
-            condition: service_healthy
-        healthcheck:
-          test: ["CMD", "curl", "-f", "http://localhost:7070/api/auth/healthcheck"]
-          interval: 30s
-          timeout: 5s
-          retries: 5
-          start_period: 10s
+```yml
+  hotelAPI:
+    image: jonbertelsen/hotel_api:latest
+    container_name: hotelAPI
+    ports:
+      - "7070:7070"
+    environment:
+      - DEPLOYED=${DEPLOYED}
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - CONNECTION_STR=${CONNECTION_STR}
+      - SECRET_KEY=${SECRET_KEY}
+      - ISSUER=${ISSUER}
+      - TOKEN_EXPIRE_TIME=${TOKEN_EXPIRE_TIME}
+    networks:
+      - backend
+      - frontend
+    volumes:
+      - ./logs:/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7070/api/auth/healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
-      networks:
-        backend:
-          name: backend
-        frontend:
-          name: frontend
+volumes:
+  logs:
 
-      volumes:
-        logs:
-    ```
+networks:
+  backend:
+    name: backend
+  frontend:
+    name: frontend
+```
 
 4. Add the following environment variables to the `.env` file:
 
-    ```properties
-    DEPLOYED=true
-    DB_NAME=hotel
-    DB_USERNAME=postgres
-    DB_PASSWORD=<your secure password>
-    CONNECTION_STR=jdbc:postgresql://db:5432/
-    SECRET_KEY=4c9f92b04b1e85fa56e7b7b0a34f2de4f5b08cd9bb4dfe8ac4d73b4f7f6ef37b
-    ISSUER=Bilbo Baggins
-    TOKEN_EXPIRE_TIME=18000
-    ```
+   ```properties
+   DEPLOYED=true
+   DB_NAME=hotel
+   DB_USERNAME=postgres
+   DB_PASSWORD=<your secure password>
+   CONNECTION_STR=jdbc:postgresql://db:5432/
+   SECRET_KEY=4c9f92b04b1e85fa56e7b7b0a34f2de4f5b08cd9bb4dfe8ac4d73b4f7f6ef37b
+   ISSUER=Bilbo Baggins
+   TOKEN_EXPIRE_TIME=18000
+   ```
 
 5. Save the file and exit the editor.
 
