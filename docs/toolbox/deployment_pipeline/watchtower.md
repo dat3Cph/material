@@ -155,3 +155,12 @@ Depending on your firewall settings, you might need to open the port `7070` on y
 ## Next Step: 2nd semester migration - or done
 
 Now that you have set up Watchtower to automatically deploy your Javalin application, you have completed you setup. In case you need to move your settings from the "Red Pill" setup from 2nd semester, then follow the [Red Pill Migration](./red-pill-migration.md) tutorial. Otherwise, you have made it to the end of the deployment pipeline. Congratulations!
+
+## Bonus Step: Rename the deployment folder
+
+This one is easy. Just rename the `2semDockerSetupRemote` folder to `deployment`:
+
+```bash
+cd ~jetty
+mv 2semDockerSetupRemote deployment
+```

@@ -1,6 +1,6 @@
 ---
-title: Full Pipeline
-description: Deployment Exercises
+title: Full Pipeline Overview
+description: Deployment overview of the full pipeline
 layout: default
 nav_order: 1
 grand_parent: Toolbox
@@ -8,7 +8,7 @@ parent: Deployment Pipeline
 permalink: /toolbox/deployment-pipeline/full-pipeline/
 ---
 
-# Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions, Docker
+# Tutorial: Setting Up a CI/CD Pipeline with GitHub Actions and Docker
 
 ## Introduction and overview
 

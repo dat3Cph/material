@@ -5,7 +5,7 @@ layout: default
 parent: Toolbox
 nav_order: 5
 has_children: true
-permalink: /toolbox/deployment-infrastructure/
+permalink: /toolbox/deployment-pipeline/
 ---
 
 # Deployment
@@ -43,3 +43,7 @@ I forhold til ovenstående skema, kan du finde ud af hvad du mangler her:
 Her er en oversigt over den overordnede system arkitektur:
 
 ![System](./images/systemarchitecture.png)
+
+## Deployment Pipeline
+
+Når du har fulgt ovenstående vejledninger, så er du klar til at deploye dit projekt. Vi har lavet en pipeline, som du kan følge. Den er delt op i 6 trin:
