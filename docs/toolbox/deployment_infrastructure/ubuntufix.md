@@ -117,15 +117,11 @@ Hvis det går godt, så læg mærke til at prompten hedder noget i stil med `jet
 
 Vi lukker kun trafik ind til ssh, postgres fra specifikke IP-numre (hvor du arbejder fra). Når du senere skal deploye dit Javalin website, har vi to måder at gøre det på. Den første kræver at mindst port 7070 er åben. Den anden at port 80 og 443 er åbne. Det gør vi senere.
 
-```bash
-sudo ufw status (viser de åbne porte - 22, 2375, 2376)
-sudo ufw allow ssh
-sudo ufw allow from <ip> to any port 5432 proto tcp
-sudo ufw status
-sudo ufw enable
-```
+Til at oprette en firewall har vi to muligheder. Den første er at bruge Linux' `ufw` (uncomplicated firewall). Den anden er at bruge Digital Ocean's firewall. Vi tager den anden mulighed.
 
-TIP! Find IP nummer hvorfra du sidder via [https://www.myip.com/](https://www.myip.com/). Det er det IP du skal indsætte i `<ip>` ovenfor. Hvis du vil tilgå din Droplet andre steder fra, så skal du også tilføje de IP-numre.
+- Følg denne video for at opsætte en [firewall hos Digital Ocean](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b2178213-1924-4325-85c6-b15a00aba65e).
+
+TIP! Find IP nummer hvorfra du sidder via [https://www.myip.com/](https://www.myip.com/). Det er det IP du skal indsætte i `<ip>` ovenfor. Hvis du vil tilgå din Droplet andre steder fra, så skal du også tilføje de IP-numre til din "white-list".
 
 ### 6. Login fra localhost
 
