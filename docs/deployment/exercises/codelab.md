@@ -51,7 +51,10 @@ Either push a new commit or run the workflow manually in GitHub Actions.
 
 ## Part 5: Setup Caddy and the hotelAPI container
 
-In this step we will configure a `docker-compose.yml` file to run the hotelAPI and Caddy server on your Digital Ocean Droplet. Follow the [Caddy Setup](../../toolbox/deployment_pipeline/caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
+In this step we will configure a `docker-compose.yml` file to run the hotelAPI and Caddy server on your Digital Ocean Droplet.
+
+- Follow the [Hotel API setup](../../toolbox/deployment_pipeline/hotelapi_setup.md) exercise to set up the hotelAPI on your Digital Ocean Droplet.
+- Then follow the [Caddy Setup](../../toolbox/deployment_pipeline/caddy_setup.md) exercise to set up Caddy and a reverse proxy for the hotel api on your Digital Ocean Droplet.
 
 ## Part 6: Setup Watchtower
 
