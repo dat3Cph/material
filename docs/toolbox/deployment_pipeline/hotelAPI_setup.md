@@ -77,6 +77,8 @@ networks:
     name: frontend
 ```
 
+Notice the healthcheck. It will check if the application is running by calling the `/api/auth/healthcheck` endpoint every 30 seconds. If the application does not respond within 5 seconds, it will retry 5 times with a 10 second start period. This is a good way to make sure that the application is running and healthy. You will need to implement a healthcheck endpoint in your application. We have already done that for you in the HotelAPI. Look in the [`SecurityController`](https://github.com/jonbertelsen/hotel_api_deployable/blob/b7c397b56559ad51ec6f070aa6ecd4fb49892099/src/main/java/dat/security/controllers/SecurityController.java#L194-L197) class, and also, notice the endpoint added in the [`SecurityRoutes`](https://github.com/jonbertelsen/hotel_api_deployable/blob/b7c397b56559ad51ec6f070aa6ecd4fb49892099/src/main/java/dat/security/routes/SecurityRoutes.java#L22).
+
 4. Add the following environment variables to the `.env` file:
 
    ```properties
