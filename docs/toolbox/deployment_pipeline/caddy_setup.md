@@ -39,7 +39,7 @@ However, we recommend that you wait with this step until you have completed the 
 
 But when you have the hotelAPI up and running, then follow these steps to merge the docker compose files:
 
-- [Red Pill Migration](./red-pill-migration.md)
+- [Red Pill Migration](./red_pill_migration.md)
 
 ## Step 2 (everyone): Updating the Docker Compose File
 

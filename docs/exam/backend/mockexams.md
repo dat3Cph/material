@@ -2,7 +2,7 @@
 title: Mock exams
 description: Mock exams for the Backend course
 layout: default
-nav_order: 1
+nav_order: 2
 parent: Backend
 grand_parent: Exam
 permalink: /exam/backend/mock-exams
