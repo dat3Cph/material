@@ -42,7 +42,7 @@ I forhold til ovenstående skema, kan du finde ud af hvad du mangler her:
 
 Her er en oversigt over den overordnede system arkitektur:
 
-![System](./images/systemarchitecture.png)
+![System](../deployment_infrastructure/images/systemarchitecture.png)
 
 ## Deployment Pipeline
 
