@@ -185,7 +185,7 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
    - Set the access permissions to **Read, Write, Delete**, then click **Generate**.
    - Copy the generated token in step 2. It will start with `dcr_pat_...` — this token will be used in the ´DOCKERHUB_TOKEN` in your GitHub secret.
 
-6. **Setting Up GitHub Secrets**:
+5. **Setting Up GitHub Secrets**:
    To authenticate with Docker Hub, add two secrets to your GitHub repository:
     - `DOCKERHUB_USERNAME`: Your Docker Hub username.
     - `DOCKERHUB_TOKEN`: Your Docker Hub access token.
