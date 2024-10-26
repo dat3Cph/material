@@ -173,7 +173,19 @@ But first, we need to setup the project for CI/CD so GitHub Actions can build an
   This is the class that contains the `main` method. Probably the class that starts your Javalin application like `dat.Main`. The package name is also important, but it is
   inserted automatically på the `${project.groupId}`
 
-4. **Setting Up GitHub Secrets**:
+4. **Create Docker Hub Access Token**:
+   
+   When setting up GitHub secrets, a Docker Hub access token is needed. To create it, follow these steps:
+
+   - Go to [Docker Hub](https://hub.docker.com/) and log in.
+   - Click on your profile picture in the top right corner, then select **Account Settings**.
+   - Navigate to **Security** > **Personal Access Tokens**.
+   - Click **Generate New Token**.
+   - In the description field, you can enter a relevant name for the token (e.g., "HotelAPI").
+   - Set the access permissions to **Read, Write, Delete**, then click **Generate**.
+   - Copy the generated token in step 2. It will start with `dcr_pat_...` — this token will be used in the ´DOCKERHUB_TOKEN` in your GitHub secret.
+
+6. **Setting Up GitHub Secrets**:
    To authenticate with Docker Hub, add two secrets to your GitHub repository:
     - `DOCKERHUB_USERNAME`: Your Docker Hub username.
     - `DOCKERHUB_TOKEN`: Your Docker Hub access token.
