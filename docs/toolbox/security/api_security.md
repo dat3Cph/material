@@ -158,12 +158,12 @@ app.beforeMatched(ctx -> { // Before matched is different from before, in that i
   UserDTO user = ctx.attribute("user"); // the User was put in the context by the SecurityController.authenticate method (in a before filter on the route)
 
   // 3. Compare
-  if (user == null)
+  if(user == null)
       ctx.status(HttpStatus.FORBIDDEN)
-              .json(jsonMapper.createObjectNode()
-                      .put("msg", "Not authorized. No username was added from the token"));
+        .json(jsonMapper.createObjectNode()
+        .put("msg", "Not authorized. No username was added from the token"));
 
-  if (!SecurityController.getInstance().authorize(user, allowedRoles)) {
+  if(!SecurityController.getInstance().authorize(user, allowedRoles)) {
       // throw new UnAuthorizedResponse(); // version 6 migration guide
       throw new ApiException(HttpStatus.FORBIDDEN.getCode(), "Unauthorized with roles: " + user.getRoles() + ". Needed roles are: " + allowedRoles);
   }
