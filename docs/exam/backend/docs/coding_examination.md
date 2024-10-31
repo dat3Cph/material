@@ -1,18 +1,16 @@
 ---
-title: Backend exam fall 2024
-description: Ordinary exam for the Backend course
+title: Coding Examination
+description: Help for the coding examination
 layout: default
 nav_order: 5
-nav_exclude: true
-search_exclude: true
+nav_exclude: false
+search_exclude: false
 parent: Backend
 grand_parent: Exam
-permalink: /exam/backend/fall2024
+permalink: /exam/backend/coding-examination
 ---
 
-# Back exam fall 2024
-
-Will be published on Monday 4th of November at 09:00.
+# Kode eksamen - emneoversigt
 
 Kære alle
 
@@ -41,3 +39,18 @@ Programmering af et REST API Javalin med:
 | 11   | DAO tests                                                  | [Example](https://github.com/jonbertelsen/gls/blob/main/src/test/java/dat/PackageDAOTest.java). Be careful which version of HibernateConfig you use!                                                                                                                     |
 | 12   | Rest Assured tests                                         | [Rest assured overview](http://localhost:4000/toolbox/test/rest-assured)                                                                    |
 | 13   | Securing Rest Endpoints with JWT and logins                | 1. [Overview of security](https://dat3cph.github.io/material/tools/security/api)<br/>2. [How to apply security to a project](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=7e145a6e-511b-48b0-919f-b20200ef108e) |
+
+## Startkode
+
+Endvidere har vi anbefalet alle at lave en startkode, som I kan bruge til at starte jeres eksamen med. Det letteste er at lave en custom template i IntelliJ. I kan hvor det gøres her:
+
+- [Custom template i IntelliJ](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7708031b-7a36-4995-8468-b21a01153a70)
+
+## Fejlhåndtering i Javalin (præcisering)
+
+Det blev tydeligt under vores gennemgang af de gamle eksamenssæt, at vi ikke har fået præciseret, hvordan fejlhåndtering skal foregå i Javalin. Derfor vil vi gerne præcisere, at fejlhåndtering skal foregå i en exceptionhandler, som fanger alle exceptions og returnerer et JSON response med en fejlbesked og en statuskode. I kan se et [eksempel på, hvordan dette kan gøres her](https://github.com/jonbertelsen/hotel_api_deployable/tree/exceptionhandling) hvis i kigger i controllers og daos.
+Selve exceptionklasserne ligger i `dat.exceptions` pakken, og der hvor de bliver håndteret og pakket ind i et JSON response sættet op i ApplicationConfig. Dvs, at hvis man smider en exception i en controller eller dao, så vil den blive fanget i exceptionhandleren og returnere et JSON response.
+
+Her er en kort videogennemgang af ovenstående, så det forhåbentlig falder på plads:
+
+- [Error and Exceptionhandling i Javalin](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c39a2112-4b0f-4bae-b911-b21a015de219)
