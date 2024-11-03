@@ -37,7 +37,7 @@ Programmering af et REST API Javalin med:
 | 9    | Streams                                                    | [Streams overview](https://dat3cph.github.io/material/toolbox/java/streams/)                                                                                                                    |
 | 10   | Fetching json from an external API and parsing it to a DTO | [Fetching from api cookbook](https://dat3cph.github.io/material/toolbox/dataintegration/httpclient)                                             |
 | 11   | DAO tests                                                  | [Example](https://github.com/jonbertelsen/gls/blob/main/src/test/java/dat/PackageDAOTest.java). Be careful which version of HibernateConfig you use!                                                                                                                     |
-| 12   | Rest Assured tests                                         | [Rest assured overview](http://localhost:4000/toolbox/test/rest-assured)                                                                    |
+| 12   | Rest Assured tests                                         | [Rest assured overview](https://dat3cph.github.io/material//toolbox/test/rest-assured)                                                                    |
 | 13   | Securing Rest Endpoints with JWT and logins                | 1. [Overview of security](https://dat3cph.github.io/material/tools/security/api)<br/>2. [How to apply security to a project](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=7e145a6e-511b-48b0-919f-b20200ef108e) |
 
 ## Startkode
