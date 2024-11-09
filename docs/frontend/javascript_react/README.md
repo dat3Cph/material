@@ -73,13 +73,22 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 ## Wednesday (CodeLab)
 
+- [Exercises](./execises/codelab.md)
+
 ## Thursday (class)
 
 ### Prepare for the class
 
+TBD
+
 ### In-class exercises
 
+TBD
+
 ## Friday (exercise day)
+
+- Europe Map
+- React version of Tic Tac Toe
 
 <hr>
 
