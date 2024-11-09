@@ -2,8 +2,8 @@
 title: Reverse Polish Notation
 description: Exercises for Frontend Week I
 layout: default
-nav_order: 5
-grand_parent: Javascript and React Intro
+nav_order: 4
+grand_parent: JS and React
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/rpn/
 ---

@@ -3,7 +3,7 @@ title: JS Basics
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 1
-grand_parent: Javascript and React Intro
+grand_parent: JS and React
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/js-basics
 ---
