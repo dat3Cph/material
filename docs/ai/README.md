@@ -2,7 +2,7 @@
 title: AI hjælp
 description: Link til customGPT hvor du kan få AI hjælp til pensum
 layout: default
-nav_order: 12
+nav_order: 19
 permalink: /ai/
 ---
 
