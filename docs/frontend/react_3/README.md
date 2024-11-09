@@ -6,7 +6,7 @@ has_children: true
 permalink: /frontend/react-3/
 ---
 
-# React part II: CRUD and Fetch API
+# React part II: CRUD, Fetch API, and Styling
 
 Topics covered in this week are:
 
@@ -16,6 +16,7 @@ Topics covered in this week are:
 - Promises
 - Fetch API
 - Async/Await
+- Styled Components
 '
 [Learning objectives for the week](./learningobjectives.md)
 
