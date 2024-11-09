@@ -3,7 +3,7 @@ title: React IV
 layout: default
 nav_order: 13
 has_children: true
-permalink: /frontend/javascript-react-4/
+permalink: /frontend/react-4/
 ---
 
 # React part II: Routing, Security, and Deployment
