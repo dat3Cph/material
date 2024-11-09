@@ -1,5 +1,5 @@
 ---
-title: Javascript and React Intro
+title: JS and React
 layout: default
 nav_order: 10
 has_children: true
@@ -12,7 +12,10 @@ Topics covered in this week are:
 
 - JavaScript as a programming language
 - JavaScript in a browser
+- SPA (Single Page Application)
 - React intro
+
+![Logos](./images/logos.jpeg)
 
 We are going to learn Javascript basics and DOM manipulation on the first day of teaching. Since you all know Java, you will see that Javascript is a bit different. But don't worry, we will guide you through the differences and similarities.
 
