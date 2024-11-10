@@ -10,7 +10,7 @@ permalink: /frontend/javascript-react-intro/exercises/rpn/
 
 # Codelab Exercise 2: Implementing Reverse Polish Notation in JavaScript
 
-In the [calculator exercise](./Calculator.md), we used the Javascript `eval()` method. It's far from a perfect solution, and in this exercise we will take the first steps to a better way. We will explore **Reverse Polish Notation (RPN)**, a postfix notation that eliminates the need for parentheses and respects operator precedence implicitly. RPN is used in many programming languages and calculators because of its simplicity and efficiency.
+In the [calculator exercise](./Calculator.md), we used the Javascript `eval()` method. It's far from a perfect solution, and in this exercise we will take the first steps to a better way. We will explore **[Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation)**, a postfix notation that eliminates the need for parentheses and respects operator precedence implicitly. RPN is used in many programming languages and calculators because of its simplicity and efficiency.
 
 The famous HP calculators use RPN. If you have never used one, you should try it. It's a different way of thinking about calculations. This one from 1981 is a beauty, and you can still buy them today.:
 
