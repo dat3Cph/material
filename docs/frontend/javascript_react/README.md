@@ -68,8 +68,11 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 **Part II: Exercises**
 
+0. [Exercise 0: Say hi to the arrow function in JavaScript](./execises/js_arrow_function.md)
 1. [Exercise 1: Getting comfortable with arrays, filter, map, and forEach](./execises/js_basics.md)
-2. [Exercise 2: JS, DOM Manipulation and Events](./execises/js_dom_basics.md)
+2. [Exercise 2: Destructuring in JavaScript](./execises/js_destructuring.md)
+3. [Exercise 3: Spread Operator in JavaScript](./execises/js_spread_operator.md)
+4. [Exercise 4: JS, DOM Manipulation and Events](./execises/js_dom_basics.md)
 
 ## Wednesday (CodeLab)
 
