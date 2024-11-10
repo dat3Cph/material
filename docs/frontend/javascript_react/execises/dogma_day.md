@@ -19,9 +19,9 @@ Welcome to Dogma Friday! This is a day where you will be coding without any assi
 
 On Dogma Friday, you are walking the straight and narrow path of the code warrior.
 
-1.**"Analyse the problem first"**
+1. **"Analyse the problem first"**
 
-- Rule: No code until you have a clear plan. Use pen and paper to sketch your solution, and how you will break down the  problems. Think and sketch your solution before you start coding. Use pen and paper or whiteboard to plan your approach.
+   - Rule: No code until you have a clear plan. Use pen and paper to sketch your solution, and how you will break down the  problems.
 
 2. **"No AI Assistance Tools"**
 

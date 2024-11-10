@@ -16,9 +16,9 @@ This CodeLab day designed to help you getting to know JavaScript and the DOM.
 
 ## 1. The assignments
 
-1. [The calculator web application](./calculator.md)
-2. [Reverse Polish Notation (optional)](./rpn.md)
-3. [Tic-Tac-Toe](./tictactoe.md)
+1. [The calculator web application](./js_calculator.md)
+2. [Reverse Polish Notation (optional)](./js_rpn.md)
+3. [Tic-Tac-Toe](./js_tictactoe.md)
 
 ## 2. Sign up on Moodle
 
