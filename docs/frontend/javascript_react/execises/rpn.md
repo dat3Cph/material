@@ -16,12 +16,15 @@ The famous HP calculators use RPN. If you have never used one, you should try it
 
 ![HP Calculator](./images/hp_calc.jpg)
 
+Notice that there is not an equal sign on the calculator. You just type in the numbers, press Enter, and the operators, and the result is shown immediately. This is because the calculator uses RPN.
+
 - This article describes both [`infix` and `postfix` notations](https://www.geeksforgeeks.org/infix-postfix-prefix-notation/).
 
 ## **Objective**
 
 - Understand how Reverse Polish Notation (RPN) works and why it’s useful.
 - Implement a JavaScript algorithm that evaluates expressions in RPN format.
+- Extend you calculator web page to use RPN instead of infix notation.
 
 ---
 
