@@ -7,10 +7,12 @@ grand_parent: JS and React
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/codelab/
 ---
+![Codelab](./images/codelab.png){: .x .mx-auto .d-block .my-5 .md .d-md-none .w-50}
+![Codelab](./images/codelab.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right width="200px"}
 
 # Codelab
 
-This CodeLab exercise is designed to help you getting to know JavaScript and the DOM better.
+This CodeLab exercise is designed to help you getting to know JavaScript and the DOM.
 
 ## 1. The assignments
 
