@@ -88,10 +88,9 @@ TBD
 
 TBD
 
-## Friday (exercise day)
+## Dogma Friday
 
-- Europe Map
-- React version of Tic Tac Toe
+- [Dogma Friday](./execises/dogma_day.md)
 
 <hr>
 

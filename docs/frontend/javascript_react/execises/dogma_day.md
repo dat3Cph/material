@@ -40,4 +40,7 @@ On Dogma Friday, you are walking the straight and narrow path of the code warrio
 
 ## 3. The assignments
 
+- Europe Map
+- React version of Tic Tac Toe
+
 ## 4. Upcoming monday review
