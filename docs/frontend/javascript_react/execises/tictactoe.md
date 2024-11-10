@@ -30,7 +30,16 @@ You will need to use the following:
 - DOM manipulation
 - Event handling
 - Event bubbling / delegation
+- Strategic thinking. Try to break the problem down into smaller parts.
 
 ## The rules
 
-Try not to copy what others have done on the web - or what chatGPT will tell you. Tic Tac Toe is one of the most used games for teaching programming. And there is a reason for that. It's a simple game, but it can be implemented in many ways. And it's a good exercise for you to practice your programming skills.
+1. No AI support. Don't use chatGPT, Github Co-Pilot and other fancy stuff to solve this. You need to do it yourself.
+2. Try not to copy what others have done on the web
+3. The game should be able to detect a winner
+4. The game should be able to detect a draw
+5. The game should be able to restart
+
+Tic Tac Toe is one of the most used games for teaching programming. And there is a reason for that. It's a simple game, but it can be implemented in many ways. And it's a good exercise for you to practice your programming skills - and learning Javascript and SPA development at the same time.
+
+Have fun, and don't give up.
