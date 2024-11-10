@@ -16,7 +16,7 @@ The famous HP calculators use RPN. If you have never used one, you should try it
 
 ![HP Calculator](./images/hp_calc.jpg)
 
-Notice that there is not an equal sign on the calculator. You just type in the numbers, press Enter, and the operators, and the result is shown immediately. This is because the calculator uses RPN.
+Notice that there is not an equal sign on the calculator. You just type in the numbers, press Enter, and the operators, and the result is shown immediately. This is because the calculator uses RPN. By the way, you clear the calculator by pressing the CLx button (Clear x). Nerdy, right? You can try out using this type of calculator in an emulator: [HP-15C](https://hp15c.com/web/hp15c.html).
 
 - This article describes both [`infix` and `postfix` notations](https://www.geeksforgeeks.org/infix-postfix-prefix-notation/).
 
@@ -113,3 +113,5 @@ Notice that there is not an equal sign on the calculator. You just type in the n
 1. Why is RPN useful in programming languages and calculators?
 2. What are the main differences between evaluating infix notation and postfix (RPN) notation?
 3. How would you extend this code to handle more complex expressions, like those involving parentheses?
+
+Johan
