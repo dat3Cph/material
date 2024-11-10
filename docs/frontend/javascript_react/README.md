@@ -80,6 +80,8 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 ## Thursday (class)
 
+React.js
+
 ### Prepare for the class
 
 TBD
