@@ -12,7 +12,7 @@ permalink: /frontend/javascript-react-intro/exercises/codelab/
 
 # Codelab
 
-This CodeLab exercise is designed to help you getting to know JavaScript and the DOM.
+This CodeLab day designed to help you getting to know JavaScript and the DOM.
 
 ## 1. The assignments
 
