@@ -2,13 +2,13 @@
 title: JS Arrow Functions
 description: Exercises for Frontend Week I
 layout: default
-nav_order: 0
+nav_order: 3
 grand_parent: JS and React
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/js-arrow-functions/
 ---
 
-# Exercise 0: Getting comfortable arrow functions in JavaScript
+# Exercise 1: Getting comfortable arrow functions in JavaScript
 
 **Make this exercise in Visual Studio Code and node.js.**
 
@@ -16,7 +16,7 @@ permalink: /frontend/javascript-react-intro/exercises/js-arrow-functions/
 
 It's time to get familiar with arrow functions in JavaScript. Arrow functions are a concise way to write functions in JavaScript. They are especially useful when working with array methods like `map`, `filter`, and `reduce`. So it's similar to *lambda functions* in Java.
 
-## 0.1 Basic Arrow Function Syntax
+## 1.1 Basic Arrow Function Syntax
 
 **Exercise:**  
 
@@ -36,7 +36,7 @@ Store the result in a variable called `greet` and call the function to see the o
 Hello, World!
 ```
 
-## 0.2 Arrow Function with Parameters
+## 1.2 Arrow Function with Parameters
 
 **Exercise:**  
 
@@ -56,7 +56,7 @@ Store the arrow function in a variable called `add` and call it with `add(5, 3)`
 8
 ```
 
-## 0.3 Implicit Return in Arrow Functions
+## 1.3 Implicit Return in Arrow Functions
 
 **Exercise:**  
 
@@ -76,7 +76,7 @@ Test it by calling `multiply(4, 2)`.
 8
 ```
 
-## 0.4 Arrow Function Without Parameters
+## 1.4 Arrow Function Without Parameters
 
 **Exercise:**  
 
@@ -86,7 +86,7 @@ Write an arrow function called `getRandomNumber` that returns a random number be
 
 A random number between 0 and 1 (e.g., `0.456`).
 
-## 0.5 Arrow Function with a Single Parameter
+## 1.5 Arrow Function with a Single Parameter
 
 **Exercise:**  
 
@@ -106,7 +106,7 @@ Test by calling `square(5)`.
 25
 ```
 
-## 6. Using Arrow Functions in Array Methods
+## 1.6 Using Arrow Functions in Array Methods
 
 **Exercise:**  
 
@@ -124,7 +124,7 @@ console.log(doubledNumbers);
 [2, 4, 6, 8]
 ```
 
-## 0.7 Filtering an Array with Arrow Functions
+## 1.7 Filtering an Array with Arrow Functions
 
 **Exercise:**  
 
@@ -142,7 +142,7 @@ Use an arrow function with the `filter` method to create a new array containing 
 [12, 18, 24]
 ```
 
-## 0.8 Arrow Function as a Callback
+## 1.8 Arrow Function as a Callback
 
 **Exercise:**  
 
@@ -158,7 +158,7 @@ setTimeout(/* your arrow function here */, 1000);
 Hello after 1 second
 ```
 
-## 0.9 Arrow Function and `this` Context
+## 1.9 Arrow Function and `this` Context
 
 **Exercise:**  
 Write an object `person` with properties `name` and `sayHello`. The `sayHello` property should be an arrow function that logs `"Hello, my name is <name>"` where `<name>` is the value of the `name` property.
@@ -179,7 +179,7 @@ Hello, my name is Alice
 
 *(Note: This exercise demonstrates that arrow functions do not have their own `this` context.)*
 
-## 0.10 Arrow Function with Default Parameters
+## 1.10 Arrow Function with Default Parameters
 
 **Exercise:**
 

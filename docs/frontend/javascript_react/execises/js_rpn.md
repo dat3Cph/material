@@ -8,7 +8,7 @@ parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/rpn/
 ---
 
-# Codelab Exercise 2: Implementing Reverse Polish Notation in JavaScript
+# Codelab Exercise 3: Implementing Reverse Polish Notation in JavaScript
 
 ![Codelab](./images/codelab.png){: .x .mx-auto .d-block .my-5 .md .d-md-none .w-50}
 ![Codelab](./images/codelab.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right width="200px"}
@@ -116,5 +116,3 @@ Notice that there is not an equal sign on the calculator. You just type in the n
 1. Why is RPN useful in programming languages and calculators?
 2. What are the main differences between evaluating infix notation and postfix (RPN) notation?
 3. How would you extend this code to handle more complex expressions, like those involving parentheses?
-
-Johan

@@ -20,7 +20,7 @@ Use [Vite](../../setup/vite.md) to create, and then remove irrelevant code from 
 
 ## 2. Download the map and take a peak
 
-Download this file [countries_europe.svg](../images/countries_europe.svg). An `svg` image is a textbased format, that can be viewed in a browser (try to open `countries_europe.svg` in Chrome). SVG is an acronym for Scalable Vector Graphics. This means that the drawings are represented as curves, that are perfectly scaleable. This is not the case with bitmap graphics formats as `jpg`, `png`, and such.
+Download this file [countries_europe.svg](./images/countries_europe.svg). An `svg` image is a textbased format, that can be viewed in a browser (try to open `countries_europe.svg` in Chrome). SVG is an acronym for Scalable Vector Graphics. This means that the drawings are represented as curves, that are perfectly scaleable. This is not the case with bitmap graphics formats as `jpg`, `png`, and such.
 
 ## 3. Study the SVG file format
 

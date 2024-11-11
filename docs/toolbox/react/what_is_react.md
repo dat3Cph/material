@@ -32,7 +32,7 @@ Think of React as a tool that helps you create complex, responsive, and fast web
    - React uses **JSX**, a syntax that looks like HTML but is actually JavaScript. This makes it easy to write the structure of your UI in a more readable and intuitive way.
    - JSX looks like HTML but lives in JavaScript files. React then compiles this JSX code into JavaScript that the browser can understand.
 
-   ```javascript
+   ```react
    function Greeting() {
      return <h1>Hello, world!</h1>;
    }
@@ -72,7 +72,7 @@ Think of React as a tool that helps you create complex, responsive, and fast web
 
 Here’s a simple React component:
 
-```javascript
+```react
 import React from 'react';
 
 function Welcome(props) {

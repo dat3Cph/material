@@ -54,7 +54,7 @@ let cars = [
 - All  Volvo’s
 - All cars with a price below 5000
 
-1.4.2 Use `map`, `join` + just a little bit more to implement a function, that , given the cars array used above, will create, and return a string with valid SQL statements to insert the data into a table with matching column names (id, year, make, model, price) as sketched below:
+1.4.2 Use `map`, `join` + just a little bit more to implement a function, that given the cars array used above, will create, and return a string with valid SQL statements to insert the data into a table with matching column names (id, year, make, model, price) as sketched below:
 
 ```sql
 INSERT INTO cars (id,year,make,model,price) VALUES ( 1, 1997 'Ford','E350', 3000 );

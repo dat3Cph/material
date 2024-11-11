@@ -66,13 +66,17 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 4. [Install ESLint extension in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 5. [Install Prettier extension in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-**Part II: Exercises**
+**Part II: Main Exercises**
 
-0. [Exercise 0: Say hi to the arrow function in JavaScript](./execises/js_arrow_function.md)
 1. [Exercise 1: Getting comfortable with arrays, filter, map, and forEach](./execises/js_basics.md)
+2. [Exercise 2: JS, DOM Manipulation and Events](./execises/js_dom_basics.md)
+
+**Part III: Bonus exercises (JS training)**
+
+1. [Exercise 1: Arrow function in JavaScript](./execises/js_arrow_function.md)
 2. [Exercise 2: Destructuring in JavaScript](./execises/js_destructuring.md)
 3. [Exercise 3: Spread Operator in JavaScript](./execises/js_spread_operator.md)
-4. [Exercise 4: JS, DOM Manipulation and Events](./execises/js_dom_basics.md)
+4. [Exercise 4: Rest Parameter Syntax in JavaScript](./execises/js_rest_syntax.md)
 
 ## Wednesday (CodeLab)
 
