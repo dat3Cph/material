@@ -71,7 +71,7 @@ In [exercise 1](./js_basics.md), you used an array type and `map` and `join` fun
 
 - Hint: You will probably see, very shortly that the name is added, the screen flickers and it's gone again. The problem is that it submits to the server, so the full page is reloaded. To prevent this you can call `.preventDefault()` on the event argument which will prevent the default behavior (submit) and it should work. You can also use `preventDefault()` to prevent a link from actually forwarding to the link-address.
 
-2.3.3 Add two more buttons to the form with the text: "remove first" and "remove last". Implement the behavior inspired by how you solved 4.3.1.
+2.3.3 Add two more buttons to the form with the text: "remove first" and "remove last". Implement the behavior inspired by how you solved 2.3.1.
 
 ## 2.4 Using `map` and `filter` to Create Dynamic Table-Rows
 
@@ -97,7 +97,7 @@ var cars = [
 
 - Add an input field and a button (provide each with an id), as sketched in this figure.
 
-![Add name button](./images/add_name_button.png){: style="width:300px;" }
+![Add name button](./images/dom_filter_cars.png){: style="width:500px;" }
 
 Write the necessary code so when the button is clicked, and the input field contains a number:
 
