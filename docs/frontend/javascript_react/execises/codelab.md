@@ -1,5 +1,5 @@
 ---
-title: Codelab
+title: JS Codelab
 description: Exercises for Frontend Week I Codelab
 layout: default
 nav_order: 6

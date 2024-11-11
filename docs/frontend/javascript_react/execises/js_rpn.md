@@ -1,5 +1,5 @@
 ---
-title: Reverse Polish Notation
+title: JS Reverse Polish Notation
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 8

@@ -1,5 +1,5 @@
 ---
-title: Calculator
+title: JS Calculator
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 7

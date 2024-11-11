@@ -1,5 +1,5 @@
 ---
-title: Tic-Tac-Toe
+title: JS Tic-Tac-Toe
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 9

@@ -80,15 +80,15 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 ## Thursday (class)
 
-React.js
-
 ### Prepare for the class
 
 TBD
 
 ### In-class exercises
 
-TBD
+1. [Exercise 1: Import/export + spread, and destructuring](./execises/react_import_export.md)
+2. [Exercise 2: Composing Components and Props](./execises/react_props.md)
+3. [Exercise 3: Fetching from an API in React](./execises/react_fetch.md)
 
 ## Dogma Friday
 
