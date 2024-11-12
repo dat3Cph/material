@@ -16,9 +16,9 @@ permalink: /frontend/javascript-react-intro/exercises/js-dom-basics
 
 In this exercise, you will practice simple DOM manipulation and event handling. You can get help from the documentation in the Toolbox:
 
-- [About the DOM](../../toolbox/javascript/dom.md)
-- [About selection elements in the DOM](../../toolbox/javascript/dom_selection.md)
-- [About manipulating the DOM a using events](../../toolbox/javascript/dom_manipulation.md)
+- [About the DOM](../../../toolbox/javascript/dom.md)
+- [About selection elements in the DOM](../../../toolbox/javascript/dom_selection.md)
+- [About manipulating the DOM a using events](../../../toolbox/javascript/dom_manipulation.md)
 
 As usual, we adhere to the [KISS principle](https://en.wikipedia.org/wiki/KISS_principle). So, don't overthink the tasks. The layout will look something like this:
 
