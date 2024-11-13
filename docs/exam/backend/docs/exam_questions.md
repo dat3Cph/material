@@ -2,7 +2,7 @@
 title: Exam questions backend
 description: Selected Learning Goals for the Backend exam
 layout: default
-nav_order: 6
+nav_order: 8
 parent: Backend
 grand_parent: Exam
 permalink: /exam/backend/questions

@@ -16,7 +16,7 @@ This exercise is about structuring your React app into parts and learning more a
 
 ## 1.1 Create a React project
 
-1.1 Create a new React app using Vite ([use this guide](../../setup/vite.md))
+1.1 Create a new React app using Vite ([use this guide](../../../toolbox/react/vite.md))
 
 1.2 Open your new web application with visual code
 
@@ -59,7 +59,7 @@ You can import it all, as sketched below:
 import upper, {text1,text2, text3} from "./file1";
 ```
 
-1.2.2 Import the three strings, and the function in `App.js`, and add a h2 element: `<h2>Ex 1</h2>` and four `<p>` tags that will print the imported variables (remember the default export is a function, so call it with a default value like:
+1.2.2 Import the three strings, and the function in `App.js`, and add a h2 element: `<h2>Ex 1</h2>` and four `<p>` tags that will print the imported variables. Remember the default export is a function, so call it with a default value like:
 
 ```jsx
 <p>{upper("please uppercase me")}</p>

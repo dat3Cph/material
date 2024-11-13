@@ -19,13 +19,13 @@ Here you will make a react component in a separate file and export it. The compo
 In the src folder, add a new file `file3.jsx`, and `import React` in the first line.
 Copy the two functions below into this file (remember to export to your App component):
 
-```javascript
+```react
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
 
-```javascript
+```react
 function MultiWelcome() {
   return (
     <div>
@@ -64,7 +64,7 @@ This component should take a full person object as parameter/props and it should
 
 In the MultiWelcome component, below the three usages of the original Welcome component add three usages of the new component as sketched here:
 
-```javascript
+```jsx
 <WelcomePerson person={persons[0]}  />
 ```
 
@@ -73,7 +73,7 @@ Hint: In the `WelcomePerson` function, the person is available in the arguments 
 Handle list of persons of arbitrary sizes. In the example above your “list” could only handle exactly three persons. Use our old friend `map()` below the three hardcoded lines in the MultiWelcome component to something similar to this (fill in the few missing parts - where the dots are):
 
 ```javascript
-{persons.map((  ....    )=><WelcomePerson  ....      />)}
+{ persons.map((  ....    )=><WelcomePerson  ....      />) }
 ```
 
 This will probably provide a nasty warning in the console. Read about [keys](https://react.dev/learn/rendering-lists) here (a topic for next week) to solve this problem.

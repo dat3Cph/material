@@ -16,7 +16,7 @@ The task is to create a web-page in React with a map of Europe which, when a cou
 
 ## 1. Create a new React app
 
-Use [Vite](../../setup/vite.md) to create, and then remove irrelevant code from the source code.
+Use [Vite](../../../toolbox/react/vite.md) to create, and then remove irrelevant code from the source code.
 
 ## 2. Download the map and take a peak
 

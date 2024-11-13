@@ -32,7 +32,7 @@ Use this code to get started, and figure out how the various parts work:
 - useEffect
 - fetch
 
-```javascript
+```react
 import React, { useState, useEffect } from 'react';
 
 function JokeComponent() {
