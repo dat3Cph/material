@@ -10,7 +10,7 @@ permalink: /frontend/javascript-react-intro/exercises/calculator/
 ![Codelab](./images/codelab.png){: .x .mx-auto .d-block .my-5 .md .d-md-none .w-50}
 ![Codelab](./images/codelab.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right width="200px"}
 
-# Codelab Exercise 1: The Simple Calculator
+# Codelab Exercise 1: The Almost Simple Calculator
 
 Implement a calculator with the functionality given below.
 
