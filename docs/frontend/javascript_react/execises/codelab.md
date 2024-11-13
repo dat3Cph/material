@@ -27,3 +27,5 @@ This CodeLab day designed to help you getting to know JavaScript and the DOM.
 
 This is mainly for the teachers to be able to check attendance, and for you to get study points.
 But remember, the more the merrier. What's not to like ;-)
+
+Link to signup: [https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=742468](https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=742468)
