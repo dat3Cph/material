@@ -86,7 +86,15 @@ Below are some great tutorials to watch on the sideline. You don't need to watch
 
 ### Prepare for the class
 
-TBD
+Orient yourself in this documentation:
+
+1. [Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
+2. [Functional Components](../../toolbox/react/functional_components.md)
+3. [Props](../../toolbox/react/props.md)
+4. [UseState](../../toolbox/react/usestate.md)
+5. [UseEffect](../../toolbox/react/useeffect.md)
+6. [Fetch (GET) in JS](../../toolbox/javascript/js_fetch.md)
+7. [Fetching (GET) in React](https://react.dev/reference/react/useEffect#fetching-data-with-effects)
 
 ### In-class exercises
 
