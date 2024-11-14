@@ -14,6 +14,14 @@ permalink: /frontend/javascript-react-intro/exercises/europe-map/
 
 The task is to create a web-page in React with a map of Europe which, when a country is selected with a mouse click, should highlight the country and print details about the country as sketched below. The country data will be fetched from an `API`.
 
+The assignment might be a bit ambitious after only one day of learning React, so this is to get you started:
+
+1. [Introduction and SVG beind the scenes](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c1345264-dd22-48bb-8087-b0be00bad627)
+2. [Start React project and get the map working](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f17512b-7ea3-4053-b78d-b0be00bae11b)
+3. The rest is up to you.
+
+Instructions and hints are also given in text format below:
+
 ## 1. Create a new React app
 
 Use [Vite](../../../toolbox/react/vite.md) to create, and then remove irrelevant code from the source code.

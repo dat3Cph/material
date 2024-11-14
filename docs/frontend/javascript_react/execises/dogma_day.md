@@ -41,6 +41,7 @@ On Dogma Friday, you are walking the straight and narrow path of the code warrio
 ## 3. The assignments
 
 1. [Europe Map](./react_europe_map.md)
+
 2. Create a React version of Tic Tac Toe (the version you made in CodeLab)
 
 ## 4. Upcoming monday review
