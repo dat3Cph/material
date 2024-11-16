@@ -31,6 +31,8 @@ Each team is on for 60 minutes. We meet in Jons Zoom Room.
 
 - 11:00 - 11:45 Team Bornholm
 
+[Agenda for each review session](./review_agenda.md)
+
 ## Tuesday (class)
 
 ### Prepare for the class
