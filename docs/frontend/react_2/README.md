@@ -21,7 +21,15 @@ Topics covered in this week are:
 
 [Learning objectives for the week](./learningobjectives.md)
 
-## Monday
+## Monday - review - online
+
+Each team is on for 60 minutes. We meet in Jons Zoom Room.
+
+- 09:00 - 10:00 Team A
+
+- 10:00 - 11:00 Team B
+
+- 11:00 - 11:45 Team Bornholm
 
 ## Tuesday (class)
 
@@ -46,6 +54,8 @@ Orient yourself in this documentation:
 3. [Tick Counter](./exercises/react_counter.md)
 
 ## Wednesday (CodeLab)
+
+- TBD
 
 ## Thursday (class)
 
