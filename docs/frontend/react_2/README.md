@@ -57,9 +57,10 @@ Orient yourself in this documentation:
 
 ## Wednesday (CodeLab)
 
-- TBD
+- [Trip and Guide exercise](./exercises/codelab.md)
 
 ## Thursday (class)
+- [React Forms](./exercises/react_forms.md)
 
 ### Prepare for the class
 

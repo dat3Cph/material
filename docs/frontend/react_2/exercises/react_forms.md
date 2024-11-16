@@ -1,3 +1,13 @@
+---
+title: React Forms
+description: Exercises for Frontend Week II about controlled components and forms
+layout: default
+nav_order: 6
+grand_parent: React II
+parent: Exercises
+permalink: /frontend/react-2/exercises/reactforms
+---
+
 # React  CRUD & Form
 
 This is a guided tutorial in which we will:
