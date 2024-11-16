@@ -1,11 +1,11 @@
 ---
-
 title: Review Agenda
 layout: default
 nav_order: 2
-has_children: true
+has_children: false
+parent: React II
 permalink: /frontend/react-2/review-agenda
---
+---
 
 # Agenda for review session
 
