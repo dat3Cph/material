@@ -33,10 +33,10 @@ Think to questions you would like to get ask - and get clarifications on - when 
 
 Thomas and Jon will visit all breakout room
 
-00:20 Team 1 + 5
-00:30 Team 2 + 6
-00:40 Team 3 + 7
-00:50 Team 4 + 8
+- 00:20 Team 1 + 5
+- 00:30 Team 2 + 6
+- 00:40 Team 3 + 7
+- 00:50 Team 4 + 8
 
 There will be some "waiting time" when either waiting for the teacher to join - or after. So in those "idle" moments, each break-out team should do this:
 
