@@ -27,6 +27,24 @@ Topics covered in this week are:
 
 ### Prepare for the class
 
+Orient yourself in this documentation:
+
+1. [Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
+2. [Spread operator in JS](../../toolbox/javascript/js_spread_operator.md)
+3. [Destructuring in JS](../../toolbox/javascript/js_destructuring.md)
+4. [Functional Components](../../toolbox/react/functional_components.md)
+5. [Props](../../toolbox/react/props.md)
+6. [UseState](../../toolbox/react/usestate.md)
+7. [UseEffect](../../toolbox/react/useeffect.md)
+8. [Fetch (GET) in JS](../../toolbox/javascript/js_fetch.md)
+9. [Fetching (GET) in React](https://react.dev/reference/react/useEffect#fetching-data-with-effects)
+
+### In-class exersises
+
+1. [UseState](./exercises/react_state.md)
+2. [Lists and keys](./exercises/react_lists.md)
+3. [Tick Counter](./exercises/react_counter.md)
+
 ## Wednesday (CodeLab)
 
 ## Thursday (class)
