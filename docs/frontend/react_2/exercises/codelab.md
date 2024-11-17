@@ -10,9 +10,12 @@ permalink: /frontend/react-2/exercises/codelab
 
 # React CodeLab Exercise: Fetching and Displaying Trip Data  
 
+![Codelab](../../javascript_react/images/codelab.png){: .x .mx-auto .d-block .my-5 .md .d-md-none .w-50}
+![Codelab](../../javascript_react/images/codelab.png){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right width="200px"}
+
 This CodeLab exercise is designed to help you practice creating React applications using Vite, fetching data from REST APIs, state management, conditional rendering, and creating dynamic UIs with interactive components. Collaboration and teamwork are emphasized, so consider pair programming where possible.
 
-![codelab_school_exercise](./images/pairprogramming.gif)  
+![codelab_school_exercise](../../../deepdive-1/exercises/images/pairprogramming.gif)  
 
 ## Exercise Overview  
 
@@ -21,16 +24,20 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 ### 1. Create a React Project  
 
 1. Create a new React project using Vite:
+
     ```bash
     npm create vite@latest
     ```
+
 2. Choose your project name and framework (`React`) and variant (`JavaScript`).
 3. Navigate to your new project folder and install dependencies:
+
     ```bash
     cd [project-name]
     npm install
     npm run dev
     ```
+
 4. Ensure your Vite development server is running successfully.
 
 ### 2. Fetch Data from the Trip API  
@@ -38,6 +45,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 1. Fetch data from the provided API endpoint: [https://tripapi.cphbusinessapps.dk/api/trips](https://tripapi.cphbusinessapps.dk/api/trips).
 2. Structure your `fetch` call to retrieve the list of trips when your React app loads. Use `useEffect` and `useState` hooks for managing state and lifecycle.
 3. Verify the response data structure:
+
     ```json
     [
       {
@@ -65,7 +73,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 
 ### 3. Display All Trips  
 
-1. Render all trips on the left side of the screen as a list (or a table or as card layout or whatever you fancy). 
+1. Render all trips on the left side of the screen as a list (or a table or as card layout or whatever you fancy).
 2. Display key information for each trip, such as:
     - Trip name
     - Start and end dates
