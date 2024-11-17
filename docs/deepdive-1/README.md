@@ -2,7 +2,7 @@
 title: Java Deep Dive I
 description: Overview of Java Deep Dive I Content
 layout: default
-nav_order: 2
+nav_order: 3
 has_children: true
 permalink: /deepdive-1/
 ---
