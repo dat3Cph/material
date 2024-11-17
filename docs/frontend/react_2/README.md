@@ -54,7 +54,7 @@ Orient yourself in this documentation:
 
 1. [UseState](./exercises/react_state.md)
 2. [Lists and keys](./exercises/react_lists.md)
-3. [Tick Counter](./exercises/react_counter.md)
+3. [Todolist](./exercises/react_shared_state.md)
 
 ## Wednesday (CodeLab)
 
@@ -73,6 +73,7 @@ Orient yourself in this documentation:
 - [React Forms](./exercises/react_forms.md)
 
 ## Friday (exercise day)
+
 - [Trips with bookings](./exercises/bookings.md)
 
 <hr>
