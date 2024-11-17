@@ -48,6 +48,7 @@ Orient yourself in this documentation:
 7. [UseEffect](../../toolbox/react/useeffect.md)
 8. [Fetch (GET) in JS](../../toolbox/javascript/js_fetch.md)
 9. [Fetching (GET) in React](https://react.dev/reference/react/useEffect#fetching-data-with-effects)
+10. [React docs - Lifting State](https://react.dev/learn/sharing-state-between-components) or [toolbox lifting state](../../toolbox/react/lifting_state.md)
 
 ### In-class exersises
 
@@ -60,13 +61,19 @@ Orient yourself in this documentation:
 - [Trip and Guide exercise](./exercises/codelab.md)
 
 ## Thursday (class)
-- [React Forms](./exercises/react_forms.md)
 
 ### Prepare for the class
 
-### In-class exercises
+Orient yourself in this documentation:
+
+- [Json server](../../toolbox/json-server.md)
+
+### In-class exersises
+
+- [React Forms](./exercises/react_forms.md)
 
 ## Friday (exercise day)
+- [Trips with bookings](./exercises/bookings.md)
 
 <hr>
 
