@@ -43,6 +43,13 @@ permalink: /frontend/react-2/learningobjectives/
 - What is the purpose of the dependency array `[]` and `[state]`
 - How do you clean up after things that might have been initiated in a useEffect, but should no longer be running?
 
+### 5. Lifting State
+
+- **Explain:** The concept of lifting state to share data between parent and child components.
+- **Show how to:** Pass callback functions as props to update shared state.
+- **Explain:** The implications of prop drilling and strategies to minimize its impact.
+- **Explain:** The benefits of lifting state, such as improved maintainability and data consistency.
+
 ### Day II
 
 ### 1. Reacting to Input
@@ -61,17 +68,16 @@ permalink: /frontend/react-2/learningobjectives/
 - **Show how to:** Implement form validation in controlled components.
 - **Show how to:** Handle and display errors in controlled forms for a user-friendly experience.
 
-### 3. Lifting State
 
-- **Explain:** The concept of lifting state to share data between parent and child components.
-- **Show how to:** Pass callback functions as props to update shared state.
-- **Explain:** The implications of prop drilling and strategies to minimize its impact.
-- **Explain:** The benefits of lifting state, such as improved maintainability and data consistency.
-
-### 4. Simple CRUD
+### 3. Simple CRUD
 
 - **Explain:** The fundamental CRUD operations (Create, Read, Update, Delete).
 - **Show how to:** Manage data within a React application for CRUD operations.
 - **Show how to:** Implement creating new items or records in the application.
 - **Show how to:** Update existing data based on user interactions.
 - **Show how to:** Delete items or records from the application.
+
+### 4. Fetching Data from Mock API server
+- **Explain:** The concept of fetching data from an API server.
+- **Show how to:** Setup a mock API server using JSON server.
+- **Show how to:** Do CRUD operations on data from the mock API server
