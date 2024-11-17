@@ -2,7 +2,7 @@
 title: Count Down
 description: Exercises for Frontend Week II
 layout: default
-nav_order: 4
+nav_order: 5
 grand_parent: React II
 parent: Exercises
 permalink: /frontend/react-2/exercises/count-down
@@ -28,7 +28,7 @@ The first prototype might look as simple as this:
 
 4. Add a `Pause` button that stops the timer until `Start` is pressed again. An even better implementation would be that `Start` changes to `Pause` when clicked, and `Pause` changes to `Start`.
 
-5. Add some short cut buttons with pre-set timers. One for 5 minutes, one for 10, and one for 15 minutes. These are usually the standard break times. The timer should begin counting down as soon as the short cut timer button is clicked.
+5. Add some shortcut buttons with pre-set timers. One for 5 minutes, one for 10, and one for 15 minutes. These are usually the standard break times. The timer should begin counting down as soon as the short cut timer button is clicked.
 
 ## Hints
 

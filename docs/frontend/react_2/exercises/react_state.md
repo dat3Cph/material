@@ -15,6 +15,7 @@ In this exercise we will create a simple count component using the `useState` ho
 ## 1. Create a React project
 
 1.1 Create a new React app using Vite ([use this guide](../../../toolbox/react/vite.md))
+
 1.2 Open your new web application with visual code
 
 1.3 Remove everything inside the App() function/Component in `App.js`

@@ -19,7 +19,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 
 ## Exercise Overview  
 
-## Instructions  
+## Instructions
 
 ### 1. Create a React Project  
 
