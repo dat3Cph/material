@@ -66,7 +66,7 @@ Orient yourself in this documentation:
 
 Orient yourself in this documentation:
 
-- [Json server](../../toolbox/json-server.md)
+- [Json server](../../toolbox/react/json-server.md)
 
 ### In-class exersises
 
