@@ -18,6 +18,7 @@ Topics covered in this week are:
 - Lists and Keys
 - Conditional Rendering
 - Simple form input
+- Sharing state between components
 
 [Learning objectives for the week](./learningobjectives.md)
 
