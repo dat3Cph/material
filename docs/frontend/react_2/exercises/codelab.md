@@ -87,7 +87,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 
 ### 5. Trip Details View  
 
-1. When a trip is clicked, display a `Trip Details` view on the right side of the screen.
+1. When a trip is clicked, display a `Trip Details` view on the right side of the screen. Details about a trip can be found by id like this: [https://tripapi.cphbusinessapps.dk/api/trips/11](https://tripapi.cphbusinessapps.dk/api/trips/2).
 2. This view should display detailed trip information, including:
     - Trip name
     - Start and end dates
