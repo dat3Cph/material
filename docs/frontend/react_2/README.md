@@ -76,7 +76,7 @@ Orient yourself in this documentation:
 
 ## Friday (exercise day)
 
-- [Trips with bookings](./exercises/bookings.md)
+- [Student and classes exercise](./exercises/friday.md)
 
 <hr>
 
