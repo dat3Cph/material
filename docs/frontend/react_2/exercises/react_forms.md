@@ -18,7 +18,7 @@ This is a guided tutorial in which we will:
 
 3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using Javascripts' `fetch` method.
 
-4. Do a little styling with css and Bootstrap.
+4. Do a little styling with css
 
 We aim for something like this mockup:
 
@@ -199,17 +199,9 @@ Accept: application/json
     </table>
 ```
 
-### 4. Activating Bootstrap css styles
+### 4. Setting up states
 
-Insert into `index.html` in the `head` section:
-
-```html
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-```
-
-### 5. Setting up states
-
-### 6. Fetching persons from the JSON-server
+### 5. Fetching persons from the JSON-server
 
 Create a new folder `util` and a file `persistence.js`:
 
@@ -247,12 +239,14 @@ export function fetchData(url, callback, method, body) {
 }
 ```
 
-### 7. Showing the persons
+### 6. Showing the persons
 
-### 8. Inserting new persons
+### 7. Inserting new persons
 
-### 9. Editing persons
+### 8. Editing persons
 
-### 10. Deleting persons
+### 9. Deleting persons
 
-### 11. Styling
+### 10. Styling with html and css
+
+Make it look smashing ;-)
