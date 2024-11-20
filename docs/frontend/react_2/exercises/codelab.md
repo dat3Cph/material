@@ -82,7 +82,7 @@ This CodeLab exercise is designed to help you practice creating React applicatio
 
 ### 4. Category Filter  
 
-1. Add a dropdown (`select` element) above the trip list that allows users to filter trips based on their `category`.
+1. Add a dropdown (`select` element) above the trip list that allows users to filter trips based on their `category`. Get the categories from here: [https://packingapi.cphbusinessapps.dk/packinglist/](https://packingapi.cphbusinessapps.dk/packinglist/)
 2. When a category is selected, only trips belonging to that category should be displayed.
 
 ### 5. Trip Details View  
