@@ -30,7 +30,7 @@ permalink: /toolbox/react/json-server
        "start": "node scripts/start.js",
        "build": "node scripts/build.js",
        "test": "node scripts/test.js --env=jsdom",
-       "backend": "json-server -p 4000 --watch books.json"
+       "backend": "json-server -p 4000 --watch booksdb.json"
      },
    ```
 
@@ -39,7 +39,7 @@ permalink: /toolbox/react/json-server
 5. Create a file in the working folder: mockdata.js:
 
 ```javascript
-var casual = require('casual');
+import casual from 'casual';
 
 // Create an object for config file
 var db = {books:[]};
@@ -65,7 +65,7 @@ console.log(JSON.stringify(db));
 6. This script is using `casual` to generate random data. Install it into the same folder.
 
 ```
-npm install casual
+npm install casual --save-dev
 ```
 
 **Windows users:** In git bash run the js script like this:

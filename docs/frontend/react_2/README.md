@@ -18,6 +18,7 @@ Topics covered in this week are:
 - Lists and Keys
 - Conditional Rendering
 - Simple form input
+- Sharing state between components
 
 [Learning objectives for the week](./learningobjectives.md)
 
@@ -67,6 +68,7 @@ Orient yourself in this documentation:
 Orient yourself in this documentation:
 
 - [Json server](../../toolbox/react/json-server.md)
+- [React Forms]()
 
 ### In-class exersises
 
@@ -74,7 +76,7 @@ Orient yourself in this documentation:
 
 ## Friday (exercise day)
 
-- [Trips with bookings](./exercises/bookings.md)
+- [Student and classes exercise](./exercises/friday.md)
 
 <hr>
 
