@@ -1,5 +1,5 @@
 ---
-title: React CRUD with Students and Classes
+title: CRUD Students and Classes
 description: Exercise for practicing React and CRUD operations with json-server
 layout: default
 nav_order: 7
@@ -28,11 +28,7 @@ In this exercise, you will create a **React Application** to manage **Students**
 
 ### Step 1: Set Up Your React Application
 
-Run the following commands to create and start your React project:
-
-```bash
-npx create-react-app student-class-app cd student-class-app
-```
+Use [Vite](../../../toolbox/react/vite.md) to create, and then remove irrelevant code from the source code.
 
 ### Step 2: Set Up `json-server`
 
@@ -75,8 +71,9 @@ npm install json-server --save-dev
     }
   ]
 }
+```
 
-Add a script to package.json to run the JSON server:
+Add a script to `package.json` to run the JSON server:
 
 ```json
 "scripts": {
@@ -104,9 +101,11 @@ Add a script to package.json to run the JSON server:
     <option value="History 201">History 201</option>
   </select>
 </form>
+```
 
 - PersonList Component
 
+```html
 <table>
   <thead>
     <tr>
@@ -197,6 +196,7 @@ export default App;
 ```
 
 ### Step 6: Creating CRUD Operations
+
 - Adding a Student (POST)
 
 - Create a function to add a new student:
@@ -204,11 +204,11 @@ export default App;
 const newStudent = {
   name: "Charlie",
   age: 19,
-  email: "charlie@example.com",
+  email: "<charlie@example.com>",
   class: "Math 101"
 };
 
-```jsx
+```javascript
 fetchData('/api/students', setStudents, 'POST', newStudent);
 ```
 
@@ -216,7 +216,7 @@ fetchData('/api/students', setStudents, 'POST', newStudent);
 
 - Update the student data like this:
 
-```jsx
+```javascript
 const updatedStudent = {
   name: "Alice",
   age: 21,
@@ -231,11 +231,10 @@ fetchData('/api/students/1', setStudents, 'PUT', updatedStudent);
 
 - Delete a student using this method:
 
-```jsx
+```javascript
 fetchData('/api/students/1', setStudents, 'DELETE');
 ```
 
 ### Step 7: Styling Your Application
-- Use CSS (or a CSS framework like Bootstrap or Tailwind) to style your application.
 
-
+- Use CSS to style your application, and make it nice and easy to use.
