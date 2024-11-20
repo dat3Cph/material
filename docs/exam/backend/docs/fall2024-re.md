@@ -16,7 +16,7 @@ search_exclude: true
 
 ## PDF Version
 
-- [Item Booking Application - pdf](fall2024re.pdf)
+- [Item Booking Application - pdf](fall2024-re.pdf)
 
 ## Exercise Guidelines
 
