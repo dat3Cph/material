@@ -18,7 +18,7 @@ This is a guided tutorial in which we will:
 
 3. Implement simple `CRUD` operations on the persons. This includes `GET`, `POST`, `PUT`, and `DELETE` http requests by using Javascripts' `fetch` method.
 
-4. Do a little styling with css and Bootstrap.
+4. Do a little styling with css
 
 We aim for something like this mockup:
 
@@ -26,13 +26,15 @@ We aim for something like this mockup:
 
 ## The video series
 
-Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=2ee87351-82f5-4bc9-addc-b0b9013e1dc7) - and use the snippets from this file when needed. In this way we can speed up the work a bit. The videos are called: `forms_01` to `forms_07` - or how many is needed ;-)
+Code happily along with the [video tutorials](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=2ee87351-82f5-4bc9-addc-b0b9013e1dc7) - and use the snippets from this file when needed. In this way we can speed up the work a bit. The videos are called: `forms_01` to `forms_05`.
 
-1. [Get started](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f69f405-a1b8-4e0d-a9e5-b0c20110e8e3)
-2. [Create components](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f81fe7a9-099a-4366-aa84-b0c20111517b)
-3. [Get all persons](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0ed05562-8fbc-4ee2-bdfa-b0c2011394ed)
-4. [Delete](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=38c297ea-1511-424d-b770-b0c300dee4a7)
-5. [Create and update](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f937e84-afc9-4819-819b-b0c3010e3226)
+1. [Get started (16:23)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f69f405-a1b8-4e0d-a9e5-b0c20110e8e3)
+2. [Create components (8:05)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f81fe7a9-099a-4366-aa84-b0c20111517b)
+3. [Get all persons (16:28)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0ed05562-8fbc-4ee2-bdfa-b0c2011394ed)
+4. [Delete (20:28)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=38c297ea-1511-424d-b770-b0c300dee4a7)
+5. [Create and update (49:36)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f937e84-afc9-4819-819b-b0c3010e3226)
+
+These are the steps:
 
 ### 1. Getting the project configured
 
@@ -92,21 +94,29 @@ A snippet for the `package.json`:
     "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
 ```
 
-And one for the `vite.config.js`:
+Add the json server port to `vite.config.js` like this:
 
-```json
-server: {
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': 'http://127.0.0.1:3000'
     }
   }
+})
+
 ```
 
 Also, install the VS Code extention `REST Client` af Huachao Mao. This makes it possible to create a `dev.http` file to test out the api as we do it in IntelliJ.
 
 This is a suggestion for a `dev.http` file for testing:
 
-```http
+```plaintext
 GET http://localhost:3000/api
 
 ###
@@ -199,21 +209,13 @@ Accept: application/json
     </table>
 ```
 
-### 4. Activating Bootstrap css styles
+### 4. Setting up states
 
-Insert into `index.html` in the `head` section:
-
-```html
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-```
-
-### 5. Setting up states
-
-### 6. Fetching persons from the JSON-server
+### 5. Fetching persons from the JSON-server
 
 Create a new folder `util` and a file `persistence.js`:
 
-```javascript
+```react
 export function fetchData(url, callback, method, body) {
 
     const headers =
@@ -247,12 +249,14 @@ export function fetchData(url, callback, method, body) {
 }
 ```
 
-### 7. Showing the persons
+### 6. Showing the persons
 
-### 8. Inserting new persons
+### 7. Inserting new persons
 
-### 9. Editing persons
+### 8. Editing persons
 
-### 10. Deleting persons
+### 9. Deleting persons
 
-### 11. Styling
+### 10. Styling with html and css
+
+Make it look smashing ;-)
