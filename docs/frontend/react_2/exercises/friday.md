@@ -52,14 +52,28 @@ npm install json-server --save-dev
       "name": "Alice",
       "age": 20,
       "email": "alice@example.com",
-      "class": "Math 101"
+      "class": [1,2]
     },
     {
       "id": 2,
       "name": "Bob",
-      "age": 22,
+      "age": 20,
       "email": "bob@example.com",
-      "class": "History 201"
+      "class": [1,2]
+    },
+    {
+      "id": 3,
+      "name": "Charlize",
+      "age": 20,
+      "email": "char@example.com",
+      "class": [2]
+    },
+    {
+      "id": 4,
+      "name": "Eric",
+      "age": 22,
+      "email": "eric@example.com",
+      "class": [1]
     }
   ],
   "classes": [
