@@ -48,28 +48,28 @@ npm install json-server --save-dev
       "name": "Alice",
       "age": 20,
       "email": "alice@example.com",
-      "class": [1,2]
+      "classes": [1,2]
     },
     {
       "id": 2,
       "name": "Bob",
       "age": 20,
       "email": "bob@example.com",
-      "class": [1,2]
+      "classes": [1,2]
     },
     {
       "id": 3,
       "name": "Charlize",
       "age": 20,
       "email": "char@example.com",
-      "class": [2]
+      "classes": [2]
     },
     {
       "id": 4,
       "name": "Eric",
       "age": 22,
       "email": "eric@example.com",
-      "class": [1]
+      "classes": [1]
     }
   ],
   "classes": [
@@ -91,7 +91,7 @@ Add a script to `package.json` to run the JSON server:
 
 ```json
 "scripts": {
-  "jsonserver": "json-server --watch data/db.json --port 3000 --host 127.0.0.1"
+  "jsonserver": "json-server --watch data/db.json --port 3000"
 }
 ```
 
@@ -116,8 +116,9 @@ Add a script to `package.json` to run the JSON server:
   </select>
 </form>
 ```
+- See if you can find a way to be able to add multiple classes to a student.
 
-- PersonList Component
+- StudentList Component should contain a table with the following structure:
 
 ```html
 <table>
@@ -127,7 +128,7 @@ Add a script to `package.json` to run the JSON server:
       <th>Name</th>
       <th>Age</th>
       <th>Email</th>
-      <th>Class</th>
+      <th>Classes</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -137,7 +138,7 @@ Add a script to `package.json` to run the JSON server:
       <td>Alice</td>
       <td>20</td>
       <td>alice@example.com</td>
-      <td>Math 101</td>
+      <td>Math 101, History 201</td>
       <td>
         <button>Edit</button>
         <button>Delete</button>
@@ -146,6 +147,8 @@ Add a script to `package.json` to run the JSON server:
   </tbody>
 </table>
 ```
+- In the above structure, the classes should be displayed as a comma-separated list of classes attained by the student.
+
 
 ### Step 4: Setting Up Fetch Functions
 
@@ -185,69 +188,14 @@ export function fetchData(url, callback, method, body) {
 
 ### Step 5: Fetching and Displaying Data
 
-In your main App.js file, use the fetchData function to display students:
-
-```jsx
-import React, { useState, useEffect } from 'react';
-import { fetchData } from './utils/fetchData';
-
-function App() {
-  const [students, setStudents] = useState([]);
-
-  useEffect(() => {
-    fetchData('/api/students', setStudents, 'GET');
-  }, []);
-
-  return (
-    <div>
-      <h1>Students List</h1>
-      <PersonList students={students} />
-    </div>
-  );
-}
-
-export default App;
-```
+- In your main App.js file, use the fetchData function to display students:
 
 ### Step 6: Creating CRUD Operations
 
 - Adding a Student (POST)
-
-- Create a function to add a new student:
-
-const newStudent = {
-  name: "Charlie",
-  age: 19,
-  email: "<charlie@example.com>",
-  class: "Math 101"
-};
-
-```javascript
-fetchData('/api/students', setStudents, 'POST', newStudent);
-```
-
 - Updating a Student (PUT)
-
-- Update the student data like this:
-
-```javascript
-const updatedStudent = {
-  name: "Alice",
-  age: 21,
-  email: "alice_updated@example.com",
-  class: "History 201"
-};
-
-fetchData('/api/students/1', setStudents, 'PUT', updatedStudent);
-```
-
 - Deleting a Student (DELETE)
-
-- Delete a student using this method:
-
-```javascript
-fetchData('/api/students/1', setStudents, 'DELETE');
-```
+- Adding a class to a student (PATCH)
 
 ### Step 7: Styling Your Application
 
