@@ -6,9 +6,9 @@ nav_order: 6
 parent: Backend
 grand_parent: Exam
 permalink: /exam/backend/fall2024-re
-sitemap: false
-nav_exclude: true
-search_exclude: true
+sitemap: true
+nav_exclude: false
+search_exclude: false
 
 ---
 
