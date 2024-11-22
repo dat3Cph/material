@@ -10,4 +10,5 @@ permalink: /frontend/react-3/learningobjectives/
 
 # Learning Objectives
 
-TBD
+- Routing in a single-page application (SPA) with react-router-dom
+- Implementing security in a React application with JWT

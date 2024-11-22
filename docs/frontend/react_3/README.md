@@ -1,23 +1,19 @@
 ---
-title: React III
+title: React IV
 layout: default
-nav_order: 12
+nav_order: 13
 has_children: true
-permalink: /frontend/react-3/
+permalink: /frontend/react-4/
 ---
 
-# React part II: CRUD, Fetch API, and Styling
+# React part III: Routing, Security, and Deployment
 
 Topics covered in this week are:
 
-- Controlled Components (forms)
-- Lifting State Up
-- CRUD operations
-- Promises
-- Fetch API
-- Async/Await
-- Styled Components
-'
+- Routing
+- Security
+- Deployment
+
 [Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
@@ -25,6 +21,9 @@ Topics covered in this week are:
 ## Tuesday (class)
 
 ### Prepare for the class
+
+Orient yourself in this documentation:
+1. [React Router](https://reactrouter.com/web/guides/quick-start)
 
 ## Wednesday (CodeLab)
 

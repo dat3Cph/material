@@ -1,19 +1,18 @@
 ---
-title: React IV
+title: React III
 layout: default
-nav_order: 13
+nav_order: 12
 has_children: true
-permalink: /frontend/react-4/
+permalink: /frontend/react-3/
 ---
 
-# React part II: Routing, Security, and Deployment
+# React part IV: Styling and Deployment
 
 Topics covered in this week are:
 
-- Routing
-- Security
-- Deployment
-
+- Styled Components
+- Deployment with caddy and docker
+'
 [Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
