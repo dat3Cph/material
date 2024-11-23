@@ -23,8 +23,9 @@ Topics covered in this week are:
 ### Prepare for the class
 
 - Orient yourself in this documentation:
-1. [React Router quick start](https://reactrouter.com/web/guides/quick-start)
-2. [React Router tutorial](https://reactrouter.com/en/main/start/tutorial)
+1. [Start code example](https://reactrouter.com/start/library/routing)
+2. [Navigation](https://reactrouter.com/start/library/navigating)
+3. [Route parameters](https://reactrouter.com/start/library/url-values)
 
 ### In-class exercises
 1. [React Router](./exercises/routing_in_react.md)
