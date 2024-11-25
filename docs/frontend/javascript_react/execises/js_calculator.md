@@ -3,7 +3,7 @@ title: JS Calculator
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 7
-grand_parent: JS and React
+grand_parent: JS and React I
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/calculator/
 ---

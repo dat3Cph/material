@@ -4,7 +4,7 @@ description: Javascript and React Intro Learning Objectives
 layout: default
 nav_order: 1
 has_children: false
-parent: Javascript and React Intro
+parent: JS and React I
 permalink: /frontend/javascript-react-intro/learningobjectives/
 ---
 

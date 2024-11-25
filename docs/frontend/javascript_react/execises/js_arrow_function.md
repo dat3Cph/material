@@ -3,7 +3,7 @@ title: JS Arrow Functions
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 3
-grand_parent: JS and React
+grand_parent: JS and React I
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/js-arrow-functions/
 ---

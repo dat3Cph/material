@@ -1,9 +1,9 @@
 ---
-title: React III
+title: React IV
 layout: default
 nav_order: 12
 has_children: true
-permalink: /frontend/react-3/
+permalink: /frontend/react-4/
 ---
 
 # React part IV: Styling and Deployment

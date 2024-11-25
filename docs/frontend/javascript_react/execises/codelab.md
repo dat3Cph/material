@@ -3,7 +3,7 @@ title: JS Codelab
 description: Exercises for Frontend Week I Codelab
 layout: default
 nav_order: 6
-grand_parent: JS and React
+grand_parent: JS and React I
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/codelab/
 ---

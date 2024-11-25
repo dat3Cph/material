@@ -3,7 +3,7 @@ title: React Fetching
 description: Exercises for Frontend Week I
 layout: default
 nav_order: 12
-grand_parent: JS and React
+grand_parent: JS and React I
 parent: Exercises
 permalink: /frontend/javascript-react-intro/exercises/fetch/
 ---
