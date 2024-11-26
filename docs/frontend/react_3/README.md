@@ -41,6 +41,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 ### Prepare for the class
 
 - Orient yourself in this documentation:
+
 1. [Start code example](https://reactrouter.com/6.28.0/route/route)
 2. [Navigation](https://reactrouter.com/start/library/navigating)
 3. [Route parameters](https://reactrouter.com/start/library/url-values)
@@ -51,7 +52,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 
 ## Wednesday (CodeLab)
 
-[TBD]
+- [Codelab Exercise (Bornholmer Tours)](./exercises/codelab.md)
 
 ## Thursday (class)
 

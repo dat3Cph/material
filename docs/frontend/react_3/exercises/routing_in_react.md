@@ -2,7 +2,7 @@
 title: Routing in React
 description: Exercises for Frontend Week III
 layout: default
-nav_order: 2
+nav_order: 1
 grand_parent: React III
 parent: Exercises
 permalink: /frontend/react-3/exercises/routing-in-react/
