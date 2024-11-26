@@ -52,7 +52,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 
 ## Wednesday (CodeLab)
 
-- [Codelab Exercise (Bornholmer Tours)](./exercises/codelab.md)
+1. [Codelab Exercise (Bornholmer Tours)](./exercises/codelab.md)
 
 ## Thursday (class)
 
