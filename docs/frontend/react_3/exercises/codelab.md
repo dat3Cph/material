@@ -37,4 +37,4 @@ It's a simple React website, and the main focus of your job is to get the user a
 ## Other sources
 
 1. [Make your own free logo here](https://myfreelogomaker.com/)
-2. [If you need to manipulate bitmap images, use this](https://www.gimp.org/)
+2. [If you need to manipulate bitmap images, use The Gimp](https://www.gimp.org/)
