@@ -10,10 +10,10 @@ permalink: /frontend/react-3/exercises/routing-in-react/
 
 # Exercise: React and Routing
 
-Open the React Router tutorial: [React Router Tutorial](https://reactrouter.com/start/library/installation) for reference.
+Open the React Router tutorial: [React Router Tutorial](https://reactrouter.com/6.28.0/start/tutorial) for reference. If you are [using version 7, use this instead](https://reactrouter.com/start/library/installation).
 
 1. Create a new project with Vite and clean up in the usual way before you continue.
-2. Install `react-router`.
+2. Install `npm install react-router-dom@6.28.0` or [version 7](https://reactrouter.com/start/library/installation)
 
 We are going to create a book viewing app.
 
@@ -24,9 +24,7 @@ We are going to create a book viewing app.
    - Find a book (With an input field to write an id number to show a book)
 
 4. Add appropriate routes with components for each link.
-
 5. Use the `BookFacade` from [here](https://github.com/dat3startcode/router-start-code#2-create-a-new-file-bookfacadejs-and-add-the-following-content-to-the-file) for methods to use on the book list.
-
 6. Implement the `Books` component to show a list of all the books.
 
    - Make each book a clickable link.
