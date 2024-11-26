@@ -33,3 +33,8 @@ It's a simple React website, and the main focus of your job is to get the user a
 1. [Online mockup version](https://www.figma.com/proto/azlsprXp9ltmTvGTT2mNvL/UserAdmin?node-id=0-1&t=2nJiqCVeF3JntB0z-1)
 2. [Figma file to open directly in Figma](../docs/bornholmertours.fig)
 3. [Pdf of Figma pages](../docs/bornholmertours.pdf)
+
+## Other sources
+
+1. [Make your own free logo here](https://myfreelogomaker.com/)
+2. [If you need to manipulate bitmap images, use this](https://www.gimp.org/)
