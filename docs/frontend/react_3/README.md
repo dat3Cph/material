@@ -24,7 +24,7 @@ Vi ser på de temaer vi har arbejdet med i sidste uge med udgangspunkt i den vid
 
 De næste mandage kan I skiftes til at vise noget frem. Vi regner bestemt ikke med at alle kan nå at vise noget frem på den halve time vi har, men så kan vi rotere næste gang. Det er jo også en slags træning til den eksamensform vi har i Front-end.
 
-Find nogle gode eksempler frem (du selv har lavet), hvor du har fortælle lidt om:
+Find nogle gode eksempler frem (du selv har lavet), hvor du kan fortælle lidt om:
 
 - Hvad er en React Component?
 - Fortælt hvad fordelene er ved React i stedet for vanilla Javascript og DOM programmering
@@ -41,8 +41,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 ### Prepare for the class
 
 - Orient yourself in this documentation:
-
-1. [Start code example](https://reactrouter.com/start/library/routing)
+1. [Start code example](https://reactrouter.com/6.28.0/route/route)
 2. [Navigation](https://reactrouter.com/start/library/navigating)
 3. [Route parameters](https://reactrouter.com/start/library/url-values)
 
