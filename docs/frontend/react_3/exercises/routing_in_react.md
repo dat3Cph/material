@@ -10,10 +10,10 @@ permalink: /frontend/react-3/exercises/routing-in-react/
 
 # Exercise: React and Routing
 
-Open the React Router tutorial: [React Router Tutorial](https://reactrouter.com/en/6.20.1/start/tutorial) for reference.
+Open the React Router tutorial: [React Router Tutorial](https://reactrouter.com/6.28.0/start/tutorial) for reference.
 
 1. Create a new project with Vite and clean up in the usual way before you continue.
-2. Install `react-router-dom`.
+2. Install `npm install react-router-dom@6.28.0`.
 
 We are going to create a book viewing app.
 
