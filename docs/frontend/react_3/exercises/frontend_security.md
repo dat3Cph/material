@@ -10,9 +10,9 @@ permalink: /frontend/react-3/exercises/frontend-security/
 
 # Tokens and authentication with React (SPA’s)
 
-- In this part, we will create a simple REACT-SPA, that will use the backend created in the first part of the semester. The application must include two views, one for unauthenticated users (the login view below) and one,  rendered after a successful login.
+In this part, we will create a simple REACT-SPA, that will use the backend created in the first part of the semester. The application must include two views, one for unauthenticated users (the login view below) and one,  rendered after a successful login.
 
-- The second view should make a request to one of the protected endpoints on the server, and provide a logout button. Both components below are encapsulated in an “outer” component, and we will use the “Lifting state up” pattern to synchronize the two.
+The second view should make a request to one of the protected endpoints on the server, and provide a logout button. Both components below are encapsulated in an “outer” component, and we will use the “Lifting state up” pattern to synchronize the two.
 
 ![Mockup](./images/Week4exSecurity1.png)
 
@@ -20,7 +20,7 @@ permalink: /frontend/react-3/exercises/frontend-security/
 
 ## Getting started
 
-- This exercise requires your backend to run, and to handle CORS as explained in a previous session.
+This exercise requires your backend to run, and to handle CORS as explained in a previous session. If you are not sure how to do that, then check this [CORS and Javalin tutorial](../../../toolbox/security/cors.md).
 
 1. Create a new react project and clean it up “the usual way”.
 
