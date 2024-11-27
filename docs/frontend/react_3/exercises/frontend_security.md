@@ -39,7 +39,7 @@ DB_NAME=hotel
 
 2. Create a new file in the src folder called apiFacade.js and paste in the code below:
 
-    - It includes the suggested handleHttpErrors(res) function from this document + a customized version of the makeOptions() function from the same document, changed to handle tokens.
+    - It includes the suggested handleHttpErrors(res) function from this document + a customized version of the makeOptions() function from the same document, changed to handle tokens. The code will not necessarily work out of the box, but it's a good start.
 
     - **Remember** to do what it says in the first line:
 
@@ -103,7 +103,7 @@ DB_NAME=hotel
 
       const performLogin = (evt) => {
         evt.preventDefault();
-        login(loginCredentials.username, loginCredentials.password);
+        facade.login(loginCredentials.username, loginCredentials.password);
       }
       const onChange = (evt) => {
         setLoginCredentials({ ...loginCredentials,[evt.target.id]: evt.target.value })
@@ -112,10 +112,10 @@ DB_NAME=hotel
       return (
         <div>
           <h2>Login</h2>
-          <form onChange={onChange} >
-            <input placeholder="User Name" id="username" />
-            <input placeholder="Password" id="password" />
-            <button onClick={performLogin}>Login</button>
+          <form onSubmit={performLogin}>
+            <input placeholder="User Name" id="username" onChange={onChange} value={loginCredentials.username} />
+            <input placeholder="Password" id="password" onChange={onChange} value={loginCredentials.password} />
+            <button type="submit">Login</button>
           </form>
         </div>
       )
@@ -189,7 +189,7 @@ DB_NAME=hotel
 7. Now we are ready to login, so add this code to the apiFacade’s login function
 
     ```js
-    const options = makeOptions("POST", true,{username: user, password: password });
+    const options = makeOptions("POST", true, {username: user, password: password });
     return fetch(URL + "/api/login", options)
         .then(handleHttpErrors)
         .then(res => {setToken(res.token) })
@@ -247,3 +247,30 @@ DB_NAME=hotel
     - How we (you) attach the token to the outgoing request up against the protected endpoint
 
 14. Finally, to add the final touch to this exercise, add routing to organize your code and layout, and add error-handling where relevant (wrong credentials when logging in etc.). Use the `errorElement` prop in React Router for error handling.
+
+### Checking user roles
+
+Sooner or later you will need a function to check if a logged in user has a specific role.
+
+These two functions will do the job:
+
+```javascript
+const getUserRoles = () => {
+        const token = getToken()
+        if (token != null) {
+            const payloadBase64 = getToken().split('.')[1]
+            const decodedClaims = JSON.parse(window.atob(payloadBase64))
+            const roles = decodedClaims.roles
+            return roles
+        } else return ""
+    }
+
+    const hasUserAccess = (neededRole, loggedIn) => {
+        const roles = getUserRoles().split(',')
+        return loggedIn && roles.includes(neededRole)
+    }
+```
+
+Make sure you understand why they work.
+
+Add the functions to the export
