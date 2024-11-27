@@ -20,7 +20,20 @@ The second view should make a request to one of the protected endpoints on the s
 
 ## Getting started
 
-This exercise requires your backend to run, and to handle CORS as explained in a previous session. If you are not sure how to do that, then check this [CORS and Javalin tutorial](../../../toolbox/security/cors.md).
+This exercise requires your backend to run, and to handle CORS as explained in a previous session. If you are not sure how to do that, then check this [CORS and Javalin tutorial](../../../toolbox/security/cors.md). Your backend API should have the security package installed. You can either use your startcode from the exam - or - the good'ol `hotel api` which can be cloned like this:
+
+```bash
+git clone --branch exceptionhandling git@github.com:jonbertelsen/hotel_api_deployable.git
+```
+
+Then add the `config.properties` file and make sure that the hotel database exists in Postgres:
+
+```plaintext
+SECRET_KEY=4c9f92b04b1e85fa56e7b7b0a34f2de4f5b08cd9bb4dfe8ac4d73b4f7f6ef37b
+ISSUER=Donald Duck
+TOKEN_EXPIRE_TIME=1800000
+DB_NAME=hotel
+```
 
 1. Create a new react project and clean it up “the usual way”.
 
@@ -41,7 +54,7 @@ This exercise requires your backend to run, and to handle CORS as explained in a
     }
 
     function apiFacade() {
-    /* Insert utility-methods from a later step (d) 
+    /* Insert utility-methods from later steps 
     here (REMEMBER to uncomment in the returned 
     object when you do)*/
     
@@ -233,4 +246,4 @@ This exercise requires your backend to run, and to handle CORS as explained in a
     - How the server returns the token (in the Response)
     - How we (you) attach the token to the outgoing request up against the protected endpoint
 
-14. Finally, to add the final touch to this exercise, add error-handling where relevant (wrong credentials when logging in etc.). Use the `errorElement` prop in React Router.
+14. Finally, to add the final touch to this exercise, add routing to organize your code and layout, and add error-handling where relevant (wrong credentials when logging in etc.). Use the `errorElement` prop in React Router for error handling.
