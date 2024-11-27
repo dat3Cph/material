@@ -43,6 +43,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 - Orient yourself in this documentation:
 
 1. [Start code example](https://reactrouter.com/6.28.0/route/route)
+2. [Create Routes from Elements](https://reactrouter.com/6.28.0/utils/create-routes-from-elements)
 2. [Navigation](https://reactrouter.com/start/library/navigating)
 3. [Route parameters](https://reactrouter.com/start/library/url-values)
 4. [React Router YouTube Playlist](https://www.youtube.com/watch?v=OMQ2QARHPo0&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf)

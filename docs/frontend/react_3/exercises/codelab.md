@@ -23,6 +23,7 @@ Implement a React website from scratch that works like the Figma mockup below.
 It's a simple React website, and the main focus of your job is to get the user admin working:
 
 - Use [JsonServer](../../../toolbox/react/json-server.md) as an api for holding users with `userid`, `login`, `password`, and some `roles` (user, admin, superman etc). Use chatGPT to generate the `db.json` file.
+- Set up routing with [Create Routes from Elements](https://reactrouter.com/6.28.0/utils/create-routes-from-elements)
 
 - Think about the routing and how to divide the application into components.
 - Start building a wireframe with html / JSX, and CSS.
