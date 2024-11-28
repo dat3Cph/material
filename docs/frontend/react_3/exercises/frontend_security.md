@@ -69,7 +69,7 @@ DB_NAME=hotel
         }
       }
       if (addToken && loggedIn()) {
-        opts.headers["Authentication"] = `Baerer ${getToken()}`;
+        opts.headers["Authorization"] = `Baerer ${getToken()}`;
       }
       if (body) {
         opts.body = JSON.stringify(body);
