@@ -63,12 +63,12 @@ Here are the steps to start a React project using Vite:
 7. **Customizing Your Project**: You can customize your project by editing the files in the `src` folder. Vite supports hot module replacement (HMR), so your changes will be reflected in the browser almost instantly.
 
 8. **Adding Additional Dependencies**: If you need to add more packages or libraries to your project, use npm or yarn to install them as you would in any other Node.js project.
-For example React Router:
+For example React Router (newest version):
 
 ```console
-npm install react-router-dom
+npm i react-router
 ```
 
-9. **Consult the Documentation**: For more advanced configurations and optimizations, refer to the [Vite documentation](https://vitejs.dev/guide/) and [React documentation](https://reactjs.org/docs/getting-started.html).
+9. **Consult the Documentation**: For more advanced configurations and optimizations, refer to the [Vite documentation](https://vitejs.dev/guide/) and [React documentation](https://react.dev/learn).
 
 Starting with Vite offers a modern, fast, and efficient way to build React applications, making it a great choice for both beginners and experienced developers.
