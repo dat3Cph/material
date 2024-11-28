@@ -12,6 +12,15 @@ permalink: /frontend/react-3/exercises/tripapp_security/
 
 ## Continue the tripapp from frontend react II - codelab 
 
+- API to use: 
+  - https://tripapi.cphbusinessapps.dk/api/trips
+  - https://tripapi.cphbusinessapps.dk/api/guides (ADMIN)
+  - https://tripapi.cphbusinessapps.dk/api/trips/3 (USER)
+
+- users in the system:
+  - user {"username": "user", "password": "user123"}
+  - admin {"username": "admin", "password": "admin123"}
+
 1. Use your solution to the codelab exercise in the second react week.
 
 2. Install react router: `npm install react-router-dom@6.28.0`
