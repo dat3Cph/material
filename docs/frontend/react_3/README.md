@@ -62,7 +62,7 @@ Derudover kan vi selvfølgelig snakke om alle de ting I har på hjertet – hels
 
 ## Friday (exercise day)
 
-TBD
+1. [Trip app with security](./exercises/tripapp_security.md)
 
 <hr/>
 

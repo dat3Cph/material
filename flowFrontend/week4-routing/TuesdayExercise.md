@@ -23,6 +23,7 @@ We are going to create a book viewing app.
 11. Change the book links to be `NavLinks` as in [here](https://reactrouter.com/en/6.20.1/components/nav-link).
 
 ## Deploy the Project
+
 1. Create a Dockerfile for the frontend.
   - Use the template as done in this [video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=429ca57d-e870-406c-8fae-b0ca010eb5ea)
 2. Create a `.github/workflows` folder and add a `deploy.yml` file.
