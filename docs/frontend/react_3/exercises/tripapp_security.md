@@ -28,9 +28,9 @@ permalink: /frontend/react-3/exercises/tripapp_security/
 3. Setup the router in `main.jsx` and setup a parent route with the App component as element surrounding all the other routes
 
 4. Setup 3 sub routes under the parent route:
-  1. Trips (to show a list of all available trips)
-  2. Guides (to show a list of all available guides - protected with the `Admin` role)
-  3. Trip (to show a single trip with details about guide and packing list (if available) - protected with `User` role)
+    1. Trips (to show a list of all available trips)
+    2. Guides (to show a list of all available guides - protected with the `Admin` role)
+    3. Trip (to show a single trip with details about guide and packing list (if available) - protected with `User` role)
 
 5. Setup a Header component used inside App (allways visible) with 3 links to `trips`, `guides` and `trip/:id` respectively
 
