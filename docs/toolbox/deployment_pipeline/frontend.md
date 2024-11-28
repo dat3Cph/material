@@ -11,10 +11,10 @@ permalink: /toolbox/deployment-pipeline/frontend/
 ![Caddy Logo](./images/redblue.webp){: .mx-auto .d-block .my-5 .md .d-md-none  style="width: 25%;"}
 ![Caddy Logo](./images/redblue.webp){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right style="width: 25%;"}
 
-# Deploying React Frontend Application
+# Deploying React Frontend Applications
 
 In this tutorial, you will learn how to deploy a React frontend application using Github Actions and Caddy as a
-static file server. Compared to deploying the Javalin Backend APIs it not a big deal.
+static file server. Compared to deploying the Javalin Backend APIs it's not a big deal.
 
 ## Prerequisites at this point
 
@@ -24,7 +24,7 @@ static file server. Compared to deploying the Javalin Backend APIs it not a big 
 
 3. You should have a Droplet with Caddy installed that you use for your backend deployment pipeline.
 
-4. You should create a subdomain that can be used for accessing your frontend application.
+4. You should have a subdomain that can be used for accessing your frontend application.
 
 ## The Plan
 
@@ -39,6 +39,8 @@ This is the plan for deploying the React frontend application:
 7. Push the React frontend application to the Github repository and wait for the deployment to complete (A)
 
 ![Flow](./images/frontend_flow.svg)
+
+The steps are annotated with letters (A, B, C) to indicate where they are performed:
 
 ### Step 1: Github Action Workflow (A)
 
