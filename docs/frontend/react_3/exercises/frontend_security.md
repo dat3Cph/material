@@ -184,7 +184,7 @@ DB_NAME=hotel
     Important: Also un-comment the four functions in the object we are returning in bottom of the function
 
     We have several options when it comes to “where to store the Token” (cookies, localstorage and sessionstorage + more “sophisticated” options).
-    Important: In this example localStorage has been chosen, since it provides some usability advantages, but it’s not necessarily the most secure choice. Read here for additional info.
+    Important: In this example localStorage has been chosen, since it provides some usability advantages, but it’s not necessarily the most secure choice. Depending on the necessary security level, you might want to consider other options. But for now, let’s stick with localStorage, since it’s easy to work with and widely used.
 
 7. Now we are ready to login, so add this code to the apiFacade’s login function
 
