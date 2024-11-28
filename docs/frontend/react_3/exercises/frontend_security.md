@@ -37,7 +37,7 @@ DB_NAME=hotel
 
 1. Create a new react project and clean it up “the usual way”.
 
-2. Create a new file in the src folder called apiFacade.js and paste in the code below:
+2. Create a new file in the src/util folder called apiFacade.js and paste in the code below:
 
     - It includes the suggested handleHttpErrors(res) function from this document + a customized version of the makeOptions() function from the same document, changed to handle tokens. The code will not necessarily work out of the box, but it's a good start.
 
@@ -69,7 +69,7 @@ DB_NAME=hotel
         }
       }
       if (addToken && loggedIn()) {
-        opts.headers["Authentication"] = `Baerer ${getToken()}`;
+        opts.headers["Authentication"] = `Bearer ${getToken()}`;
       }
       if (body) {
         opts.body = JSON.stringify(body);
@@ -94,7 +94,7 @@ DB_NAME=hotel
 
     ```react
     import React, { useState,useEffect } from "react"
-    import facade from "./apiFacade";
+    import facade from "./util/apiFacade";
 
 
     function LogIn({ login }) {
@@ -189,7 +189,7 @@ DB_NAME=hotel
 7. Now we are ready to login, so add this code to the apiFacade’s login function
 
     ```js
-    const options = makeOptions("POST", true, {username: user, password: password });
+    const options = makeOptions("POST", false, {username: user, password: password });
     return fetch(URL + "/api/login", options)
         .then(handleHttpErrors)
         .then(res => {setToken(res.token) })
