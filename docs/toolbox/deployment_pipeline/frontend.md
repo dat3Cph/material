@@ -30,15 +30,17 @@ static file server. Compared to deploying the Javalin Backend APIs it not a big 
 
 This is the plan for deploying the React frontend application:
 
-1. Create a **Github Action Workflow** that builds the React application and deploys it to the Droplet.
-2. Create a didicated ssh-key for the deployment pipeline. This is to be able to copy the files to the Droplet.
-3. Copy the public key to the Droplet (for the jetty user).
-4. Create a Github Action Secret for the private key.
-5. Add a "site block" to the Caddyfile on your Drolet for the frontend application.
-6. Restart the Caddy container to apply the changes.
-7. Push the React frontend application to the Github repository and wait for the deployment to complete.
+1. Create a **Github Action Workflow** that builds your React app and deploys it to the Droplet (A)
+2. Create a didicated ssh-key for the deployment pipeline. This is to be able to copy the files to the Droplet (A)
+3. Copy the public key to the Droplet (for the jetty user). From (B) to (C)
+4. Create a Github Action Secret for the private key (B)
+5. Add a "site block" to the Caddyfile on your Drolet for the frontend application (C)
+6. Restart the Caddy container to apply the changes (C)
+7. Push the React frontend application to the Github repository and wait for the deployment to complete (A)
 
-### Step 1: Github Action Workflow
+![Flow](./images/frontend_flow.svg)
+
+### Step 1: Github Action Workflow (A)
 
 Create a new directory `.github/workflows` in the root of your project, and add the file `deploy.yml`:
 
@@ -91,7 +93,7 @@ jobs:
 - Set the REMOTE_PATH variable to the path where the frontend application should be deployed on the Droplet.
 - Set the APP_NAME variable to the name of your application. In this example it's called `timer`.
 
-### Step 2: Generating a new SSH key for the deployment pipeline
+### Step 2: Generating a new SSH key for the deployment pipeline (A)
 
 On your local machine, generate a new SSH key pair for the deployment pipeline:
 
@@ -122,7 +124,7 @@ Expected out:
 
 The private key is `deploy_key` and the public key is `deploy_key.pub`.
 
-### Step 3: Copy the public key to the Droplet
+### Step 3: Copy the public key to the Droplet (A + C)
 
 Start by copying the public key by doing this:
 
@@ -150,7 +152,7 @@ Paste the public key into the file and save it by pressing `Ctrl + X`, y and the
 
 Done with the public key.
 
-### Step 4: Create a Github Action Secret for the private key
+### Step 4: Create a Github Action Secret for the private key (B)
 
 Copy the content of the private key:
 
@@ -166,7 +168,7 @@ cat ~/.ssh/deploy_key
 
 4. Click on **Add secret** to save the secret.
 
-### Step 5: Add a "site block" to the Caddyfile
+### Step 5: Add a "site block" to the Caddyfile (C)
 
 On your droplet: navigate to the folder where your Caddyfile is located. In this example, it's `~jetty/deployment`.
 In the folder, you should have a file called `Caddyfile`. Edit the Caddyfile with nano:
@@ -192,9 +194,17 @@ match the `APP_NAME` variable in the Github Action Workflow.
 Remember to configure your DNS settings to point the subdomain to the IP address of your Droplet. This is done in the DNS
 settings of your domain provider. On Digital Ocean it's done in the [Networking domain tab](https://cloud.digitalocean.com/networking/domains).
 
-### Step 6: Ensure Correct Ownership and Permissions
+### Step 6: Create App directory and Ensure Correct Ownership and Permissions (C)
 
-On your droplet, check the ownership and permissions of the target directory for the application.
+On your droplet:
+
+Create a directory for the frontend application (called `timer` in this example) in the path you specified in the Caddyfile:
+
+```bash
+mkdir -p /home/jetty/deployment/site/timer
+```
+
+Check the ownership and permissions of the target directory for the application.
 
 ```bash
 ls -ld /home/jetty/deployment/site/timer
@@ -229,7 +239,7 @@ drwxr-xr-x 3 jetty jetty 4096 Nov 28 21:13 /home/jetty/deployment/site/timer
 After adding the site block to the Caddyfile, you need to restart the Caddy container to apply the changes:
 
 ```bash
-docker compose restart caddy
+sudo docker compose restart caddy
 ```
 
 ### Step 8: Push the React frontend application
