@@ -19,15 +19,39 @@ Topics covered in this week are:
 
 ## Tuesday (class)
 
+Styling in React with Styled Components
+
 ### Prepare for the class
+
+Skim through the following resources:
+
+- [Styled Components](https://scalablecss.com/styled-components-quickstart-guide/)
+
+Watch the following videos:
+
+- [Styled Components Is the Only Way To Do CSS](https://www.youtube.com/watch?v=54-hITMASgM)
+- [Styled Components in React | All you need to know](https://www.youtube.com/watch?v=kClcUzAhz9g)
 
 ## Wednesday (CodeLab)
 
+- TBD
+
 ## Thursday (class)
+
+Deployment with Github Actions and Caddy
 
 ### Prepare for the class
 
+Read throught the [exercise for the day](../../toolbox/deployment_pipeline/frontend.md) - but wait with
+the implementation until the class. Get an overall understanding of the steps involved.
+
+See this video about the linux command `rsync`:
+
+- [rsync is a Based File Sync Program](https://www.youtube.com/watch?v=iTnWIKHtOnA)
+
 ### In-class exercises
+
+- [Deploying React Frontend Applications](../../toolbox/deployment_pipeline/frontend.md)
 
 ## Friday (exercise day)
 
