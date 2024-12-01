@@ -8,8 +8,8 @@ parent: Deployment Pipeline
 permalink: /toolbox/deployment-pipeline/frontend/
 ---
 
-![Caddy Logo](./images/redblue.webp){: .mx-auto .d-block .my-5 .md .d-md-none  style="width: 25%;"}
-![Caddy Logo](./images/redblue.webp){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right style="width: 25%;"}
+![Caddy Logo](./images/redblue.webp){: .mx-auto .d-block .my-5 .md .d-md-none  style="width: 100%;"}
+![Caddy Logo](./images/redblue.webp){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right style="width: 40%;"}
 
 # Deploying React Frontend Applications
 
