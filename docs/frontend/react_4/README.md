@@ -26,6 +26,13 @@ We will review the code from the previous week. In particular the Friday Exercis
 
 Exam questions that could be relevant for the review:
 
+- Show and explain the concept of promises in JavaScript (think of the fetch API)
+- Provide examples for different ways of doing conditional rendering.
+- Show and explain of what a JWT token is composed
+- Describe and show the process og login using JWT. What problem does it solve?
+- Show and explain an example of sub-routing.
+- Describe conceptually what Same Origin Policy (SOP) and Cross Origin Ressource Sharing (CORS) are, and how we avoid getting CORS errors when fetching data from your API.
+
 ## Tuesday (class)
 
 Styling in React with Styled Components
@@ -39,7 +46,8 @@ Skim through the following resources:
 Watch the following videos:
 
 - [Styled Components Is the Only Way To Do CSS](https://www.youtube.com/watch?v=54-hITMASgM)
-- [Styled Components in React | All you need to know](https://www.youtube.com/watch?v=kClcUzAhz9g)
+
+- [Styled Components in React - All you need to know](https://www.youtube.com/watch?v=kClcUzAhz9g)
 
 ### In-class exercises
 
@@ -55,7 +63,7 @@ Deployment with Github Actions and Caddy
 
 ### Prepare for the class
 
-Read throught the [exercise for the day](../../toolbox/deployment_pipeline/frontend.md) - but wait with
+Read through the [exercise for the day](../../toolbox/deployment_pipeline/frontend.md) - but wait with
 the implementation until the class. Get an overall understanding of the steps involved.
 
 See this video about the linux command `rsync`:
