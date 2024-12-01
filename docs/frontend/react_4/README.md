@@ -11,11 +11,20 @@ permalink: /frontend/react-4/
 Topics covered in this week are:
 
 - Styled Components
-- Deployment with caddy and docker
-'
+- Architecture of a full stack application
+- Deployment with Github Actions and Caddy
+
 [Learning objectives for the week](./learningobjectives.md)
 
 ## Monday
+
+Reviews in groups
+
+### Prepare for the day
+
+We will review the code from the previous week. In particular the Friday Exercise. Make sure you have your code ready for review.
+
+Exam questions that could be relevant for the review:
 
 ## Tuesday (class)
 
