@@ -12,46 +12,76 @@ permalink: /frontend/react-3/exercises/styling-in-react/
 
 Open the StyledComponents documentation: [StyledComponents Documentation](https://styled-components.com/docs) for reference.
 
-1. Create a new project with Vite and clean up in the usual way before you continue.
+1. Create a [new project with Vite](../../../toolbox/react/vite.md) and clean up in the usual way before you continue.
 2. Install StyledComponents using:
-```bash
-npm install styled-components
-```
 
-## We are going to create a simple Styled Todo App.
+      ```bash
+      npm install styled-components
+      ```
 
-1. Set up your app with the following components:
-   - TodoList (to display the list of todos)
-   - AddTodo (to add a new todo)
+## Styled Todo App v. II
 
-1. Create a styled navigation bar at the top of your app:
-   - The navigation bar should have links to Home, Todos and Login.
-   - Style the navigation bar using styled-components.
+We built a [Todo App](../../react_2/exercises/react_shared_state.md) two weeks ago. Now we will take it further and style it using StyledComponents. We also want to recap the use of shared state, react-router, props, css, and more.
 
-1. Style the TodoList component:
-   - Each todo should be displayed in a styled card with a title and a description.
-   - Use StyledComponents to apply hover effects to the todo cards.
+**Objective**: Build a styled Todo App using React and styled-components.
 
-1. Style the AddTodo form:
-   - Use a styled form component with input fields and a submit button.
-   - Ensure the button has hover and active states styled using styled-components.
+1. **Main Components to Create**:
+   - `TodoList`: Displays a list of todos.
+   - `AddTodo`: A form to add new todos.
 
-1. Use props to dynamically style a button component:
-   - Add a button that toggles the theme (e.g., light or dark mode).
-   - Use props in your styled components to apply different styles for light and dark themes.
+2. **Navigation Bar**
 
-1. Add a global style using createGlobalStyle from styled-components to:
-   - Set a default font and background color for the app.
-   - Change the background color based on the theme.
+   - Create a styled navigation bar with links to `Home`, `Todos`, and `Login`.
+   - Use styled-components to style the navigation bar.
+   - Create placeholder pages for `Home`, `Todos` and `Login`.
+   - Use `React Router` to navigate between pages.
 
-1. Use theming with the ThemeProvider component:
-   - Define a light theme and a dark theme.
-   - Pass the theme object using ThemeProvider and apply it to your styled components.
+3. **TodoList Styling**
 
-1. Bonus: Add animations to the todos using keyframes and styled-components.
+   - Each todo should be displayed in a styled card with a title and description.
+   - Add hover effects using styled-components (e.g., change background color or scale the card).
 
-1. Example:
-    Animate the appearance of a todo item when it is added to the list.
-    Add a hover animation effect to make the todo cards visually dynamic.
+4. **AddTodo Form**
 
-1. Test your application by styling additional components and ensuring that the theme switch works seamlessly.
+   - Create a styled form with input fields for title and description, and a submit button.
+   - Style the button with hover and active states using styled-components.
+   - Implement validation to ensure both fields are filled.
+
+5. **Dynamic Styling with Props**
+
+   - Add a "Toggle Theme" button to switch between light and dark themes.
+   - Use props to apply different styles based on the selected theme (e.g., background, text color).
+
+6. **Global Styles**
+
+   - Use `createGlobalStyle` to define default fonts and colors.
+   - Dynamically update the background color based on the current theme.
+
+7. **Theming**
+
+   - Define light and dark theme objects with properties like `background`, `text`, and `button`.
+   - Pass the theme object to components using `ThemeProvider`.
+
+8. **Bonus: Animations**
+
+   - Animate todo appearance with `keyframes` (e.g., fade in).
+   - Add hover animations to make the todo cards visually engaging.
+
+9. **Testing**
+
+   - Ensure the theme switch toggles correctly.
+   - Style additional components to reinforce the use of styled-components.
+
+---
+
+### Additional hints
+
+- **State Management**: Use `useState` for managing todos and theme selection.
+- **Prop-Driven Styling**: Demonstrate how to pass `props` to styled-components for dynamic styles.
+- **Code Organization**: Structure your components logically and separate concerns (e.g., `components`, `styles`, `pages`). Place your styled-components where they make most sense.
+
+### To consider
+
+1. What is the benefit of using styled-components over traditional CSS?
+2. How does the `ThemeProvider` simplify theming in styled-components?
+3. How can you optimize the styling of your components to reduce redundancy?
