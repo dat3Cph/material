@@ -23,7 +23,7 @@ The second view should make a request to one of the protected endpoints on the s
 This exercise requires your backend to run, and to handle CORS as explained in a previous session. If you are not sure how to do that, then check this [CORS and Javalin tutorial](../../../toolbox/security/cors.md). Your backend API should have the security package installed. You can either use your startcode from the exam - or - the good'ol `hotel api` which can be cloned like this:
 
 ```bash
-git clone --branch exceptionhandling git@github.com:jonbertelsen/hotel_api_deployable.git
+git clone --branch exceptionhandling https://github.com/jonbertelsen/hotel_api_deployable.git
 ```
 
 Then add the `config.properties` file and make sure that the hotel database exists in Postgres:
@@ -35,31 +35,35 @@ TOKEN_EXPIRE_TIME=1800000
 DB_NAME=hotel
 ```
 
-1. Create a new react project and clean it up “the usual way”.
+1. Create a new react project and clean it up "[the usual way](../../../toolbox/react/vite.md)".
 
-2. Create a new file in the src folder called apiFacade.js and paste in the code below:
+2. Create a file called `apiFacade.js` in the `/src` folder, and paste in the code below:
 
     - It includes the suggested handleHttpErrors(res) function from this document + a customized version of the makeOptions() function from the same document, changed to handle tokens. The code will not necessarily work out of the box, but it's a good start.
 
     - **Remember** to do what it says in the first line:
 
     ```js
-    const URL = "ADD URL TO YOU SERVER";
+    const BASE_URL = "ADD URL TO YOU SERVER"
+    const LOGIN_ENDPOINT = "auth/login"
 
     function handleHttpErrors(res) {
     if (!res.ok) {
       return Promise.reject({ status: res.status, fullError: res.json() })
     }
-    return res.json();
+    return res.json()
     }
 
     function apiFacade() {
+
     /* Insert utility-methods from later steps 
     here (REMEMBER to uncomment in the returned 
     object when you do)*/
     
     const login = (user, password) => {/*TODO*/  }
+
     const fetchData = () => {/*TODO */  }
+
     const makeOptions= (method,addToken,body) =>{
       var opts = {
         method: method,
@@ -69,7 +73,7 @@ DB_NAME=hotel
         }
       }
       if (addToken && loggedIn()) {
-        opts.headers["Authorization"] = `Baerer ${getToken()}`;
+        opts.headers["Authorization"] = `Bearer ${getToken()}`;
       }
       if (body) {
         opts.body = JSON.stringify(body);
@@ -78,7 +82,7 @@ DB_NAME=hotel
     }
     return {
         makeOptions,
-        setToken,
+        //setToken,
         //getToken,
         //loggedIn,
         //login,
@@ -93,9 +97,7 @@ DB_NAME=hotel
 3. Create this component `LogIn.jsx`:
 
     ```react
-    import React, { useState,useEffect } from "react"
-    import facade from "./apiFacade";
-
+    import { useState, useEffect } from "react"
 
     function LogIn({ login }) {
       const init = { username: "", password: "" };
@@ -120,12 +122,16 @@ DB_NAME=hotel
         </div>
       )
     }
+    export default LogIn
     ```
 
 4. Create this component `LoggedIn.jsx`:
 
     ```react
-    function LoggedIn() {
+    import { useState, useEffect } from 'react'
+    import facade from './apiFacade'
+
+    function LoggedIn( { loggedIn }) {
       const [dataFromServer, setDataFromServer] = useState("Loading...")
       
       useEffect(() => { /*TODO*/}, [])
@@ -137,11 +143,16 @@ DB_NAME=hotel
         </div>
       )
     }
+    export default LoggedIn
     ```
 
 5. Remove all code in App.jsx, import `Login.jsx` and `LoggedIn.jsx` and paste in the code below:
 
     ```react
+    import LogIn from './LogIn'
+    import LoggedIn from './LoggedIn'
+    import facade from './apiFacade'
+
     function App() {
       const [loggedIn, setLoggedIn] = useState(false);
 
@@ -152,7 +163,7 @@ DB_NAME=hotel
         <div>
           {!loggedIn ? (<LogIn login={login} />) :
             (<div>
-              <LoggedIn />
+              <LoggedIn loggedIn={loggedIn} />
               <button onClick={logout}>Logout</button>
             </div>)}
         </div>
@@ -190,7 +201,7 @@ DB_NAME=hotel
 
     ```js
     const options = makeOptions("POST", false, {username: user, password: password });
-    return fetch(URL + "/api/login", options)
+    return fetch(BASE_URL + LOGIN_ENDPOINT, options)
         .then(handleHttpErrors)
         .then(res => {setToken(res.token) })
     ```
@@ -226,7 +237,7 @@ DB_NAME=hotel
 
     ```js
     const options = makeOptions("GET",true); //True add's the token
-    return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
+    return fetch(BASE_URL + "hotels", options).then(handleHttpErrors);
     ```
 
     - Do NOT continue, before you have convinced yourself about how the token was added to the authentication header for the outgoing request.

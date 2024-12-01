@@ -9,9 +9,11 @@ has_children: false
 permalink: /toolbox/react/router
 ---
 
-# Frontend routing with React Router 6
+# Frontend routing with React Router 6 and 7
 
-React Router enables "client side routing".
+React Router enables "client side routing". React Router is currently released as version **7.0.1** (Nov 28 2024). The documentation of **7.0.1** is not totally done yet, but it's a small release, and the previous version **6.28.0** is very similar. So look to a fuller [documentation there](https://reactrouter.com/6.28.0/home). The biggest change is that as of **7.0.1**, you need to import one library: `react-router`. Previously, you needed `react-router-dom` instead. Since **6.4.0** it's recommended to use `createBrowserRouter` and `<RouterProvider router={router} />` as shown below. They are containg all the latest updates and functions. The older `<BrowserRouter>` still works, but hasn't got the latest bling.
+
+## So what is a router in a SPA
 
 In traditional websites, the browser requests a document from a web server, downloads and evaluates CSS and JavaScript assets, and renders the HTML sent from the server. When the user clicks a link, it starts the process all over again for a new page.
 
@@ -24,15 +26,12 @@ And having the URL update with each page makes it possible for users to share li
 
 ## Examples
 
-- `main.js`:
+You can typically place your router in either `main.jsx` or in the `App.jsx`. It's up to you. This is how you can do it in `main.jsx`.
+
+## `main.jsx`
 
 ```jsx
-import {
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,9 +45,16 @@ const router = createBrowserRouter(
 );
 ```
 
-In the above example, the `<App />` component will be rendered when the URL matches `/` or any of its children. The `<Photos />` component will be rendered when the URL matches `/photos` or any of its children. The `<Photo />` component will be rendered when the URL matches `/photos/:id`. The `<h1>Articles</h1>` element will be rendered when the URL matches `/articles`.
+In the above example,
+
+- the `<App />` component will be rendered when the URL matches `/` or any of its children. The children will be shown in its `<Outlet/>` element.
+- The `<Photos />` component will be rendered when the URL matches `/photos` or any of its children.
+- The `<Photo />` component will be rendered when the URL matches `/photos/:id` in  the `<Outlet/>` element in the parent (Photos) component.
+- The `<h1>Articles</h1>` element will be rendered when the URL matches `/articles`.
 
 ### Attaching the router to the DOM
+
+Also in the `main.jsx`:
 
 ```jsx
 ReactDOM.createRoot(document.getElementById("root")).render(
