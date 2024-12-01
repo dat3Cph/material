@@ -1,11 +1,11 @@
 ---
-title: Styling in React with StyledComponents
-description: Exercises for Frontend Week III
+title: Styled Components
+description: Exercises for Frontend Week IV
 layout: default
 nav_order: 1
 grand_parent: React IV
 parent: Exercises
-permalink: /frontend/react-3/exercises/styling-in-react/
+permalink: /frontend/react-4/exercises/styling-in-react/
 ---
 
 # Exercise: Styling with StyledComponents
