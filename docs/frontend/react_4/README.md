@@ -41,6 +41,10 @@ Watch the following videos:
 - [Styled Components Is the Only Way To Do CSS](https://www.youtube.com/watch?v=54-hITMASgM)
 - [Styled Components in React | All you need to know](https://www.youtube.com/watch?v=kClcUzAhz9g)
 
+### In-class exercises
+
+- [Styling a todo app](./exercises/styling-in-react.md)
+
 ## Wednesday (CodeLab)
 
 - TBD
