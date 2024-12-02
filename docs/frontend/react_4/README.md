@@ -26,12 +26,12 @@ We will review the code from the previous week. In particular the Friday Exercis
 
 Exam questions that could be relevant for the review:
 
-- Show and explain the concept of promises in JavaScript (think of the fetch API)
-- Provide examples for different ways of doing conditional rendering.
-- Show and explain of what a JWT token is composed
-- Describe and show the process og login using JWT. What problem does it solve?
-- Show and explain an example of sub-routing.
-- Describe conceptually what Same Origin Policy (SOP) and Cross Origin Ressource Sharing (CORS) are, and how we avoid getting CORS errors when fetching data from your API.
+1. Show and explain the concept of promises in JavaScript (think of the fetch API)
+2. Provide examples for different ways of doing conditional rendering.
+3. Show and explain of what a JWT token is composed
+4. Describe and show the process og login using JWT. What problem does it solve?
+5. Show and explain an example of sub-routing.
+6. Describe conceptually what Same Origin Policy (SOP) and Cross Origin Ressource Sharing (CORS) are, and how we avoid getting CORS errors when fetching data from your API.
 
 ## Tuesday (class)
 
@@ -75,6 +75,8 @@ See this video about the linux command `rsync`:
 - [Deploying React Frontend Applications](../../toolbox/deployment_pipeline/frontend.md)
 
 ## Friday (exercise day)
+
+- [TBD](./exercises/friday.md)
 
 <hr>
 

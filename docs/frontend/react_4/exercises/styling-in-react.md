@@ -12,6 +12,8 @@ permalink: /frontend/react-4/exercises/styling-in-react/
 
 Open the StyledComponents documentation: [StyledComponents Documentation](https://styled-components.com/docs) for reference.
 
+We also have a brief introduction to StyledComponents in the Toolbox: [Styled Components](../../../toolbox/react/styled_components.md)
+
 1. Create a [new project with Vite](../../../toolbox/react/vite.md) and clean up in the usual way before you continue.
 2. Install StyledComponents using:
 
