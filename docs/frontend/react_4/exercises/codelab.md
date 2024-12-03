@@ -16,7 +16,7 @@ permalink: /frontend/react-4/exercises/codelab/
 This CodeLab exercise is designed to help you practice the concepts you have learned in the Frontend Week IV module. 
 You will be working with a partner to complete the tasks in this exercise. 
 
-![truck](./images/truck.jpeg){: .d-none .d-md-inline-block .ml-3 .mb-5 .float-right width="200px"}
+<img src="images/Truck.jpeg" width="700"/>
 
 ## The assignment
 ### Basic setup with pages
