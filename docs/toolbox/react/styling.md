@@ -187,3 +187,27 @@ const App = () => {
 
 export default App;
 ```
+
+### The main.jsx file
+```jsx
+import React from 'react';
+import * as ReactDOM from "react-dom/client";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+// import './index.css'
+import App from './App.jsx'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App/>}> 
+    <Route path="about" element={<h1>About</h1>} />
+    <Route path="*" element={<h1>404 Not Found</h1>} />
+    </Route>
+  )
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+      <RouterProvider router={router} />
+  </React.StrictMode>
+);
+```
