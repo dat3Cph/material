@@ -55,7 +55,7 @@ Watch the following videos:
 
 ## Wednesday (CodeLab)
 
-- TBD
+- [Practicing styling with styled-components and error handling](./exercises/codelab.md)
 
 ## Thursday (class)
 
