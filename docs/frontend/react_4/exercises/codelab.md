@@ -17,6 +17,7 @@ This CodeLab exercise is designed to help you practice the concepts you have lea
 You will be working with a partner to complete the tasks in this exercise. 
 
 <img src="./images/Truck.png" width="800"/>
+
 ![Truck](./images/Truck.png)
 
 
