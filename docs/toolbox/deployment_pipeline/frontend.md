@@ -236,6 +236,12 @@ Expected output:
 drwxr-xr-x 3 jetty jetty 4096 Nov 28 21:13 /home/jetty/deployment/site/timer
 ```
 
+In docker-compose.yml file under the caddy service, add the volume for the frontend application:
+
+```yaml
+- ./site:/srv
+```
+
 ### Step 7: Restart the Caddy container
 
 After adding the site block to the Caddyfile, you need to restart the Caddy container to apply the changes:
