@@ -77,7 +77,7 @@ jobs:
       - name: Set up SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.DO_SSH_KEY }} # The SSH private key stored in GitHub secrets.
+          ssh-private-key: {% raw %}${{ secrets.DO_SSH_KEY }}{% endraw %} # The SSH private key stored in GitHub secrets.
 
       - name: Sync files to DigitalOcean Droplet using rsync
         run: |
@@ -241,6 +241,7 @@ In docker-compose.yml file under the caddy service, add (if not already there) t
 ```yaml
 - ./site:/srv
 ```
+
 or if you did not setup Caddy before:
   
   ```yaml
