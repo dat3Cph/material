@@ -27,6 +27,15 @@ You should create and deploy (1 per team) a React application that can display:
 4. A link to the repository of the API. In case your student colleagues wants to see the code.
 5. Any ideas for the frontend application that will use the API. It could be some mockups or a description of the application. Whatever you can come up with. It doesn't have to be a lot, but take as a brainstorm.
 
+## Technical Requirements
+
+The React application should be built with these technologies:
+
+1. React Router. You should have at least three routes. A main page, a vision page, and an endpoints page. But feel free to add more.
+2. Use Styled Components for styling.
+3. Make the website responsive. Use media queries and flexbox/grid to make it look good on all devices.
+4. Add a nice image to the main page. It could be a logo or something that represents the API. The image resolution should be 300x300 pixels. And the image format is png
+
 ## Hand-in
 
 - Deadline is Sunday at 20:00.
@@ -51,4 +60,8 @@ A: No, you can either make a new API or use another team's API. But you should a
 
 ### Q: What if we can't deploy the webpage?
 
-A: Then hand-in a link to the repository instead. But begin by trying to deploy the webpage as soo as you have your first version ready. Then you will have time to catch up.
+A: Then hand-in a link to the repository instead. But begin by trying to deploy the webpage as soon as you have your first version ready. Then you will have time to catch up.
+
+### Q: Can we work in other team constellations in SP-3?
+
+A: Yes, you can. Sign up your team on Moodle here: [SP-3: The Frontend Hub](https://cphbusiness.mrooms.net/mod/choicegroup/view.php?id=752290).
