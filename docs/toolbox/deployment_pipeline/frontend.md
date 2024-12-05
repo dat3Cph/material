@@ -236,7 +236,7 @@ Expected output:
 drwxr-xr-x 3 jetty jetty 4096 Nov 28 21:13 /home/jetty/deployment/site/timer
 ```
 
-In docker-compose.yml file under the caddy service, add the volume for the frontend application:
+In docker-compose.yml file under the caddy service, add (if not already there) the volume for the frontend application:
 
 ```yaml
 - ./site:/srv
