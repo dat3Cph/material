@@ -144,7 +144,7 @@ ssh root@your_droplet_ip
 su - jetty
 ```
 
-Now add the public key to the `~/.ssh/authorized_keys` file:
+Now add the public key to the `~/.ssh/authorized_keys` file: (the file can have multiple keys - ctrl + E to go to the end of the file, then `Enter` the paste the new key)
 
 ```bash
 nano ~/.ssh/authorized_keys
