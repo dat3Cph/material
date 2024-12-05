@@ -241,7 +241,26 @@ In docker-compose.yml file under the caddy service, add (if not already there) t
 ```yaml
 - ./site:/srv
 ```
-
+or if you did not setup Caddy before:
+  
+  ```yaml
+    caddy: image: caddy:2.7.6
+    restart: unless-stopped
+    container_name: caddy
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/srv
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+  ```
+  
 ### Step 7: Restart the Caddy container
 
 After adding the site block to the Caddyfile, you need to restart the Caddy container to apply the changes:
