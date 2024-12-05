@@ -8,7 +8,7 @@ parent: Projects
 permalink: /projects/sp-2-api-hub/
 ---
 
-<br/><bt/>
+<br/><br/>
 ![API Hub logo](./images/api_hub_logo_banner.png)
 
 # SP-2: The API Hub
