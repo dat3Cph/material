@@ -24,7 +24,7 @@ static file server. Compared to deploying the Javalin Backend APIs it's not a bi
 
 3. You should have a Droplet with Caddy installed that you use for your backend deployment pipeline.
 
-4. You should have a subdomain that can be used for accessing your frontend application.
+4. You should have a domain that can be used for accessing your frontend application.
 
 ## The Plan
 
