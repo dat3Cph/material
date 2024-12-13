@@ -67,7 +67,7 @@ There are three steps to this process:
 2. Copy the `site` folder to the `2semDockerSetupRemote` folder:
 
     ```bash
-    cp -r site /../2semDockerSetupRemote
+    cp -r site ../2semDockerSetupRemote
     ```
 
 ### Step 3: Copy the Javalin applications folders
@@ -76,9 +76,9 @@ There are three steps to this process:
 2. Copy the Javalin applications folders to the `2semDockerSetupRemote` folder:
 
     ```bash
-    cp -r fog /../2semDockerSetupRemote
-    cp -r cupcake /../2semDockerSetupRemote
-    cp -r fourthingsplus /../2semDockerSetupRemote
+    cp -r fog ../2semDockerSetupRemote
+    cp -r cupcake ../2semDockerSetupRemote
+    cp -r fourthingsplus ../2semDockerSetupRemote
     ```
 
 3. Repeat this step for all the Javalin applications you have running in Docker containers.
