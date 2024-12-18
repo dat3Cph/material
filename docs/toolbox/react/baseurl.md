@@ -17,34 +17,46 @@ This is a common practice in React applications. You can achieve base-url switch
 
 ### 1. Use Environment Variables
 
-React apps (created using `create-react-app` or similar setups) support environment variables. You can define different variables for different environments.
+With **Vite**, you can achieve dynamic API base URL configuration using **environment variables**. Here's how you can set it up:
 
-#### a. Create `.env` files
+---
 
-1. For local development:
-   - Create a file named `.env.development`:
+### 1. Define Environment Variables
+
+In Vite, you can use `.env` files to define environment-specific variables:
+
+#### a. Create `.env` Files
+
+1. For **local development**:
+
+   - Create a file named `.env` (or `.env.development`):
 
      ```plaintext
-     REACT_APP_API_BASE_URL=http://localhost:5000
+     VITE_API_BASE_URL=http://localhost:5000
      ```
 
-2. For production:
+2. For **production**:
+
    - Create a file named `.env.production`:
 
      ```plaintext
-     REACT_APP_API_BASE_URL=https://your-deployed-api.com
+     VITE_API_BASE_URL=https://your-deployed-api.com
      ```
 
-React will automatically use the appropriate file when you build or run the app (`.env.development` for `npm start` or `yarn start` and `.env.production` for `npm run build` or `yarn build`).
+3. For additional environments (e.g., staging), you can create `.env.staging`:
+
+   ```plaintext
+   VITE_API_BASE_URL=https://staging-api.com
+   ```
 
 ---
 
 ### 2. Access the Environment Variables in Code
 
-In your code, you can use the environment variable like this:
+In your code, use `import.meta.env` to access the environment variables. For example:
 
 ```javascript
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 async function fetchData() {
   const response = await fetch(`${BASE_URL}/endpoint`);
@@ -53,19 +65,49 @@ async function fetchData() {
 }
 ```
 
----
-
-### 3. Building and Deployment
-
-- During **development**, when you run the development server (`npm start`), the app will use `http://localhost:5000` as the base URL.
-- When you **build the app for production** (`npm run build`), React will embed the production API base URL (`https://your-deployed-api.com`) into the build files.
+⚠️ **Note:** Environment variables in Vite must start with the prefix `VITE_` for them to be accessible via `import.meta.env`.
 
 ---
 
-### 4. Additional Notes
+### 3. Building and Running
 
-- **Security**: Be careful not to expose sensitive credentials in environment variables, as they are bundled into the final build.
-- **Debugging**: If something doesn’t work as expected, log `process.env` to ensure your environment variables are loaded correctly.
-- **Custom Builds**: If you need more flexibility (e.g., different staging or testing environments), you can create additional `.env` files like `.env.staging` and load them using `npm run env-cmd`.
+- When you run `npm run dev` (or `yarn dev`), Vite uses `.env` or `.env.development` by default.
+- When you run `npm run build` (or `yarn build`), Vite uses `.env.production`.
 
-This setup ensures your app fetches data from the correct API base URL depending on the environment.
+---
+
+### 4. Customize for Multiple Environments
+
+To build for other environments (e.g., staging), you can specify the environment file using the `--mode` flag:
+
+```bash
+# Use staging environment
+vite build --mode staging
+```
+
+Vite will then use `.env.staging` during the build process.
+
+---
+
+### 5. Example Directory Structure
+
+```
+project/
+├── .env
+├── .env.development
+├── .env.production
+├── .env.staging
+├── src/
+│   ├── main.js
+│   ├── App.jsx
+```
+
+---
+
+### 6. Additional Notes
+
+- **Environment Variable Precedence**: If a variable is defined in multiple `.env` files, the file matching the mode takes precedence.
+- **Accessing All Variables**: You can log `import.meta.env` to inspect all available environment variables.
+- **Security Warning**: Never include sensitive information in your `.env` files, as they are bundled into the final build.
+
+With this setup, Vite dynamically uses the correct base URL for your API depending on the environment.
